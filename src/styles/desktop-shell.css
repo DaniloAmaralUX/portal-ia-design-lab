@@ -1,5 +1,6 @@
 /* Desktop layer ownership: wallpaper 0, library 1, windows 6/8, dock 20. */
 .wallpaper { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.desktop-wallpaper { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; user-select: none; }
 .launchpad { position: relative; z-index: 1; height: 100svh; padding: 28px var(--desktop-gutter) var(--work-bottom); overflow: auto; scrollbar-width: none; }
 .folders { position: relative; display: grid; grid-template-columns: 128px; gap: 20px; align-content: start; width: max-content; margin: 0; }
 .folder { position: relative; display: flex; flex-direction: column; align-items: center; width: 128px; min-height: 132px; padding: 6px; border-radius: 12px; background: transparent; user-select: none; }

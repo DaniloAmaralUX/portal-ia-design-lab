@@ -12,7 +12,7 @@ Uma mesa de ferramentas para quem cria interfaces, com navegação por janelas e
 - **Ícones:** 90 SVGs Lucide com busca em português, ajuste de tamanho, cor e espessura, cópia e download.
 - **Desktop:** seleção, clique duplo, teclado, histórico, busca, movimentação de janelas, minimizar, ampliar e restaurar.
 - **Glass Icons:** seis atalhos com placas coloridas, refração e movimento do React Bits; símbolos Lucide, rótulos permanentes e fallback sem GPU.
-- **Background:** Strands, com os shaders originais do componente fornecido e fallback estático quando WebGL não está disponível.
+- **Background:** fotografia de Elliott Engelmann fornecida pelo usuário, incorporada ao HTML e enquadrada com `object-fit: cover`.
 
 As categorias Plugins e Recursos ainda não têm conteúdo cadastrado. As ferramentas são adaptações locais de partes dos projetos de origem; não incluem seus serviços de nuvem, contas ou funcionalidades de IA.
 

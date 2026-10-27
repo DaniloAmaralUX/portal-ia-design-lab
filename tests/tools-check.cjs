@@ -106,10 +106,12 @@ async function test(label,run){await run();assert.deepEqual(errors,[]);checks++;
   const original=fs.readFileSync(path.join(root,'vendor/react-bits/glass-icons/GlassIcons.original.jsx'),'utf8'),port=fs.readFileSync(path.join(root,'src/scripts/glass-icons.js'),'utf8');
   for(const name of ['VERTEX','FRAGMENT']){const regexp=new RegExp('const '+name+' = `([\\s\\S]*?)`;');assert.equal(original.match(regexp)[1].replace(/\r\n/g,'\n'),port.match(regexp)[1].replace(/\r\n/g,'\n'))}
  });
- await test('both GLSL shaders exactly match the user-supplied Strands source',()=>{
+ await test('wallpaper embeds the supplied photograph and archived Strands shaders remain intact',()=>{
   const original=fs.readFileSync(path.join(root,'vendor/react-bits/Strands.original.jsx'),'utf8'),port=fs.readFileSync(path.join(root,'src/scripts/strands.js'),'utf8');
   for(const name of ['VERT','FRAG']){const regexp=new RegExp('const '+name+' = `([\\s\\S]*?)`;');const a=original.match(regexp)[1],b=port.match(regexp)[1];assert.equal(crypto.createHash('sha256').update(a).digest('hex'),crypto.createHash('sha256').update(b).digest('hex'))}
-  assert.ok($('#desktop-strands'));assert.ok($('.strands-fallback'));assert.equal(d.querySelector('.landscape'),null);
+  const photo=$('.desktop-wallpaper');assert.equal(photo.alt,'');assert.equal(photo.getAttribute('fetchpriority'),'high');
+  assert.deepEqual(Buffer.from(photo.src.split(',')[1],'base64'),fs.readFileSync(path.join(root,'src/assets/backgrounds/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg')));
+  assert.equal(d.querySelector('#desktop-strands'),null);
  });
  console.log(`\n${checks} tool/background integration scenarios passed. DOM and generated files tested; WebGL pixels and browser platform APIs are not exercised by jsdom.`);
 }finally{w.close()}})().catch(error=>{console.error(error);process.exitCode=1});

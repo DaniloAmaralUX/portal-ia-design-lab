@@ -11,12 +11,13 @@ function build(){
  const interfaces=JSON.parse(read('src/data/interfaces.json'));
  const desktopIcons={};
  for(const name of ['skills','plugins','recursos'])desktopIcons[name]='data:image/svg+xml;base64,'+fs.readFileSync(path.join(root,'src/assets/icons',name+'.svg')).toString('base64');
- const styles=['base','library','tool-panels','strands','glass-icons','desktop-shell'].map(name=>read('src/styles/'+name+'.css')).join('\n');
- const scripts=['window-manager','desktop','interfaces','tools','glass-icons','strands'].map(name=>{
+ const wallpaper='data:image/jpeg;base64,'+fs.readFileSync(path.join(root,'src/assets/backgrounds/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg')).toString('base64');
+ const styles=['base','library','tool-panels','glass-icons','desktop-shell'].map(name=>read('src/styles/'+name+'.css')).join('\n');
+ const scripts=['window-manager','desktop','interfaces','tools','glass-icons'].map(name=>{
   const source=read('src/scripts/'+name+'.js');
   return name==='desktop'?source.replace('__DESKTOP_ICONS__',JSON.stringify(desktopIcons)):source;
  }).join('\n');
- const replacements={styles,scripts,interfacesData:jsonForHTML(interfaces),toolsData:jsonForHTML(tools),libraryView:read('src/views/interfaces.html'),toolsView:read('src/views/tools.html'),iconSkills:desktopIcons.skills};
+ const replacements={styles,scripts,wallpaper,interfacesData:jsonForHTML(interfaces),toolsData:jsonForHTML(tools),libraryView:read('src/views/interfaces.html'),toolsView:read('src/views/tools.html'),iconSkills:desktopIcons.skills};
  const html=read('src/index.template.html').replace(/\{\{([A-Za-z]+)\}\}/g,(_,name)=>{
   assert.ok(Object.hasOwn(replacements,name),'Unknown template placeholder: '+name);
   return replacements[name];

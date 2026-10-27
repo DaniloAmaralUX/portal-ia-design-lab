@@ -8,7 +8,7 @@ A aplicação roda no navegador com HTML, CSS e JavaScript. Node.js é necessár
 
 `scripts/build.cjs` combina as views e os dados em `src/index.template.html`. Os placeholders são resolvidos em uma única passagem, evitando interpretar conteúdo dos documentos como parte do template. JSON é escapado antes da inclusão em tags `script`.
 
-Ordem dos scripts: `window-manager` → `desktop` → `interfaces` → `tools` → `glass-icons` → `strands`. Eles compartilham o escopo de um script clássico para manter a abertura offline do HTML; não converta um arquivo isolado para módulo sem ajustar o build e seus consumidores.
+Ordem dos scripts: `window-manager` → `desktop` → `interfaces` → `tools` → `glass-icons`. Eles compartilham o escopo de um script clássico para manter a abertura offline do HTML; não converta um arquivo isolado para módulo sem ajustar o build e seus consumidores.
 
 ## Donos de estado e de estilo
 
@@ -16,10 +16,10 @@ Ordem dos scripts: `window-manager` → `desktop` → `interfaces` → `tools` �
 - `desktop.js`: seleção das categorias, histórico e estado da janela de biblioteca.
 - `interfaces.js`: catálogo, busca, filtros, detalhes e exportação das skills.
 - `tools.js`: os três aplicativos e seus estados locais.
-- `strands.js`: lifecycle WebGL; os shaders permanecem iguais a `vendor/react-bits/Strands.original.jsx`.
+- O fundo usa `src/assets/backgrounds/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg`, fornecido pelo usuário em 27 de outubro de 2026. A fotografia é incorporada ao HTML e preenche a tela com `object-fit: cover`, centralizada. `strands.js` e seus shaders originais permanecem arquivados, sem participar do build nem consumir GPU.
 - `glass-icons.js`: adapta o renderer Glass Icons do React Bits aos seis botões existentes. São dois canvases compartilhados, um por grupo, com redraw apenas durante interação ou resize. Os shaders, gradientes e cálculos ópticos originais são preservados. Rótulos ficam sempre visíveis; não há intro, e ações por teclado não disparam movimento decorativo. Sem WebGL, o fallback usa CSS. Origem e revisão em `vendor/react-bits/glass-icons/source.txt`.
 - `desktop-shell.css`: única fonte para geometria de janelas, dock e área de trabalho. O dock tem espaço reservado para evitar sobreposição com rodapés.
-- `base.css`, `library.css`, `tool-panels.css`, `glass-icons.css` e `strands.css`: reset/tokens e estilos dos componentes correspondentes.
+- `base.css`, `library.css`, `tool-panels.css` e `glass-icons.css`: reset/tokens e estilos dos componentes correspondentes.
 
 As skins anteriores não fazem parte deste repositório. Evite voltar a empilhar folhas de estilo de protótipos antigos para corrigir componentes atuais.
 
@@ -38,7 +38,7 @@ Nunca versionar `.env*`, `.vercel/`, tokens, dados de usuário, dependências in
 - A ferramenta Temas adapta presets e edição local do tweakcn; contas, comunidade, IA e sincronização do projeto original não estão implementadas.
 - Blocos contém três composições portadas do Tailark. Exporta HTML/CSS, não componentes React com todas as dependências do projeto original.
 - Ícones contém a seleção de 90 SVGs registrada em `vendor/lucide/icons`.
-- Strands depende de WebGL 2; o fallback é estático e o componente respeita redução de movimento.
+- O fundo fotográfico não requer WebGL. Glass Icons usa WebGL 2 com fallback CSS.
 - Copiar depende das permissões e APIs do navegador. Há seleção manual quando os mecanismos de cópia não estão disponíveis. O adaptador de clipboard do navegador de validação retornou vazio; não foi usado como confirmação da cópia nativa.
 
 ## Como validar alterações
