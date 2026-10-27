@@ -58,6 +58,8 @@ Nunca versionar `.env*`, `.vercel/`, tokens, dados de usuário, dependências in
 
 Na validação publicada, o Strands renderizou sem erros de console, as seis imagens carregaram, a busca por "coracao" retornou um ícone e as caixas de janelas ficaram acima do dock nos dois tamanhos citados.
 
+Em 27/10/2026, o Aero Shards foi validado no navegador publicado: renderer em estado `ready`, foto carregada, opacidade `0.25`, nenhum erro ou warning de console. Skills e Temas continuaram abrindo por clique. Ao ativar movimento reduzido durante a animação, o canvas foi removido; ao restaurar a preferência, o renderer reiniciou. Em 390×844, canvas e viewport têm o mesmo tamanho, o dock cabe na tela e não há overflow horizontal. A CI Linux passou os 45 cenários e a compilação de CSS exportado.
+
 ## Deploy
 
 Projeto Vercel: `mesa-dev-desktop`. Escopo: `danilos-projects-94eff717`. Framework: Other. Root Directory: raiz do repositório. Build: `npm run build`. Output Directory: `dist`. Node.js: 24.

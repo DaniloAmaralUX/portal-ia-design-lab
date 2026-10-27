@@ -21,7 +21,7 @@ As categorias Plugins e Recursos ainda não têm conteúdo cadastrado. As ferram
 Requer **Node.js 24**. Não requer Python, banco, API key ou arquivos fora deste repositório.
 
 ```sh
-npm ci
+npm ci --ignore-scripts
 npm run dev
 ```
 
