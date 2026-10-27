@@ -1,0 +1,23 @@
+/* React Bits Glass Icons: standalone integration, with CSS fallback before GPU init. */
+.glass-tile { position: relative; flex: none; overflow: visible; pointer-events: none; --glass-radius: 30%; }
+.glass-icon-plate, .glass-icon-glass, .glass-icon-face { position: absolute; inset: 0; border-radius: var(--glass-radius); pointer-events: none; }
+.glass-icon-plate { background: var(--glass-plate); transform: rotate(30deg); transform-origin: 100% 100%; box-shadow: inset 0 1px 1px #ffffff30; }
+.glass-icon-glass { overflow: hidden; background: linear-gradient(145deg,#ffffff36,#ffffff09); border: 1px solid #ffffff38; backdrop-filter: blur(4px) saturate(1.4); -webkit-backdrop-filter: blur(4px) saturate(1.4); box-shadow: inset 1px 1px 1px #ffffff45,inset -1px -1px 2px #ffffff12,0 9px 18px -11px #0009; }
+.glass-icon-glass::after { content: ''; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(135deg,#ffffff44,transparent 34%,transparent 72%,#ffffff1c); }
+.glass-icon-face { z-index: 2; display: grid; place-items: center; }
+.glass-icon-glyph { display: grid; place-items: center; width: 40%; height: 40%; color: #fff; filter: drop-shadow(0 1px 3px #0005); }
+.glass-icon-glyph > svg { display: block; width: 100%; height: 100%; stroke-width: 1.8; }
+.glass-icons-canvas { position: absolute; z-index: 1; display: block; pointer-events: none; }
+.glass-gpu .glass-icon-plate, .glass-gpu .glass-icon-glass { visibility: hidden; }
+.tool-running { position: relative; z-index: 2; }
+.folder:focus-visible .glass-tile { outline: 2px solid #c7e0ff; outline-offset: 5px; }
+.tool-launch:focus-visible { outline-color: #315e87; outline-offset: 5px; }
+@media (prefers-reduced-transparency: reduce) {
+ .glass-icon-glass { background: var(--glass-plate); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+@media (forced-colors: active) {
+ .glass-icons-canvas, .glass-icon-plate { display: none; }
+ .glass-gpu .glass-icon-glass { visibility: visible; }
+ .glass-icon-glass { background: Canvas; border: 1px solid ButtonText; }
+ .glass-icon-glyph { color: ButtonText; filter: none; }
+}

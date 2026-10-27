@@ -1,0 +1,34 @@
+:root {
+  color-scheme: dark;
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-in-out: cubic-bezier(.77, 0, .175, 1);
+  --desktop-gutter: 20px;
+  --work-top: 16px;
+  --dock-height: 96px;
+  --dock-bottom: max(14px, env(safe-area-inset-bottom));
+  --work-bottom: calc(var(--dock-height) + var(--dock-bottom) + 16px);
+  --work-height: calc(100svh - var(--work-top) - var(--work-bottom));
+  --work-center: calc((100svh + var(--work-top) - var(--work-bottom)) / 2);
+}
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; }
+body {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #060608;
+  color: #f4f7fc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, select, textarea { font: inherit; }
+button { color: inherit; border: 0; cursor: pointer; touch-action: manipulation; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:disabled { cursor: default; opacity: .45; }
+button:focus-visible, a:focus-visible { outline: 2px solid #91bdef; outline-offset: 3px; }
+[hidden] { display: none !important; }
+::selection { background: #83b5f04d; }
+.keyboard-mode *, .keyboard-mode *::before, .keyboard-mode *::after { transition-duration: 0ms !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+}

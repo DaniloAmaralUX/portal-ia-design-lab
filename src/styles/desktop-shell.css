@@ -1,0 +1,151 @@
+/* Desktop layer ownership: wallpaper 0, library 1, windows 6/8, dock 20. */
+.wallpaper { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.launchpad { position: relative; z-index: 1; height: 100svh; padding: 28px var(--desktop-gutter) var(--work-bottom); overflow: auto; scrollbar-width: none; }
+.folders { position: relative; display: grid; grid-template-columns: 128px; gap: 20px; align-content: start; width: max-content; margin: 0; }
+.folder { position: relative; display: flex; flex-direction: column; align-items: center; width: 128px; min-height: 132px; padding: 6px; border-radius: 12px; background: transparent; user-select: none; }
+.folder-art { display: grid; place-items: center; width: 72px; height: 72px; margin-top: 12px; margin-bottom: 12px; border-radius: 12px; transition: transform 140ms var(--ease-out); }
+.folder-art > .desktop-object { display: block; width: 84px; height: 84px; padding: 3px; object-fit: contain; pointer-events: none; -webkit-user-drag: none; filter: drop-shadow(0 3px 3px #0005); }
+.folder-name { padding: 1px 7px; border-radius: 4px; font-size: 13px; line-height: 21px; font-weight: 500; color: #f4f8fc; text-shadow: 0 1px 4px #000b; }
+.folder-note { display: block; max-width: 126px; margin-top: 2px; color: #c6d1e1; font-size: 10px; line-height: 16px; text-align: center; text-shadow: 0 1px 4px #000c; }
+.folder.selected .folder-name { background: #3679c8; color: white; text-shadow: none; box-shadow: inset 0 0 0 1px #ffffff25; }
+.folder:focus-visible { outline: none; }
+.folder:focus-visible .folder-art { outline: 2px solid #a9d4ff; outline-offset: 3px; }
+.folder:active .folder-art { transform: none; }
+.folder.running::after { content: ''; position: absolute; width: 4px; height: 4px; bottom: -3px; border-radius: 50%; background: #d4e8ff; }
+
+/* App names stay visible; a tooltip adds the action rather than hiding the identity. */
+.tool-dock { position: fixed; z-index: 20; bottom: var(--dock-bottom); left: 50%; transform: translateX(-50%); display: flex; align-items: stretch; gap: 6px; padding: 10px 12px 8px; margin: 0; border: 1px solid #ffffff63; border-radius: 22px; background: linear-gradient(140deg,#edf3f3b8,#c3d0d58a); backdrop-filter: blur(24px) saturate(1.15); box-shadow: inset 0 1px 0 #ffffff50,0 8px 26px #0005; }
+.tool-launch { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 4px; width: 72px; padding: 0 4px; border-radius: 12px; color: #223b4b; background: transparent; }
+.tool-launch-art { display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; transition: transform 150ms var(--ease-out); }
+.tool-launch-art img { display: block; width: 48px; height: 48px; object-fit: contain; pointer-events: none; -webkit-user-drag: none; filter: drop-shadow(0 3px 2px #1d344b29); }
+.tool-launch-name { position: relative; z-index: 2; display: block; font-size: 11px; line-height: 16px; font-weight: 500; color: #233d4e; }
+.tool-running { display: block; width: 4px; height: 4px; margin-top: 0; border-radius: 50%; background: transparent; }
+.tool-launch[data-running=true] .tool-running { background: #30566f; }
+.tool-tip { z-index: 4; position: absolute; bottom: calc(100% + 16px); left: 50%; transform: translate(-50%,3px); padding: 8px 12px; border-radius: 8px; border: 1px solid #ffffff70; background: #edf3f3f2; color: #324b5d; box-shadow: 0 4px 15px #0004; opacity: 0; pointer-events: none; white-space: nowrap; font-size: 12px; line-height: 18px; transition: opacity 100ms ease,transform 120ms var(--ease-out); }
+.tool-tip small { display: block; font-size: 11px; line-height: 16px; color: #5e7486; }
+.tool-launch:focus-visible .tool-tip { opacity: 1; transform: translate(-50%,0); }
+.tool-launch:active .tool-launch-art { transform: none; }
+
+/* Both windows use the same reserved work area and sizing rules. */
+.finder, .tool-window {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color-scheme: light;
+  color: #334451;
+  background: #fafbfd;
+  border: 1px solid #dfe9f44d;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px #0004,0 12px 32px #0004,0 32px 75px -18px #0008;
+  min-width: min(300px,calc(100vw - 24px));
+  min-height: min(280px,var(--work-height));
+  max-width: calc(100vw - 24px);
+  max-height: var(--work-height);
+  resize: both;
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(.98);
+  transition: opacity 180ms var(--ease-out),transform 180ms var(--ease-out);
+}
+.finder { z-index: 6; left: var(--finder-x,50%); top: var(--finder-y,var(--work-center)); width: min(790px,calc(100vw - 40px)); height: min(474px,var(--work-height)); }
+.finder.library-open { width: min(1010px,calc(100vw - 40px)); height: min(710px,var(--work-height)); min-height: min(340px,var(--work-height)); }
+.tool-window { --tool-line: #dfe7ee; --tool-accent: #467da9; z-index: 8; left: var(--tool-x,50%); top: var(--tool-y,var(--work-center)); width: min(1180px,calc(100vw - 40px)); height: min(760px,var(--work-height)); font-size: 12px; }
+.finder[open] { display: grid; grid-template-rows: 42px 46px minmax(0,1fr) 30px; }
+.tool-window[open] { display: grid; grid-template-rows: 42px auto minmax(0,1fr) 30px; }
+.finder.visible, .tool-window.visible { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+.finder.closing, .tool-window.closing { opacity: 0; transform: translate(-50%,-50%) scale(.985); transition-duration: 100ms; }
+.finder.instant, .tool-window.instant { transition: none; }
+.finder.maximized, .tool-window.maximized { left: 12px; top: var(--work-top); width: calc(100vw - 24px) !important; height: var(--work-height) !important; transform: none; resize: none; }
+.finder.maximized.visible, .finder.maximized.closing, .tool-window.maximized.visible, .tool-window.maximized.closing { transform: none; }
+.finder-titlebar, .tool-titlebar { position: relative; display: flex; align-items: center; height: 42px; background: linear-gradient(#f9fbfd,#eaf0f4); box-shadow: inset 0 1px #fff; user-select: none; touch-action: none; }
+.traffic-lights { position: relative; z-index: 1; display: flex; gap: 8px; align-items: center; padding-left: 16px; }
+.traffic { position: relative; display: grid; place-items: center; width: 12px; height: 12px; padding: 0; border-radius: 50%; border: 1px solid #0002; box-shadow: inset 0 1px #fff3; color: #68453e; }
+.traffic::after { content: ''; position: absolute; inset: -5px; }
+.traffic svg { width: 8px; height: 8px; opacity: 0; }
+.traffic-lights:hover svg, .traffic:focus-visible svg { opacity: 1; }
+.traffic.close-window { background: #ff635b; }
+.traffic.minimize-window { background: #ffc044; }
+.traffic.maximize-window { background: #35c84a; }
+.traffic:active { filter: brightness(.9); }
+.window-heading { position: absolute; left: 100px; right: 100px; display: flex; align-items: center; justify-content: center; gap: 7px; pointer-events: none; }
+.window-heading h1 { font-size: 13px; line-height: 18px; font-weight: 600; letter-spacing: -.1px; margin: 0; }
+.location-icon { width: 21px; height: 21px; object-fit: contain; }
+.finder-toolbar { display: flex; align-items: center; gap: 6px; padding: 0 12px; height: 46px; border-bottom: 1px solid #d5dfe7; background: #edf2f6; }
+.tool-button { display: grid; place-items: center; width: 28px; height: 27px; padding: 0; border: 1px solid #c9d5df; border-radius: 5px; background: #fbfdff; color: #557085; }
+.tool-button svg { width: 15px; height: 15px; }
+.tool-button[aria-pressed=true] { background: #d6e3ef; }
+.view-toggle { display: flex; gap: 3px; margin-left: 7px; }
+.finder-search { display: flex; align-items: center; position: relative; width: 180px; height: 28px; margin-left: auto; border: 1px solid #ccd8e2; border-radius: 6px; background: #fbfdff; }
+.finder-search > svg { position: absolute; left: 8px; width: 13px; height: 13px; color: #7d92a2; pointer-events: none; }
+.finder-search input { width: 100%; height: 100%; padding: 0 9px 0 28px; border: 0; border-radius: inherit; outline: none; background: none; color: #405b70; font-size: 12px; }
+.finder-search:focus-within { outline: 2px solid #8bb8df; outline-offset: 1px; }
+.finder-body { display: flex; min-height: 0; height: auto; }
+.finder-sidebar { width: 154px; flex-shrink: 0; padding: 17px 9px; border-right: 1px solid #dce5ec; background: linear-gradient(140deg,#edf3f7,#e7eef3); }
+.sidebar-label { margin: 0 0 9px; padding: 0 9px; color: #738695; font-size: 11px; line-height: 16px; font-weight: 500; }
+.sidebar-folder { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 36px; padding: 6px 8px; border-radius: 6px; background: none; color: #516d82; text-align: left; font-size: 12px; }
+.sidebar-folder .desktop-object { width: 24px; height: 24px; object-fit: contain; flex-shrink: 0; }
+.sidebar-folder[aria-current=true] { background: #ffffffc9; color: #315675; box-shadow: 0 1px 2px #243f5010; }
+.finder-content { position: relative; flex: 1; min-width: 0; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; background: #fcfdff; }
+.finder-empty { position: absolute; inset: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; pointer-events: none; }
+.empty-location-icon { width: 64px; height: 64px; margin-bottom: 14px; opacity: .45; }
+.finder-empty h2 { margin: 0 0 8px; font-size: 14px; font-weight: 500; color: #687f91; }
+.finder-empty p { max-width: 260px; margin: 0; color: #7d91a1; font-size: 12px; line-height: 18px; }
+.finder-status { display: flex; align-items: center; gap: 7px; height: 30px; padding: 0 12px; border-top: 1px solid #d9e2e9; background: #eef3f7; font-size: 11px; color: #6c8293; }
+.finder-status .location-icon { width: 17px; height: 17px; }
+.finder-status .count { margin-left: auto; }
+.finder-status .chevron { color: #9aabb7; }
+.tool-panel { height: auto; min-height: 0; }
+.tool-footer { height: 30px; }
+.tool-intro { min-height: 80px; height: auto; }
+.library-feedback { z-index: 30; bottom: calc(var(--work-bottom) - 6px); }
+
+@media (hover: hover) and (pointer: fine) {
+  .folder:active .folder-art { transform: none; }
+  .tool-launch:active .tool-launch-art { transform: none; }
+  .tool-launch:hover .tool-tip { opacity: 1; transform: translate(-50%,0); }
+  .tool-launch[aria-expanded=true] .tool-tip { opacity: 0; }
+  .sidebar-folder:not([aria-current=true]):hover { background: #dce7f0; }
+}
+@media (max-width: 540px) {
+  :root { --desktop-gutter: 14px; --work-top: 10px; --dock-height: 88px; }
+  .launchpad { padding-top: 18px; }
+  .folders { grid-template-columns: 116px; gap: 12px; }
+  .folder { width: 116px; min-height: 118px; }
+  .folder-art { width: 62px; height: 62px; margin-top: 10px; margin-bottom: 10px; }
+  .folder-note { font-size: 10px; }
+  .tool-dock { gap: 3px; padding: 9px 10px 7px; border-radius: 19px; }
+  .tool-launch { width: 66px; }
+  .tool-launch-art, .tool-launch-art img { width: 43px; height: 43px; }
+  .tool-launch-name { font-size: 11px; }
+  .finder, .finder.library-open, .tool-window { width: calc(100vw - 16px); max-width: calc(100vw - 16px); height: var(--work-height); min-height: min(260px,var(--work-height)); resize: none; border-radius: 12px; }
+  .finder.maximized, .tool-window.maximized { left: 8px; width: calc(100vw - 16px) !important; }
+  .finder-sidebar { width: 112px; padding: 14px 5px; }
+  .library-open .finder-sidebar { display: none; }
+  .sidebar-folder { padding: 7px 5px; font-size: 11px; gap: 6px; }
+  .sidebar-folder .desktop-object { width: 20px; height: 20px; }
+  .finder-search { width: 128px; min-width: 68px; }
+  .finder-search input { font-size: 16px; }
+  .finder-toolbar { padding: 0 8px; gap: 4px; }
+  .view-toggle { margin-left: 3px; }
+  .window-heading { left: 90px; right: 16px; }
+  .finder-status { gap: 5px; padding: 0 8px; font-size: 10px; }
+  .finder-status .count { font-size: 9px; }
+  .tool-tip { max-width: 210px; white-space: normal; width: max-content; text-align: center; }
+}
+@media (max-height: 520px) {
+  :root { --work-top: 8px; --dock-height: 80px; --dock-bottom: 8px; }
+  .launchpad { padding-top: 12px; }
+  .folders { grid-template-columns: repeat(3, minmax(96px,116px)); gap: 6px; }
+  .folder { width: 100%; min-height: 104px; padding-inline: 2px; }
+  .folder-art { width: 54px; height: 54px; margin-top: 8px; margin-bottom: 8px; }
+  .folder-note { font-size: 9px; }
+  .tool-dock { padding-top: 7px; padding-bottom: 5px; }
+  .tool-launch-art, .tool-launch-art img { width: 38px; height: 38px; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .tool-dock { background: #cdd8de; backdrop-filter: none; }
+  .tool-tip { background: #edf3f6; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .folder:hover .folder-art, .tool-launch:hover .tool-launch-art { transform: none; }
+}

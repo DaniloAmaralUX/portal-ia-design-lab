@@ -1,0 +1,22 @@
+{
+  "skills": {
+    "url": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/82ecf7cbdb43684403c7125efa160be04a33dca5/assets/Code%20Block/SVG/ic_fluent_code_block_48_color.svg",
+    "path": "assets/Code Block/SVG/ic_fluent_code_block_48_color.svg",
+    "revision": "82ecf7cbdb43684403c7125efa160be04a33dca5"
+  },
+  "plugins": {
+    "url": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/82ecf7cbdb43684403c7125efa160be04a33dca5/assets/Puzzle%20Piece/SVG/ic_fluent_puzzle_piece_48_color.svg",
+    "path": "assets/Puzzle Piece/SVG/ic_fluent_puzzle_piece_48_color.svg",
+    "revision": "82ecf7cbdb43684403c7125efa160be04a33dca5"
+  },
+  "recursos": {
+    "url": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/82ecf7cbdb43684403c7125efa160be04a33dca5/assets/Library/SVG/ic_fluent_library_32_color.svg",
+    "path": "assets/Library/SVG/ic_fluent_library_32_color.svg",
+    "revision": "82ecf7cbdb43684403c7125efa160be04a33dca5"
+  },
+  "blocos": {
+    "url": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/82ecf7cbdb43684403c7125efa160be04a33dca5/assets/Apps/SVG/ic_fluent_apps_48_color.svg",
+    "path": "assets/Apps/SVG/ic_fluent_apps_48_color.svg",
+    "revision": "82ecf7cbdb43684403c7125efa160be04a33dca5"
+  }
+}

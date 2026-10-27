@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+<defs><linearGradient id="page" x1="11" y1="5" x2="34" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#FAFCFF"/><stop offset="1" stop-color="#CCDCE9"/></linearGradient><linearGradient id="square" x1="24" y1="23" x2="37" y2="39" gradientUnits="userSpaceOnUse"><stop stop-color="#BDA3FA"/><stop offset="1" stop-color="#8068CA"/></linearGradient><linearGradient id="circle" x1="10" y1="10" x2="23" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#75CDF2"/><stop offset="1" stop-color="#338BC8"/></linearGradient><linearGradient id="triangle" x1="30" y1="9" x2="39" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE38A"/><stop offset="1" stop-color="#F0A53E"/></linearGradient></defs>
+<path d="M8 7a4 4 0 0 1 4-4h21l8 8v30a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V7Z" fill="#839FB6" opacity=".5"/>
+<path d="M7 6a4 4 0 0 1 4-4h21l8 8v30a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V6Z" fill="url(#page)"/><path d="M32 2v5a3 3 0 0 0 3 3h5l-8-8Z" fill="#AAC1D6"/>
+<circle cx="17.5" cy="18.5" r="7.5" fill="url(#circle)"/><path d="m31.8 12 6.3 11H25.5l6.3-11Z" fill="url(#triangle)" stroke="#E9AB4B" stroke-width=".4" stroke-linejoin="round"/>
+<rect x="24" y="28" width="13" height="13" rx="3" fill="url(#square)"/><path d="m16 28 6.5 6.5L16 41l-6.5-6.5L16 28Z" fill="#62B996"/>
+<path d="M10 6v30" stroke="#FFF" stroke-opacity=".55" stroke-linecap="round"/>
+</svg>

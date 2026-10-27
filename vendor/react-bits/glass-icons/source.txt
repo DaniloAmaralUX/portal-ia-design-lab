@@ -1,0 +1,4 @@
+https://reactbits.dev/components/glass-icons
+https://github.com/DavidHDev/react-bits
+e12c22192ac7b4b452c5e2feb9b586d74765d696
+Adapted to standalone DOM buttons; labels always visible; no intro; reduced motion and transparency fallbacks.

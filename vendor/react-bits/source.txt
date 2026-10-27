@@ -1,0 +1,3 @@
+https://github.com/DavidHDev/react-bits
+e12c22192ac7b4b452c5e2feb9b586d74765d696
+Strands source supplied by the user. React lifecycle adapted to vanilla JS; original GLSL shaders preserved.

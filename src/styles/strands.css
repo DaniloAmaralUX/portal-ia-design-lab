@@ -1,0 +1,14 @@
+/* Strands, React Bits: original glass orb, warm core and cyan/blue ribbons. */
+html,body{background:#060608}
+.wallpaper{background:#060608}
+.wallpaper .landscape,.wallpaper .grain,.wallpaper:after{display:none}
+.strands-container{position:absolute;inset:0;width:100%;height:100%;background:transparent;pointer-events:none;-webkit-tap-highlight-color:transparent}
+.strands-container canvas{display:block;width:100%;height:100%;position:absolute;inset:0}
+.strands-fallback{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84vmin;height:84vmin;border-radius:50%;border:1px solid #a4bdcf21;background:radial-gradient(ellipse at 68% 66%,#174a8c1c,transparent 55%),radial-gradient(ellipse at 27% 48%,#a7664021,transparent 45%),#101114;box-shadow:inset -12px 8px 40px #b7d5ff08,inset 1px 1px 3px #ffffff19;overflow:hidden}
+.strands-fallback:before{content:'';position:absolute;left:-6%;right:-6%;top:40%;height:20%;border-radius:50%;background:conic-gradient(from 100deg,#152c59,#4cbbed,#e8fcff,#ffdaab,#bb5d4c,#1d3f8b);filter:blur(13px);transform:rotate(-14deg);opacity:.8}
+.strands-fallback:after{content:'';position:absolute;left:-10%;right:-10%;top:47%;height:2px;border-radius:50%;background:linear-gradient(90deg,transparent,#fff1d4,#fff,#90d7ff,transparent);box-shadow:0 0 15px 3px #fff1ca59;transform:rotate(-13deg)}
+.strands-ready .strands-fallback{display:none}
+.tool-dock{background:linear-gradient(145deg,#bdced02d,#8fa8ad1c);border-color:#e0f2ff33;box-shadow:inset 0 1px 0 #ffffff25,inset 0 -1px 0 #0004,0 8px 24px #0005,0 2px 4px #0003}
+.folder-name{color:#f4f8fc;text-shadow:0 1px 3px #0009}
+.tool-dock .tool-running{box-shadow:none}.tool-launch[data-running=true] .tool-running{background:#cce4f9;box-shadow:0 0 3px #9ebeff66}
+@media(prefers-reduced-transparency:reduce){.tool-dock{background:#36434d}}

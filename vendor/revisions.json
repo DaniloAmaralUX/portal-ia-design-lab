@@ -1,0 +1,14 @@
+{
+  "tweakcn": {
+    "repo": "jnsahaj/tweakcn",
+    "sha": "a3b47b37cba97dd637de517aab52c45ec0f83456"
+  },
+  "tailark": {
+    "repo": "tailark/blocks",
+    "sha": "8139698115c1341bfd2e3e286c04bb4d8146f472"
+  },
+  "lucide": {
+    "repo": "lucide-icons/lucide",
+    "sha": "7faf87628a1ad6175975bc595344337ce14a7db4"
+  }
+}
