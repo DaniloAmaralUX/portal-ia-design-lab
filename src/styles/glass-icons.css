@@ -2,6 +2,7 @@
 .glass-tile { position: relative; flex: none; overflow: visible; pointer-events: none; --glass-radius: 30%; }
 .glass-icon-plate, .glass-icon-glass, .glass-icon-face { position: absolute; inset: 0; border-radius: var(--glass-radius); pointer-events: none; }
 .glass-icon-plate { background: var(--glass-plate); transform: rotate(30deg); transform-origin: 100% 100%; box-shadow: inset 0 1px 1px #ffffff30; }
+.tool-dock .glass-icon-plate { transform: translate(11.7%,-11.7%); transform-origin: center; }
 .glass-icon-glass { overflow: hidden; background: linear-gradient(145deg,#ffffff36,#ffffff09); border: 1px solid #ffffff38; backdrop-filter: blur(4px) saturate(1.4); -webkit-backdrop-filter: blur(4px) saturate(1.4); box-shadow: inset 1px 1px 1px #ffffff45,inset -1px -1px 2px #ffffff12,0 9px 18px -11px #0009; }
 .glass-icon-glass::after { content: ''; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(135deg,#ffffff44,transparent 34%,transparent 72%,#ffffff1c); }
 .glass-icon-face { z-index: 2; display: grid; place-items: center; }
@@ -11,7 +12,7 @@
 .glass-gpu .glass-icon-plate, .glass-gpu .glass-icon-glass { visibility: hidden; }
 .tool-running { position: relative; z-index: 2; }
 .folder:focus-visible .glass-tile { outline: 2px solid #c7e0ff; outline-offset: 5px; }
-.tool-launch:focus-visible { outline-color: #315e87; outline-offset: 5px; }
+.tool-launch:focus-visible { outline-color: #c5ddf4; outline-offset: 2px; }
 @media (prefers-reduced-transparency: reduce) {
  .glass-icon-glass { background: var(--glass-plate); backdrop-filter: none; -webkit-backdrop-filter: none; }
 }

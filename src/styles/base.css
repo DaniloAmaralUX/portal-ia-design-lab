@@ -4,7 +4,7 @@
   --ease-in-out: cubic-bezier(.77, 0, .175, 1);
   --desktop-gutter: 20px;
   --work-top: 16px;
-  --dock-height: 96px;
+  --dock-height: 76px;
   --dock-bottom: max(14px, env(safe-area-inset-bottom));
   --work-bottom: calc(var(--dock-height) + var(--dock-bottom) + 16px);
   --work-height: calc(100svh - var(--work-top) - var(--work-bottom));

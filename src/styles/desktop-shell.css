@@ -15,15 +15,15 @@
 .folder.running::after { content: ''; position: absolute; width: 4px; height: 4px; bottom: -3px; border-radius: 50%; background: #d4e8ff; }
 
 /* App names stay visible; a tooltip adds the action rather than hiding the identity. */
-.tool-dock { position: fixed; z-index: 20; bottom: var(--dock-bottom); left: 50%; transform: translateX(-50%); display: flex; align-items: stretch; gap: 6px; padding: 10px 12px 8px; margin: 0; border: 1px solid #ffffff63; border-radius: 22px; background: linear-gradient(140deg,#edf3f3b8,#c3d0d58a); backdrop-filter: blur(24px) saturate(1.15); box-shadow: inset 0 1px 0 #ffffff50,0 8px 26px #0005; }
-.tool-launch { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 4px; width: 72px; padding: 0 4px; border-radius: 12px; color: #223b4b; background: transparent; }
-.tool-launch-art { display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; transition: transform 150ms var(--ease-out); }
-.tool-launch-art img { display: block; width: 48px; height: 48px; object-fit: contain; pointer-events: none; -webkit-user-drag: none; filter: drop-shadow(0 3px 2px #1d344b29); }
-.tool-launch-name { position: relative; z-index: 2; display: block; font-size: 11px; line-height: 16px; font-weight: 500; color: #233d4e; }
-.tool-running { display: block; width: 4px; height: 4px; margin-top: 0; border-radius: 50%; background: transparent; }
-.tool-launch[data-running=true] .tool-running { background: #30566f; }
-.tool-tip { z-index: 4; position: absolute; bottom: calc(100% + 16px); left: 50%; transform: translate(-50%,3px); padding: 8px 12px; border-radius: 8px; border: 1px solid #ffffff70; background: #edf3f3f2; color: #324b5d; box-shadow: 0 4px 15px #0004; opacity: 0; pointer-events: none; white-space: nowrap; font-size: 12px; line-height: 18px; transition: opacity 100ms ease,transform 120ms var(--ease-out); }
-.tool-tip small { display: block; font-size: 11px; line-height: 16px; color: #5e7486; }
+.tool-dock { position: fixed; z-index: 20; bottom: var(--dock-bottom); left: 50%; transform: translateX(-50%); display: flex; align-items: stretch; gap: 4px; max-width: calc(100vw - 24px); padding: 7px; margin: 0; border: 1px solid #ffffff29; border-radius: 23px; background: linear-gradient(145deg,#333c3be0,#1c2524c9); backdrop-filter: blur(28px) saturate(1.3); -webkit-backdrop-filter: blur(28px) saturate(1.3); box-shadow: inset 0 1px 0 #ffffff1f,0 2px 4px #0003,0 12px 36px #0005; }
+.tool-launch { position: relative; display: flex; flex-direction: row; align-items: center; justify-content: flex-start; gap: 9px; width: 108px; min-height: 52px; padding: 7px 10px; border-radius: 16px; color: #eef4f2; background: transparent; transition: background-color 140ms ease,box-shadow 140ms ease; }
+.tool-launch[aria-expanded=true] { background: #ffffff12; box-shadow: inset 0 0 0 1px #ffffff12; }
+.tool-launch-art { display: grid; place-items: center; width: 38px; height: 38px; flex-shrink: 0; }
+.tool-launch-name { position: relative; z-index: 2; display: block; font-size: 12px; line-height: 16px; font-weight: 500; color: #edf3f0; }
+.tool-running { display: block; position: absolute; bottom: 3px; left: calc(50% + 16px); width: 12px; height: 2px; margin: 0; border-radius: 2px; background: transparent; }
+.tool-launch[data-running=true] .tool-running { background: #dcece5; }
+.tool-tip { z-index: 4; position: absolute; bottom: calc(100% + 16px); left: 50%; transform: translate(-50%,3px); padding: 8px 12px; border-radius: 10px; border: 1px solid #ffffff29; background: #25302df5; color: #edf3f0; box-shadow: 0 4px 15px #0004; opacity: 0; pointer-events: none; white-space: nowrap; font-size: 12px; line-height: 18px; transition: opacity 100ms ease,transform 120ms var(--ease-out); }
+.tool-tip small { display: block; font-size: 11px; line-height: 16px; color: #b6c5bf; }
 .tool-launch:focus-visible .tool-tip { opacity: 1; transform: translate(-50%,0); }
 .tool-launch:active .tool-launch-art { transform: none; }
 
@@ -103,21 +103,22 @@
 @media (hover: hover) and (pointer: fine) {
   .folder:active .folder-art { transform: none; }
   .tool-launch:active .tool-launch-art { transform: none; }
+  .tool-launch:hover { background: #ffffff0c; }
+  .tool-launch[aria-expanded=true]:hover { background: #ffffff19; }
   .tool-launch:hover .tool-tip { opacity: 1; transform: translate(-50%,0); }
   .tool-launch[aria-expanded=true] .tool-tip { opacity: 0; }
   .sidebar-folder:not([aria-current=true]):hover { background: #dce7f0; }
 }
 @media (max-width: 540px) {
-  :root { --desktop-gutter: 14px; --work-top: 10px; --dock-height: 88px; }
+  :root { --desktop-gutter: 14px; --work-top: 10px; --dock-height: 72px; }
   .launchpad { padding-top: 18px; }
   .folders { grid-template-columns: 116px; gap: 12px; }
   .folder { width: 116px; min-height: 118px; }
   .folder-art { width: 62px; height: 62px; margin-top: 10px; margin-bottom: 10px; }
   .folder-note { font-size: 10px; }
-  .tool-dock { gap: 3px; padding: 9px 10px 7px; border-radius: 19px; }
-  .tool-launch { width: 66px; }
-  .tool-launch-art, .tool-launch-art img { width: 43px; height: 43px; }
-  .tool-launch-name { font-size: 11px; }
+  .tool-dock { gap: 2px; padding: 6px; border-radius: 21px; }
+  .tool-launch { width: 94px; min-height: 48px; gap: 7px; padding: 7px 8px; border-radius: 14px; }
+  .tool-launch-art { width: 32px; height: 32px; }
   .finder, .finder.library-open, .tool-window { width: calc(100vw - 16px); max-width: calc(100vw - 16px); height: var(--work-height); min-height: min(260px,var(--work-height)); resize: none; border-radius: 12px; }
   .finder.maximized, .tool-window.maximized { left: 8px; width: calc(100vw - 16px) !important; }
   .finder-sidebar { width: 112px; padding: 14px 5px; }
@@ -134,18 +135,19 @@
   .tool-tip { max-width: 210px; white-space: normal; width: max-content; text-align: center; }
 }
 @media (max-height: 520px) {
-  :root { --work-top: 8px; --dock-height: 80px; --dock-bottom: 8px; }
+  :root { --work-top: 8px; --dock-height: 64px; --dock-bottom: 8px; }
   .launchpad { padding-top: 12px; }
   .folders { grid-template-columns: repeat(3, minmax(96px,116px)); gap: 6px; }
   .folder { width: 100%; min-height: 104px; padding-inline: 2px; }
   .folder-art { width: 54px; height: 54px; margin-top: 8px; margin-bottom: 8px; }
   .folder-note { font-size: 9px; }
-  .tool-dock { padding-top: 7px; padding-bottom: 5px; }
-  .tool-launch-art, .tool-launch-art img { width: 38px; height: 38px; }
+  .tool-dock { padding-top: 6px; padding-bottom: 6px; }
+  .tool-launch { min-height: 44px; padding-block: 6px; }
+  .tool-launch-art { width: 30px; height: 30px; }
 }
 @media (prefers-reduced-transparency: reduce) {
-  .tool-dock { background: #cdd8de; backdrop-filter: none; }
-  .tool-tip { background: #edf3f6; }
+  .tool-dock { background: #25302d; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .tool-tip { background: #25302d; }
 }
 @media (prefers-reduced-motion: reduce) {
   .folder:hover .folder-art, .tool-launch:hover .tool-launch-art { transform: none; }

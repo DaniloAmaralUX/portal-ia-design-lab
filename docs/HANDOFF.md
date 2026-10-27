@@ -19,6 +19,7 @@ Ordem dos scripts: `window-manager` → `desktop` → `interfaces` → `tools` �
 - O fundo usa `src/assets/backgrounds/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg`, fornecido pelo usuário em 27 de outubro de 2026. A fotografia é incorporada ao HTML e preenche a tela com `object-fit: cover`, centralizada. `strands.js` e seus shaders originais permanecem arquivados, sem participar do build nem consumir GPU.
 - `glass-icons.js`: adapta o renderer Glass Icons do React Bits aos seis botões existentes. São dois canvases compartilhados, um por grupo, com redraw apenas durante interação ou resize. Os shaders, gradientes e cálculos ópticos originais são preservados. Rótulos ficam sempre visíveis; não há intro, e ações por teclado não disparam movimento decorativo. Sem WebGL, o fallback usa CSS. Origem e revisão em `vendor/react-bits/glass-icons/source.txt`.
 - `desktop-shell.css`: única fonte para geometria de janelas, dock e área de trabalho. O dock tem espaço reservado para evitar sobreposição com rodapés.
+- O dock usa uma variante compacta horizontal: vidro escuro, ícone à esquerda do rótulo e indicador discreto de aplicativo aberto. Seus Glass Icons usam `plate: 'offset'` e `spread: .45`, tanto no renderer quanto no fallback CSS; os atalhos do desktop mantêm a placa inclinada.
 - `base.css`, `library.css`, `tool-panels.css` e `glass-icons.css`: reset/tokens e estilos dos componentes correspondentes.
 
 As skins anteriores não fazem parte deste repositório. Evite voltar a empilhar folhas de estilo de protótipos antigos para corrigir componentes atuais.

@@ -291,12 +291,12 @@ const poseOf = (state, s) => {
 };
 
 
-function mountGlassIcons(root, colors) {
+function mountGlassIcons(root, colors, {plate='tilt',spread=.5}={}) {
  const tiles = [...root.querySelectorAll('.glass-tile')];
  if (!tiles.length || !window.ResizeObserver || !window.IntersectionObserver || !window.WebGL2RenderingContext || matchMedia('(prefers-reduced-transparency: reduce)').matches) return () => {};
  const canvas = document.createElement('canvas'); canvas.className='glass-icons-canvas'; canvas.setAttribute('aria-hidden','true'); root.append(canvas);
  const size = tiles[0].clientWidth;
- const settingsRef = { current: {count:tiles.length,tile:size,radius:size*.3,edge:Math.max(2,Math.round(size*.156)),strength:size*.24,split:0,soft:1+size*.03,shine:.85,shade:.35,tint:'#dfdfdf',tintOpacity:.2,plate:'tilt',hover:'press',labels:'none',tilt:30,spread:.5,parallax:1,intro:false,colors:colors.map(color=>GRADIENTS[color]),colorKey:colors.join('|')} };
+ const settingsRef = { current: {count:tiles.length,tile:size,radius:size*.3,edge:Math.max(2,Math.round(size*.156)),strength:size*.24,split:0,soft:1+size*.03,shine:.85,shade:.35,tint:'#dfdfdf',tintOpacity:.2,plate,hover:'press',labels:'none',tilt:30,spread,parallax:1,intro:false,colors:colors.map(color=>GRADIENTS[color]),colorKey:colors.join('|')} };
  const plateRefs={current:tiles.map(tile=>tile.querySelector('.glass-icon-plate'))};
  const glassRefs={current:tiles.map(tile=>tile.querySelector('.glass-icon-glass'))};
  const faceRefs={current:tiles.map(tile=>tile.querySelector('.glass-icon-face'))};
@@ -676,6 +676,6 @@ for (const button of document.querySelectorAll('.folder,.tool-launch')) {
  art.style.setProperty('--glass-plate',GRADIENTS[app.color]);
  art.innerHTML='<span class="glass-icon-plate"></span><span class="glass-icon-glass"></span><span class="glass-icon-face"><span class="glass-icon-glyph">'+toolData.icons[app.symbol]+'</span></span>';
 }
-const cleanups = [mountGlassIcons(document.querySelector('.folders'),['blue','purple','teal']),mountGlassIcons(document.querySelector('.tool-dock'),['orange','indigo','green'])];
+const cleanups = [mountGlassIcons(document.querySelector('.folders'),['blue','purple','teal']),mountGlassIcons(document.querySelector('.tool-dock'),['orange','indigo','green'],{plate:'offset',spread:.45})];
 window.addEventListener('pagehide',()=>cleanups.forEach(cleanup=>cleanup()),{once:true});
 })();
