@@ -1,0 +1,6 @@
+https://reactbits.dev/backgrounds/aeroshards
+https://github.com/DavidHDev/react-bits
+Revision: e12c22192ac7b4b452c5e2feb9b586d74765d696
+Original WGSL shaders, simulation, and vgpu renderer preserved.
+React lifecycle adapted to standalone JavaScript. Transparent photographic overlay at 25% opacity; shardColor/accentColor #f97316, speed 0.87.
+Pointer interactions and markers disabled; 30 FPS render cap; DPR capped at 1.25; pauses while hidden; disabled for reduced motion/transparency; photograph remains if WebGPU is unavailable.

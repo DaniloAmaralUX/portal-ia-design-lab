@@ -1,0 +1,6 @@
+/* The photograph stays opaque below the transparent, decorative GPU layer. */
+.aero-shards-overlay { position: absolute; inset: 0; z-index: 1; overflow: hidden; opacity: .25; pointer-events: none; }
+.aero-shards-canvas { display: block; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+@media (prefers-reduced-motion: reduce), (prefers-reduced-transparency: reduce) {
+  .aero-shards-overlay { display: none; }
+}

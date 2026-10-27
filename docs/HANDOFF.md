@@ -8,6 +8,8 @@ A aplicação roda no navegador com HTML, CSS e JavaScript. Node.js é necessár
 
 `scripts/build.cjs` combina as views e os dados em `src/index.template.html`. Os placeholders são resolvidos em uma única passagem, evitando interpretar conteúdo dos documentos como parte do template. JSON é escapado antes da inclusão em tags `script`.
 
+O Aero Shards tem um bundle IIFE separado, preparado pelo esbuild e incorporado ao mesmo HTML, sem imports de rede. `vgpu@0.3.1`, `@vgpu/core` e `@vgpu/wgsl` fornecem o renderer WebGPU. As dependências e o lockfile são versionados; não há React em runtime. O override do pacote transitivo `@modelcontextprotocol/server` para `2.3.0` corrige alertas de segurança da dependência de tooling do vgpu. Esse servidor não participa do bundle nem é executado pela aplicação.
+
 Ordem dos scripts: `window-manager` → `desktop` → `interfaces` → `tools` → `glass-icons`. Eles compartilham o escopo de um script clássico para manter a abertura offline do HTML; não converta um arquivo isolado para módulo sem ajustar o build e seus consumidores.
 
 ## Donos de estado e de estilo
@@ -17,6 +19,7 @@ Ordem dos scripts: `window-manager` → `desktop` → `interfaces` → `tools` �
 - `interfaces.js`: catálogo, busca, filtros, detalhes e exportação das skills.
 - `tools.js`: os três aplicativos e seus estados locais.
 - O fundo usa `src/assets/backgrounds/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg`, fornecido pelo usuário em 27 de outubro de 2026. A fotografia é incorporada ao HTML e preenche a tela com `object-fit: cover`, centralizada. `strands.js` e seus shaders originais permanecem arquivados, sem participar do build nem consumir GPU.
+- `aero-shards.js` conserva os nove shaders WGSL, a simulação e a composição do componente React Bits original. Adapta apenas o lifecycle: laranja `#f97316`, velocidade `0.87`, fundo transparente, opacidade CSS de 25%, sem marcadores ou eventos de ponteiro. Render limitado a 30 FPS e DPR 1.25. A animação pausa com a aba oculta e é desmontada quando movimento/transparência reduzidos são ativados; sem WebGPU, a fotografia continua visível. Recursos são liberados ao sair, e recriados ao voltar pelo histórico do navegador. Estado de diagnóstico em `data-aero-state`.
 - `glass-icons.js`: adapta o renderer Glass Icons do React Bits aos seis botões existentes. São dois canvases compartilhados, um por grupo, com redraw apenas durante interação ou resize. Os shaders, gradientes e cálculos ópticos originais são preservados. Rótulos ficam sempre visíveis; não há intro, e ações por teclado não disparam movimento decorativo. Sem WebGL, o fallback usa CSS. Origem e revisão em `vendor/react-bits/glass-icons/source.txt`.
 - `desktop-shell.css`: única fonte para geometria de janelas, dock e área de trabalho. O dock tem espaço reservado para evitar sobreposição com rodapés.
 - O dock usa uma variante compacta horizontal: vidro escuro, ícone à esquerda do rótulo e indicador discreto de aplicativo aberto. Seus Glass Icons usam `plate: 'offset'` e `spread: .45`, tanto no renderer quanto no fallback CSS; os atalhos do desktop mantêm a placa inclinada.
@@ -40,6 +43,7 @@ Nunca versionar `.env*`, `.vercel/`, tokens, dados de usuário, dependências in
 - Blocos contém três composições portadas do Tailark. Exporta HTML/CSS, não componentes React com todas as dependências do projeto original.
 - Ícones contém a seleção de 90 SVGs registrada em `vendor/lucide/icons`.
 - O fundo fotográfico não requer WebGL. Glass Icons usa WebGL 2 com fallback CSS.
+- Aero Shards precisa de WebGPU em contexto seguro. O fundo fica só com a foto em plataformas sem suporte; não há download extra, tela de erro ou bloqueio da navegação.
 - Copiar depende das permissões e APIs do navegador. Há seleção manual quando os mecanismos de cópia não estão disponíveis. O adaptador de clipboard do navegador de validação retornou vazio; não foi usado como confirmação da cópia nativa.
 
 ## Como validar alterações

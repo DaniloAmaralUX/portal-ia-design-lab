@@ -106,6 +106,13 @@ async function test(label,run){await run();assert.deepEqual(errors,[]);checks++;
   const original=fs.readFileSync(path.join(root,'vendor/react-bits/glass-icons/GlassIcons.original.jsx'),'utf8'),port=fs.readFileSync(path.join(root,'src/scripts/glass-icons.js'),'utf8');
   for(const name of ['VERTEX','FRAGMENT']){const regexp=new RegExp('const '+name+' = `([\\s\\S]*?)`;');assert.equal(original.match(regexp)[1].replace(/\r\n/g,'\n'),port.match(regexp)[1].replace(/\r\n/g,'\n'))}
  });
+ await test('Aero Shards preserves original WGSL and leaves photo and clicks available without WebGPU',()=>{
+  const original=fs.readFileSync(path.join(root,'vendor/react-bits/aero-shards/AeroShards.original.jsx'),'utf8').replace(/\r\n/g,'\n'),port=fs.readFileSync(path.join(root,'src/scripts/aero-shards.js'),'utf8').replace(/\r\n/g,'\n');
+  const shaders=[...original.matchAll(/const ([A-Z_]+_SHADER) = `([\s\S]*?)`;/g)];assert.equal(shaders.length,9);
+  for(const [,name,shader] of shaders){const match=port.match(new RegExp('const '+name+' = `([\\s\\S]*?)`;'));assert.ok(match,name);assert.equal(match[1],shader,name)}
+  const layer=$('#aero-shards-overlay');assert.equal(layer.dataset.aeroState,'unsupported');assert.equal(layer.querySelector('canvas'),null);
+  assert.equal(w.getComputedStyle(layer).pointerEvents,'none');assert.equal(w.getComputedStyle(layer).opacity,'0.25');assert.equal(layer.closest('.wallpaper').getAttribute('aria-hidden'),'true');
+ });
  await test('wallpaper embeds the supplied photograph and archived Strands shaders remain intact',()=>{
   const original=fs.readFileSync(path.join(root,'vendor/react-bits/Strands.original.jsx'),'utf8'),port=fs.readFileSync(path.join(root,'src/scripts/strands.js'),'utf8');
   for(const name of ['VERT','FRAG']){const regexp=new RegExp('const '+name+' = `([\\s\\S]*?)`;');const a=original.match(regexp)[1],b=port.match(regexp)[1];assert.equal(crypto.createHash('sha256').update(a).digest('hex'),crypto.createHash('sha256').update(b).digest('hex'))}
