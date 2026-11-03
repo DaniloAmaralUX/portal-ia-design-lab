@@ -1,14 +1,14 @@
 /* Folder contents are typed resources; the skill document reader lives in library.css. */
-.resource-catalog { padding: 26px; min-height: 100%; background: #f7f8fc; color: var(--ui-text); }
+.resource-catalog { padding: 26px; min-height: 100%; background: #fcfcfd; color: var(--ui-text); }
 .resource-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin: 0 0 22px; }
-.resource-heading h2 { margin: 0 0 7px; font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -.7px; }
+.resource-heading h2 { margin: 0 0 7px; font-size: 23px; line-height: 29px; font-weight: 600; letter-spacing: -.45px; }
 .resource-heading p { max-width: 480px; margin: 0; color: var(--ui-muted); font-size: 13px; line-height: 21px; }
-.resource-count { flex-shrink: 0; margin-top: 6px; padding: 6px 10px; border-radius: 16px; background: #e9eef7; color: #52647b; font-size: 11px; white-space: nowrap; }
+.resource-count { flex-shrink: 0; margin-top: 6px; padding: 6px 10px; border-radius: 5px; background: #e9eef7; color: #52647b; font-size: 11px; white-space: nowrap; }
 .folder-files { display: grid; grid-template-columns: repeat(auto-fill,minmax(min(240px,100%),1fr)); align-items: stretch; gap: 14px; }
-.resource-card, .interface-file { min-width: 0; margin: 0; padding: 20px; border: 1px solid #27384d0e; border-radius: 20px; background: #fff; box-shadow: 0 2px 5px #182b4405; }
+.resource-card, .interface-file { min-width: 0; margin: 0; padding: 20px; border: 1px solid #dce4eb; border-radius: 7px; background: #fff; box-shadow: 0 2px 5px #182b4405; }
 .resource-card { display: flex; flex-direction: column; }
 .resource-card-heading { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; }
-.resource-card-icon, .resource-folder-icon { display: grid; place-items: center; flex-shrink: 0; width: 42px; height: 42px; border-radius: 13px; background: #edf4ff; color: #007aff; }
+.resource-card-icon, .resource-folder-icon { display: grid; place-items: center; flex-shrink: 0; width: 42px; height: 42px; border-radius: 7px; background: #edf4ff; color: #397ba9; }
 .resource-card-icon svg, .resource-folder-icon svg { width: 23px; height: 23px; }
 .resource-card[data-resource=pstack] .resource-card-icon { color: #7952d8; background: #f1edff; }
 .resource-card[data-resource=hex] .resource-card-icon { color: #208465; background: #eaf7f0; }
@@ -19,40 +19,40 @@
 .resource-author { margin: 4px 0 0; color: var(--ui-muted); font-size: 11px; line-height: 17px; overflow-wrap: anywhere; }
 .resource-description { margin: 0 0 12px; font-size: 13px; line-height: 21px; color: #43526a; }
 .resource-note { margin: 0 0 15px; font-size: 11px; line-height: 18px; color: var(--ui-muted); }
-.resource-command { display: block; margin: 0 0 16px; padding: 11px 12px; border: 1px solid #27384d0b; border-radius: 12px; background: #f5f7fb; color: #52647b; font: 11px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap: anywhere; white-space: pre-wrap; }
+.resource-command { display: block; margin: 0 0 16px; padding: 11px 12px; border: 1px solid #27384d0b; border-radius: 5px; background: #f5f7fb; color: #52647b; font: 11px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap: anywhere; white-space: pre-wrap; }
 .resource-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; padding-top: 4px; }
-.resource-open, .resource-local, .resource-copy { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; max-width: 100%; padding: 9px 12px; border: 0; border-radius: 20px; color: #007aff; background: #eef4fd; font-size: 11px; line-height: 17px; font-weight: 600; text-align: center; text-decoration: none; overflow-wrap: anywhere; transition: background-color 120ms ease,transform 120ms var(--ease-out); }
-.resource-open { background: #007aff; color: #fff; }
+.resource-open, .resource-local, .resource-copy { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; max-width: 100%; padding: 9px 12px; border: 1px solid #cddbe7; border-radius: 7px; color: #397ba9; background: #eef4fd; font-size: 11px; line-height: 17px; font-weight: 600; text-align: center; text-decoration: none; overflow-wrap: anywhere; transition: background-color 120ms ease,transform 120ms var(--ease-out); }
+.resource-open { background: #397ba9; color: #fff; }
 .resource-copy { background: #f3f5f9; color: #51627a; }
 .resource-copy svg { width: 14px; height: 14px; margin-right: 6px; }
 .resource-copy.copied { color: #1d7850; background: #e8f7ee; }
 .resource-sources { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
 .resource-link { color: #61748d; font-size: 10px; line-height: 18px; text-underline-offset: 3px; overflow-wrap: anywhere; }
-.resource-folder { display: flex; align-items: center; gap: 14px; min-width: 0; min-height: 104px; padding: 20px; border: 1px solid #27384d0e; border-radius: 20px; background: #fff; color: var(--ui-text); text-align: left; }
+.resource-folder { display: flex; align-items: center; gap: 14px; min-width: 0; min-height: 104px; padding: 20px; border: 1px solid #dce4eb; border-radius: 7px; background: #fff; color: var(--ui-text); text-align: left; }
 .resource-folder-text { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
 .resource-folder-text strong { font-size: 16px; line-height: 22px; letter-spacing: -.2px; }
 .resource-folder-text > span { color: var(--ui-muted); font-size: 12px; line-height: 18px; }
 .resource-folder-arrow { display: grid; place-items: center; margin-left: auto; color: #7c899b; }
 .resource-folder-arrow svg { width: 18px; height: 18px; }
 .interface-file { display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-height: 210px; color: var(--ui-text); text-align: left; }
-.interface-file.selected { background: #f3f7ff; border-color: #007aff35; }
-.page-file-icon { display: grid; place-items: center; width: 50px; height: 56px; margin-bottom: 15px; border-radius: 13px; background: linear-gradient(145deg,#eaf4ff,#d6e9ff); color: #007aff; }
+.interface-file.selected { background: #f3f7ff; border-color: #397ba935; }
+.page-file-icon { display: grid; place-items: center; width: 50px; height: 56px; margin-bottom: 15px; border-radius: 7px; background: linear-gradient(145deg,#eaf4ff,#d6e9ff); color: #397ba9; }
 .page-file-icon > svg { width: 30px; height: 30px; }
 .page-file-lines { display: none; }
 .file-name { display: block; margin: 0 0 6px; font-size: 16px; line-height: 22px; font-weight: 650; letter-spacing: -.2px; }
 .file-description { color: var(--ui-muted); font-size: 12px; line-height: 19px; }
-.file-open-label { display: block; margin-top: auto; padding-top: 16px; font-size: 12px; line-height: 20px; font-weight: 600; color: #007aff; }
+.file-open-label { display: block; margin-top: auto; padding-top: 16px; font-size: 12px; line-height: 20px; font-weight: 600; color: #397ba9; }
 .resource-empty { padding: 38px 12px; color: var(--ui-muted); text-align: center; font-size: 14px; line-height: 22px; }
-.resource-empty button { min-height: 40px; padding: 8px 16px; border-radius: 20px; background: #eaf2ff; color: #007aff; font-size: 13px; }
+.resource-empty button { min-height: 40px; padding: 8px 16px; border-radius: 7px; background: #eaf2ff; color: #397ba9; font-size: 13px; }
 .manual-copy-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.manual-copy-heading button { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; color: #52647b; background: #dceaff; font-size: 20px; }
+.manual-copy-heading button { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 5px; flex-shrink: 0; color: #52647b; background: #dceaff; font-size: 20px; }
 .finder-content[data-view=list] .folder-files { grid-template-columns: 1fr; }
 .finder-content[data-view=list] .resource-card { padding: 18px 20px; }
 .finder-content[data-view=list] .interface-file { min-height: 120px; }
 @media (hover:hover) and (pointer:fine) {
- .resource-open:hover { background: #0069e0; }
+ .resource-open:hover { background: #306e99; }
  .resource-local:hover, .resource-copy:hover { background: #e4edfa; }
- .resource-folder:hover, .interface-file:hover { background: #f7faff; border-color: #007aff2b; }
+ .resource-folder:hover, .interface-file:hover { background: #f7faff; border-color: #397ba92b; }
 }
 .resource-open:active, .resource-local:active, .resource-copy:active, .resource-folder:active, .interface-file:active { transform: scale(.985); }
 @media (max-width:540px) {

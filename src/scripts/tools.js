@@ -9,6 +9,7 @@ const toolMeta={
 const toolSymbol=name=>toolData.icons[name]||toolData.icons.shapes;
 document.querySelectorAll('[data-symbol]').forEach(el=>{el.innerHTML=toolSymbol(el.dataset.symbol);el.setAttribute('aria-hidden','true')});
 const launchers=[...document.querySelectorAll('.tool-launch')];
+launchers.forEach(button=>{const image=document.createElement('img');image.src=toolData.uiIcons[button.dataset.tool];image.alt='';image.width=48;image.height=48;image.draggable=false;button.querySelector('.tool-launch-art').replaceChildren(image)});
 let activeTool='temas',toolMinimized=false,toolCloseTimer,toolOpenFrame,toolLastTrigger;
 function focusDesktopWindow(which){desktopWindows.activate(which)}
 function syncToolDock(){launchers.forEach(button=>{const running=button.dataset.tool===activeTool&&(toolWindow.open||toolMinimized);button.dataset.running=String(running);button.setAttribute('aria-expanded',String(toolWindow.open&&button.dataset.tool===activeTool))})}

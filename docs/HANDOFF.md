@@ -10,7 +10,7 @@ A aplicação roda no navegador com HTML, CSS e JavaScript. Node.js é necessár
 
 O fundo publicado é apenas a fotografia estática. Aero Shards e seu renderer vgpu permanecem arquivados para referência, sem markup, CSS, bundle ou execução no HTML gerado.
 
-Ordem dos scripts: `window-manager` → `desktop` → `interfaces` → `tools` → `resource-catalog` → `glass-icons`. Eles compartilham o escopo de um script clássico para manter a abertura offline do HTML; não converta um arquivo isolado para módulo sem ajustar o build e seus consumidores.
+Ordem dos scripts: `window-manager` → `desktop` → `interfaces` → `tools` → `resource-catalog`. Eles compartilham o escopo de um script clássico para manter a abertura offline do HTML; não converta um arquivo isolado para módulo sem ajustar o build e seus consumidores.
 
 ## Donos de estado e de estilo
 
@@ -21,10 +21,10 @@ Ordem dos scripts: `window-manager` → `desktop` → `interfaces` → `tools` �
 - `tools.js`: os três aplicativos e seus estados locais.
 - O fundo usa `src/assets/backgrounds/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg`, fornecido pelo usuário em 27 de outubro de 2026. A fotografia é incorporada ao HTML e preenche a tela com `object-fit: cover`, centralizada. `strands.js` e seus shaders originais permanecem arquivados, sem participar do build nem consumir GPU.
 - `aero-shards.js` e `aero-shards.css` estão arquivados e excluídos do build. A camada animada foi removida a pedido do usuário em 03/11/2026.
-- `glass-icons.js`: adapta o renderer Glass Icons do React Bits aos seis botões existentes. São dois canvases compartilhados, um por grupo, com redraw apenas durante interação ou resize. Os shaders, gradientes e cálculos ópticos originais são preservados. Rótulos ficam sempre visíveis; não há intro, e ações por teclado não disparam movimento decorativo. Sem WebGL, o fallback usa CSS. Origem e revisão em `vendor/react-bits/glass-icons/source.txt`.
+- `glass-icons.js` e `glass-icons.css` estão arquivados e excluídos do build. Os seis atalhos voltaram às ilustrações SVG locais, com símbolos representativos e rótulos permanentes.
 - `desktop-shell.css`: única fonte para geometria de janelas, dock e área de trabalho. O dock tem espaço reservado para evitar sobreposição com rodapés.
-- O visual atual é inspirado no iOS: ícones em grade com cantos arredondados, dock claro de vidro, rótulos abaixo dos ícones e painéis translúcidos. Glass Icons usa `plate: 'offset'`, `spread: 0` e raio de 24%, com fallback CSS equivalente. A abertura usa um toque/clique; no celular os painéis têm botão de fechar, enquanto minimizar/ampliar ficam disponíveis no desktop.
-- `base.css`, `library.css`, `tool-panels.css` e `glass-icons.css`: reset/tokens e estilos dos componentes correspondentes.
+- O visual atual restaura o desktop clássico anterior à versão iOS: atalhos em coluna à esquerda, dock compacto horizontal, barra metálica, botões de janela coloridos e controles com cantos menores. O conteúdo e a navegação continuam atuais. Mantém abertura com um toque/clique e Back nas subpastas; no celular a sidebar se oculta para liberar espaço ao conteúdo.
+- `base.css`, `library.css` e `tool-panels.css`: reset/tokens e estilos dos componentes correspondentes.
 - `resources.css`: cartões, arquivos e subpastas do catálogo. A cópia manual é compartilhada com o leitor de skills e fica visível também fora de Interfaces.
 
 As skins anteriores não fazem parte deste repositório. Evite voltar a empilhar folhas de estilo de protótipos antigos para corrigir componentes atuais.
@@ -44,13 +44,13 @@ Nunca versionar `.env*`, `.vercel/`, tokens, dados de usuário, dependências in
 - A ferramenta Temas adapta presets e edição local do tweakcn; contas, comunidade, IA e sincronização do projeto original não estão implementadas.
 - Blocos contém três composições portadas do Tailark. Exporta HTML/CSS, não componentes React com todas as dependências do projeto original.
 - Ícones contém a seleção de 90 SVGs registrada em `vendor/lucide/icons`.
-- O fundo fotográfico não requer WebGL. Glass Icons usa WebGL 2 com fallback CSS.
+- A interface publicada usa SVG, HTML e CSS. O fundo fotográfico e os ícones não requerem WebGL ou WebGPU.
 - Copiar depende das permissões e APIs do navegador. Há seleção manual quando os mecanismos de cópia não estão disponíveis. O adaptador de clipboard do navegador de validação retornou vazio; não foi usado como confirmação da cópia nativa.
 
 ## Como validar alterações
 
 1. Execute `npm test` em um checkout limpo.
-2. Confira em navegador real os seis Glass Icons, o fundo, a seleção e os rótulos do dock, incluindo fallback e redução de movimento.
+2. Confira em navegador real os seis ícones ilustrados, o fundo estático, a seleção e os rótulos do dock.
 3. Abra skills → INTERFACES, busque, filtre, expanda e baixe um ZIP.
 4. Abra uma ferramenta, depois a biblioteca; feche a biblioteca e confirme que o teclado volta à ferramenta.
 5. Confira janelas normais e ampliadas: rodapés devem ficar acima do dock.

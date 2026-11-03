@@ -99,10 +99,10 @@ async function test(label,run){await run();assert.deepEqual(errors,[]);checks++;
   const build=fs.readFileSync(path.join(root,'scripts/build.cjs'),'utf8');assert.ok(!build.includes('Downloads'));assert.ok(!build.includes("'refine'"));
   const shell=fs.readFileSync(path.join(root,'src/styles/desktop-shell.css'),'utf8');assert.ok(shell.includes('z-index: 0'));assert.ok(shell.includes('height: var(--work-height) !important'));assert.ok(shell.includes('.tool-launch-name'));
  });
- await test('six glass launchers retain semantic symbols, labels, and a GPU-free fallback',()=>{
-  const tiles=[...d.querySelectorAll('.glass-tile')];assert.equal(tiles.length,6);
-  assert.deepEqual(tiles.map(tile=>tile.dataset.glassSymbol),['terminal','plug','layers','palette','panels-top-left','shapes']);
-  tiles.forEach(tile=>{assert.ok(tile.closest('button').getAttribute('aria-label'));assert.ok(tile.querySelector('.glass-icon-glyph svg'));assert.ok(tile.querySelector('.glass-icon-plate'));assert.ok(tile.querySelector('.glass-icon-glass'))});
+ await test('six classic illustrated launchers keep accessible controls without a glass renderer',()=>{
+  const buttons=[...d.querySelectorAll('.folder,.tool-launch')];assert.equal(buttons.length,6);
+  buttons.forEach(button=>{assert.ok(button.getAttribute('aria-label'));const image=button.querySelector('.folder-art img,.tool-launch-art img');assert.ok(image);assert.ok(image.src.startsWith('data:image/svg+xml;base64,'));assert.equal(image.alt,'')});
+  assert.equal(d.querySelector('.glass-tile,.glass-icons-canvas'),null);
   const original=fs.readFileSync(path.join(root,'vendor/react-bits/glass-icons/GlassIcons.original.jsx'),'utf8'),port=fs.readFileSync(path.join(root,'src/scripts/glass-icons.js'),'utf8');
   for(const name of ['VERTEX','FRAGMENT']){const regexp=new RegExp('const '+name+' = `([\\s\\S]*?)`;');assert.equal(original.match(regexp)[1].replace(/\r\n/g,'\n'),port.match(regexp)[1].replace(/\r\n/g,'\n'))}
  });

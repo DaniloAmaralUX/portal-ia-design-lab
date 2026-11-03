@@ -20,7 +20,7 @@ $('.launchpad').addEventListener('click',event=>{if(!event.target.closest('.fold
 $('.folders').addEventListener('keydown',event=>{
  if((event.metaKey||event.ctrlKey)&&event.key==='ArrowDown'){event.preventDefault();const active=document.activeElement.closest('.folder');if(active)openFolder(active.dataset.folder,active,true);return;}
  if(!['ArrowLeft','ArrowRight','ArrowDown','ArrowUp','Home','End'].includes(event.key))return;
- event.preventDefault();const index=folders.indexOf(document.activeElement),next=event.key==='Home'?0:event.key==='End'?2:['ArrowDown','ArrowUp'].includes(event.key)?Math.max(0,index):(index+(event.key==='ArrowRight'?1:-1)+3)%3;
+ event.preventDefault();const index=folders.indexOf(document.activeElement),next=event.key==='Home'?0:event.key==='End'?2:(index+(['ArrowRight','ArrowDown'].includes(event.key)?1:-1)+3)%3;
  selectFolder(folders[next]);folders[next].focus();
 });
 names.forEach(name=>{

@@ -13,8 +13,8 @@ Uma mesa de ferramentas para quem cria interfaces, com navegação por janelas e
 - **Temas:** 42 presets do tweakcn, modos claro e escuro, cores, tipografia, bordas, sombras, desfazer/refazer, salvamento local e exportação CSS para Tailwind CSS 4.
 - **Blocos:** três composições adaptadas do Tailark; edição de conteúdo, prévia de computador/celular e exportação HTML autossuficiente.
 - **Ícones:** 90 SVGs Lucide com busca em português, ajuste de tamanho, cor e espessura, cópia e download.
-- **Interface:** visual inspirado no iOS, abertura com um toque/clique, teclado, histórico, busca, janelas de vidro e dock adaptado ao celular. No desktop, as janelas também podem ser movidas, minimizadas e ampliadas.
-- **Glass Icons:** seis atalhos com placas coloridas, refração e movimento do React Bits; símbolos Lucide, rótulos permanentes e fallback sem GPU.
+- **Interface:** visual clássico de desktop, abertura com um toque/clique, teclado, histórico, busca, janelas de vidro e dock adaptado ao celular. No desktop, as janelas também podem ser movidas, minimizadas e ampliadas.
+- **Ícones do desktop:** seis ilustrações SVG incorporadas, com rótulos permanentes; não usam renderização GPU ou placas de vidro.
 - **Background:** fotografia estática de Elliott Engelmann, sem camada animada sobre a imagem.
 
 Os sete links adicionados ficam em `src/data/resources.json`, classificados por tipo e consultados em 03/11/2026. Eles abrem as fontes oficiais ou copiam instruções; não instalam plugins, aplicativos ou modelos no dispositivo. As ferramentas internas são adaptações locais de partes dos projetos de origem; não incluem seus serviços de nuvem, contas ou funcionalidades de IA.

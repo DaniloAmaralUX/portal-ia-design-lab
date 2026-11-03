@@ -1,29 +1,29 @@
-/* Library: grouped native surfaces, readable type, touch-sized actions. */
-.interfaces-page { color: var(--ui-text); font-size: 14px; min-height: 100%; background: #f7f8fc; }
-.library-header { padding: 28px 28px 24px; background: #ffffff98; }
+/* Classic library components. Resource cards belong to resources.css. */
+.interfaces-page { color: var(--ui-text); font-size: 14px; min-height: 100%; background: #fcfcfd; }
+.library-header { padding: 24px 28px 20px; background: linear-gradient(140deg,#f5f7fa,#fcfcfd); border-bottom: 1px solid var(--ui-line); }
 .library-intro { display: flex; align-items: center; gap: 16px; }
-.library-app-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 15px; background: linear-gradient(145deg,#70b7ff,#007aff); color: #fff; box-shadow: inset 0 1px 0 #ffffff70,0 4px 12px #007aff20; flex-shrink: 0; }
+.library-app-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 10px; background: linear-gradient(145deg,#70b7ff,#397ba9); color: #fff; box-shadow: inset 0 1px 0 #ffffff70,0 4px 12px #397ba920; flex-shrink: 0; }
 .library-app-icon svg { width: 31px; height: 31px; }
-.library-title { margin: 0 0 5px; font-size: 34px; line-height: 39px; letter-spacing: -1px; font-weight: 700; }
+.library-title { margin: 0 0 5px; font-size: 29px; line-height: 34px; letter-spacing: -.85px; font-weight: 700; }
 .library-title:focus { outline: none; }
 .library-author { margin: 0; color: var(--ui-muted); font-size: 13px; line-height: 20px; }
-.library-author a, .library-footer a, .skill-details a { color: #007aff; text-decoration: none; }
+.library-author a, .library-footer a, .skill-details a { color: #397ba9; text-decoration: none; }
 .library-intro-copy { font-size: 14px; line-height: 22px; color: var(--ui-muted); margin: 18px 0 0; max-width: 490px; }
 .library-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
-.library-button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0 16px; border-radius: 22px; border: 1px solid #1d335515; background: #fff; color: #007aff; font-size: 13px; font-weight: 600; box-shadow: 0 1px 3px #20345106; transition: background-color 120ms ease,transform 120ms var(--ease-out); }
+.library-button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0 16px; border-radius: 6px; border: 1px solid #1d335515; background: #fff; color: #397ba9; font-size: 13px; font-weight: 600; box-shadow: 0 1px 3px #20345106; transition: background-color 120ms ease,transform 120ms var(--ease-out); }
 .library-button svg { width: 16px; height: 16px; }
-.library-button.primary { background: #007aff; border-color: transparent; color: #fff; box-shadow: 0 3px 8px #007aff20; }
+.library-button.primary { background: #397ba9; border-color: transparent; color: #fff; box-shadow: 0 3px 8px #397ba920; }
 .library-button:active { transform: scale(.97); }
 .library-button.copied, .skill-copy.copied { color: #1d7850; background: #e8f7ee; }
-.library-filters { display: flex; gap: 4px; margin: 0; padding: 14px 24px; position: sticky; top: 0; background: #f7f8fcef; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 1; overflow-x: auto; scrollbar-width: none; border-block: 1px solid var(--ui-line); }
-.library-filter { min-height: 38px; background: transparent; font-size: 12px; color: var(--ui-muted); padding: 8px 12px; border-radius: 20px; white-space: nowrap; }
-.library-filter[aria-pressed=true] { color: #007aff; background: #fff; font-weight: 600; box-shadow: 0 1px 5px #21395610; }
+.library-filters { display: flex; gap: 4px; margin: 0; padding: 14px 24px; position: sticky; top: 0; background: #fcfcfdef; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 1; overflow-x: auto; scrollbar-width: none; border-block: 1px solid var(--ui-line); }
+.library-filter { min-height: 38px; background: transparent; font-size: 12px; color: var(--ui-muted); padding: 8px 12px; border-radius: 6px; white-space: nowrap; }
+.library-filter[aria-pressed=true] { color: #397ba9; background: #fff; font-weight: 600; box-shadow: 0 1px 5px #21395610; }
 .library-filter span { margin-left: 3px; font-size: 11px; opacity: .65; }
 .skills-list { padding: 12px 24px; }
-.skill-row { margin-bottom: 8px; border: 1px solid #27384d0a; border-radius: 18px; background: #fff; overflow: hidden; }
+.skill-row { margin: 0; border-bottom: 1px solid var(--ui-line); background: #fff; overflow: hidden; }
 .skill-summary { display: flex; align-items: center; gap: 10px; min-height: 90px; padding: 14px 16px; }
 .skill-open { display: flex; align-items: center; gap: 12px; min-width: 0; min-height: 48px; flex: 1; padding: 0; background: none; color: inherit; text-align: left; border-radius: 9px; }
-.skill-mark { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0; background: #eaf3ff; color: #007aff; }
+.skill-mark { width: 40px; height: 40px; border-radius: 6px; display: grid; place-items: center; flex-shrink: 0; background: #eaf3ff; color: #397ba9; }
 .skill-mark[data-group=fluxos] { background: #f1edff; color: #7952d8; }
 .skill-mark[data-group=extras] { background: #fff3de; color: #b47b20; }
 .skill-mark svg { width: 22px; height: 22px; }
@@ -31,7 +31,7 @@
 .skill-name { display: block; font-size: 14px; font-weight: 600; letter-spacing: -.2px; line-height: 20px; overflow-wrap: anywhere; }
 .skill-description { display: block; font-size: 12px; color: var(--ui-muted); line-height: 18px; margin-top: 4px; max-width: 400px; }
 .skill-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
-.skill-copy, .skill-download { height: 40px; display: flex; gap: 6px; align-items: center; justify-content: center; padding: 0 12px; color: #007aff; border: 0; background: #f0f5fd; border-radius: 20px; font-size: 12px; font-weight: 500; min-width: 82px; transition: background-color 120ms ease,transform 120ms var(--ease-out); }
+.skill-copy, .skill-download { height: 40px; display: flex; gap: 6px; align-items: center; justify-content: center; padding: 0 12px; color: #397ba9; border: 0; background: #f0f5fd; border-radius: 6px; font-size: 12px; font-weight: 500; min-width: 82px; transition: background-color 120ms ease,transform 120ms var(--ease-out); }
 .skill-actions svg { width: 17px; height: 17px; }
 .skill-download { min-width: 40px; width: 40px; padding: 0; }
 .skill-copy:active, .skill-download:active { transform: scale(.96); }
@@ -41,7 +41,7 @@
 .skill-details.detail-visible { opacity: 1; transform: translateY(0); }
 .skill-details.detail-closing { transition-duration: 100ms; }
 .skill-details.detail-instant { transition: none; }
-.skill-command, .skill-markdown { display: block; padding: 14px; background: #f4f6fb; border: 1px solid var(--ui-line); border-radius: 12px; white-space: pre-wrap; overflow-wrap: anywhere; font: 12px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; color: #46556a; }
+.skill-command, .skill-markdown { display: block; padding: 14px; background: #f4f6fb; border: 1px solid var(--ui-line); border-radius: 6px; white-space: pre-wrap; overflow-wrap: anywhere; font: 12px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; color: #46556a; }
 .skill-markdown { max-height: 300px; overflow: auto; margin: 0; scrollbar-width: thin; tab-size: 2; }
 .source-label { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12px; font-weight: 500; color: var(--ui-muted); margin: 16px 0 8px; }
 .source-links { display: flex; flex-wrap: wrap; gap: 16px; margin: 12px 0 0; }
@@ -49,15 +49,15 @@
 .skill-copy-document.library-button { min-height: 34px; font-size: 11px; padding: 0 12px; }
 .library-empty { padding: 48px 20px; text-align: center; color: var(--ui-muted); font-size: 14px; }
 .library-footer { padding: 20px 28px 24px; font-size: 11px; line-height: 1.8; color: var(--ui-muted); }
-.library-feedback { position: fixed; bottom: 24px; left: 50%; transform: translate(-50%,5px); padding: 12px 18px; border-radius: 20px; background: #f4faf5f5; border: 1px solid #ffffffb0; backdrop-filter: blur(20px); box-shadow: 0 4px 24px #13241c28; color: #285c3d; font-size: 13px; z-index: 30; opacity: 0; pointer-events: none; transition: opacity 140ms ease,transform 170ms var(--ease-out); max-width: calc(100vw - 32px); text-align: center; }
+.library-feedback { position: fixed; bottom: 24px; left: 50%; transform: translate(-50%,5px); padding: 12px 18px; border-radius: 6px; background: #f4faf5f5; border: 1px solid #ffffffb0; backdrop-filter: blur(20px); box-shadow: 0 4px 24px #13241c28; color: #285c3d; font-size: 13px; z-index: 30; opacity: 0; pointer-events: none; transition: opacity 140ms ease,transform 170ms var(--ease-out); max-width: calc(100vw - 32px); text-align: center; }
 .library-feedback.visible { opacity: 1; transform: translate(-50%,0); }
-.manual-copy { padding: 18px 24px; background: #eef6ff; border-block: 1px solid #007aff18; }
+.manual-copy { padding: 18px 24px; background: #eef6ff; border-block: 1px solid #397ba918; }
 .manual-copy p { font-size: 13px; margin: 0 0 10px; color: #526881; }
-.manual-copy textarea { width: 100%; height: 90px; padding: 12px; border: 1px solid #007aff25; border-radius: 12px; resize: vertical; font: 12px/1.7 ui-monospace,Consolas,monospace; color: #3d536c; background: #fff; }
+.manual-copy textarea { width: 100%; height: 90px; padding: 12px; border: 1px solid #397ba925; border-radius: 6px; resize: vertical; font: 12px/1.7 ui-monospace,Consolas,monospace; color: #3d536c; background: #fff; }
 @media (hover:hover) and (pointer:fine) {
  .skill-copy:hover, .skill-download:hover, .library-button:not(.primary):hover { background: #e6f0ff; }
- .library-button.primary:hover { background: #0069e0; }
- .skill-open:hover .skill-name { color: #007aff; }
+ .library-button.primary:hover { background: #306e99; }
+ .skill-open:hover .skill-name { color: #397ba9; }
  .library-author a:hover, .library-footer a:hover, .skill-details a:hover { text-decoration: underline; }
 }
 @media (max-width:760px) {
@@ -71,7 +71,7 @@
 }
 @media (max-width:540px) {
  .library-header { padding: 22px 18px; }
- .library-title { font-size: 30px; line-height: 35px; }
+ .library-title { font-size: 27px; line-height: 32px; }
  .library-app-icon { width: 50px; height: 50px; }
  .library-intro { gap: 12px; }
  .library-intro-copy { font-size: 13px; line-height: 20px; }
@@ -84,7 +84,7 @@
  .skill-description { font-size: 12px; }
  .skill-summary { min-height: 96px; }
  .skill-actions { gap: 3px; }
- .skill-copy, .skill-download { width: 36px; min-width: 36px; height: 42px; border-radius: 14px; }
+ .skill-copy, .skill-download { width: 36px; min-width: 36px; height: 42px; border-radius: 5px; }
  .library-footer { padding-inline: 18px; }
  .library-feedback { font-size: 12px; }
  .source-label { font-size: 11px; }

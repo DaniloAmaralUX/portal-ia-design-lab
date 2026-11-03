@@ -20,8 +20,8 @@ function build(){
  const desktopIcons={};
  for(const name of ['skills','plugins','recursos'])desktopIcons[name]='data:image/svg+xml;base64,'+fs.readFileSync(path.join(root,'src/assets/icons',name+'.svg')).toString('base64');
  const wallpaper='data:image/jpeg;base64,'+fs.readFileSync(path.join(root,'src/assets/backgrounds/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg')).toString('base64');
- const styles=['base','library','tool-panels','resources','glass-icons','desktop-shell'].map(name=>read('src/styles/'+name+'.css')).join('\n');
- const scripts=['window-manager','desktop','interfaces','tools','resource-catalog','glass-icons'].map(name=>{
+ const styles=['base','library','tool-panels','resources','desktop-shell'].map(name=>read('src/styles/'+name+'.css')).join('\n');
+ const scripts=['window-manager','desktop','interfaces','tools','resource-catalog'].map(name=>{
   const source=read('src/scripts/'+name+'.js');
   return name==='desktop'?source.replace('__DESKTOP_ICONS__',JSON.stringify(desktopIcons)):source;
  }).join('\n');
