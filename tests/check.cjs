@@ -36,16 +36,16 @@ async function test(label,run){await run();assert.deepEqual(errors,[]);checks++;
   assert.deepEqual([...d.querySelectorAll('.folder')].map(x=>x.dataset.folder),['skills','plugins','recursos']);
   assert.equal(d.querySelector('.menu-bar'),null);assert.equal(d.querySelectorAll('.tool-dock .tool-launch').length,3);assert.equal($('#finder').open,false);
  });
- await test('single click selects; double click opens skills',()=>{
-  pointer();$('.folder').dispatchEvent(new w.MouseEvent('click',{bubbles:true,detail:1}));assert.equal($('#finder').open,false);assert.ok($('.folder').classList.contains('selected'));
-  dbl('.folder[data-folder=skills]');assert.equal($('#finder').open,true);assert.equal($('.folder-files').hidden,false);
+ await test('one click selects and opens skills without a double-click delay',()=>{
+  pointer();$('.folder').dispatchEvent(new w.MouseEvent('click',{bubbles:true,detail:1}));assert.equal($('#finder').open,true);assert.ok($('.folder').classList.contains('selected'));
+  assert.equal($('.folder-files').hidden,false);dbl('.folder[data-folder=skills]');assert.equal($('#finder').open,true);
  });
  await test('icon/list buttons change folder view',()=>{
   click('[data-view-button=list]');assert.equal($('.finder-content').dataset.view,'list');assert.equal($('[data-view-button=list]').getAttribute('aria-pressed'),'true');
   click('[data-view-button=grid]');assert.equal($('.finder-content').dataset.view,'grid');
  });
  await test('folder search returns real matches and empty results',()=>{
-  search('missing');assert.equal($('.interface-file').hidden,true);assert.equal($('.finder-empty').hidden,false);
+  search('missing');assert.equal($('.interface-file').hidden,true);assert.equal($('.resource-empty').hidden,false);
   search('INTERFACES');assert.equal($('.interface-file').hidden,false);search('');
  });
  await test('keyboard Enter opens INTERFACES with 16 original documents',()=>{
@@ -96,16 +96,48 @@ async function test(label,run){await run();assert.deepEqual(errors,[]);checks++;
   click('#maximize-window');assert.ok(!$('#finder').classList.contains('maximized'));
  });
  await test('close and immediate reopen does not lose the new window',async()=>{
-  pointer();click('#close-window');dbl('.folder[data-folder=plugins]');await delay(160);assert.equal($('#finder').open,true);assert.equal($('#folder-title').textContent,'plugins');assert.equal($('.finder-empty').hidden,false);
+  pointer();click('#close-window');dbl('.folder[data-folder=plugins]');await delay(160);assert.equal($('#finder').open,true);assert.equal($('#folder-title').textContent,'plugins');assert.ok($('[data-resource=pstack]'));
  });
- await test('all sidebar folders navigate and empty folders report 0 items',()=>{
-  for(const name of ['recursos','plugins','skills']){click(`.sidebar-folder[data-folder=${name}]`);assert.equal($('#folder-title').textContent,name);assert.equal($('.finder-status .count').textContent,name==='skills'?'1 item':'0 itens')}
+ await test('sidebar folders navigate and report their actual contents',()=>{
+  for(const [name,count] of [['recursos','2 itens'],['plugins','1 item'],['skills','4 itens']]){click(`.sidebar-folder[data-folder=${name}]`);assert.equal($('#folder-title').textContent,name);assert.equal($('.finder-status .count').textContent,count)}
  });
  await test('Escape closes, Ctrl+K opens search, Ctrl+W closes',()=>{
   key('#finder','Escape');assert.equal($('#finder').open,false);key('body','k',{ctrlKey:true});assert.equal($('#finder').open,true);assert.equal(d.activeElement,$('#window-search'));key('#finder','w',{ctrlKey:true});assert.equal($('#finder').open,false);
  });
  await test('desktop arrow navigation and keyboard open work',()=>{
-  $('.folder[data-folder=skills]').focus();key('.folder[data-folder=skills]','ArrowDown');assert.equal(d.activeElement,$('.folder[data-folder=plugins]'));key('.folder[data-folder=plugins]','Enter');assert.equal($('#folder-title').textContent,'plugins');assert.equal($('#finder').open,true);
+  $('.folder[data-folder=skills]').focus();key('.folder[data-folder=skills]','ArrowRight');assert.equal(d.activeElement,$('.folder[data-folder=plugins]'));key('.folder[data-folder=plugins]','Enter');assert.equal($('#folder-title').textContent,'plugins');assert.equal($('#finder').open,true);
+ });
+ await test('all seven requested URLs are catalogued under their actual resource types',()=>{
+  const resources=JSON.parse($('#resources-data').textContent);assert.equal(resources.items.length,7);
+  const expected={
+   'matt-pocock-skills':['skills','https://github.com/mattpocock/skills'],
+   'full-send':['skills','https://github.com/t3dotgg/tstack/tree/main/skills/full-send'],
+   'better-interface':['skills','https://www.ui-skills.com/skills/jakubkrehel/better-interface'],
+   pstack:['plugins','https://github.com/cursor/plugins/tree/main/pstack'],
+   mesa:['ferramentas','https://mesa-dev-desktop.vercel.app/'],hex:['ferramentas','https://anoma.ly/hex/'],dessa:['modelos','https://block.xyz/dessa']
+  };
+  for(const item of resources.items)assert.deepEqual([item.folder,item.url],expected[item.id]);
+  click('.sidebar-folder[data-folder=skills]');assert.equal(d.querySelectorAll('.resource-card').length,3);assert.equal($('.interface-file').hidden,false);
+  for(const a of d.querySelectorAll('.resource-card a')){assert.equal(a.target,'_blank');assert.equal(a.rel,'noopener noreferrer')}
+ });
+ await test('resource folders navigate through Tools and Voice Models with history and breadcrumbs',()=>{
+  click('.sidebar-folder[data-folder=recursos]');assert.equal(d.querySelectorAll('.resource-folder').length,2);
+  click('[data-resource-folder=ferramentas]');assert.equal($('#folder-title').textContent,'Ferramentas');assert.equal($('#path-name').textContent,'recursos › Ferramentas');assert.ok($('[data-resource=hex]'));assert.ok($('[data-resource=mesa]'));assert.equal($('.finder-status .count').textContent,'2 itens');
+  assert.equal($('.sidebar-folder[data-folder=recursos]').getAttribute('aria-current'),'true');click('#back');assert.equal($('#folder-title').textContent,'recursos');click('#forward');assert.equal($('#folder-title').textContent,'Ferramentas');click('#back');click('[data-resource-folder=modelos]');assert.equal($('#folder-title').textContent,'Modelos de voz');assert.equal($('[data-resource=dessa] .resource-open').href,'https://block.xyz/dessa');assert.equal($('.finder-status .count').textContent,'1 item');
+ });
+ await test('resource search filters author/type/title and clear search restores the folder',()=>{
+  click('.sidebar-folder[data-folder=skills]');search('Matt');assert.equal(d.querySelectorAll('.resource-card:not([hidden])').length,1);assert.equal($('[data-resource=matt-pocock-skills]').hidden,false);assert.equal($('.interface-file').hidden,true);
+  search('not-found');assert.equal($('.resource-empty').hidden,false);click('#clear-resource-search');assert.equal($('#window-search').value,'');assert.equal($('.finder-status .count').textContent,'4 itens');assert.equal($('.resource-empty').hidden,true);
+ });
+ await test('resource copy buttons copy exact installation commands or links with accurate feedback',async()=>{
+  for(const [folder,id,value] of [['skills','matt-pocock-skills','npx skills@latest add mattpocock/skills'],['skills','better-interface','npx skills add https://github.com/jakubkrehel/skills --skill better-interface'],['plugins','pstack','/add-plugin pstack']]){click(`.sidebar-folder[data-folder=${folder}]`);click(`[data-resource=${id}] .resource-copy`);await delay(0);assert.equal(copied,value)}
+  click('.sidebar-folder[data-folder=recursos]');click('[data-resource-folder=ferramentas]');click('[data-resource=hex] .resource-copy');await delay(0);assert.equal(copied,'https://anoma.ly/hex/');assert.equal($('[data-resource=hex] .resource-copy').getAttribute('aria-label'),'Link copiado');assert.equal($('.library-feedback').textContent,'Link copiado.');
+ });
+ await test('better-interface opens its existing source document and ZIP inside Interfaces',()=>{
+  click('.sidebar-folder[data-folder=skills]');click('[data-resource=better-interface] .resource-local');assert.equal($('#folder-title').textContent,'INTERFACES');assert.equal(visible().length,1);assert.equal(visible()[0].dataset.skill,'better-interface');assert.equal($('#detail-better-interface').hidden,false);assert.ok($('[data-skill=better-interface] .skill-download'));click('#back');assert.equal($('#folder-title').textContent,'skills');
+ });
+ await test('denied clipboard access offers a visible manual copy panel from a resource card',async()=>{
+  click('.sidebar-folder[data-folder=recursos]');click('[data-resource-folder=ferramentas]');clipboardFails=true;fallbackWorks=false;click('[data-resource=hex] .resource-copy');await delay(0);assert.equal($('.manual-copy').hidden,false);assert.equal($('.manual-copy').closest('[hidden]'),null);assert.equal($('.manual-copy textarea').value,'https://anoma.ly/hex/');click('#library-manual-close');assert.equal($('.manual-copy').hidden,true);assert.equal(d.activeElement,$('[data-resource=hex] .resource-copy'));clipboardFails=false;
  });
  console.log(`\n${checks} integration scenarios passed. Dialog, clipboard and download platform APIs were stubbed; layout is not rendered by jsdom.`);
 }finally{dom.window.close()}})().catch(error=>{console.error(error);process.exitCode=1});

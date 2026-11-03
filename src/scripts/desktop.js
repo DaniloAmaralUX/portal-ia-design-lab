@@ -12,47 +12,43 @@ function selectFolder(folder){selected=folder;folders.forEach(item=>item.classLi
 folders.forEach(folder=>{
  const art=folder.querySelector('.folder-art');
  art.innerHTML=folderIcon(folder.dataset.folder);
- folder.addEventListener('click',event=>{selectFolder(folder);if(event.detail===0)openFolder(folder.dataset.folder,folder,true)});
+ folder.addEventListener('click',event=>{selectFolder(folder);openFolder(folder.dataset.folder,folder,event.detail===0)});
  folder.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();selectFolder(folder);openFolder(folder.dataset.folder,folder,true)}});
- folder.addEventListener('dblclick',()=>openFolder(folder.dataset.folder,folder));
- folder.addEventListener('pointerup',event=>{if(event.pointerType==='touch')openFolder(folder.dataset.folder,folder)});
+ folder.addEventListener('dblclick',()=>{if(!finder.open||finder.classList.contains('closing')||resourceRoot(current)!==folder.dataset.folder)openFolder(folder.dataset.folder,folder)});
 });
 $('.launchpad').addEventListener('click',event=>{if(!event.target.closest('.folder'))selectFolder(null)});
 $('.folders').addEventListener('keydown',event=>{
  if((event.metaKey||event.ctrlKey)&&event.key==='ArrowDown'){event.preventDefault();const active=document.activeElement.closest('.folder');if(active)openFolder(active.dataset.folder,active,true);return;}
  if(!['ArrowLeft','ArrowRight','ArrowDown','ArrowUp','Home','End'].includes(event.key))return;
- event.preventDefault();const index=folders.indexOf(document.activeElement),next=event.key==='Home'?0:event.key==='End'?2:(index+(['ArrowRight','ArrowDown'].includes(event.key)?1:-1)+3)%3;
+ event.preventDefault();const index=folders.indexOf(document.activeElement),next=event.key==='Home'?0:event.key==='End'?2:['ArrowDown','ArrowUp'].includes(event.key)?Math.max(0,index):(index+(event.key==='ArrowRight'?1:-1)+3)%3;
  selectFolder(folders[next]);folders[next].focus();
 });
 names.forEach(name=>{
  const side=document.createElement('button');side.className='sidebar-folder';side.dataset.folder=name;side.innerHTML=folderIcon(name)+'<span>'+name+'</span>';side.addEventListener('click',()=>navigate(name));$('.sidebar-folders').append(side);
 });
 function renderFolder(){
- const rootFolder=current==='interfaces'?'skills':current;
- $('#folder-title').textContent=current==='interfaces'?'INTERFACES':current;$('.window-heading>.location-icon').src=desktopIcons[rootFolder];$('.finder-status>.location-icon').src=desktopIcons[rootFolder];$('#path-name').textContent=current==='interfaces'?'skills › INTERFACES':current;
- $('.finder-empty').hidden=current==='skills'||current==='interfaces';$('.folder-files').hidden=current!=='skills';$('.interfaces-page').hidden=current!=='interfaces';finder.classList.toggle('library-open',current==='interfaces');
- $('.finder-empty>.empty-location-icon').src=desktopIcons[rootFolder];$('#empty-title').textContent='Esta pasta está vazia';$('#folder-description').textContent='';
- $('.interface-file').hidden=false;
+ const rootFolder=resourceRoot(current),isInterfaces=current==='interfaces';
+ $('#folder-title').textContent=isInterfaces?'INTERFACES':resourceData.folders[current]?.parent?resourceData.folders[current].title:current;
+ $('.window-heading>.location-icon').src=desktopIcons[rootFolder];$('.finder-status>.location-icon').src=desktopIcons[rootFolder];$('#path-name').textContent=resourcePath(current);
+ $('.resource-catalog').hidden=isInterfaces;$('.folder-files').hidden=isInterfaces;$('.interfaces-page').hidden=!isInterfaces;$('.manual-copy').hidden=true;finder.classList.toggle('library-open',isInterfaces);
  document.querySelectorAll('.sidebar-folder').forEach(el=>el.setAttribute('aria-current',String(el.dataset.folder===rootFolder)));
  folders.forEach(el=>{el.setAttribute('aria-expanded',String(finder.open&&el.dataset.folder===rootFolder));el.classList.toggle('running',minimized&&el.dataset.folder===rootFolder)});
  $('#back').disabled=historyIndex<=0;$('#forward').disabled=historyIndex>=history.length-1;$('#window-search').value='';
- $('.finder-status .count').textContent=current==='skills'?'1 item':current==='interfaces'?'16 skills':'0 itens';
- libraryQuery='';if(current==='interfaces')filterLibrary();
- $('.finder-content').scrollTop=0;
- $('.view-toggle').hidden=current==='interfaces';
- if(current==='interfaces'&&finder.open)$('#library-title').focus({preventScroll:true});
+ libraryQuery='';if(isInterfaces){filterLibrary();$('.finder-status .count').textContent='16 skills'}else renderResourceFolder();
+ $('.finder-content').scrollTop=0;$('.view-toggle').hidden=isInterfaces;
+ if(isInterfaces&&finder.open)$('#library-title').focus({preventScroll:true});
 }
 function navigate(name,record=true){current=name;if(record){history=history.slice(0,historyIndex+1);if(history.at(-1)!==name){history.push(name);historyIndex=history.length-1}}renderFolder();}
 function openFolder(name,trigger,byKeyboard=false){
 
- const restoring=minimized&&(current==='interfaces'?'skills':current)===name;
+ const restoring=minimized&&resourceRoot(current)===name;
  clearTimeout(closeTimer);cancelAnimationFrame(openFrame);minimized=false;lastTrigger=trigger||lastTrigger;finder.classList.remove('closing');finder.classList.toggle('instant',byKeyboard||instant());
  const wasOpen=finder.open;if(!wasOpen)finder.show();desktopWindows.activate('finder');
- if(restoring)folders.forEach(el=>{el.classList.remove('running');el.setAttribute('aria-expanded',String(el.dataset.folder===(current==='interfaces'?'skills':current)))});else navigate(name);
+ if(restoring)folders.forEach(el=>{el.classList.remove('running');el.setAttribute('aria-expanded',String(el.dataset.folder===resourceRoot(current)))});else navigate(name);
  if(wasOpen||byKeyboard||instant())finder.classList.add('visible');else{void finder.offsetWidth;openFrame=requestAnimationFrame(()=>finder.classList.add('visible'));}
  if(byKeyboard)$('#close-window').focus();
 }
-function finishClose(keepRunning=false){clearTimeout(closeTimer);cancelAnimationFrame(openFrame);minimized=keepRunning;finder.classList.remove('visible','closing');if(finder.open)finder.close();folders.forEach(el=>{el.setAttribute('aria-expanded','false');el.classList.toggle('running',keepRunning&&el.dataset.folder===(current==='interfaces'?'skills':current))});desktopWindows.afterClose('finder',lastTrigger)}
+function finishClose(keepRunning=false){clearTimeout(closeTimer);cancelAnimationFrame(openFrame);minimized=keepRunning;finder.classList.remove('visible','closing');if(finder.open)finder.close();folders.forEach(el=>{el.setAttribute('aria-expanded','false');el.classList.toggle('running',keepRunning&&el.dataset.folder===resourceRoot(current))});desktopWindows.afterClose('finder',lastTrigger)}
 function closeWindow(minimize=false){clearTimeout(closeTimer);cancelAnimationFrame(openFrame);finder.classList.toggle('instant',instant());if(instant()){finishClose(minimize);return}finder.classList.remove('visible');finder.classList.add('closing');closeTimer=setTimeout(()=>finishClose(minimize),120)}
 $('#close-window').addEventListener('click',()=>closeWindow());$('#minimize-window').addEventListener('click',()=>closeWindow(true));
 function maximize(){finder.classList.toggle('maximized');$('#maximize-window').setAttribute('aria-label',finder.classList.contains('maximized')?'Restaurar janela':'Ampliar janela')}
@@ -61,8 +57,7 @@ $('#back').addEventListener('click',()=>{if(historyIndex>0){historyIndex--;navig
 document.querySelectorAll('[data-view-button]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-view-button]').forEach(el=>el.setAttribute('aria-pressed',String(el===button)));$('.finder-content').dataset.view=button.dataset.viewButton}));
 $('#window-search').addEventListener('input',event=>{
  if(current==='interfaces'){libraryQuery=event.target.value;filterLibrary();return}
- if(current==='skills'){const found='interfaces'.includes(event.target.value.trim().toLowerCase());$('.interface-file').hidden=!found;$('.finder-empty').hidden=found;$('#empty-title').textContent='Nenhum resultado';$('#folder-description').textContent='Busque por INTERFACES.';$('.finder-status .count').textContent=found?'1 item':'0 itens';return}
- $('#empty-title').textContent=event.target.value?'Nenhum resultado':'Esta pasta está vazia';$('#folder-description').textContent=event.target.value?'Nenhum item nesta pasta corresponde à busca.':''
+ filterResourceFolder(event.target.value);
 });
 document.addEventListener('keydown',event=>{
  if(event.defaultPrevented||(document.body.dataset.frontWindow==='tools'&&document.querySelector('#tool-window')?.open))return;

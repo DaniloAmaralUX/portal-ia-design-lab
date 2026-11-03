@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-11-03",
+  "folders": {
+    "skills": {"title":"Skills","root":"skills","description":"Coleções e instruções para trabalhar com agentes de IA."},
+    "plugins": {"title":"Plugins","root":"plugins","description":"Extensões e conjuntos de fluxos de trabalho para seu editor."},
+    "recursos": {"title":"Recursos","root":"recursos","description":"Ferramentas e modelos, organizados pelo que fazem."},
+    "ferramentas": {"title":"Ferramentas","root":"recursos","parent":"recursos","symbol":"command","description":"Aplicativos e portais para criar e trabalhar."},
+    "modelos": {"title":"Modelos de voz","root":"recursos","parent":"recursos","symbol":"cpu","description":"Modelos de IA para conversação e áudio."}
+  },
+  "items": [
+    {
+      "id":"matt-pocock-skills","folder":"skills","type":"Coleção de skills","title":"Matt Pocock · Skills","author":"Matt Pocock","symbol":"terminal",
+      "description":"Skills de engenharia e produtividade, incluindo planejamento, TDD e revisão de código.",
+      "url":"https://github.com/mattpocock/skills","actionLabel":"Ver coleção",
+      "command":"npx skills@latest add mattpocock/skills","commandLabel":"Copiar instalação",
+      "note":"O instalador permite escolher o agente e as skills. A coleção recomenda começar por setup-matt-pocock-skills."
+    },
+    {
+      "id":"full-send","folder":"skills","type":"Skill","title":"full-send","author":"t3dotgg / tstack","symbol":"rocket",
+      "description":"Fluxo de engenharia que conduz uma alteração por verificação, revisão e merge de pull request.",
+      "url":"https://github.com/t3dotgg/tstack/tree/main/skills/full-send","actionLabel":"Ver skill",
+      "note":"Faz parte do tstack e depende de outras skills da coleção. Consulte os requisitos e a instalação no repositório.",
+      "guideUrl":"https://github.com/t3dotgg/tstack#install","guideLabel":"Instalação e requisitos"
+    },
+    {
+      "id":"better-interface","folder":"skills","type":"Skill de interface","title":"better-interface","author":"Jakub Kréhel","symbol":"panels-top-left",
+      "description":"Revisão de acessibilidade, layout, escrita, tipografia, cores e acabamento visual.",
+      "url":"https://www.ui-skills.com/skills/jakubkrehel/better-interface","actionLabel":"Ver fonte original",
+      "command":"npx skills add https://github.com/jakubkrehel/skills --skill better-interface","commandLabel":"Copiar instalação",
+      "internalSkill":"better-interface","note":"O documento e o ZIP também estão disponíveis na coleção Interfaces desta biblioteca."
+    },
+    {
+      "id":"pstack","folder":"plugins","type":"Plugin do Cursor","title":"pstack","author":"Lauren Tan · cursor/plugins","symbol":"plug",
+      "description":"Plugin com skills e agentes para fluxos de engenharia, revisão e verificação no Cursor.",
+      "url":"https://github.com/cursor/plugins/tree/main/pstack","actionLabel":"Ver plugin",
+      "command":"/add-plugin pstack","commandLabel":"Copiar comando do Cursor",
+      "note":"Use o comando no chat do Cursor. Depois da instalação, o guia orienta a configuração com /setup-pstack.",
+      "guideUrl":"https://github.com/cursor/plugins/blob/main/pstack/docs/guide/01-setup.md","guideLabel":"Guia de configuração"
+    },
+    {
+      "id":"mesa","folder":"ferramentas","type":"Aplicação web","title":"Mesa","author":"Portal IA Design Lab","symbol":"layout-dashboard",
+      "description":"O portal publicado de skills, plugins, recursos e ferramentas para criar interfaces.",
+      "url":"https://mesa-dev-desktop.vercel.app/","actionLabel":"Abrir aplicação"
+    },
+    {
+      "id":"hex","folder":"ferramentas","type":"Aplicativo de ditado","title":"Hex","author":"Anomaly","symbol":"type",
+      "description":"Ditado por voz local para macOS, Windows e Linux. Consulte os downloads para seu sistema.",
+      "url":"https://anoma.ly/hex/","actionLabel":"Ver downloads oficiais",
+      "guideUrl":"https://github.com/anomalyco/hex","guideLabel":"Código no GitHub"
+    },
+    {
+      "id":"dessa","folder":"modelos","type":"Modelo de voz","title":"Dessa","author":"Block","symbol":"message-circle",
+      "description":"Modelo de conversação por voz full-duplex, apresentado pela Block como prévia de pesquisa.",
+      "url":"https://block.xyz/dessa","actionLabel":"Conhecer a pesquisa",
+      "note":"A página oficial apresenta o modelo e suas demonstrações."
+    }
+  ]
+}

@@ -10,16 +10,24 @@ const jsonForHTML=value=>JSON.stringify(value).replace(/</g,'\\u003c').replace(/
 function build(){
  const {data:tools,notices}=prepareData();
  const interfaces=JSON.parse(read('src/data/interfaces.json'));
+ const resources=JSON.parse(read('src/data/resources.json'));
+ for(const [id,folder] of Object.entries(resources.folders)){
+  assert.ok(resources.folders[folder.root],'Unknown root for '+id);
+  const seen=new Set([id]);let parent=folder.parent;
+  while(parent){assert.ok(resources.folders[parent],'Unknown parent for '+id);assert.ok(!seen.has(parent),'Folder cycle: '+id);seen.add(parent);parent=resources.folders[parent].parent}
+ }
+ const resourceIds=new Set();
+ for(const item of resources.items){assert.ok(!resourceIds.has(item.id),'Duplicate resource: '+item.id);resourceIds.add(item.id);assert.ok(resources.folders[item.folder]);for(const url of [item.url,item.guideUrl].filter(Boolean))assert.equal(new URL(url).protocol,'https:');if(item.internalSkill)assert.ok(interfaces.skills.some(skill=>skill.id===item.internalSkill))}
  const desktopIcons={};
  for(const name of ['skills','plugins','recursos'])desktopIcons[name]='data:image/svg+xml;base64,'+fs.readFileSync(path.join(root,'src/assets/icons',name+'.svg')).toString('base64');
  const wallpaper='data:image/jpeg;base64,'+fs.readFileSync(path.join(root,'src/assets/backgrounds/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg')).toString('base64');
- const styles=['base','library','tool-panels','glass-icons','aero-shards','desktop-shell'].map(name=>read('src/styles/'+name+'.css')).join('\n');
- const scripts=['window-manager','desktop','interfaces','tools','glass-icons'].map(name=>{
+ const styles=['base','library','tool-panels','resources','glass-icons','aero-shards','desktop-shell'].map(name=>read('src/styles/'+name+'.css')).join('\n');
+ const scripts=['window-manager','desktop','interfaces','tools','resource-catalog','glass-icons'].map(name=>{
   const source=read('src/scripts/'+name+'.js');
   return name==='desktop'?source.replace('__DESKTOP_ICONS__',JSON.stringify(desktopIcons)):source;
  }).join('\n');
  const aeroBundle=esbuild.buildSync({entryPoints:[path.join(root,'src/scripts/aero-shards.js')],bundle:true,write:false,platform:'browser',format:'iife',target:'es2020',minify:true,legalComments:'inline'}).outputFiles[0].text;
- const replacements={styles,scripts:scripts+'\n'+aeroBundle,wallpaper,interfacesData:jsonForHTML(interfaces),toolsData:jsonForHTML(tools),libraryView:read('src/views/interfaces.html'),toolsView:read('src/views/tools.html'),iconSkills:desktopIcons.skills};
+ const replacements={styles,scripts:scripts+'\n'+aeroBundle,wallpaper,resourcesData:jsonForHTML(resources),interfacesData:jsonForHTML(interfaces),toolsData:jsonForHTML(tools),libraryView:read('src/views/interfaces.html'),toolsView:read('src/views/tools.html'),iconSkills:desktopIcons.skills};
  const html=read('src/index.template.html').replace(/\{\{([A-Za-z]+)\}\}/g,(_,name)=>{
   assert.ok(Object.hasOwn(replacements,name),'Unknown template placeholder: '+name);
   return replacements[name];

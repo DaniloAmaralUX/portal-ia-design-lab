@@ -291,12 +291,12 @@ const poseOf = (state, s) => {
 };
 
 
-function mountGlassIcons(root, colors, {plate='tilt',spread=.5}={}) {
+function mountGlassIcons(root, colors, {plate='offset',spread=0}={}) {
  const tiles = [...root.querySelectorAll('.glass-tile')];
  if (!tiles.length || !window.ResizeObserver || !window.IntersectionObserver || !window.WebGL2RenderingContext || matchMedia('(prefers-reduced-transparency: reduce)').matches) return () => {};
  const canvas = document.createElement('canvas'); canvas.className='glass-icons-canvas'; canvas.setAttribute('aria-hidden','true'); root.append(canvas);
  const size = tiles[0].clientWidth;
- const settingsRef = { current: {count:tiles.length,tile:size,radius:size*.3,edge:Math.max(2,Math.round(size*.156)),strength:size*.24,split:0,soft:1+size*.03,shine:.85,shade:.35,tint:'#dfdfdf',tintOpacity:.2,plate,hover:'press',labels:'none',tilt:30,spread,parallax:1,intro:false,colors:colors.map(color=>GRADIENTS[color]),colorKey:colors.join('|')} };
+ const settingsRef = { current: {count:tiles.length,tile:size,radius:size*.24,edge:Math.max(2,Math.round(size*.156)),strength:size*.24,split:0,soft:1+size*.03,shine:.85,shade:.35,tint:'#dfdfdf',tintOpacity:.12,plate,hover:'press',labels:'none',tilt:30,spread,parallax:.35,intro:false,colors:colors.map(color=>GRADIENTS[color]),colorKey:colors.join('|')} };
  const plateRefs={current:tiles.map(tile=>tile.querySelector('.glass-icon-plate'))};
  const glassRefs={current:tiles.map(tile=>tile.querySelector('.glass-icon-glass'))};
  const faceRefs={current:tiles.map(tile=>tile.querySelector('.glass-icon-face'))};
@@ -419,7 +419,7 @@ function mountGlassIcons(root, colors, {plate='tilt',spread=.5}={}) {
 
     const measure = () => {
       const s = settingsRef.current;
-      s.tile = tiles[0].clientWidth; s.radius = s.tile * .3; s.edge = Math.max(2, Math.round(s.tile * .156));
+      s.tile = tiles[0].clientWidth; s.radius = s.tile * .24; s.edge = Math.max(2, Math.round(s.tile * .156));
       s.strength = s.tile * .24; s.soft = 1 + s.tile * .03;
       const margin = Math.ceil(s.tile * 0.7);
       layout.margin = margin;
@@ -676,6 +676,6 @@ for (const button of document.querySelectorAll('.folder,.tool-launch')) {
  art.style.setProperty('--glass-plate',GRADIENTS[app.color]);
  art.innerHTML='<span class="glass-icon-plate"></span><span class="glass-icon-glass"></span><span class="glass-icon-face"><span class="glass-icon-glyph">'+toolData.icons[app.symbol]+'</span></span>';
 }
-const cleanups = [mountGlassIcons(document.querySelector('.folders'),['blue','purple','teal']),mountGlassIcons(document.querySelector('.tool-dock'),['orange','indigo','green'],{plate:'offset',spread:.45})];
+const cleanups = [mountGlassIcons(document.querySelector('.folders'),['blue','purple','teal']),mountGlassIcons(document.querySelector('.tool-dock'),['orange','indigo','green'],{plate:'offset',spread:0})];
 window.addEventListener('pagehide',()=>cleanups.forEach(cleanup=>cleanup()),{once:true});
 })();

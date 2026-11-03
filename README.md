@@ -7,14 +7,17 @@ Uma mesa de ferramentas para quem cria interfaces, com navegação por janelas e
 ## O que funciona
 
 - **Skills → INTERFACES:** 16 skills de Jakub Kréhel; busca, categorias, comandos de instalação, cópia do documento original e ZIPs completos.
+- **Skills:** coleção de Matt Pocock, full-send do tstack e atalho para better-interface, com fontes e comandos verificados.
+- **Plugins:** pstack, com comando para o chat do Cursor e guia de configuração.
+- **Recursos → Ferramentas:** Hex e o portal Mesa. **Recursos → Modelos de voz:** Dessa, da Block.
 - **Temas:** 42 presets do tweakcn, modos claro e escuro, cores, tipografia, bordas, sombras, desfazer/refazer, salvamento local e exportação CSS para Tailwind CSS 4.
 - **Blocos:** três composições adaptadas do Tailark; edição de conteúdo, prévia de computador/celular e exportação HTML autossuficiente.
 - **Ícones:** 90 SVGs Lucide com busca em português, ajuste de tamanho, cor e espessura, cópia e download.
-- **Desktop:** seleção, clique duplo, teclado, histórico, busca, movimentação de janelas, minimizar, ampliar e restaurar.
+- **Interface:** visual inspirado no iOS, abertura com um toque/clique, teclado, histórico, busca, janelas de vidro e dock adaptado ao celular. No desktop, as janelas também podem ser movidas, minimizadas e ampliadas.
 - **Glass Icons:** seis atalhos com placas coloridas, refração e movimento do React Bits; símbolos Lucide, rótulos permanentes e fallback sem GPU.
 - **Background:** fotografia de Elliott Engelmann com Aero Shards em uma camada transparente, laranja `#f97316`, velocidade `0.87` e opacidade de 25%. Sem captura de cliques; a foto permanece quando WebGPU não está disponível ou há preferência por movimento/transparência reduzidos.
 
-As categorias Plugins e Recursos ainda não têm conteúdo cadastrado. As ferramentas são adaptações locais de partes dos projetos de origem; não incluem seus serviços de nuvem, contas ou funcionalidades de IA.
+Os sete links adicionados ficam em `src/data/resources.json`, classificados por tipo e consultados em 03/11/2026. Eles abrem as fontes oficiais ou copiam instruções; não instalam plugins, aplicativos ou modelos no dispositivo. As ferramentas internas são adaptações locais de partes dos projetos de origem; não incluem seus serviços de nuvem, contas ou funcionalidades de IA.
 
 ## Rodar localmente
 
@@ -36,7 +39,7 @@ npm test
 
 O build gera apenas `dist/index.html`, o ZIP da coleção e `dist/LICENSES.txt`. O HTML incorpora scripts, estilos, ícones e dados, podendo ser aberto offline. `npm run preview` serve esse build sem recompilar.
 
-A suíte inclui 45 cenários de DOM/integração e a compilação de um tema exportado no Tailwind CSS 4. **jsdom não renderiza layout, WebGL ou WebGPU.** Mudanças visuais precisam de conferência em navegador real; veja [o handoff](docs/HANDOFF.md).
+A suíte inclui 51 cenários de DOM/integração e a compilação de um tema exportado no Tailwind CSS 4. **jsdom não renderiza layout, WebGL ou WebGPU.** Mudanças visuais precisam de conferência em navegador real; veja [o handoff](docs/HANDOFF.md).
 
 ## Estrutura
 
@@ -45,7 +48,8 @@ src/
   index.template.html     Estrutura da página
   assets/icons/           Ícones do desktop e do dock
   data/interfaces.json    Skills, documentos e ZIPs incorporados
-  scripts/                Janelas, catálogo, ferramentas e Strands
+  data/resources.json     Catálogo tipado de links e subpastas
+  scripts/                Janelas, catálogos, ferramentas e fundos
   styles/                 Base, biblioteca, ferramentas, fundo e shell
   views/                  Conteúdo HTML das janelas
 scripts/                  Preparação dos dados, build e servidor local

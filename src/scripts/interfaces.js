@@ -43,17 +43,18 @@ const orderedSkills=Object.keys(skillMeta).map(id=>interfaceData.skills.find(ski
 function feedback(message){const el=document.querySelector('.library-feedback');el.textContent=message;el.classList.add('visible');clearTimeout(feedbackTimer);feedbackTimer=setTimeout(()=>el.classList.remove('visible'),2200)}
 function getAllCommands(){return [...new Set(interfaceData.skills.map(skill=>skill.repo))].sort((a,b)=>(a.endsWith('/skills')?-1:0)-(b.endsWith('/skills')?-1:0)).map(repo=>repo==='jakubkrehel/skills'?"npx skills add https://github.com/jakubkrehel/skills --skill '*'":interfaceData.skills.find(skill=>skill.repo===repo).command).join('\n')}
 const copyTimers=new WeakMap(),copyWidths=new WeakMap(),detailStates=new WeakMap();
-async function copyText(text,button,label='Copiar'){
+let manualCopyTrigger=null;
+async function copyText(text,button,label='Copiar',type='command'){
  const originalAria=button.dataset.copyAria||button.getAttribute('aria-label')||label;button.dataset.copyAria=originalAria;
  let success=false;
  try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text);success=true}}catch{}
  if(!success){const input=document.createElement('textarea');input.value=text;input.style.cssText='position:fixed;left:-9999px;top:0';document.body.append(input);input.select();try{success=document.execCommand('copy')}catch{}input.remove();button.focus({preventScroll:true})}
- if(!success){const panel=document.querySelector('.manual-copy');panel.hidden=false;panel.querySelector('textarea').value=text;panel.querySelector('textarea').focus();panel.querySelector('textarea').select();feedback('Copie o texto selecionado com Ctrl ou ⌘ C.');return}
+ if(!success){const panel=document.querySelector('.manual-copy');manualCopyTrigger=button;panel.hidden=false;panel.querySelector('textarea').value=text;panel.querySelector('textarea').focus();panel.querySelector('textarea').select();feedback('Copie o texto selecionado com Ctrl ou ⌘ C.');return}
  clearTimeout(copyTimers.get(button));
  if(!copyWidths.has(button))copyWidths.set(button,button.style.width);
  button.style.width=button.getBoundingClientRect().width+'px';
- button.classList.add('copied');button.innerHTML=tickIcon+'<span class="copy-label">Copiado</span>';button.setAttribute('aria-label',label==='Copiar SKILL.md'?'SKILL.md copiado':'Comando copiado');feedback(label==='Copiar SKILL.md'?'Conteúdo do SKILL.md copiado.':'Comando de instalação copiado.');
- copyTimers.set(button,setTimeout(()=>{button.classList.remove('copied');button.innerHTML=copyIcon+'<span class="copy-label">'+label+'</span>';button.setAttribute('aria-label',originalAria);button.style.width=copyWidths.get(button)||'';copyWidths.delete(button)},1800));
+ button.classList.add('copied');button.innerHTML=tickIcon+'<span class="copy-label">Copiado</span>';button.setAttribute('aria-label',type==='link'?'Link copiado':label==='Copiar SKILL.md'?'SKILL.md copiado':'Comando copiado');feedback(type==='link'?'Link copiado.':label==='Copiar SKILL.md'?'Conteúdo do SKILL.md copiado.':'Comando copiado.');
+ copyTimers.set(button,setTimeout(()=>{button.classList.remove('copied');button.innerHTML=copyIcon+'<span class="copy-label"></span>';button.querySelector('.copy-label').textContent=label;button.setAttribute('aria-label',originalAria);button.style.width=copyWidths.get(button)||'';copyWidths.delete(button)},1800));
 }
 function toggleSkillDetails(button,details){
  const state=detailStates.get(details)||{};clearTimeout(state.timer);cancelAnimationFrame(state.frame);
@@ -92,7 +93,7 @@ function setupLibrary(){
  document.querySelectorAll('.library-filter').forEach(button=>button.addEventListener('click',()=>{category=button.dataset.category;document.querySelectorAll('.library-filter').forEach(el=>el.setAttribute('aria-pressed',String(el===button)));filterLibrary()}));
  const allCopy=document.querySelector('#copy-collection');allCopy.innerHTML=copyIcon+'<span class="copy-label">Copiar instalação</span>';allCopy.addEventListener('click',()=>copyText(getAllCommands(),allCopy,'Copiar instalação'));
  const allDownload=document.querySelector('#download-collection');allDownload.innerHTML=downloadIcon+'<span>Baixar coleção</span>';allDownload.addEventListener('click',()=>downloadZip(interfaceData.bundle,'interfaces-jakubkrehel.zip'));
- const file=document.querySelector('.interface-file');file.addEventListener('click',event=>{file.classList.add('selected');if(event.detail===0)navigate('interfaces')});file.addEventListener('dblclick',()=>navigate('interfaces'));file.addEventListener('pointerup',event=>{if(event.pointerType==='touch')navigate('interfaces')});
+ const file=document.querySelector('.interface-file');file.addEventListener('click',()=>{file.classList.add('selected');navigate('interfaces')});file.addEventListener('dblclick',()=>{if(current!=='interfaces')navigate('interfaces')});
  file.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();navigate('interfaces')}});
 }
 setupLibrary();
