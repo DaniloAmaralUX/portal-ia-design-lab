@@ -1,0 +1,32 @@
+{
+  "name": "scroll-progress",
+  "type": "registry:component",
+  "title": "Scroll Progress",
+  "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+  "files": [
+    {
+      "path": "components/core/scroll-progress.tsx",
+      "type": "registry:component",
+      "content": "'use client';\n\nimport { motion, SpringOptions, useScroll, useSpring } from 'motion/react';\nimport { cn } from '@/lib/utils';\nimport { RefObject } from 'react';\n\nexport type ScrollProgressProps = {\n  className?: string;\n  springOptions?: SpringOptions;\n  containerRef?: RefObject<HTMLDivElement>;\n};\n\nconst DEFAULT_SPRING_OPTIONS: SpringOptions = {\n  stiffness: 200,\n  damping: 50,\n  restDelta: 0.001,\n};\n\nexport function ScrollProgress({\n  className,\n  springOptions,\n  containerRef,\n}: ScrollProgressProps) {\n  const { scrollYProgress } = useScroll({\n    container: containerRef,\n    layoutEffect: Boolean(containerRef?.current),\n  });\n\n  const scaleX = useSpring(scrollYProgress, {\n    ...DEFAULT_SPRING_OPTIONS,\n    ...(springOptions ?? {}),\n  });\n\n  return (\n    <motion.div\n      className={cn('inset-x-0 top-0 h-1 origin-left', className)}\n      style={{\n        scaleX,\n      }}\n    />\n  );\n}\n"
+    },
+    {
+      "path": "lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { clsx, type ClassValue } from 'clsx';\nimport { twMerge } from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://motion-primitives.com/docs/scroll-progress",
+    "commit": "120f64f6ca60348e251f929e9c81f11ccbe45eda",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

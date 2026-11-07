@@ -1,0 +1,4 @@
+
+export function PortalSculpture() {
+  return <svg viewBox="0 0 556 354" fill="none" aria-hidden className="proto-sculpture"><defs><pattern id="proto-hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M-2 2L2-2M0 8L8 0M6 10L10 6" stroke="currentColor" strokeOpacity=".14" /></pattern></defs><g stroke="currentColor" strokeOpacity=".17" strokeDasharray="4 3"><path d="M-100 354L556-30M-40-20L656 380M0 250L510-50" /></g>{[0, 1, 2].map(layer => <g key={layer} transform={`translate(0 ${layer * -57})`} stroke="currentColor" strokeOpacity=".45"><path d="M70 239L277 119L484 239L277 359Z" fill="var(--background)" /><path d="M70 239L277 359L484 239V263L277 383L70 263Z" fill="var(--background)" /><path d="M70 239L277 119L484 239L277 359Z" fill="url(#proto-hatch)" /><path d="M277 359V383" /></g>)}</svg>;
+}

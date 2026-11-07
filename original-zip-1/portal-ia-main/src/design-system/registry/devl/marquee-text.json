@@ -1,0 +1,32 @@
+{
+  "name": "marquee-text",
+  "type": "registry:component",
+  "title": "Marquee Text",
+  "description": "An oversized headline that scrolls forever in alternating solid and outlined words, gliding to a halt when you hover instead of freezing mid-word.",
+  "files": [
+    {
+      "path": "src/registry/items/marquee-text/marquee-text.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport { useReducedMotion } from \"motion/react\";\nimport { type ReactNode, useEffect, useLayoutEffect, useRef, useState } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface MarqueeTextProps {\n  words: string[];\n  speed?: number;\n  direction?: \"left\" | \"right\";\n  pauseOnHover?: boolean;\n  paused?: boolean;\n  separator?: ReactNode;\n  className?: string;\n}\n\nexport function MarqueeText({\n  words,\n  speed = 56,\n  direction = \"left\",\n  pauseOnHover = true,\n  paused = false,\n  separator = <span className=\"mx-[0.28em] inline-block size-[0.16em] rounded-full bg-brand-ink align-middle\" />,\n  className,\n}: MarqueeTextProps) {\n  const reduce = useReducedMotion();\n  const root = useRef<HTMLDivElement>(null);\n  const track = useRef<HTMLDivElement>(null);\n  const copy = useRef<HTMLDivElement>(null);\n  const hovered = useRef(false);\n  const [copies, setCopies] = useState(2);\n  const live = useRef({ speed, paused, pauseOnHover });\n  useLayoutEffect(() => {\n    live.current = { speed, paused, pauseOnHover };\n  }, [speed, paused, pauseOnHover]);\n\n  useLayoutEffect(() => {\n    const r = root.current;\n    const c = copy.current;\n    if (!r || !c) return;\n    const fit = () => setCopies(Math.max(2, Math.ceil(r.offsetWidth / Math.max(c.offsetWidth, 1)) + 1));\n    fit();\n    const ro = new ResizeObserver(fit);\n    ro.observe(r);\n    ro.observe(c);\n    return () => ro.disconnect();\n  }, []);\n\n  useEffect(() => {\n    const r = root.current;\n    const t = track.current;\n    const c = copy.current;\n    if (!r || !t || !c || reduce) {\n      if (t) t.style.transform = \"\";\n      return;\n    }\n    let raf = 0;\n    let onScreen = true;\n    let offset = 0;\n    let velocity = live.current.paused ? 0 : live.current.speed;\n    let last = performance.now();\n    let width = Math.max(c.offsetWidth, 1);\n    const ro = new ResizeObserver(() => {\n      width = Math.max(c.offsetWidth, 1);\n    });\n    ro.observe(c);\n    const sign = direction === \"left\" ? -1 : 1;\n\n    const tick = (now: number) => {\n      const dt = Math.min((now - last) / 1000, 0.05);\n      last = now;\n      const { speed, paused, pauseOnHover } = live.current;\n      const goal = paused || (pauseOnHover && hovered.current) ? 0 : speed;\n      velocity += (goal - velocity) * (1 - Math.exp(-dt / 0.12));\n      offset = (offset + velocity * dt) % width;\n      t.style.transform = `translate3d(${sign < 0 ? -offset : offset - width}px, 0, 0)`;\n      raf = onScreen ? requestAnimationFrame(tick) : 0;\n    };\n\n    const io = new IntersectionObserver(([e]) => {\n      onScreen = e.isIntersecting;\n      if (onScreen && !raf) {\n        last = performance.now();\n        raf = requestAnimationFrame(tick);\n      }\n    });\n    io.observe(r);\n    raf = requestAnimationFrame(tick);\n    return () => {\n      cancelAnimationFrame(raf);\n      io.disconnect();\n      ro.disconnect();\n    };\n  }, [direction, reduce]);\n\n  const row = (key: number) => (\n    <div className=\"flex shrink-0 items-center\" key={key} ref={key === 0 ? copy : undefined}>\n      {words.map((word, i) => (\n        <span className=\"flex items-center\" key={`${word}-${i}`}>\n          {i % 2 === 0 ? (\n            <span className=\"whitespace-nowrap\">{word}</span>\n          ) : (\n            // A double-width stroke under a surface-coloured copy hides the seams variable fonts show with text-stroke.\n            <span className=\"relative whitespace-nowrap tracking-[0.015em]\">\n              <span className=\"[-webkit-text-stroke:max(2px,0.05em)_currentColor]\">{word}</span>\n              <span className=\"absolute inset-0 text-(--marquee-surface,var(--color-card))\">{word}</span>\n            </span>\n          )}\n          {separator}\n        </span>\n      ))}\n    </div>\n  );\n\n  return (\n    <div\n      className={cn(\n        \"overflow-hidden font-heading font-semibold text-6xl leading-none tracking-tight [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]\",\n        className,\n      )}\n      onPointerEnter={(e) => {\n        if (e.pointerType === \"mouse\") hovered.current = true;\n      }}\n      onPointerLeave={() => {\n        hovered.current = false;\n      }}\n      ref={root}\n    >\n      <span className=\"sr-only\">{words.join(\", \")}</span>\n      <div aria-hidden className=\"flex w-max py-[0.08em] will-change-transform\" ref={track}>\n        {Array.from({ length: copies }, (_, i) => row(i))}\n      </div>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]): string {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://devl.dev/motion/marquee-text",
+    "commit": "4484fc08d1a461c08772b74612e1a2b5f725dcfd",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

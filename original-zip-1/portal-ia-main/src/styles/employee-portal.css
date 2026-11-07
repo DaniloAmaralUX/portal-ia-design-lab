@@ -1,0 +1,19 @@
+﻿/* Employee content workspace: shared by the published portal, excluded from experiments. */
+.employee-portal .portal-container .portal-container { padding-inline: 0; }
+.employee-portal h1 { max-width: 24ch; font-weight: 600; letter-spacing: -.035em; text-wrap: balance; }
+.employee-portal h2 { letter-spacing: -.025em; }
+.employee-portal .library-stage { border: 1px solid var(--border); border-radius: 20px; background: var(--card); }
+.employee-portal .library-content > section:first-child > header { padding-bottom: 24px; }
+.employee-portal .portal-docs #texto { max-width: 100%; }
+.employee-portal :is(article, .prose) { overflow-wrap: break-word; }
+.employee-portal :is(article, .prose) p { line-height: 1.8; }
+.employee-portal :is(article, .prose) :is(h2,h3) { scroll-margin-top: 7rem; }
+.employee-portal nav[aria-label="Navegação do portal"] a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--foreground); border-radius: 8px; }
+@media (min-width: 1024px) {
+  .employee-portal .library-frame, .employee-portal .portal-docs { column-gap: 40px; }
+  .employee-portal .library-frame > aside, .employee-portal .portal-docs > div:first-child { border-right: 1px solid var(--border); padding-right: 20px; }
+}
+@media (max-width: 639px) {
+  .employee-portal h1 { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+  .employee-portal .library-stage { padding-inline: 16px; }
+}

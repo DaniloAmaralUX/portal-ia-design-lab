@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stock-sm-01",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/stocks/sm/stock-01.tsx",
+      "content": "import { TriangleIcon } from \"lucide-react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Widget,\n  WidgetHeader,\n  WidgetTitle,\n  WidgetContent,\n  WidgetFooter,\n} from \"@/registry/default/ui/widget\";\n\nconst WidgetDemo = () => (\n  <Widget design=\"mumbai\">\n    <WidgetHeader>\n      <WidgetTitle className=\"flex w-full items-center justify-between\">\n        <Label size=\"xxxxl\">732.17</Label>\n        <TriangleIcon className=\"fill-productive size-6 stroke-none\" />\n      </WidgetTitle>\n    </WidgetHeader>\n    <WidgetContent className=\"justify-between\">\n      <Label variant=\"productive\">+2.76</Label>\n      <Label variant=\"productive\">+0.47%</Label>\n    </WidgetContent>\n    <WidgetFooter className=\"flex-col items-start\">\n      <Label size=\"xxl\" weight=\"medium\">\n        META\n      </Label>\n      <Label variant=\"muted-foreground\">Meta Platforms Inc</Label>\n    </WidgetFooter>\n  </Widget>\n);\n\nexport default WidgetDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "stocks"
+    ],
+    "size": "sm"
+  },
+  "type": "registry:component"
+}

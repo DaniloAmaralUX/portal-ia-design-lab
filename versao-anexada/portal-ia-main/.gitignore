@@ -1,0 +1,16 @@
+node_modules
+.skills
+dist
+.tanstack
+*.tsbuildinfo
+.DS_Store
+test-results
+e2e-results.xml
+*.local
+.env
+.build-env
+e2e/.auth
+skills.env
+docs-sdd-with-openspec.html
+docs-sdd-with-openspec.pdf
+vercel-react-best-practices

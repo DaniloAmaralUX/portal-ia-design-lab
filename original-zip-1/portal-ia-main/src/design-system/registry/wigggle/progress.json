@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress",
+  "dependencies": [
+    "@radix-ui/react-progress"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "components/ui/progress.tsx",
+      "content": "\"use client\";\n\nimport * as ProgressPrimitive from \"@radix-ui/react-progress\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\ntype ProgressStyle = React.CSSProperties & {\n  \"--progress-translation\": string;\n};\n\nconst Progress = ({\n  className,\n  value,\n  ...props\n}: React.ComponentProps<typeof ProgressPrimitive.Root>) => (\n  <ProgressPrimitive.Root\n    data-slot=\"progress\"\n    className={cn(\n      \"bg-primary/20 relative h-2 w-full overflow-hidden rounded-full\",\n      className\n    )}\n    {...props}\n  >\n    <ProgressPrimitive.Indicator\n      data-slot=\"progress-indicator\"\n      className=\"bg-primary h-full w-full flex-1 -translate-x-(--progress-translation) transition-all\"\n      style={\n        {\n          \"--progress-translation\": `${100 - (value ?? 0)}%`,\n        } as ProgressStyle\n      }\n    />\n  </ProgressPrimitive.Root>\n);\n\nexport { Progress };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

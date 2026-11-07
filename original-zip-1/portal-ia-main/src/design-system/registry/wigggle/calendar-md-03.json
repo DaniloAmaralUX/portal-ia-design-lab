@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-md-03",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/button.json",
+    "https://wigggle-ui.vercel.app/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/calendar/md/calendar-03.tsx",
+      "content": "\"use client\";\n\nimport { ChevronLeft, ChevronRight } from \"lucide-react\";\nimport * as React from \"react\";\n\nimport { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Widget,\n  WidgetContent,\n  WidgetTitle,\n} from \"@/registry/default/ui/widget\";\n\nconst WEEKDAY_NAMES = [\"S\", \"M\", \"T\", \"W\", \"T\", \"F\", \"S\"] as const;\n\ntype CalendarDay = number | null;\n\ninterface CalendarProps {\n  days: CalendarDay[];\n  month: number;\n  today: Date;\n  year: number;\n}\n\nconst formatMonth = (date: Date) =>\n  new Intl.DateTimeFormat(\"en-US\", { month: \"short\" }).format(date);\n\nconst getCalendarDays = (year: number, month: number): CalendarDay[] => {\n  const firstDay = new Date(year, month, 1).getDay();\n  const daysInMonth = new Date(year, month + 1, 0).getDate();\n\n  return [\n    ...Array.from({ length: firstDay }, () => null),\n    ...Array.from({ length: daysInMonth }, (_, index) => index + 1),\n  ];\n};\n\nconst isToday = (\n  day: CalendarDay,\n  month: number,\n  year: number,\n  today: Date\n): boolean =>\n  day !== null &&\n  today.getFullYear() === year &&\n  today.getMonth() === month &&\n  today.getDate() === day;\n\nconst WeekdayRow = () => (\n  <>\n    {WEEKDAY_NAMES.map((day, index) => (\n      <div key={`${day}-${index}`} className=\"text-xs\">\n        {day}\n      </div>\n    ))}\n  </>\n);\n\nconst Calendar = ({ days, month, today, year }: CalendarProps) => (\n  <div className=\"grid size-full grid-cols-7 gap-1 text-center\">\n    <WeekdayRow />\n    {days.map((day, index) => (\n      <div\n        key={`${year}-${month}-${index}`}\n        className=\"text-muted-foreground text-xs\"\n      >\n        {isToday(day, month, year, today) ? (\n          <Badge\n            className=\"flex size-4 items-center justify-center\"\n            radius=\"xs\"\n          >\n            {day}\n          </Badge>\n        ) : (\n          (day ?? <>&nbsp;</>)\n        )}\n      </div>\n    ))}\n  </div>\n);\n\nconst WidgetDemo = () => {\n  const [calendarState, setCalendarState] = React.useState(() => {\n    const today = new Date();\n\n    return { date: today, today };\n  });\n  const { today, date } = calendarState;\n  const year = date.getFullYear();\n  const month = date.getMonth();\n  const next = new Date(year, month + 1, 1);\n  const calendarDays = getCalendarDays(year, month);\n  const nextCalendarDays = getCalendarDays(next.getFullYear(), next.getMonth());\n  const changeMonth = (step: number) => {\n    setCalendarState((current) => ({\n      ...current,\n      date: new Date(\n        current.date.getFullYear(),\n        current.date.getMonth() + step,\n        1\n      ),\n    }));\n  };\n\n  return (\n    <Widget design=\"mumbai\" size=\"md\" className=\"p-3 pt-2.5\">\n      <WidgetContent className=\"flex flex-col gap-2\">\n        <div className=\"grid w-full grid-cols-2 items-center border-b-2 pb-1\">\n          <div className=\"flex w-full items-center gap-2\">\n            <Button\n              aria-label=\"Previous month\"\n              variant=\"ghost\"\n              size=\"icon-xs\"\n              onClick={() => changeMonth(-1)}\n            >\n              <ChevronLeft className=\"h-4 w-4\" />\n            </Button>\n            <WidgetTitle className=\"ms-8 text-sm font-normal\">\n              {formatMonth(date)} {year}\n            </WidgetTitle>\n          </div>\n          <div className=\"flex w-full items-center justify-end gap-2\">\n            <WidgetTitle className=\"me-8 text-sm font-normal\">\n              {formatMonth(next)} {next.getFullYear()}\n            </WidgetTitle>\n            <Button\n              aria-label=\"Next month\"\n              variant=\"ghost\"\n              size=\"icon-xs\"\n              onClick={() => changeMonth(1)}\n            >\n              <ChevronRight className=\"h-4 w-4\" />\n            </Button>\n          </div>\n        </div>\n        <div className=\"flex w-full flex-1 items-center justify-between gap-2\">\n          <Calendar\n            days={calendarDays}\n            month={month}\n            today={today}\n            year={year}\n          />\n          <div className=\"bg-secondary h-full w-1\" />\n          <Calendar\n            days={nextCalendarDays}\n            month={next.getMonth()}\n            today={today}\n            year={next.getFullYear()}\n          />\n        </div>\n      </WidgetContent>\n    </Widget>\n  );\n};\n\nexport default WidgetDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar"
+    ],
+    "size": "md"
+  },
+  "type": "registry:component"
+}

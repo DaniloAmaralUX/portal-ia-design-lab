@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/shadcnblocks/mainline-nextjs-template",
+  "commit": "2329ed3524a6038d834b925187084a0e41fab2d9",
+  "components": [
+    "src/components/blocks/hero.tsx",
+    "src/components/background.tsx",
+    "src/components/dashed-line.tsx",
+    "src/components/ui/button.tsx"
+  ],
+  "adaptations": [
+    "Next image replaced by interactive portal preview",
+    "Portuguese portal content",
+    "Scoped tokens and original font files",
+    "Motion properties restricted for interaction feedback"
+  ]
+}

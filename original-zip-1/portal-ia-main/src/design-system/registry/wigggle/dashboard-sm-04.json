@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-sm-04",
+  "dependencies": [
+    "recharts"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/chart.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/dashboard/sm/dashboard-04.tsx",
+      "content": "\"use client\";\n\nimport { CartesianGrid, Line, LineChart, XAxis } from \"recharts\";\n\nimport type { ChartConfig } from \"@/components/ui/chart\";\nimport {\n  ChartContainer,\n  ChartTooltip,\n  ChartTooltipContent,\n} from \"@/components/ui/chart\";\nimport {\n  Widget,\n  WidgetContent,\n  WidgetHeader,\n  WidgetTitle,\n} from \"@/registry/default/ui/widget\";\n\nconst chartData = [\n  { desktop: 186, mobile: 80, month: \"Jan\" },\n  { desktop: 305, mobile: 200, month: \"Feb\" },\n  { desktop: 237, mobile: 120, month: \"Mar\" },\n  { desktop: 173, mobile: 56, month: \"Apr\" },\n  { desktop: 299, mobile: 130, month: \"May\" },\n];\n\nconst chartConfig = {\n  desktop: {\n    color: \"var(--productive)\",\n    label: \"Desktop\",\n  },\n  mobile: {\n    color: \"var(--destructive)\",\n    label: \"Mobile\",\n  },\n} satisfies ChartConfig;\n\nconst WidgetDemo = () => (\n  <Widget design=\"mumbai\" className=\"gap-4\">\n    <WidgetHeader>\n      <WidgetTitle className=\"w-full text-center\">acme.com</WidgetTitle>\n    </WidgetHeader>\n    <WidgetContent>\n      <ChartContainer className=\"size-full\" config={chartConfig}>\n        <LineChart\n          accessibilityLayer\n          data={chartData}\n          margin={{\n            left: 12,\n            right: 12,\n          }}\n        >\n          <CartesianGrid vertical={false} />\n          <XAxis\n            dataKey=\"month\"\n            tickLine={false}\n            axisLine={false}\n            tickMargin={8}\n            tickFormatter={(value) => value.slice(0, 3)}\n          />\n          <ChartTooltip\n            cursor={false}\n            content={<ChartTooltipContent hideLabel />}\n          />\n          <Line\n            dataKey=\"desktop\"\n            type=\"natural\"\n            stroke=\"var(--color-desktop)\"\n            strokeWidth={2}\n            dot={{\n              fill: \"var(--color-desktop)\",\n            }}\n            activeDot={{\n              r: 6,\n            }}\n          />\n          <Line\n            dataKey=\"mobile\"\n            type=\"natural\"\n            stroke=\"var(--color-mobile)\"\n            strokeWidth={2}\n            dot={{\n              fill: \"var(--color-mobile)\",\n            }}\n            activeDot={{\n              r: 6,\n            }}\n          />\n        </LineChart>\n      </ChartContainer>\n    </WidgetContent>\n  </Widget>\n);\n\nexport default WidgetDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dashboard"
+    ]
+  },
+  "type": "registry:component"
+}

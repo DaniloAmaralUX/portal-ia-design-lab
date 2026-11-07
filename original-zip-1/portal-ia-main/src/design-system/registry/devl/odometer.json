@@ -1,0 +1,32 @@
+{
+  "name": "odometer",
+  "type": "registry:component",
+  "title": "Odometer",
+  "description": "Digits that turn like a real counter: every place rolls the way the number moved, so 9 ticks over to 0 instead of spinning back, and it counts up the first time you scroll to it.",
+  "files": [
+    {
+      "path": "src/registry/items/odometer/odometer.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport {\n  AnimatePresence,\n  animate,\n  type MotionValue,\n  motion,\n  useInView,\n  useMotionValue,\n  useReducedMotion,\n  useTransform,\n} from \"motion/react\";\nimport { type ComponentProps, useEffect, useMemo, useRef, useState } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nconst DIGITS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nexport interface OdometerProps extends Omit<ComponentProps<\"span\">, \"children\"> {\n  value: number;\n  from?: number;\n  format?: Intl.NumberFormatOptions;\n  locale?: string;\n  startOnView?: boolean;\n  stiffness?: number;\n  stagger?: number;\n}\n\ntype Glyph = { key: string; char: string; digit: number | null; place: number };\n\nfunction toGlyphs(text: string): Glyph[] {\n  let place = 0;\n  let other = 0;\n  return [...text]\n    .reverse()\n    .map((char) => {\n      const isDigit = char >= \"0\" && char <= \"9\";\n      const key = isDigit ? `d${place}` : `s${other++}-${char}`;\n      return { key, char, digit: isDigit ? Number(char) : null, place: isDigit ? place++ : place };\n    })\n    .reverse();\n}\n\nfunction Face({ n, turn }: { n: number; turn: MotionValue<number> }) {\n  const y = useTransform(turn, (t) => {\n    let offset = (((n - t) % 10) + 10) % 10;\n    if (offset > 5) offset -= 10;\n    return `${offset * 100}%`;\n  });\n  return (\n    <motion.span className=\"absolute inset-x-0 top-0 block h-(--row) text-center leading-(--row)\" style={{ y }}>\n      {n}\n    </motion.span>\n  );\n}\n\nfunction Wheel({\n  digit,\n  direction,\n  startAt,\n  delay,\n  stiffness,\n  reduce,\n}: {\n  digit: number;\n  direction: number;\n  startAt: number;\n  delay: number;\n  stiffness: number;\n  reduce: boolean;\n}) {\n  const turn = useMotionValue(startAt);\n  const target = useRef(startAt);\n\n  useEffect(() => {\n    const current = ((target.current % 10) + 10) % 10;\n    let step = digit - current;\n    if (direction > 0) step = (step + 10) % 10;\n    else if (direction < 0) step = -((-step + 10) % 10);\n    else if (step > 5) step -= 10;\n    else if (step < -5) step += 10;\n    target.current += step;\n    if (reduce) turn.jump(target.current);\n    else if (step !== 0 || (!turn.isAnimating() && turn.get() !== target.current))\n      animate(turn, target.current, { type: \"spring\", stiffness, damping: 2 * Math.sqrt(stiffness), delay });\n  }, [digit, direction, delay, stiffness, reduce, turn]);\n\n  useEffect(() => () => turn.stop(), [turn]);\n\n  return (\n    <>\n      <span className=\"invisible block leading-(--row)\">0</span>\n      {DIGITS.map((n) => (\n        <Face key={n} n={n} turn={turn} />\n      ))}\n    </>\n  );\n}\n\nexport function Odometer({\n  value,\n  from = 0,\n  format,\n  locale = \"en-US\",\n  startOnView = true,\n  stiffness = 170,\n  stagger = 0.035,\n  className,\n  ...props\n}: OdometerProps) {\n  const ref = useRef<HTMLSpanElement>(null);\n  const inView = useInView(ref, { once: true, margin: \"0px 0px -10% 0px\" });\n  const reduce = useReducedMotion() ?? false;\n  const formatter = useMemo(() => new Intl.NumberFormat(locale, format), [locale, format]);\n\n  const [hydrated, setHydrated] = useState(false);\n  useEffect(() => setHydrated(true), []);\n  const shown = !startOnView || inView || (hydrated && reduce) ? value : from;\n  const glyphs = toGlyphs(formatter.format(shown));\n\n  const previous = useRef(shown);\n  const direction = Math.sign(shown - previous.current);\n  useEffect(() => {\n    previous.current = shown;\n  }, [shown]);\n\n  const painted = useRef(false);\n  useEffect(() => {\n    painted.current = true;\n  }, []);\n\n  return (\n    <span\n      className={cn(\"relative inline-flex items-baseline whitespace-nowrap tabular-nums leading-none\", className)}\n      ref={ref}\n      {...props}\n    >\n      <span className=\"sr-only\">{formatter.format(value)}</span>\n      <span aria-hidden className=\"relative inline-flex [--row:1.15em]\">\n        <AnimatePresence initial={false} mode=\"popLayout\">\n          {glyphs.map((glyph) => (\n            <motion.span\n              animate={{ opacity: 1 }}\n              className={cn(\n                \"relative inline-block h-(--row) leading-(--row)\",\n                glyph.digit !== null &&\n                  \"overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]\",\n              )}\n              exit={{ opacity: 0 }}\n              initial={{ opacity: 0 }}\n              key={glyph.key}\n              layout={reduce ? false : \"position\"}\n              transition={{ type: \"spring\", duration: 0.35, bounce: 0 }}\n            >\n              {glyph.digit === null ? (\n                glyph.char\n              ) : (\n                <Wheel\n                  delay={Math.min(glyph.place, 6) * stagger}\n                  digit={glyph.digit}\n                  direction={direction}\n                  reduce={reduce}\n                  startAt={painted.current && direction > 0 ? 0 : glyph.digit}\n                  stiffness={stiffness}\n                />\n              )}\n            </motion.span>\n          ))}\n        </AnimatePresence>\n      </span>\n    </span>\n  );\n}\n"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]): string {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://devl.dev/motion/odometer",
+    "commit": "4484fc08d1a461c08772b74612e1a2b5f725dcfd",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "blur-rise",
+  "type": "registry:component",
+  "title": "Blur Rise",
+  "description": "Text that drifts up and comes into focus a letter or a word at a time as it scrolls into view, quick enough that nobody waits to read it.",
+  "files": [
+    {
+      "path": "src/registry/items/blur-rise/blur-rise.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport { motion, useInView, useReducedMotion } from \"motion/react\";\nimport { type ElementType, Fragment, useRef } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface BlurRiseProps {\n  text: string;\n  by?: \"word\" | \"letter\";\n  as?: ElementType;\n  stagger?: number;\n  maxSpread?: number;\n  delay?: number;\n  once?: boolean;\n  className?: string;\n}\n\nconst EASE_OUT = [0.23, 1, 0.32, 1] as const;\n\nexport function BlurRise({\n  text,\n  by = \"word\",\n  as: Tag = \"p\",\n  stagger,\n  maxSpread = 0.6,\n  delay = 0,\n  once = true,\n  className,\n}: BlurRiseProps) {\n  const ref = useRef<HTMLElement>(null);\n  const inView = useInView(ref, { once, amount: 0.4 });\n  const reduce = useReducedMotion();\n  const words = text.split(/\\s+/).filter(Boolean);\n  const count = by === \"letter\" ? words.reduce((n, w) => n + [...w].length, 0) : words.length;\n  const wanted = stagger ?? (by === \"letter\" ? 0.022 : 0.035);\n  const step = count > 1 ? Math.min(wanted, maxSpread / (count - 1)) : 0;\n\n  let index = 0;\n  const piece = (content: string, key: string) => {\n    const at = delay + index++ * step;\n    return (\n      <motion.span\n        animate={inView ? \"shown\" : \"hidden\"}\n        className=\"inline-block\"\n        initial=\"hidden\"\n        key={key}\n        transition={\n          reduce\n            ? { duration: 0, opacity: { duration: 0.3, ease: \"easeOut\", delay: delay + (at - delay) / 2 } }\n            : {\n                delay: at,\n                type: \"spring\",\n                stiffness: 170,\n                damping: 22,\n                mass: 0.7,\n                filter: { duration: 0.45, ease: EASE_OUT, delay: at },\n                opacity: { duration: 0.3, ease: \"easeOut\", delay: at },\n              }\n        }\n        variants={{\n          hidden: { opacity: 0, y: \"0.4em\", scale: 0.96, filter: \"blur(8px)\" },\n          shown: { opacity: 1, y: 0, scale: 1, filter: \"blur(0px)\", transitionEnd: { filter: \"none\" } },\n        }}\n      >\n        {content}\n      </motion.span>\n    );\n  };\n\n  return (\n    <Tag className={cn(\"text-balance\", className)} ref={ref}>\n      <span className=\"sr-only\">{text}</span>\n      {words.map((word, w) => (\n        <Fragment key={`${word}-${w}`}>\n          <span aria-hidden className=\"inline-block whitespace-nowrap\">\n            {by === \"letter\" ? [...word].map((ch, c) => piece(ch, `${w}-${c}`)) : piece(word, `${w}`)}\n          </span>\n          {w < words.length - 1 && \" \"}\n        </Fragment>\n      ))}\n    </Tag>\n  );\n}\n"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]): string {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://devl.dev/motion/blur-rise",
+    "commit": "4484fc08d1a461c08772b74612e1a2b5f725dcfd",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

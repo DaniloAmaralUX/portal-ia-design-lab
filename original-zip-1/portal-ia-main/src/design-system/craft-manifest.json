@@ -1,0 +1,1392 @@
+[
+  {
+    "id": "accounts-crm",
+    "title": "Pipeline Today",
+    "description": "A salesperson's morning view: drag deals between stages (or move them with the keyboard) while each column's weighted value and the forecast roll live, and a Focus rail tells you who to act on and why, with one-click email, call and snooze that update the deal.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/accounts-crm",
+    "install": "npx shadcn@latest add https://devl.dev/r/accounts-crm.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "admin-users",
+    "title": "Admin Users",
+    "description": "A members admin with seat and 2FA stats, role and status filters, a sortable table you can bulk-edit, an invite dialog that checks emails as chips, and a drawer with each person's devices and activity.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/admin-users",
+    "install": "npx shadcn@latest add https://devl.dev/r/admin-users.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "appearance-settings",
+    "title": "Appearance Settings",
+    "description": "Theme cards with miniature previews above a compact live app that re-themes with a circular wipe, eases into your accent colour and glides between densities as you change them.",
+    "collection": "devl",
+    "family": "screen / Settings",
+    "source": "https://devl.dev/screens/appearance-settings",
+    "install": "npx shadcn@latest add https://devl.dev/r/appearance-settings.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "article-cards",
+    "title": "Article Cards",
+    "description": "A blog grid led by one large featured post, each card with drawn cover art, tags, reading time and author, lifting gently on hover while its cover drifts closer.",
+    "collection": "devl",
+    "family": "block / Content",
+    "source": "https://devl.dev/blocks/article-cards",
+    "install": "npx shadcn@latest add https://devl.dev/r/article-cards.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "assistant-app",
+    "title": "Assistant App",
+    "description": "A small, complete assistant with chats and projects in the sidebar, files you can attach, and replies that write themselves out word by word.",
+    "collection": "devl",
+    "family": "block / Apps",
+    "source": "https://devl.dev/blocks/assistant-app",
+    "install": "npx shadcn@latest add https://devl.dev/r/assistant-app.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "assistant-start",
+    "title": "Assistant Start",
+    "description": "The first screen of an AI assistant, with chats and projects down the side, a gooey orb that says hello and a prompt box that gathers tools and connected apps as context, then glides down into the conversation when you send.",
+    "collection": "devl",
+    "family": "screen / AI",
+    "source": "https://devl.dev/screens/assistant-start",
+    "install": "npx shadcn@latest add https://devl.dev/r/assistant-start.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "before-after-hero",
+    "title": "Before & After Hero",
+    "description": "A hero split down the middle: drag the handle and a messy expense spreadsheet turns into a clean, matched ledger row by row, while the headline flips from a week to an afternoon.",
+    "collection": "devl",
+    "family": "block / Heroes",
+    "source": "https://devl.dev/blocks/before-after-hero",
+    "install": "npx shadcn@latest add https://devl.dev/r/before-after-hero.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "billing-overview",
+    "title": "Billing Overview",
+    "description": "A billing page in one glance: plan and seats, the next invoice with its cycle progress, a payment card that holds its colours in both themes, usage bars that warn near the limit, and invoices with a one-click retry.",
+    "collection": "devl",
+    "family": "block / Dashboards",
+    "source": "https://devl.dev/blocks/billing-overview",
+    "install": "npx shadcn@latest add https://devl.dev/r/billing-overview.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "blur-rise",
+    "title": "Blur Rise",
+    "description": "Text that drifts up and comes into focus a letter or a word at a time as it scrolls into view, quick enough that nobody waits to read it.",
+    "collection": "devl",
+    "family": "motion / Text",
+    "source": "https://devl.dev/motion/blur-rise",
+    "install": "npx shadcn@latest add https://devl.dev/r/blur-rise.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "calendar-week",
+    "title": "Calendar Week",
+    "description": "A week calendar you can push around: drag events to move or stretch them on a 15-minute snap, drag empty time to create one, nudge with the arrow keys, and watch the now line creep down the day.",
+    "collection": "devl",
+    "family": "screen / Comms",
+    "source": "https://devl.dev/screens/calendar-week",
+    "install": "npx shadcn@latest add https://devl.dev/r/calendar-week.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "card-deal",
+    "title": "Card Deal",
+    "description": "A grid that deals itself out from one point like a hand of cards: each card flies to its slot tilted and settles flat, and a shuffle sweeps them back into the deck and deals a fresh order, even mid-flight.",
+    "collection": "devl",
+    "family": "motion / Surfaces",
+    "source": "https://devl.dev/motion/card-deal",
+    "install": "npx shadcn@latest add https://devl.dev/r/card-deal.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "changelog",
+    "title": "Changelog",
+    "description": "A release timeline with sticky version tags, New / Improved / Fixed chips you can filter by, small drawn media cards instead of screenshots, and a load-more that eases older releases into place.",
+    "collection": "devl",
+    "family": "block / Content",
+    "source": "https://devl.dev/blocks/changelog",
+    "install": "npx shadcn@latest add https://devl.dev/r/changelog.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "checkout",
+    "title": "Checkout",
+    "description": "A one-page checkout that folds each finished step into a one-line summary: inline validation that clears as you type, delivery choices that re-total the order, a card that flips when you reach the CVC, and a calm confirmation.",
+    "collection": "devl",
+    "family": "screen / Commerce",
+    "source": "https://devl.dev/screens/checkout",
+    "install": "npx shadcn@latest add https://devl.dev/r/checkout.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "checkout-summary",
+    "title": "Checkout Summary",
+    "description": "A checkout with generic express-pay buttons, delivery options that slide a selection ring, quantity steppers, a promo field that validates, and totals whose digits roll as anything changes.",
+    "collection": "devl",
+    "family": "block / Apps",
+    "source": "https://devl.dev/blocks/checkout-summary",
+    "install": "npx shadcn@latest add https://devl.dev/r/checkout-summary.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "city-time",
+    "title": "City Time",
+    "description": "A local-time page for any city: a live clock whose digits roll, the sun on today's arc, your working hours against theirs with the best time to meet, and the year's clock changes, all re-computed as you switch cities.",
+    "collection": "devl",
+    "family": "block / Apps",
+    "source": "https://devl.dev/blocks/city-time",
+    "install": "npx shadcn@latest add https://devl.dev/r/city-time.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "co-writing-doc",
+    "title": "Co-writing Doc",
+    "description": "A document where AI agents write alongside you: coloured cursors with name tags glide between words, an agent types its suggestion letter by letter for you to accept or reject, and comments sit in the margin next to the lines they're about.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/co-writing-doc",
+    "install": "npx shadcn@latest add https://devl.dev/r/co-writing-doc.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "code-review",
+    "title": "Code Review",
+    "description": "A pull request review with a file tree, split or unified diffs with word-level highlights, inline threads you can reply to and resolve, Viewed checkboxes that fold files away, and an approve or request-changes panel.",
+    "collection": "devl",
+    "family": "screen / Dev",
+    "source": "https://devl.dev/screens/code-review",
+    "install": "npx shadcn@latest add https://devl.dev/r/code-review.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "conductor",
+    "title": "Conductor",
+    "description": "Chat with a lead agent while it works: it streams its replies, hands tasks to helpers whose progress ticks along in a side panel and writes what it learns straight into a launch brief you can edit beside the chat.",
+    "collection": "devl",
+    "family": "screen / AI",
+    "source": "https://devl.dev/screens/conductor",
+    "install": "npx shadcn@latest add https://devl.dev/r/conductor.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "confetti-burst",
+    "title": "Confetti Burst",
+    "description": "Confetti that blooms out of the button you pressed, hangs at the top of its arc in the air drag, flutters as each piece turns over and drifts down; reduced motion gets a quick check instead.",
+    "collection": "devl",
+    "family": "motion / Celebration",
+    "source": "https://devl.dev/motion/confetti-burst",
+    "install": "npx shadcn@latest add https://devl.dev/r/confetti-burst.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "connector-marketplace",
+    "title": "Connector Marketplace",
+    "description": "A place to browse the apps that plug into your product: filter by category, search, and connect one through a short permissions step that shows the link being made.",
+    "collection": "devl",
+    "family": "block / Apps",
+    "source": "https://devl.dev/blocks/connector-marketplace",
+    "install": "npx shadcn@latest add https://devl.dev/r/connector-marketplace.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "connectors",
+    "title": "Connectors",
+    "description": "Browse every app your product plugs into, grouped by category in tidy two-up cards, with a sticky search, filters that glide, connect buttons that spin and settle into a quiet connected state, and a slide-over for permissions and settings.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/connectors",
+    "install": "npx shadcn@latest add https://devl.dev/r/connectors.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "dashboard-header",
+    "title": "Dashboard Header",
+    "description": "The top of a dashboard: three trend cards, a this-period-versus-last chart you can scrub day by day, and a goal ring that fills as sales come in.",
+    "collection": "devl",
+    "family": "block / Dashboards",
+    "source": "https://devl.dev/blocks/dashboard-header",
+    "install": "npx shadcn@latest add https://devl.dev/r/dashboard-header.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "delivery-tracker",
+    "title": "Delivery Tracker",
+    "description": "Live order tracking on a hand-drawn city map: the courier rides the route as the ETA counts down, you can zoom in to follow them, message with quick replies, and rate and tip once it lands.",
+    "collection": "devl",
+    "family": "screen / Commerce",
+    "source": "https://devl.dev/screens/delivery-tracker",
+    "install": "npx shadcn@latest add https://devl.dev/r/delivery-tracker.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "developer-settings",
+    "title": "API Keys & Webhooks",
+    "description": "Scoped API keys with a show-once secret, roll and revoke, plus webhook endpoints with event picking, a signing secret and a deliveries log where failed sends retry and flip to 200.",
+    "collection": "devl",
+    "family": "screen / Settings",
+    "source": "https://devl.dev/screens/developer-settings",
+    "install": "npx shadcn@latest add https://devl.dev/r/developer-settings.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "docs-layout",
+    "title": "Docs Layout",
+    "description": "A docs page shell: grouped sidebar, readable article with tabbed code and callouts, a reading-progress hairline and a right-hand outline whose marker glides to the section you're reading; the sidebar becomes a drawer on phones.",
+    "collection": "devl",
+    "family": "block / Apps",
+    "source": "https://devl.dev/blocks/docs-layout",
+    "install": "npx shadcn@latest add https://devl.dev/r/docs-layout.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "docs-site",
+    "title": "Docs Site",
+    "description": "A documentation site with a top nav, collapsible sidebar, code samples whose language choice follows you across the page, a table of contents that tracks your scroll, ⌘K search over pages and headings, and prev and next cards.",
+    "collection": "devl",
+    "family": "screen / Dev",
+    "source": "https://devl.dev/screens/docs-site",
+    "install": "npx shadcn@latest add https://devl.dev/r/docs-site.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "drip-loaders",
+    "title": "Drip Loaders",
+    "description": "Three loaders made of liquid in whatever colour you like: a comet of drops that stretches and gathers, a bead that drips into a pool, and a dot that splits and flows back together.",
+    "collection": "devl",
+    "family": "motion / Liquid",
+    "source": "https://devl.dev/motion/drip-loaders",
+    "install": "npx shadcn@latest add https://devl.dev/r/drip-loaders.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "drive",
+    "title": "Drive",
+    "description": "A cloud drive home with a sidebar of places and quick access, start-from-template cards, and folders that glide between a card grid and a tidy table when you switch views, with search, sort and stars.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/drive",
+    "install": "npx shadcn@latest add https://devl.dev/r/drive.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "elastic-list",
+    "title": "Elastic List",
+    "description": "A scrolling list with real rubber-band edges: drag or flick past either end and it stretches with growing resistance, then springs back, pulling down from the top winds up a spinner that snaps when it's ready to refresh, and the wheel hands off to the page once you reach an end.",
+    "collection": "devl",
+    "family": "motion / Surfaces",
+    "source": "https://devl.dev/motion/elastic-list",
+    "install": "npx shadcn@latest add https://devl.dev/r/elastic-list.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "faq",
+    "title": "FAQ",
+    "description": "A searchable FAQ with topic tabs and live counts, matches marked in place, answers that open on a smooth measured height, and a copy-link button on every question that deep-links straight to it.",
+    "collection": "devl",
+    "family": "block / Content",
+    "source": "https://devl.dev/blocks/faq",
+    "install": "npx shadcn@latest add https://devl.dev/r/faq.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "feature-bento",
+    "title": "Feature Bento",
+    "description": "A bento grid of feature tiles, each with a tiny working demo (search, shortcuts, version history, a flow, a chart) that wakes up on hover and rests when you leave.",
+    "collection": "devl",
+    "family": "block / Marketing",
+    "source": "https://devl.dev/blocks/feature-bento",
+    "install": "npx shadcn@latest add https://devl.dev/r/feature-bento.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "first-project",
+    "title": "First Project",
+    "description": "The empty Projects page of an app: one line on what projects are for, a Create button with its shortcut, a guide link and three templates. Creating one flies the icon into the first row of a real project list.",
+    "collection": "devl",
+    "family": "block / Empty & Error",
+    "source": "https://devl.dev/blocks/first-project",
+    "install": "npx shadcn@latest add https://devl.dev/r/first-project.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "first-run",
+    "title": "First Run",
+    "description": "A four-step setup for a brand-new AI workspace, with a springy stepper, tools that connect right where they sit, invites as chips, a live preview of your first agent and a calm summary you can jump back from.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/first-run",
+    "install": "npx shadcn@latest add https://devl.dev/r/first-run.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "flags-console",
+    "title": "Flags Console",
+    "description": "A whole flag console in one piece: search and filter your flags, pick one to edit its targeting rules and rollout per environment, and watch a live log of requests getting their variant, with a marker the moment your change takes effect.",
+    "collection": "devl",
+    "family": "block / Filters",
+    "source": "https://devl.dev/blocks/flags-console",
+    "install": "npx shadcn@latest add https://devl.dev/r/flags-console.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "flip-clock",
+    "title": "Flip Clock",
+    "description": "A split-flap countdown where each changed digit's top flap falls away under gravity, darkening as it turns, and the new lower flap lands with one small rebound.",
+    "collection": "devl",
+    "family": "motion / Text",
+    "source": "https://devl.dev/motion/flip-clock",
+    "install": "npx shadcn@latest add https://devl.dev/r/flip-clock.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "folder-view",
+    "title": "Folder View",
+    "description": "One folder opened inside a drive, with a folder tree in the sidebar, type filters with counts, a grid of file cards with little drawn previews or a dense table, a bulk bar that rises with a rolling count when you pick a few, and ghost files fanning out of an empty sub-folder.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/folder-view",
+    "install": "npx shadcn@latest add https://devl.dev/r/folder-view.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "forgot-password",
+    "title": "Forgot Password",
+    "description": "Ask for a reset link, then a confirmation with the address it went to, a resend countdown and a way back to sign in.",
+    "collection": "devl",
+    "family": "screen / Auth",
+    "source": "https://devl.dev/screens/forgot-password",
+    "install": "npx shadcn@latest add https://devl.dev/r/forgot-password.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "habits",
+    "title": "Habits",
+    "description": "A habit tracker that makes ticking things off feel good: checks fill and draw in a beat, counted habits fill like a glass, streaks roll up, and a week grid lets you patch the days you forgot to log.",
+    "collection": "devl",
+    "family": "screen / Personal",
+    "source": "https://devl.dev/screens/habits",
+    "install": "npx shadcn@latest add https://devl.dev/r/habits.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "hairline-shell",
+    "title": "Hairline Shell",
+    "description": "An app frame drawn edge to edge on single hairlines, with header and footer rules running straight across, a marker that slides along the edge to the current page and a dense issue list you can walk with J and K.",
+    "collection": "devl",
+    "family": "screen / Shells",
+    "source": "https://devl.dev/screens/hairline-shell",
+    "install": "npx shadcn@latest add https://devl.dev/r/hairline-shell.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "help-centre",
+    "title": "Help Centre",
+    "description": "A support site with a search that suggests articles as you type, topic cards, readable articles with a table of contents that follows you, and a feedback form that asks what went wrong.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/help-centre",
+    "install": "npx shadcn@latest add https://devl.dev/r/help-centre.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "highlighter",
+    "title": "Highlighter",
+    "description": "A marker pen that sweeps behind your words one line after another, with a chisel tip, slightly ragged edges and ink that pools where each stroke starts and stops; runs when it scrolls into view or when its row is hovered.",
+    "collection": "devl",
+    "family": "motion / Text",
+    "source": "https://devl.dev/motion/highlighter",
+    "install": "npx shadcn@latest add https://devl.dev/r/highlighter.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "inbox-preview",
+    "title": "Inbox Preview",
+    "description": "A mail client in one block: unread dots, coloured labels, hover actions, rows you swipe to archive or mark read (with undo), j/k/e shortcuts and a reading pane that slides over the list on phones.",
+    "collection": "devl",
+    "family": "block / Apps",
+    "source": "https://devl.dev/blocks/inbox-preview",
+    "install": "npx shadcn@latest add https://devl.dev/r/inbox-preview.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "ink-stamp",
+    "title": "Ink Stamp",
+    "description": "A rubber stamp that rises, winds up and slams onto the page with a quick squash and a jolt through the card, lifting away to leave a rough, slightly bled ink impression that comes out a little different every time.",
+    "collection": "devl",
+    "family": "motion / Celebration",
+    "source": "https://devl.dev/motion/ink-stamp",
+    "install": "npx shadcn@latest add https://devl.dev/r/ink-stamp.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "inset-shell",
+    "title": "Inset Shell",
+    "description": "The frame an app lives in: a sidebar with workspace switcher, nav, colour-dotted projects and an account menu that folds down to an icon rail, beside a rounded inset page with live breadcrumbs and a floating drawer on phones.",
+    "collection": "devl",
+    "family": "screen / Shells",
+    "source": "https://devl.dev/screens/inset-shell",
+    "install": "npx shadcn@latest add https://devl.dev/r/inset-shell.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "intake-survey",
+    "title": "Intake Survey",
+    "description": "A one-question-at-a-time onboarding survey: answer with A–D, a quick blink confirms your pick before the next question glides in, multi-select with a limit, an optional free-text step and an editable summary at the end.",
+    "collection": "devl",
+    "family": "block / Apps",
+    "source": "https://devl.dev/blocks/intake-survey",
+    "install": "npx shadcn@latest add https://devl.dev/r/intake-survey.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "issue-tracker",
+    "title": "Issue Tracker",
+    "description": "An issue list you drive with your hands on the keys: J and K to move, S, P, A and L to change status, priority, assignee and labels, X to multi-select, ⌘K for everything else, and rows glide to their new group when they change.",
+    "collection": "devl",
+    "family": "screen / Dev",
+    "source": "https://devl.dev/screens/issue-tracker",
+    "install": "npx shadcn@latest add https://devl.dev/r/issue-tracker.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "kanban-board",
+    "title": "Kanban Board",
+    "description": "A team board you can really work in: drag cards between columns, add one with a keystroke, filter by label, and open any card for its checklist and notes.",
+    "collection": "devl",
+    "family": "block / Apps",
+    "source": "https://devl.dev/blocks/kanban-board",
+    "install": "npx shadcn@latest add https://devl.dev/r/kanban-board.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "lava-lamp",
+    "title": "Lava Lamp",
+    "description": "Warm wax blobs that wander, melt into one another and drift apart behind your content, with one that lazily trails your cursor.",
+    "collection": "devl",
+    "family": "motion / Liquid",
+    "source": "https://devl.dev/motion/lava-lamp",
+    "install": "npx shadcn@latest add https://devl.dev/r/lava-lamp.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "lift-to-open",
+    "title": "Lift to Open",
+    "description": "A thumbnail that lifts off the grid and grows into its own detail view as one object, cover and title travelling with it, the details fading in once it lands; Escape or a click outside folds it back into its exact slot.",
+    "collection": "devl",
+    "family": "motion / Surfaces",
+    "source": "https://devl.dev/motion/lift-to-open",
+    "install": "npx shadcn@latest add https://devl.dev/r/lift-to-open.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "like-burst",
+    "title": "Like Burst",
+    "description": "A heart that squeezes and pops full with a thin ring and a flick of sparks, while the count rolls over digit by digit like an odometer; unliking fades back quietly.",
+    "collection": "devl",
+    "family": "motion / Celebration",
+    "source": "https://devl.dev/motion/like-burst",
+    "install": "npx shadcn@latest add https://devl.dev/r/like-burst.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "liquid-cursor",
+    "title": "Liquid Cursor",
+    "description": "Inside its card the pointer becomes a drop of liquid with a short trail; hover a link or button and the drop pours itself into that shape, then pinches free when you move on.",
+    "collection": "devl",
+    "family": "motion / Liquid",
+    "source": "https://devl.dev/motion/liquid-cursor",
+    "install": "npx shadcn@latest add https://devl.dev/r/liquid-cursor.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "liquid-fab",
+    "title": "Liquid FAB",
+    "description": "A round action button that squeezes out its actions as droplets: each one stretches away, pinches off into its own button and gets drawn back in when you close it, with labels as tooltips and full keyboard support.",
+    "collection": "devl",
+    "family": "motion / Liquid",
+    "source": "https://devl.dev/motion/liquid-fab",
+    "install": "npx shadcn@latest add https://devl.dev/r/liquid-fab.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "magnetic",
+    "title": "Magnetic",
+    "description": "Buttons and icons lean toward your pointer as it comes near, labels drifting a little further than their buttons, then spring back the moment you move away.",
+    "collection": "devl",
+    "family": "motion / Cursor",
+    "source": "https://devl.dev/motion/magnetic",
+    "install": "npx shadcn@latest add https://devl.dev/r/magnetic.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "mail",
+    "title": "Mail",
+    "description": "A three-pane mail client you can run from the keyboard: J and K walk the threads, E archives with an undo, R drops you into a quick reply, and the reading pane slides over the list on phones.",
+    "collection": "devl",
+    "family": "screen / Comms",
+    "source": "https://devl.dev/screens/mail",
+    "install": "npx shadcn@latest add https://devl.dev/r/mail.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "margin-notes",
+    "title": "Margin Notes",
+    "description": "A reviewer's pen that draws itself onto your text as it scrolls into view: wobbly circles, double underlines, boxes and strike-throughs, then arrows that curve from a handwritten note to the words it means.",
+    "collection": "devl",
+    "family": "motion / Text",
+    "source": "https://devl.dev/motion/margin-notes",
+    "install": "npx shadcn@latest add https://devl.dev/r/margin-notes.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "marquee-text",
+    "title": "Marquee Text",
+    "description": "An oversized headline that scrolls forever in alternating solid and outlined words, gliding to a halt when you hover instead of freezing mid-word.",
+    "collection": "devl",
+    "family": "motion / Text",
+    "source": "https://devl.dev/motion/marquee-text",
+    "install": "npx shadcn@latest add https://devl.dev/r/marquee-text.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "mega-footer",
+    "title": "Mega Footer",
+    "description": "A full site footer: link columns with little badges, a one-field digest signup, a live status pill, language and theme switches, a legal row, and an oversized wordmark fading into the floor.",
+    "collection": "devl",
+    "family": "block / Marketing",
+    "source": "https://devl.dev/blocks/mega-footer",
+    "install": "npx shadcn@latest add https://devl.dev/r/mega-footer.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "money",
+    "title": "Money",
+    "description": "A personal finance home: the balance rolls digit by digit as you switch accounts or pay a bill, the payment lands in your transactions, spending donut and budgets at once, and each budget shows if you’re spending ahead of pace.",
+    "collection": "devl",
+    "family": "screen / Personal",
+    "source": "https://devl.dev/screens/money",
+    "install": "npx shadcn@latest add https://devl.dev/r/money.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "morph-icons",
+    "title": "Morph Icons",
+    "description": "Menu to close, play to pause, plus to check, sun to moon: each pair is one set of paths in two poses, so lines rotate and stretch into place on a spring and reverse cleanly mid-way.",
+    "collection": "devl",
+    "family": "motion / Surfaces",
+    "source": "https://devl.dev/motion/morph-icons",
+    "install": "npx shadcn@latest add https://devl.dev/r/morph-icons.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "music-player",
+    "title": "Music Player",
+    "description": "A music app with gradient cover art that glows into the room, a waveform you can scrub, a drag-to-reorder queue and lyrics that follow the song line by line.",
+    "collection": "devl",
+    "family": "screen / Personal",
+    "source": "https://devl.dev/screens/music-player",
+    "install": "npx shadcn@latest add https://devl.dev/r/music-player.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "newsletter-cta",
+    "title": "Newsletter CTA",
+    "description": "An email capture that checks as you go, catches gmial-style typos, shakes once on a bad address, then morphs into a success note while your avatar joins the stack and the reader count rolls up by one.",
+    "collection": "devl",
+    "family": "block / Marketing",
+    "source": "https://devl.dev/blocks/newsletter-cta",
+    "install": "npx shadcn@latest add https://devl.dev/r/newsletter-cta.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "not-found",
+    "title": "Not Found",
+    "description": "A 404 with a compass that dithers between headings until you move your mouse or start searching, plus a did-you-mean fix for the typo, inline search and popular links.",
+    "collection": "devl",
+    "family": "block / Content",
+    "source": "https://devl.dev/blocks/not-found",
+    "install": "npx shadcn@latest add https://devl.dev/r/not-found.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "notes",
+    "title": "Notes",
+    "description": "A notes app with folders, pinned notes that glide to the top, search that highlights matches as you type, and an editor where typing “[] ”, “- ” or “# ” turns a line into a checklist, bullet or heading.",
+    "collection": "devl",
+    "family": "screen / Personal",
+    "source": "https://devl.dev/screens/notes",
+    "install": "npx shadcn@latest add https://devl.dev/r/notes.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "notification-matrix",
+    "title": "Notification Matrix",
+    "description": "Events down the side, email, push and in-app across the top: group checkboxes that go half-checked, locked security rows with a reason, edited cells that glow, and a save bar that floats in only when something changed.",
+    "collection": "devl",
+    "family": "block / Dashboards",
+    "source": "https://devl.dev/blocks/notification-matrix",
+    "install": "npx shadcn@latest add https://devl.dev/r/notification-matrix.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "notification-settings",
+    "title": "Notification Settings",
+    "description": "Channels you can open and tune, per-event email, push and chat toggles grouped under section switches, quiet hours on a small 24-hour track, and a digest line whose item count rolls as you change things.",
+    "collection": "devl",
+    "family": "screen / Settings",
+    "source": "https://devl.dev/screens/notification-settings",
+    "install": "npx shadcn@latest add https://devl.dev/r/notification-settings.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "odometer",
+    "title": "Odometer",
+    "description": "Digits that turn like a real counter: every place rolls the way the number moved, so 9 ticks over to 0 instead of spinning back, and it counts up the first time you scroll to it.",
+    "collection": "devl",
+    "family": "motion / Text",
+    "source": "https://devl.dev/motion/odometer",
+    "install": "npx shadcn@latest add https://devl.dev/r/odometer.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "pour-hero",
+    "title": "Pour Hero",
+    "description": "A hero whose headline drips in as lime liquid: drops pinch off the top edge, splash on landing and set into real, selectable type, with a droplet button that squashes and splashes when pressed.",
+    "collection": "devl",
+    "family": "block / Heroes",
+    "source": "https://devl.dev/blocks/pour-hero",
+    "install": "npx shadcn@latest add https://devl.dev/r/pour-hero.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "pour-progress",
+    "title": "Pour Progress",
+    "description": "Progress you can watch fill up: a stream pours in from the top, the surface sloshes and settles as the level eases to the value, and hitting 100% sends out a small ripple. Comes as a round vessel or a slim bar.",
+    "collection": "devl",
+    "family": "motion / Liquid",
+    "source": "https://devl.dev/motion/pour-progress",
+    "install": "npx shadcn@latest add https://devl.dev/r/pour-progress.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "press-ripple",
+    "title": "Press Ripple",
+    "description": "A quiet wave that spreads from exactly where you pressed, clipped to the element's corners, finishes filling even on a quick tap, and gives Enter and Space the same feedback from the centre.",
+    "collection": "devl",
+    "family": "motion / Surfaces",
+    "source": "https://devl.dev/motion/press-ripple",
+    "install": "npx shadcn@latest add https://devl.dev/r/press-ripple.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "pricing-table",
+    "title": "Pricing Table",
+    "description": "Three plans side by side with a monthly or yearly toggle that rolls each price into place, and a full feature table that folds out underneath.",
+    "collection": "devl",
+    "family": "block / Marketing",
+    "source": "https://devl.dev/blocks/pricing-table",
+    "install": "npx shadcn@latest add https://devl.dev/r/pricing-table.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "profile",
+    "title": "Profile",
+    "description": "A social profile with a painted cover, a Follow button that pinches off a notification bell like a droplet, followers that roll up, and posts, replies and a media grid that opens into a lightbox.",
+    "collection": "devl",
+    "family": "screen / Personal",
+    "source": "https://devl.dev/screens/profile",
+    "install": "npx shadcn@latest add https://devl.dev/r/profile.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "profile-settings",
+    "title": "Profile Settings",
+    "description": "Edit your profile: crop a generated photo in a small dialog, claim a username with a live availability check and suggestions, see your local time on a tiny clock, and save from a bar that springs up when something changes.",
+    "collection": "devl",
+    "family": "screen / Settings",
+    "source": "https://devl.dev/screens/profile-settings",
+    "install": "npx shadcn@latest add https://devl.dev/r/profile-settings.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "prompt-test-bench",
+    "title": "Prompt Test Bench",
+    "description": "Check a prompt before it ships, with pass rate by version against the bar it has to clear, a unified or side-by-side diff of what changed, and test cases that re-run live from queued to a rolling score.",
+    "collection": "devl",
+    "family": "screen / AI",
+    "source": "https://devl.dev/screens/prompt-test-bench",
+    "install": "npx shadcn@latest add https://devl.dev/r/prompt-test-bench.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "quote-wall",
+    "title": "Quote Wall",
+    "description": "Customer quotes stacked in columns that drift past in opposite directions and settle the moment you stop to read one.",
+    "collection": "devl",
+    "family": "block / Marketing",
+    "source": "https://devl.dev/blocks/quote-wall",
+    "install": "npx shadcn@latest add https://devl.dev/r/quote-wall.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "request-access",
+    "title": "Request Access",
+    "description": "The page you hit when a doc is private: who you are signed in as, a switch-account menu, an optional note and a Request access button. It then shows who the request went to, when, and a resend that unlocks after a countdown.",
+    "collection": "devl",
+    "family": "block / Empty & Error",
+    "source": "https://devl.dev/blocks/request-access",
+    "install": "npx shadcn@latest add https://devl.dev/r/request-access.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "revenue-overview",
+    "title": "Revenue Story",
+    "description": "A store's revenue told as a story: one big annotated line you can scrub day by day against last period, a plain-sentence summary whose numbers roll, a range switch that morphs the line and moves its notes, and a ranked strip of where the money came from.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/revenue-overview",
+    "install": "npx shadcn@latest add https://devl.dev/r/revenue-overview.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "rim-light",
+    "title": "Rim Light",
+    "description": "A point of light that laps a card's border at a steady pace with a fading tail, tracing rounded corners exactly; every beam on the page shares one clock, so busy cards pulse in step.",
+    "collection": "devl",
+    "family": "motion / Surfaces",
+    "source": "https://devl.dev/motion/rim-light",
+    "install": "npx shadcn@latest add https://devl.dev/r/rim-light.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "run-replay",
+    "title": "Run Replay",
+    "description": "Watch an agent work a task from start to finish: plan steps tick off, tool calls stream into a log, it stops to ask before sending anything, and the draft it's writing fills in beside it.",
+    "collection": "devl",
+    "family": "screen / AI",
+    "source": "https://devl.dev/screens/run-replay",
+    "install": "npx shadcn@latest add https://devl.dev/r/run-replay.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "sales-overview",
+    "title": "Sales Overview",
+    "description": "A year of sales on one page: pick a number up top and the monthly chart, best sellers and channel split all follow it, with a line or bar view to taste.",
+    "collection": "devl",
+    "family": "block / Dashboards",
+    "source": "https://devl.dev/blocks/sales-overview",
+    "install": "npx shadcn@latest add https://devl.dev/r/sales-overview.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "scramble-text",
+    "title": "Scramble Text",
+    "description": "Text that decodes from random glyphs into the real words, sweeping left to right on view, on hover or on demand, with a monospace variant for codes and labels.",
+    "collection": "devl",
+    "family": "motion / Text",
+    "source": "https://devl.dev/motion/scramble-text",
+    "install": "npx shadcn@latest add https://devl.dev/r/scramble-text.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "security-settings",
+    "title": "Security Settings",
+    "description": "Password, two-factor, passkeys and sessions in grouped rows: a tiny ring counts recommended steps, passkeys are added inline while your device confirms, and signed-out sessions slide off the table one after another.",
+    "collection": "devl",
+    "family": "screen / Settings",
+    "source": "https://devl.dev/screens/security-settings",
+    "install": "npx shadcn@latest add https://devl.dev/r/security-settings.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "settings-and-plans",
+    "title": "Settings & Plans",
+    "description": "Workspace, members, API keys and billing in one calm settings screen: grouped rows, an unsaved-changes bar that springs up, invites and role changes, keys shown once, and usage bars that fill when you open Billing.",
+    "collection": "devl",
+    "family": "screen / Product",
+    "source": "https://devl.dev/screens/settings-and-plans",
+    "install": "npx shadcn@latest add https://devl.dev/r/settings-and-plans.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "sign-in",
+    "title": "Sign In",
+    "description": "A minimal centred sign-in: passkey and single sign-on side by side, email and password with a show toggle, a gentle shake when the password is wrong and a check when you’re in.",
+    "collection": "devl",
+    "family": "screen / Auth",
+    "source": "https://devl.dev/screens/sign-in",
+    "install": "npx shadcn@latest add https://devl.dev/r/sign-in.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "sign-in-card",
+    "title": "Sign-in Card",
+    "description": "Email and password sign-in with a peek toggle, a one-tap switch to magic links, passkey and SSO buttons, a gentle shake on errors and a calm check-your-inbox state.",
+    "collection": "devl",
+    "family": "block / Auth",
+    "source": "https://devl.dev/blocks/sign-in-card",
+    "install": "npx shadcn@latest add https://devl.dev/r/sign-in-card.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "sign-up",
+    "title": "Sign Up",
+    "description": "A minimal centred sign-up: name, work email and a password whose length hint ticks green as you type, with inline errors and the terms in one quiet line.",
+    "collection": "devl",
+    "family": "screen / Auth",
+    "source": "https://devl.dev/screens/sign-up",
+    "install": "npx shadcn@latest add https://devl.dev/r/sign-up.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "skeleton-sweep",
+    "title": "Skeleton Sweep",
+    "description": "Loading placeholders lit by one sweep of light that crosses the whole card at once, with a matching glint for “Drafting…” status lines.",
+    "collection": "devl",
+    "family": "motion / Loading",
+    "source": "https://devl.dev/motion/skeleton-sweep",
+    "install": "npx shadcn@latest add https://devl.dev/r/skeleton-sweep.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "something-went-wrong",
+    "title": "Something Went Wrong",
+    "description": "An app error page with a small 1-bit dithered ?! glyph, Try again that fails once with a shake and then recovers into a check, a copyable error details panel and a quiet Report this link.",
+    "collection": "devl",
+    "family": "block / Empty & Error",
+    "source": "https://devl.dev/blocks/something-went-wrong",
+    "install": "npx shadcn@latest add https://devl.dev/r/something-went-wrong.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "split-shell",
+    "title": "Split Shell",
+    "description": "A frame for working with an agent: tasks on the left, its thread in the middle, and a work panel you can drag or nudge with arrow keys to watch its tool calls tick by, the page it's reading and the sources it will cite.",
+    "collection": "devl",
+    "family": "screen / Shells",
+    "source": "https://devl.dev/screens/split-shell",
+    "install": "npx shadcn@latest add https://devl.dev/r/split-shell.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "split-sign-up",
+    "title": "Split Sign-up",
+    "description": "A two-panel sign-up: the form validates as you go (live email check, password rules that tick off, a strength bar) beside a product glimpse and rotating customer quotes that fold below on phones.",
+    "collection": "devl",
+    "family": "block / Auth",
+    "source": "https://devl.dev/blocks/split-sign-up",
+    "install": "npx shadcn@latest add https://devl.dev/r/split-sign-up.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "spotlight-text",
+    "title": "Spotlight Text",
+    "description": "Dimmed copy with a soft warm spotlight that trails your pointer, bringing the words underneath to full contrast and uncovering a line that isn't there otherwise; on touch, or once you leave, the light drifts on a slow path of its own.",
+    "collection": "devl",
+    "family": "motion / Cursor",
+    "source": "https://devl.dev/motion/spotlight-text",
+    "install": "npx shadcn@latest add https://devl.dev/r/spotlight-text.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "stats-band",
+    "title": "Stats Band",
+    "description": "A band of big figures that count up once when it scrolls into view, sitting on a hairline ruler that draws itself in, with labels and captions on a steady divider rhythm.",
+    "collection": "devl",
+    "family": "block / Marketing",
+    "source": "https://devl.dev/blocks/stats-band",
+    "install": "npx shadcn@latest add https://devl.dev/r/stats-band.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "status-console",
+    "title": "Status Console",
+    "description": "An ops console where an incident plays out live: services with ticking p95 sparklines, a timeline that moves from investigating to resolved, the fix rolling out in recent deploys, and an on-call card you can page from the keyboard.",
+    "collection": "devl",
+    "family": "screen / Dev",
+    "source": "https://devl.dev/screens/status-console",
+    "install": "npx shadcn@latest add https://devl.dev/r/status-console.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "status-page",
+    "title": "Status Page",
+    "description": "A public status page: a banner that names what's wrong, 90 days of uptime bars you can scrub with mouse or arrow keys, an incident timeline, and an inline subscribe form.",
+    "collection": "devl",
+    "family": "block / Apps",
+    "source": "https://devl.dev/blocks/status-page",
+    "install": "npx shadcn@latest add https://devl.dev/r/status-page.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "tally-hero",
+    "title": "Tally Hero",
+    "description": "A hero led by one giant figure that rolls up digit by digit as the itemised statement beneath it prints line by line, landing on a total that matches, with a period switch that re-tallies both.",
+    "collection": "devl",
+    "family": "block / Heroes",
+    "source": "https://devl.dev/blocks/tally-hero",
+    "install": "npx shadcn@latest add https://devl.dev/r/tally-hero.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "team-chat",
+    "title": "Team Chat",
+    "description": "Channels and DMs with grouped messages, reactions that roll their counts, and threads that open in a side panel; send something and a teammate starts typing back.",
+    "collection": "devl",
+    "family": "screen / Comms",
+    "source": "https://devl.dev/screens/team-chat",
+    "install": "npx shadcn@latest add https://devl.dev/r/team-chat.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "team-grid",
+    "title": "Team Grid",
+    "description": "Team cards with tinted initials portraits, roles and a ticking local clock; hover, focus or tap one and a short bio with links slides over, plus a team filter and a we're-hiring card.",
+    "collection": "devl",
+    "family": "block / Content",
+    "source": "https://devl.dev/blocks/team-grid",
+    "install": "npx shadcn@latest add https://devl.dev/r/team-grid.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "team-roles",
+    "title": "Members & Roles",
+    "description": "Invite people, manage members and pending invites, and tune a role-by-permission matrix with a locked owner column, live head counts and a duplicate-to-customise role.",
+    "collection": "devl",
+    "family": "screen / Settings",
+    "source": "https://devl.dev/screens/team-roles",
+    "install": "npx shadcn@latest add https://devl.dev/r/team-roles.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "ticket-tear",
+    "title": "Ticket Tear",
+    "description": "A booking ticket that, once confirmed, rips along its perforation: the stub pulls open from the top, comes free and drops away with a lazy spin, and the ticket you keep slides back to centre with its torn edge intact.",
+    "collection": "devl",
+    "family": "motion / Celebration",
+    "source": "https://devl.dev/motion/ticket-tear",
+    "install": "npx shadcn@latest add https://devl.dev/r/ticket-tear.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "torch-grid",
+    "title": "Torch Grid",
+    "description": "One soft light follows your pointer across a grid of cards, washing over the one you're on and catching the rims of its neighbours across the gaps.",
+    "collection": "devl",
+    "family": "motion / Cursor",
+    "source": "https://devl.dev/motion/torch-grid",
+    "install": "npx shadcn@latest add https://devl.dev/r/torch-grid.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "two-step-setup",
+    "title": "Two-step Setup",
+    "description": "Turn on authenticator-app 2FA in three calm steps: scan a coded QR or copy the setup key, type the six digits, then copy or download backup codes before you can finish.",
+    "collection": "devl",
+    "family": "block / Auth",
+    "source": "https://devl.dev/blocks/two-step-setup",
+    "install": "npx shadcn@latest add https://devl.dev/r/two-step-setup.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "typewriter",
+    "title": "Typewriter",
+    "description": "Types a phrase with a human rhythm, holds it long enough to read, then backspaces or selects it away and moves on; the caret only blinks while it waits.",
+    "collection": "devl",
+    "family": "motion / Text",
+    "source": "https://devl.dev/motion/typewriter",
+    "install": "npx shadcn@latest add https://devl.dev/r/typewriter.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "verify-email",
+    "title": "Verify Email",
+    "description": "The 6-digit code step: a centred code field split 3 + 3, a shake when the code is wrong, a resend timer that counts down and a mail icon that turns into a check.",
+    "collection": "devl",
+    "family": "screen / Auth",
+    "source": "https://devl.dev/screens/verify-email",
+    "install": "npx shadcn@latest add https://devl.dev/r/verify-email.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "versus-table",
+    "title": "Versus Table",
+    "description": "An us-versus-the-old-way comparison with one raised, highlighted column, ticks that pop in as you scroll, a header that sticks, and a phone layout that compares against one rival at a time.",
+    "collection": "devl",
+    "family": "block / Marketing",
+    "source": "https://devl.dev/blocks/versus-table",
+    "install": "npx shadcn@latest add https://devl.dev/r/versus-table.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "video-call",
+    "title": "Video Call",
+    "description": "A video call where the grid reflows as people drop in and out, whoever is talking gets a soft ring and a pulse, reactions float up the stage, and chat and people slide in beside it.",
+    "collection": "devl",
+    "family": "screen / Comms",
+    "source": "https://devl.dev/screens/video-call",
+    "install": "npx shadcn@latest add https://devl.dev/r/video-call.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "waitlist",
+    "title": "Waitlist",
+    "description": "A join-the-line card: your position rolls down digit by digit, a referral link to copy, and friends who sign up drop into slots while you jump toward the next wave.",
+    "collection": "devl",
+    "family": "block / Auth",
+    "source": "https://devl.dev/blocks/waitlist",
+    "install": "npx shadcn@latest add https://devl.dev/r/waitlist.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "wordmark-ticker",
+    "title": "Wordmark Ticker",
+    "description": "A quiet strip of customer wordmarks that eases to a stop under your cursor, flings when you drag it, and pauses with a click.",
+    "collection": "devl",
+    "family": "block / Marketing",
+    "source": "https://devl.dev/blocks/wordmark-ticker",
+    "install": "npx shadcn@latest add https://devl.dev/r/wordmark-ticker.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "accordion",
+    "title": "Accordion",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/accordion",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/accordion.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "animated-background",
+    "title": "Animated Background",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/animated-background",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/animated-background.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "animated-group",
+    "title": "Animated Group",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/animated-group",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/animated-group.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "animated-number",
+    "title": "Animated Number",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/animated-number",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/animated-number.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "border-trail",
+    "title": "Border Trail",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/border-trail",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/border-trail.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "carousel",
+    "title": "Carousel",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/carousel",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/carousel.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "cursor",
+    "title": "Cursor",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/cursor",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/cursor.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "dialog",
+    "title": "Dialog",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/dialog",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/dialog.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "disclosure",
+    "title": "Disclosure",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/disclosure",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/disclosure.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "dock",
+    "title": "Dock",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/dock",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/dock.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "glow-effect",
+    "title": "Glow Effect",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/glow-effect",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/glow-effect.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "image-comparison",
+    "title": "Image Comparison",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/image-comparison",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/image-comparison.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "in-view",
+    "title": "In View",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/in-view",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/in-view.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "infinite-slider",
+    "title": "Infinite Slider",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/infinite-slider",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/infinite-slider.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "magnetic",
+    "title": "Magnetic",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/magnetic",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/magnetic.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "morphing-dialog",
+    "title": "Morphing Dialog",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/morphing-dialog",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/morphing-dialog.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "morphing-popover",
+    "title": "Morphing Popover",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/morphing-popover",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/morphing-popover.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "progressive-blur",
+    "title": "Progressive Blur",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/progressive-blur",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/progressive-blur.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "scroll-progress",
+    "title": "Scroll Progress",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/scroll-progress",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/scroll-progress.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "sliding-number",
+    "title": "Sliding Number",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/sliding-number",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/sliding-number.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "spinning-text",
+    "title": "Spinning Text",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/spinning-text",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/spinning-text.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "spotlight",
+    "title": "Spotlight",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/spotlight",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/spotlight.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "text-effect",
+    "title": "Text Effect",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/text-effect",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/text-effect.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "text-loop",
+    "title": "Text Loop",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/text-loop",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/text-loop.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "text-morph",
+    "title": "Text Morph",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/text-morph",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/text-morph.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "text-roll",
+    "title": "Text Roll",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/text-roll",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/text-roll.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "text-scramble",
+    "title": "Text Scramble",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/text-scramble",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/text-scramble.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "text-shimmer-wave",
+    "title": "Text Shimmer Wave",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/text-shimmer-wave",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/text-shimmer-wave.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "text-shimmer",
+    "title": "Text Shimmer",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/text-shimmer",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/text-shimmer.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "tilt",
+    "title": "Tilt",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/tilt",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/tilt.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "toolbar-dynamic",
+    "title": "Toolbar Dynamic",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/toolbar-dynamic",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/toolbar-dynamic.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "toolbar-expandable",
+    "title": "Toolbar Expandable",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/toolbar-expandable",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/toolbar-expandable.json",
+    "status": "Fonte original; adaptação necessária"
+  },
+  {
+    "id": "transition-panel",
+    "title": "Transition Panel",
+    "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+    "collection": "motion-primitives",
+    "family": "motion / Motion",
+    "source": "https://motion-primitives.com/docs/transition-panel",
+    "install": "npx shadcn@latest add https://motion-primitives.com/r/transition-panel.json",
+    "status": "Fonte original; adaptação necessária"
+  }
+]

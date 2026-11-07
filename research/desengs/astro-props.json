@@ -1,0 +1,3400 @@
+{
+  "resources": [
+    1,
+    [
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-20"
+          ],
+          "description": [
+            0,
+            "Good design emits as little light as possible."
+          ],
+          "format": [
+            0,
+            "watch"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "In praise of dark mode ft. Mehmet Aydın Baytaş (Attio) | Config 2026"
+          ],
+          "url": [
+            0,
+            "https://www.youtube.com/watch?v=cWggqwauYXQ"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-20"
+          ],
+          "description": [
+            0,
+            "What can everyone else learn from designers and design engineers?"
+          ],
+          "format": [
+            0,
+            "watch"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Engineering with Maggie Appleton"
+          ],
+          "url": [
+            0,
+            "https://www.youtube.com/watch?v=KZSzF0KEFRg"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-17"
+          ],
+          "description": [
+            0,
+            "A curated collection of interface craft, component libraries, AI tools, and resources for builders."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Designeer"
+          ],
+          "url": [
+            0,
+            "https://designeer.xyz/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-17"
+          ],
+          "description": [
+            0,
+            "A curated list of web design inspiration directories, free to explore with no paywall or account, ranked by the people who use them."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "mkdir"
+          ],
+          "url": [
+            0,
+            "https://mkdir.directory/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-13"
+          ],
+          "description": [
+            0,
+            "A collection of design engineering concepts."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Craft"
+          ],
+          "url": [
+            0,
+            "https://craft.gustavofior.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-13"
+          ],
+          "description": [
+            0,
+            ""
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "The Age of the Soft Skill"
+          ],
+          "url": [
+            0,
+            "https://rudyfaile.com/2026/09/24/the-age-of-the-soft-skill/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-04"
+          ],
+          "description": [
+            0,
+            "With AI tooling, code being the source of truth just makes sense."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Code as the Source of Truth"
+          ],
+          "url": [
+            0,
+            "https://www.tonyward.dev/articles/code-as-the-source-of-truth"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-04"
+          ],
+          "description": [
+            0,
+            "As AI makes it easier to build, how do we keep products from becoming generic “zombie UI”?"
+          ],
+          "format": [
+            0,
+            "watch"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "How to scale intent, quality, and artistry with Al"
+          ],
+          "url": [
+            0,
+            "https://www.youtube.com/watch?v=GLvFTMtw4Jk"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-02"
+          ],
+          "description": [
+            0,
+            "A lightweight library full of beautiful loading indicators for React."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "loading.dev"
+          ],
+          "url": [
+            0,
+            "https://loading.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-10-01"
+          ],
+          "description": [
+            0,
+            "A simple tool for infinite unique outputs."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "GRADIENTOOL"
+          ],
+          "url": [
+            0,
+            "https://gradientool.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-29"
+          ],
+          "description": [
+            0,
+            "Free React components with animation, built with Framer Motion and Tailwind CSS. Preview them, copy the code, and add them to your site."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "useLayouts"
+          ],
+          "url": [
+            0,
+            "https://uselayouts.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-20"
+          ],
+          "description": [
+            0,
+            "A tool to calculate perfect nested border radii."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Corner Radii"
+          ],
+          "url": [
+            0,
+            "https://corner-radii.xyz/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-16"
+          ],
+          "description": [
+            0,
+            "The musings of a designer on why he designs the way he does and what he’s learned along the journey."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Lessons of Design"
+          ],
+          "url": [
+            0,
+            "https://lessons.design/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-16"
+          ],
+          "description": [
+            0,
+            ""
+          ],
+          "format": [
+            0,
+            "learn"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Butterick’s Practical Typography"
+          ],
+          "url": [
+            0,
+            "https://practicaltypography.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-16"
+          ],
+          "description": [
+            0,
+            "Every detail asks for attention. Limiting how many we add is what gives us room to make the ones that remain better."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Limit the number of details"
+          ],
+          "url": [
+            0,
+            "https://design.lightspark.com/limit-the-number-of-details"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-16"
+          ],
+          "description": [
+            0,
+            "Paste brand colors or a Figma, Tokens Studio, or DTCG export and get production-ready design tokens: semantic CSS variables with dark mode, a Tailwind v4 @theme, DTCG tokens.json, and rules your AI coding agents can follow."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Tokens Generator"
+          ],
+          "url": [
+            0,
+            "https://design.dev/ai/design-tokens-generator/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-14"
+          ],
+          "description": [
+            0,
+            "HTML has been gobbling up swathes of what used to be JavaScript’s remit. This page lists a bunch of dynamic functionality that we can now achieve with just HTML."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "HTML Can Do That"
+          ],
+          "url": [
+            0,
+            "https://chrisburnell.com/html-can-do-that/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-13"
+          ],
+          "description": [
+            0,
+            "As an engineer who is not a designer and hates slop."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "How I Design with AI"
+          ],
+          "url": [
+            0,
+            "https://ref.tools/blog/how-i-design-with-ai"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-12"
+          ],
+          "description": [
+            0,
+            "Tired of Inter being everywhere? Two real criteria—cap-centered vertical metrics and a tall x-height—for choosing a UI font, plus 10 alternatives from independent foundries."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Inter alternatives: How to choose a UI font"
+          ],
+          "url": [
+            0,
+            "https://yeptype.com/article/inter-alternatives"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-12"
+          ],
+          "description": [
+            0,
+            "Understanding the structure of an AI input."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Anatomy of AI Input"
+          ],
+          "url": [
+            0,
+            "https://ibelick.com/anatomy-ai-input"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-12"
+          ],
+          "description": [
+            0,
+            ""
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "A Five-Minute Guide to Better Typography"
+          ],
+          "url": [
+            0,
+            "https://www.pierrickcalvez.com/journal/a-five-minute-guide-to-better-typography"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-11"
+          ],
+          "description": [
+            0,
+            "A library of interactive UI blocks you can explore, tweak, and take straight into your projects."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Bencho"
+          ],
+          "url": [
+            0,
+            "https://bencho.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-07"
+          ],
+          "description": [
+            0,
+            "Splits text into lines, words and characters exactly where the browser already broke it."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "kugiri"
+          ],
+          "url": [
+            0,
+            "https://edoardolunardi.github.io/kugiri/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-04"
+          ],
+          "description": [
+            0,
+            "Open-source JS library for displaying independent columns, opposite directions: a continuous animated image pattern for the web."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Images in motion"
+          ],
+          "url": [
+            0,
+            "https://iim.smartsquad.io"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-04"
+          ],
+          "description": [
+            0,
+            "Search shadcn UI blocks, components and templates across the shadcn registries"
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Shoogle"
+          ],
+          "url": [
+            0,
+            "https://shoogle.dev"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-09-01"
+          ],
+          "description": [
+            0,
+            "A small library of extremely crafted, copy-paste components for chat agents, thinking states, human-in-the-loop approvals, and everything agents need to talk to humans beautifully."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Beautiful UI"
+          ],
+          "url": [
+            0,
+            "https://beautifului.dev"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-30"
+          ],
+          "description": [
+            0,
+            "Dot Matrix is a React component library of dot matrix loaders—expressive loading primitives you install via the shadcn registry and own as local code."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Dot Matrix"
+          ],
+          "url": [
+            0,
+            "https://dotmatrix.zzzzshawn.cloud"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-29"
+          ],
+          "description": [
+            0,
+            "Beautifully designed, copy-paste UI components for AI agent conversations: thinking states, tool calls, streaming text, citations, tables and more. Ships in React, Vue and Svelte."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "AICSS"
+          ],
+          "url": [
+            0,
+            "https://aicss.dev"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-28"
+          ],
+          "description": [
+            0,
+            ""
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "On AI, systems, taste and the human filter"
+          ],
+          "url": [
+            0,
+            "https://shedsgns.me/taste"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-26"
+          ],
+          "description": [
+            0,
+            "Cuelume is a tiny, dependency-free library of carefully designed interaction sounds, synthesized live with Web Audio."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Cuelume"
+          ],
+          "url": [
+            0,
+            "https://cuelume.dev"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-26"
+          ],
+          "description": [
+            0,
+            ""
+          ],
+          "format": [
+            0,
+            "watch"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "The Rise of Design Engineering"
+          ],
+          "url": [
+            0,
+            "https://youtu.be/uEMEs499fUs"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-24"
+          ],
+          "description": [
+            0,
+            "What's changed, and what still matters."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Is AI going to steal my job as a design engineer?"
+          ],
+          "url": [
+            0,
+            "https://twilson.net/writing/ai-design-engineer"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-22"
+          ],
+          "description": [
+            0,
+            "Create beautiful product visuals from your UI. Studio-quality photos and videos of software, right in the browser."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "UI Camera"
+          ],
+          "url": [
+            0,
+            "https://ui.camera"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-21"
+          ],
+          "description": [
+            0,
+            "A list of tips, improvements and best practices that quickly make your interfaces better."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Interface Cheat Sheet"
+          ],
+          "url": [
+            0,
+            "https://interfaces.dev/cheat-sheet"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-20"
+          ],
+          "description": [
+            0,
+            "How icon morphing actually works, in ten parts, ending with enough to go and build it yourself."
+          ],
+          "format": [
+            0,
+            "learn"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Morphrig"
+          ],
+          "url": [
+            0,
+            "https://morphrig.dev"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-16"
+          ],
+          "description": [
+            0,
+            "A realistic guide to shipping your own designs."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "How to become an AI Designer"
+          ],
+          "url": [
+            0,
+            "https://uxdesign.cc/how-to-become-an-ai-designer-ff8ee8aed205"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-16"
+          ],
+          "description": [
+            0,
+            "Morph any SVG icon into any other with spring physics."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "morphicons"
+          ],
+          "url": [
+            0,
+            "https://www.morphicons.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-13"
+          ],
+          "description": [
+            0,
+            "Micro-interactions for react, built for the half-second after a click."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "interior.dev"
+          ],
+          "url": [
+            0,
+            "https://www.interior.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-11"
+          ],
+          "description": [
+            0,
+            "A headless React lens that refracts the live page."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "liquid-glass"
+          ],
+          "url": [
+            0,
+            "https://glass.samasante.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-11"
+          ],
+          "description": [
+            0,
+            "Liquid UI effects for React."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Liquid Gooey"
+          ],
+          "url": [
+            0,
+            "https://gooey.jakubantalik.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-05"
+          ],
+          "description": [
+            0,
+            "A credit & debit card component for payment forms: live brand detection, 3D flip, themeable variants."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "crd-ui"
+          ],
+          "url": [
+            0,
+            "https://crd-ui.juanda.co/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-08-05"
+          ],
+          "description": [
+            0,
+            "Open Source UI components created by @micka_design"
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Fluid Functionalism"
+          ],
+          "url": [
+            0,
+            "https://www.fluidfunctionalism.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-22"
+          ],
+          "description": [
+            0,
+            "Dotted thought-orb loading indicators for AI and agent UIs."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Thinking orbs"
+          ],
+          "url": [
+            0,
+            "https://orbs.jakubantalik.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-15"
+          ],
+          "description": [
+            0,
+            "A set of agent skills that help improve different parts of a product, from animations and typography to layout and colors."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "jakubkrehel/skills"
+          ],
+          "url": [
+            0,
+            "https://github.com/jakubkrehel/skills"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-13"
+          ],
+          "description": [
+            0,
+            "Composable, dithered charts with a recharts-style children-as-config API."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "dither-kit"
+          ],
+          "url": [
+            0,
+            "https://www.tripwire.sh/dither-kit"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-13"
+          ],
+          "description": [
+            0,
+            "Curated collection of A/B test results from best-in-class apps"
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "abtest.design"
+          ],
+          "url": [
+            0,
+            "https://abtest.design/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-13"
+          ],
+          "description": [
+            0,
+            "The visual feedback tool for agents."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Agentation"
+          ],
+          "url": [
+            0,
+            "https://www.agentation.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-13"
+          ],
+          "description": [
+            0,
+            "Founding Design Engineer / Remote, United States"
+          ],
+          "format": [
+            0,
+            "apply"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Autumn"
+          ],
+          "url": [
+            0,
+            "https://findautumn.com/careers/design-engineer"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-13"
+          ],
+          "description": [
+            0,
+            "Product Design Engineer / Remote"
+          ],
+          "format": [
+            0,
+            "apply"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Zed"
+          ],
+          "url": [
+            0,
+            "https://zed.dev/jobs/product-designer"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-12"
+          ],
+          "description": [
+            0,
+            "Skills for Design Engineers."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "emilkowalski/skills"
+          ],
+          "url": [
+            0,
+            "https://github.com/emilkowalski/skills"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-09"
+          ],
+          "description": [
+            0,
+            "A curated reading list for product, interaction, and visual designers studying usability, systems, typography, research, and the craft of making useful things."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Books"
+          ],
+          "url": [
+            0,
+            "https://designbooks.org/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-09"
+          ],
+          "description": [
+            0,
+            "A React component to animate numbers. Dependency-free. Accessible. Customizable."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "NumberFlow"
+          ],
+          "url": [
+            0,
+            "https://number-flow.barvian.me/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-08"
+          ],
+          "description": [
+            0,
+            "Product Engineer / Americas / Remote"
+          ],
+          "format": [
+            0,
+            "apply"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Resend"
+          ],
+          "url": [
+            0,
+            "https://resend.com/careers/9b68ba51-3895-4d29-8fd1-364bdf8956e7"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-08"
+          ],
+          "description": [
+            0,
+            "Design Engineer / Rockstar New York"
+          ],
+          "format": [
+            0,
+            "apply"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Rockstar Games"
+          ],
+          "url": [
+            0,
+            "https://www.rockstargames.com/careers/openings/position/7767935003"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-08"
+          ],
+          "description": [
+            0,
+            "Why you are animating more often than you should."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "You Don't Need Animations"
+          ],
+          "url": [
+            0,
+            "https://emilkowal.ski/ui/you-dont-need-animations"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-07-01"
+          ],
+          "description": [
+            0,
+            "Beautiful UI components and templates to make your landing page look stunning."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Magic UI"
+          ],
+          "url": [
+            0,
+            "https://magicui.design/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-18"
+          ],
+          "description": [
+            0,
+            "Discover micro-interactions, easter eggs, and other seemingly extra design details that infuse life, personality, and fun back into the web."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Spells"
+          ],
+          "url": [
+            0,
+            "https://designspells.com"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-16"
+          ],
+          "description": [
+            0,
+            "Best-in-class Design Systems collection with a repository of Components and Foundations references from top-tier tech companies and leading UI teams."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Systems Surf"
+          ],
+          "url": [
+            0,
+            "https://designsystems.surf/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-16"
+          ],
+          "description": [
+            0,
+            "Declarative audio synthesis for the web."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "@web-kits/audio"
+          ],
+          "url": [
+            0,
+            "https://audio.raphaelsalaja.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-15"
+          ],
+          "description": [
+            0,
+            "A simple Tailwind CSS plugin for beautiful gradient borders using mask-composite. Mirrors Tailwind's gradient utilities with from / via / to color stops, configurable widths, and an animated variant."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Gradient Border Plugin"
+          ],
+          "url": [
+            0,
+            "https://gradient-border.floriankiem.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-15"
+          ],
+          "description": [
+            0,
+            ""
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Front-of-the-front-end and back-of-the-front-end web development"
+          ],
+          "url": [
+            0,
+            "https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-14"
+          ],
+          "description": [
+            0,
+            "Taste Skill gives your AI coding agent good taste. Open-source skill files that stop Cursor, Claude Code, Codex & more from generating generic, boring frontends. Install in one command."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Taste Skill"
+          ],
+          "url": [
+            0,
+            "https://www.tasteskill.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-13"
+          ],
+          "description": [
+            0,
+            "An exploration of aesthetic taste in art, design, and creative fields."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "The Concept of Taste"
+          ],
+          "url": [
+            0,
+            "https://www.raphaelsalaja.com/library/the-concept-of-taste"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-13"
+          ],
+          "description": [
+            0,
+            "Design and code work hand-in-hand to produce memorable digital products."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design for Engineers"
+          ],
+          "url": [
+            0,
+            "https://didoesdigital.com/project/design-for-engineers/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-13"
+          ],
+          "description": [
+            0,
+            "Founding Design Engineer at Interfere"
+          ],
+          "format": [
+            0,
+            "follow"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Jakub Krehel"
+          ],
+          "url": [
+            0,
+            "https://jakub.kr/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-13"
+          ],
+          "description": [
+            0,
+            "Design Engineering Magazine"
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Interfaces"
+          ],
+          "url": [
+            0,
+            "https://interfaces.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-13"
+          ],
+          "description": [
+            0,
+            "Generate deterministic, unique avatars from wallet addresses, usernames, or any string. Zero dependencies. Gradient & dither modes. React & vanilla JS."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Hashvatar"
+          ],
+          "url": [
+            0,
+            "https://www.hashvatar.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-04"
+          ],
+          "description": [
+            0,
+            "Capture screenshots, video, voice notes, and annotations from users as in-app feedback. One React component, one server helper. Routes to Slack, Linear, GitHub, email, or webhooks. MIT licensed."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Remediate"
+          ],
+          "url": [
+            0,
+            "https://www.remediate.ski/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-05-02"
+          ],
+          "description": [
+            0,
+            "Collection of the most essential transitions for web apps that you can just copy and paste into any project."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Transitions.dev"
+          ],
+          "url": [
+            0,
+            "https://transitions.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-04-27"
+          ],
+          "description": [
+            0,
+            "Two years of UI experiments. 159+ components built on coss-ui, all on the shadcn registry."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "devl.dev"
+          ],
+          "url": [
+            0,
+            "https://devl.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-04-16"
+          ],
+          "description": [
+            0,
+            "The Digital Library for Designers and Engineers."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "ui.land"
+          ],
+          "url": [
+            0,
+            "https://ui.land/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-04-05"
+          ],
+          "description": [
+            0,
+            "How I use AI as a design engineer on a daily basis."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Using AI as a Design Engineer"
+          ],
+          "url": [
+            0,
+            "https://jakub.kr/work/using-ai-as-a-design-engineer"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-04-03"
+          ],
+          "description": [
+            0,
+            "Dependency-free animated text component."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Torph"
+          ],
+          "url": [
+            0,
+            "https://torph.lochie.me/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-27"
+          ],
+          "description": [
+            0,
+            "A playground for creating box shadows for web and React Native."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "shadowLab"
+          ],
+          "url": [
+            0,
+            "https://shadowlab.mocarski.design/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-24"
+          ],
+          "description": [
+            0,
+            "A set of skills to polish interfaces built by agents."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "UI Skills"
+          ],
+          "url": [
+            0,
+            "https://www.ui-skills.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-24"
+          ],
+          "description": [
+            0,
+            "Collecting people I know who work at the intersection of design and engineering, in an attempt to figure out what a design engineer is"
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "A Collection of Design Engineers"
+          ],
+          "url": [
+            0,
+            "https://maggieappleton.com/design-engineers"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-21"
+          ],
+          "description": [
+            0,
+            "Automated design reviews for AI-generated code. Catches accessibility issues and visual bugs in React, Vue, Svelte, and more."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "rams"
+          ],
+          "url": [
+            0,
+            "https://www.rams.ai/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-18"
+          ],
+          "description": [
+            0,
+            "A curated collection of design principles used as decision-making frameworks. Practical examples and guidance for teams building products."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Principles"
+          ],
+          "url": [
+            0,
+            "https://principles.design/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-18"
+          ],
+          "description": [
+            0,
+            "Ready to use, fancy React components to make the web fun again. Free & Open Source."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Fancy Components"
+          ],
+          "url": [
+            0,
+            "https://www.fancycomponents.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-17"
+          ],
+          "description": [
+            0,
+            "An open-source checklist to help you plan, build and grow your design system."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design System Checklist"
+          ],
+          "url": [
+            0,
+            "https://www.designsystemchecklist.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-17"
+          ],
+          "description": [
+            0,
+            "Laws of UX is a collection of best practices that designers can consider when building user interfaces."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Laws of UX"
+          ],
+          "url": [
+            0,
+            "https://lawsofux.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-17"
+          ],
+          "description": [
+            0,
+            "1 skill, 20 commands, and curated anti-patterns for impeccable frontend design. Works with Cursor, Claude Code, Gemini CLI, and Codex CLI."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Impeccable"
+          ],
+          "url": [
+            0,
+            "https://impeccable.style/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-17"
+          ],
+          "description": [
+            0,
+            "A floating control panel for React: sliders, toggles, color pickers, spring editors, and action buttons wired directly to your UI values."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "DialKit"
+          ],
+          "url": [
+            0,
+            "https://joshpuckett.me/dialkit"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-16"
+          ],
+          "description": [
+            0,
+            "A collection of details that make your interfaces feel better."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Details That Make Interfaces Feel Better"
+          ],
+          "url": [
+            0,
+            "https://jakub.kr/writing/details-that-make-interfaces-feel-better"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-16"
+          ],
+          "description": [
+            0,
+            "Fluid text transitions powered by Motion"
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Calligraph"
+          ],
+          "url": [
+            0,
+            "https://calligraph.raphaelsalaja.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-16"
+          ],
+          "description": [
+            0,
+            "My definition of design engineering after building the practice at DoorDash."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "The Attributes of a Design Engineer"
+          ],
+          "url": [
+            0,
+            "https://www.ryngonzalez.com/blog/the-attributes-of-a-design-engineer"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-15"
+          ],
+          "description": [
+            0,
+            "A curated collection of easing graphs"
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Easing Graphs"
+          ],
+          "url": [
+            0,
+            "https://www.easing.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-15"
+          ],
+          "description": [
+            0,
+            "Founding design engineer at Paradigm"
+          ],
+          "format": [
+            0,
+            "follow"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "floguo"
+          ],
+          "url": [
+            0,
+            "https://www.floguo.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-15"
+          ],
+          "description": [
+            0,
+            "Links and observations on design engineering"
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Engineering"
+          ],
+          "url": [
+            0,
+            "https://www.floguo.com/notes/design-engineering"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-15"
+          ],
+          "description": [
+            0,
+            "Thoughts about design, code, technology and everything in between."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Becoming a Design Engineer"
+          ],
+          "url": [
+            0,
+            "https://marcel.io/posts/becoming-a-design-engineer"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-15"
+          ],
+          "description": [
+            0,
+            "Learn what Design Engineers do, why they matter to modern tech companies, and how they differ from vibe coders."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Engineering"
+          ],
+          "url": [
+            0,
+            "https://www.designengineer.xyz/design-engineering"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-14"
+          ],
+          "description": [
+            0,
+            "A list of useful tools for web-focused design engineers."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Engineer Tools"
+          ],
+          "url": [
+            0,
+            "https://designengineer.tools/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-14"
+          ],
+          "description": [
+            0,
+            "A living manual for better interfaces. Learn design principles, motion, typography, and more."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "userinterface.wiki"
+          ],
+          "url": [
+            0,
+            "https://userinterface.wiki/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-11"
+          ],
+          "description": [
+            0,
+            "Convert, generate and explore OKLCH colors – a powerful tool to build unique and uniform color palettes."
+          ],
+          "format": [
+            0,
+            "use"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "OKLCH.fyi"
+          ],
+          "url": [
+            0,
+            "https://oklch.fyi/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-10"
+          ],
+          "description": [
+            0,
+            "An up-to-date repository of interface components based on examples from the world of design systems, designed to be a reference for anyone building user interfaces."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "The Component Gallery"
+          ],
+          "url": [
+            0,
+            "https://component.gallery/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-10"
+          ],
+          "description": [
+            0,
+            "A working library for those committed to designing with uncommon care."
+          ],
+          "format": [
+            0,
+            "learn"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Interface Craft"
+          ],
+          "url": [
+            0,
+            "https://www.interfacecraft.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-10"
+          ],
+          "description": [
+            0,
+            "What makes great interactions feel right?"
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Invisible Details of Interaction Design"
+          ],
+          "url": [
+            0,
+            "https://rauno.me/craft/interaction-design"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-10"
+          ],
+          "description": [
+            0,
+            "An interactive mini-course on creating SVG animations by Nanda Syahrasyad."
+          ],
+          "format": [
+            0,
+            "learn"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Interactive SVG Animations"
+          ],
+          "url": [
+            0,
+            "https://www.svg.guide/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-09"
+          ],
+          "description": [
+            0,
+            "Real-time animated line chart for React."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Liveline"
+          ],
+          "url": [
+            0,
+            "https://github.com/benjitaylor/liveline"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-09"
+          ],
+          "description": [
+            0,
+            "What makes Family, Family."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Family Values"
+          ],
+          "url": [
+            0,
+            "https://benji.org/family-values"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-09"
+          ],
+          "description": [
+            0,
+            "An interactive reference manual for interaction-curious designers."
+          ],
+          "format": [
+            0,
+            "learn"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Devouring Details"
+          ],
+          "url": [
+            0,
+            "https://devouringdetails.com/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-09"
+          ],
+          "description": [
+            0,
+            "The documented collection of UI components."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "UI Playbook"
+          ],
+          "url": [
+            0,
+            "https://uiplaybook.dev/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-09"
+          ],
+          "description": [
+            0,
+            "Fast, unstyled command menu React component."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "⌘K"
+          ],
+          "url": [
+            0,
+            "https://github.com/dip/cmdk"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-09"
+          ],
+          "description": [
+            0,
+            "A non-exhaustive list of details that make a good web interface."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Web Interface Guidelines"
+          ],
+          "url": [
+            0,
+            "https://interfaces.rauno.me/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-08"
+          ],
+          "description": [
+            0,
+            "Find a design engineering job in a next generation software company."
+          ],
+          "format": [
+            0,
+            "browse"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Engineer Jobs"
+          ],
+          "url": [
+            0,
+            "https://designengineer.io/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-08"
+          ],
+          "description": [
+            0,
+            "700+ curated UI sound effects for modern web apps."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "soundcn"
+          ],
+          "url": [
+            0,
+            "https://soundcn.xyz/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-08"
+          ],
+          "description": [
+            0,
+            "Finding my dream role blending code, design, and product thinking"
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Engineering: A State of Mind"
+          ],
+          "url": [
+            0,
+            "https://blog.designeng.club/p/design-engineering-a-state-of-mind"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-08"
+          ],
+          "description": [
+            0,
+            "Design Engineering Community"
+          ],
+          "format": [
+            0,
+            "join"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Engineering Club"
+          ],
+          "url": [
+            0,
+            "https://designeng.club/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-07"
+          ],
+          "description": [
+            0,
+            "Haptic feedback for the mobile web."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "WebHaptics"
+          ],
+          "url": [
+            0,
+            "https://haptics.lochie.me"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-07"
+          ],
+          "description": [
+            0,
+            "Practical guide to the jobs and skills of the design engineer in tech"
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Engineering 101"
+          ],
+          "url": [
+            0,
+            "https://www.designdisciplin.com/p/design-engineering-101"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-07"
+          ],
+          "description": [
+            0,
+            "Staff Design Engineer at Vercel"
+          ],
+          "format": [
+            0,
+            "follow"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Rauno Freiberg"
+          ],
+          "url": [
+            0,
+            "https://rauno.me/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-06"
+          ],
+          "description": [
+            0,
+            "An opinionated toast component for React."
+          ],
+          "format": [
+            0,
+            "build"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Sonner"
+          ],
+          "url": [
+            0,
+            "https://sonner.emilkowal.ski/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-06"
+          ],
+          "description": [
+            0,
+            "Design engineer working at Linear."
+          ],
+          "format": [
+            0,
+            "follow"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Emil Kowalski"
+          ],
+          "url": [
+            0,
+            "https://emilkowal.ski/"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-06"
+          ],
+          "description": [
+            0,
+            "Animations on the Web"
+          ],
+          "format": [
+            0,
+            "learn"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "animations.dev"
+          ],
+          "url": [
+            0,
+            "https://animations.dev"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-05"
+          ],
+          "description": [
+            0,
+            "A guide to the foundational principles of animation."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "12 Principles of Animation"
+          ],
+          "url": [
+            0,
+            "https://www.raphaelsalaja.com/library/12-principles-of-animation"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-05"
+          ],
+          "description": [
+            0,
+            "Why taste matters and how to develop it."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Developing Taste"
+          ],
+          "url": [
+            0,
+            "https://emilkowal.ski/ui/developing-taste"
+          ]
+        }
+      ],
+      [
+        0,
+        {
+          "date": [
+            0,
+            "2026-03-04"
+          ],
+          "description": [
+            0,
+            "Learn what Design Engineers are and what they do at Vercel."
+          ],
+          "format": [
+            0,
+            "read"
+          ],
+          "id": [
+            0,
+            ""
+          ],
+          "title": [
+            0,
+            "Design Engineering at Vercel"
+          ],
+          "url": [
+            0,
+            "https://vercel.com/blog/design-engineering-at-vercel"
+          ]
+        }
+      ]
+    ]
+  ]
+}

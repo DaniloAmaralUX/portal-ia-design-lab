@@ -1,0 +1,256 @@
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+stages:
+  - verify
+  - browser
+  - image
+  - deploy
+  - queue
+
+variables:
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  # The catalog is built from a clone of the skills repository. Its stable branch only moves with a release, and the skills
+  # pipeline triggers this one with SKILLS_REF=stable. The stable branch is born with the v1.0.0 tag of the skills repository,
+  # so a pipeline of this project before that release has no ref to clone.
+  SKILLS_REF: stable
+  SKILLS_DIR: "$CI_PROJECT_DIR/.skills"
+  # The path of the skills project in GitLab. A project variable of the same name overrides this default. It builds the clone
+  # URL the build gives to the commands of the site, so the pages and the clone point at the same project.
+  SKILLS_PROJECT_PATH: pitang-agentic/skills
+  SKILLS_REPO_URL: "${CI_SERVER_URL}/${SKILLS_PROJECT_PATH}.git"
+
+# The whole history, because the date of the last change of each skill comes from the git log. The job token only clones the skills
+# project if this project is in the allowlist of that one (Settings > CI/CD > Job token permissions). The script clones the
+# channel and, when SKILLS_SHA is set, puts the clone on that commit, so every job of a pipeline tests and publishes the same
+# revision of the skills even if the channel moves in the middle. The verify job is the first to clone: it writes the SKILLS_SHA
+# of what it got into skills.env, a dotenv artifact that browser and build-image receive as a variable.
+# The slim image has no git and no CA bundle, and --no-install-recommends leaves ca-certificates out: without it git can't verify
+# the https certificate of the GitLab ("server certificate verification failed. CAfile: none").
+.clone-skills:
+  script:
+    - command -v git >/dev/null || (apt-get update && apt-get install -y --no-install-recommends git ca-certificates)
+    - sh deploy/clone-skills.sh
+
+default:
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - .npm/
+  before_script:
+    - npm ci --prefer-offline
+
+verify:
+  stage: verify
+  image: node:24.21.0-bookworm-slim
+  # A scheduled pipeline is the queue of /publicar (the job at the end of the file) and nothing else: it would otherwise build, test and
+  # publish the portal on every run.
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      when: never
+    - when: on_success
+  before_script:
+    - command -v git >/dev/null || (apt-get update && apt-get install -y --no-install-recommends git ca-certificates)
+    - sh deploy/clone-skills.sh skills.env
+    # scripts/service-yaml.test.ts runs deploy/render-service.sh, which needs envsubst.
+    - command -v envsubst >/dev/null || (apt-get update && apt-get install -y --no-install-recommends gettext-base)
+    - npm ci --prefer-offline
+  script:
+    - npm run check
+    - npm test
+    - npm run build
+  artifacts:
+    paths:
+      - dist/client/
+    reports:
+      dotenv: skills.env
+    expire_in: 1 week
+
+browser:
+  stage: browser
+  image: node:24.21.0-bookworm
+  # A scheduled pipeline is the queue of /publicar (the job at the end of the file) and nothing else: it would otherwise build, test and
+  # publish the portal on every run.
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      when: never
+    - when: on_success
+  variables:
+    PLAYWRIGHT_BROWSERS_PATH: "$CI_PROJECT_DIR/.cache/ms-playwright"
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - .npm/
+      - .cache/ms-playwright/
+  needs:
+    - verify
+  before_script:
+    - !reference [.clone-skills, script]
+    - npm ci --prefer-offline
+  script:
+    - npx playwright install --with-deps chromium
+    # The web vitals of e2e/experience.spec.ts stay in npm run test:e2e, on a laptop like the ones the portal is opened on. The pod
+    # of the shared runner times its own CPU: the same build painted / in 0.7 s on a laptop and in 3.0 to 3.2 s here, one page at a
+    # time, so the job failed without the page getting slower.
+    - npx playwright test --grep-invert @vitals
+  artifacts:
+    when: always
+    paths:
+      - test-results/
+    reports:
+      junit: e2e-results.xml
+    expire_in: 1 week
+
+# Publishing to Cloud Run. The two jobs below only exist on the default branch and only when every required variable is set
+# in Settings > CI/CD > Variables, so a project without them keeps the pipeline of verify and browser. Each pipeline of the
+# default branch publishes, the one that the push of the stable branch of the skills repository triggers included. The
+# README (Publicar no Cloud Run) lists the variables and what the infrastructure creates.
+#
+# The job asks GitLab for an ID token, swaps it for a short-lived Google credential through Workload Identity Federation and
+# impersonates the deploy service account: Cloud Run does not accept the direct access of the federation. No key is stored.
+# The aud of the token is the default audience of the provider, which is the address of the provider in iam.googleapis.com.
+# The image is the one of the Google Cloud CLI at a fixed version (587.0.0 is from 2026-09-29, and was the newest with more
+# than three days when this was written; its digest was read on 2026-10-07).
+.publish:
+  image: gcr.io/google.com/cloudsdktool/google-cloud-cli:587.0.0-alpine@sha256:7002c0b3cec597224a6a483d390f8b71c0a10a9281d7c54335145754b2507e80
+  before_script: []
+  cache: []
+  timeout: 30m
+  id_tokens:
+    GITLAB_OIDC_TOKEN:
+      aud: "https://iam.googleapis.com/${GCP_WORKLOAD_IDENTITY_PROVIDER}"
+  rules:
+    - if: >-
+        $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+        && $GCP_PROJECT_ID && $GCP_REGION && $GCP_WORKLOAD_IDENTITY_PROVIDER
+        && $GCP_DEPLOY_SERVICE_ACCOUNT && $GCP_RUNTIME_SERVICE_ACCOUNT && $GCP_ARTIFACT_REPOSITORY
+        && $SKILLS_REF == "stable"
+        && $CLOUD_RUN_SERVICE && $PORTAL_URL && $MICROSOFT_TENANT_ID && $MICROSOFT_CLIENT_ID
+        && $MICROSOFT_CLIENT_SECRET_NAME && $MICROSOFT_CLIENT_SECRET_VERSION
+        && $SESSION_SECRET_NAME && $SESSION_SECRET_VERSION
+        && $CI_PIPELINE_SOURCE != "schedule"
+
+.gcloud-login:
+  script:
+    - |
+      umask 077
+      gcloud_tmp=$(mktemp -d)
+      printf '%s' "$GITLAB_OIDC_TOKEN" > "$gcloud_tmp/token"
+      gcloud iam workload-identity-pools create-cred-config "$GCP_WORKLOAD_IDENTITY_PROVIDER" \
+        --service-account="$GCP_DEPLOY_SERVICE_ACCOUNT" \
+        --credential-source-file="$gcloud_tmp/token" \
+        --output-file="$gcloud_tmp/credentials.json"
+      gcloud auth login --cred-file="$gcloud_tmp/credentials.json" --quiet
+      gcloud config set project "$GCP_PROJECT_ID" --quiet
+
+# Cloud Build builds the image, because the runner of Pitang is a Kubernetes executor and building Docker there needs a
+# privileged mode. gcloud sends the working directory, which holds the skills clone in .skills, and .gcloudignore decides what
+# goes up. The tag has both commits, because the same commit of the portal changes its content when the stable branch moves.
+build-image:
+  stage: image
+  extends: .publish
+  needs:
+    - job: verify
+      artifacts: true
+    - job: browser
+      artifacts: false
+  script:
+    - !reference [.clone-skills, script]
+    - !reference [.gcloud-login, script]
+    # Cloud Build cannot pass a build argument with --tag, so the build variables go in a file of the context, which the
+    # Dockerfile reads. The script checks both values before it writes, and refuses a line break.
+    - sh deploy/write-build-env.sh
+    - |
+      skills_sha=$(git -C "$SKILLS_DIR" rev-parse --short HEAD)
+      tag="$GCP_ARTIFACT_REPOSITORY/portal-ia:$CI_COMMIT_SHORT_SHA-$skills_sha"
+      # Without --suppress-logs gcloud streams the build log to stdout, before the digest, and the variable no longer starts
+      # with sha256:. The log stays in Cloud Build, at the address gcloud prints.
+      digest=$(gcloud builds submit . --region="$GCP_REGION" --tag="$tag" --suppress-logs --format='value(results.images[0].digest)')
+      [ -n "$digest" ] || digest=$(gcloud artifacts docker images describe "$tag" --format='value(image_summary.digest)')
+      case "$digest" in sha256:*) ;; *) echo "Cloud Build did not return the digest of $tag" >&2; exit 1 ;; esac
+      echo "IMAGE=$GCP_ARTIFACT_REPOSITORY/portal-ia@$digest" > image.env
+      cat image.env
+  artifacts:
+    reports:
+      dotenv: image.env
+    expire_in: 1 week
+
+# The service is described in deploy/service.yaml, with the image by digest. The job never changes who can invoke the service
+# (roles/run.invoker, which needs run.admin): that, the domain and the load balancer are the infrastructure's.
+deploy:
+  stage: deploy
+  extends: .publish
+  needs:
+    - job: build-image
+      artifacts: true
+  resource_group: production
+  environment:
+    name: production
+    url: $PORTAL_URL
+  script:
+    - !reference [.gcloud-login, script]
+    - apk add --no-cache gettext
+    - |
+      service_file="$gcloud_tmp/service.yaml"
+      sh deploy/render-service.sh > "$service_file"
+      gcloud run services replace "$service_file" --region="$GCP_REGION"
+    - |
+      for attempt in 1 2 3 4 5 6 7 8 9 10; do
+        if health=$(curl -fsS --max-time 10 "$PORTAL_URL/health") && printf '%s' "$health" | grep -q '"status":"ok"'; then echo "$PORTAL_URL/health answered $health"; exit 0; fi
+        echo "attempt $attempt: $PORTAL_URL/health did not answer ok yet"
+        sleep 10
+      done
+      echo "$PORTAL_URL/health did not answer ok after the deploy" >&2
+      exit 1
+
+# The queue of /publicar. The portal leaves each request as an object in pending/ of the bucket PUBLISH_BUCKET, and this job, which
+# a schedule of the project starts (Settings > CI/CD > Schedules, on the default branch; Play runs it now), opens the Merge Request of
+# each one with scripts/publish-pending.ts. It is the GitLab that calls the GCP, with the same login of the deploy, so the GitLab never
+# has to be reachable from Google Cloud. The token of the GitLab is PUBLISH_GITLAB_TOKEN (masked, protected) and goes to the script by
+# stdin. The script tells the job where each object goes by its exit code: 0 to feitos/, 3 (a refusal another try would repeat) to
+# falhas/, and 1 (the GitLab did not answer) stays in pending/ and fails the job, so the team hears of it.
+#
+# The image is the one of .publish, and the script runs TypeScript with no flag, which needs Node 22.18 or newer. The Alpine of the
+# image is the 3.23, read from its history on 2026-10-29, and its nodejs package is the 24.22. The job still stops with a message when
+# a later image brings an older Node, and then the script moves to a job on node:24 that receives the files.
+publicar-pendentes:
+  stage: queue
+  extends: .publish
+  resource_group: publicar-fila
+  rules:
+    - if: >-
+        $CI_PIPELINE_SOURCE == "schedule" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+        && $GCP_PROJECT_ID && $GCP_WORKLOAD_IDENTITY_PROVIDER && $GCP_DEPLOY_SERVICE_ACCOUNT
+        && $PUBLISH_BUCKET && $PUBLISH_GITLAB_TOKEN
+  script:
+    - !reference [.gcloud-login, script]
+    - apk add --no-cache nodejs
+    - node -e 'const [major, minor] = process.versions.node.split(".").map(Number); if (major < 22 || (major === 22 && minor < 18)) { console.error("Node " + process.versions.node + " does not run .ts files without a flag; use a job on node:24 for the script."); process.exit(1); }'
+    - |
+      set -eu
+      queue="gs://$PUBLISH_BUCKET"
+      work=$(mktemp -d)
+      if ! gcloud storage ls "$queue/pending/*.json" > "$work/list" 2> "$work/error"; then
+        if grep -q "matched no objects" "$work/error"; then echo "Nothing pending in $queue/pending/."; exit 0; fi
+        cat "$work/error" >&2
+        exit 1
+      fi
+      waiting=0
+      while read -r object; do
+        name=$(basename "$object")
+        gcloud storage cp "$object" "$work/$name" --quiet
+        code=0
+        printf '%s' "$PUBLISH_GITLAB_TOKEN" | node scripts/publish-pending.ts "$work/$name" --gitlab "$CI_SERVER_URL" --project "$CI_PROJECT_ID" --sharepoint "${SHAREPOINT_ORIGIN:-}" || code=$?
+        case "$code" in
+          0) gcloud storage mv "$object" "$queue/feitos/$name" --quiet ;;
+          3) gcloud storage mv "$object" "$queue/falhas/$name" --quiet ;;
+          *) waiting=$((waiting + 1)) ;;
+        esac
+      done < "$work/list"
+      if [ "$waiting" -gt 0 ]; then echo "$waiting request(s) stay in pending/ for the next run." >&2; exit 1; fi

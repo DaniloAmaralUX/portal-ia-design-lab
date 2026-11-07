@@ -1,0 +1,17 @@
+export { AcademyLayout } from './AcademyLayout';
+export { AcademyPage } from './AcademyPage';
+export { GlossaryPage } from './GlossaryPage';
+export { InPortuguesePage } from './InPortuguesePage';
+export { loadTrack } from './track-loader';
+export { TrainingPage } from './TrainingPage';
+export { trackProgress } from './track-progress';
+export { useCompletedCourses } from './use-completed-courses';
+export { IntervalPage } from './IntervalPage';
+export { IntervalsPage } from './IntervalsPage';
+export { RecordingText } from './RecordingText';
+export { loadInterval } from './interval-loader';
+export { validateIntervalsSearch } from './intervals-search';
+export { TreinamentosPage } from './TreinamentosPage';
+export { TreinamentoPage } from './TreinamentoPage';
+export { loadCourse, loadTraining } from './training-loader';
+export { TrainingCoursePage } from './TrainingCoursePage';

@@ -1,0 +1,598 @@
+[
+  {
+    "id": "apple-accordion",
+    "title": "Apple Accordion",
+    "description": "Accordion whose items morph from pills into cards, inspired by Apple’s product pages.",
+    "source": "https://chanhdai.com/components/apple-accordion",
+    "files": 1,
+    "dependencies": [
+      "@base-ui/react",
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "apple-carousel",
+    "title": "Apple Carousel",
+    "description": "Infinite autoplay carousel with progress dots, inspired by Apple’s website.",
+    "source": "https://chanhdai.com/components/apple-carousel",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "apple-hello-effect",
+    "title": "Apple Hello Effect",
+    "description": "SVG writing animation inspired by Apple’s “Hello” screen.",
+    "source": "https://chanhdai.com/components/apple-hello-effect",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "brand-assets-menu",
+    "title": "Brand Assets Menu",
+    "description": "Context menu for copying brand SVGs and opening asset links.",
+    "source": "https://chanhdai.com/components/brand-assets-menu",
+    "files": 1,
+    "dependencies": [
+      "@rexa-developer/tiks",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "context-menu",
+      "toast"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "carbon-ads",
+    "title": "Carbon Ads",
+    "description": "Display a Carbon Ads unit in Next.js apps, styled to match your shadcn/ui theme.",
+    "source": "https://chanhdai.com/components/carbon-ads",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "chevrons-up-down-icon",
+    "title": "Chevrons Up Down Icon",
+    "description": "Animated chevrons icon that morphs between up and down directions.",
+    "source": "https://chanhdai.com/components/chevrons-up-down-icon",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "code-block-command",
+    "title": "Code Block Command",
+    "description": "Display install commands with package manager switcher and copy button.",
+    "source": "https://chanhdai.com/components/code-block-command",
+    "files": 2,
+    "dependencies": [
+      "@base-ui/react",
+      "motion",
+      "jotai",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://chanhdai.com/r/icon-swap.json",
+      "https://chanhdai.com/r/copy-button.json"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "consent-manager",
+    "title": "Consent Manager",
+    "description": "Cookie and tracking consent banner for Next.js, built on c15t.",
+    "source": "https://chanhdai.com/components/consent-manager",
+    "files": 1,
+    "dependencies": [
+      "@c15t/nextjs"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "copy-button",
+    "title": "Copy Button",
+    "description": "Copy text to clipboard with visual, haptic, and audio feedback.",
+    "source": "https://chanhdai.com/components/copy-button",
+    "files": 2,
+    "dependencies": [
+      "motion",
+      "@rexa-developer/tiks",
+      "web-haptics",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button",
+      "https://chanhdai.com/r/icon-swap.json"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "dot-grid-spotlight",
+    "title": "Dot Grid Spotlight",
+    "description": "Interactive dot grid with a cursor-tracking spotlight effect.",
+    "source": "https://chanhdai.com/components/dot-grid-spotlight",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "elastic-slider",
+    "title": "Elastic Slider",
+    "description": "Slider with elastic rubber-band drag and magnetic snap feedback.",
+    "source": "https://chanhdai.com/components/elastic-slider",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [
+      "https://chanhdai.com/r/use-controllable-state.json"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "fluid-gradient-text",
+    "title": "Fluid Gradient Text",
+    "description": "Render text with a fluid gradient that shifts with pointer movement.",
+    "source": "https://chanhdai.com/components/fluid-gradient-text",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "foldable",
+    "title": "Foldable",
+    "description": "Folded card that opens like the iPhone Duo, blurring as the cover turns.",
+    "source": "https://chanhdai.com/components/foldable",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [
+      "slider"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "github-contributions",
+    "title": "GitHub Contributions",
+    "description": "Visualize year-long GitHub contribution activity with daily counts, tooltips, and a profile link.",
+    "source": "https://chanhdai.com/components/github-contributions",
+    "files": 2,
+    "dependencies": [
+      "date-fns"
+    ],
+    "registryDependencies": [
+      "tooltip",
+      "spinner",
+      "https://chanhdai.com/r/contribution-graph.json"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "github-stars",
+    "title": "GitHub Stars",
+    "description": "Display GitHub repo star count with formatted numbers and full-count tooltip.",
+    "source": "https://chanhdai.com/components/github-stars",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "button",
+      "tooltip"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "glow-card-grid",
+    "title": "Glow Card Grid",
+    "description": "Display cards with glowing border and background effects.",
+    "source": "https://chanhdai.com/components/glow-card-grid",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "haptic",
+    "title": "Haptic Feedback",
+    "description": "Trigger haptic feedback on mobile devices.",
+    "source": "https://chanhdai.com/components/haptic",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "icon-swap",
+    "title": "Icon Swap",
+    "description": "Animate icon swaps with scale, blur, and fade transitions.",
+    "source": "https://chanhdai.com/components/icon-swap",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "ipod-classic",
+    "title": "iPod Classic",
+    "description": "iPod classic with a working click wheel, menus, and music playback.",
+    "source": "https://chanhdai.com/components/ipod-classic",
+    "files": 30,
+    "dependencies": [
+      "jotai",
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "jpg-card-holder",
+    "title": "JPG Card Holder",
+    "description": "Leather card holder shaped like a JPG file, with cards you can pull out.",
+    "source": "https://chanhdai.com/components/jpg-card-holder",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "line-nav",
+    "title": "Line Nav",
+    "description": "Vertical navigation with a line marker that expands on hover and active state.",
+    "source": "https://chanhdai.com/components/line-nav",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "logos-carousel",
+    "title": "Logos Carousel",
+    "description": "Cycle through logos column by column in a staggered wave.",
+    "source": "https://chanhdai.com/components/logos-carousel",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "logos-flip",
+    "title": "Logos Flip",
+    "description": "Flip cards in a staggered wave to reveal the next batch of logos.",
+    "source": "https://chanhdai.com/components/logos-flip",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "logos-swap",
+    "title": "Logos Swap",
+    "description": "Swap logos one at a time in a scattered order.",
+    "source": "https://chanhdai.com/components/logos-swap",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "middle-truncation",
+    "title": "Middle Truncation",
+    "description": "Truncate text in the middle while preserving start and end.",
+    "source": "https://chanhdai.com/components/middle-truncation",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "mobius-loop-icon",
+    "title": "Mobius Loop Icon",
+    "description": "Animated Mobius loop icon that morphs between circles and infinity shape.",
+    "source": "https://chanhdai.com/components/mobius-loop-icon",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "pull-quote",
+    "title": "Pull Quote",
+    "description": "Display a testimonial quote with author attribution and source link.",
+    "source": "https://chanhdai.com/components/pull-quote",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "react-wheel-picker",
+    "title": "React Wheel Picker",
+    "description": "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
+    "source": "https://chanhdai.com/components/react-wheel-picker",
+    "files": 1,
+    "dependencies": [
+      "@ncdai/react-wheel-picker"
+    ],
+    "registryDependencies": [],
+    "status": "source",
+    "installName": "wheel-picker"
+  },
+  {
+    "id": "scroll-fade-effect",
+    "title": "Scroll Fade Effect",
+    "description": "Fade content edges as you scroll, for both vertical and horizontal layouts.",
+    "source": "https://chanhdai.com/components/scroll-fade-effect",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "share-menu",
+    "title": "Share Menu",
+    "description": "Share menu to copy a link or post to X, LinkedIn, and the native share sheet.",
+    "source": "https://chanhdai.com/components/share-menu",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button",
+      "dropdown-menu",
+      "toast"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "shimmering-text",
+    "title": "Shimmering Text",
+    "description": "Smooth, light-sweeping shimmer animation for text.",
+    "source": "https://chanhdai.com/components/shimmering-text",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "slide-to-unlock",
+    "title": "Slide to Unlock",
+    "description": "Interactive slider inspired by the classic iPhone “slide to unlock” gesture.",
+    "source": "https://chanhdai.com/components/slide-to-unlock",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [
+      "https://chanhdai.com/r/shimmering-text.json"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "spinning-circular-text",
+    "title": "Spinning Circular Text",
+    "description": "Text arranged in a circle with a continuous spinning animation.",
+    "source": "https://chanhdai.com/components/spinning-circular-text",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "spotlight-logo",
+    "title": "Spotlight Logo",
+    "description": "SVG logo with a cursor-tracking gradient highlight and tactile press.",
+    "source": "https://chanhdai.com/components/spotlight-logo",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [
+      "@soundcn/metal-click"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "status-button",
+    "title": "Status Button",
+    "description": "Button that shows loading and success feedback for async actions.",
+    "source": "https://chanhdai.com/components/status-button",
+    "files": 1,
+    "dependencies": [
+      "motion",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button",
+      "https://chanhdai.com/r/use-controllable-state.json"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "swipe-actions",
+    "title": "Swipe Actions",
+    "description": "Swipe a row in a list to reveal actions on the left or right.",
+    "source": "https://chanhdai.com/components/swipe-actions",
+    "files": 1,
+    "dependencies": [
+      "@ncdai/react-swipe-actions",
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "testimonial",
+    "title": "Testimonial",
+    "description": "Display user feedback with author info, avatar, and verified badge.",
+    "source": "https://chanhdai.com/components/testimonial",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "testimonial-spotlight",
+    "title": "Testimonial Spotlight",
+    "description": "Testimonial card with spotlight effect on hover.",
+    "source": "https://chanhdai.com/components/testimonial-spotlight",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://chanhdai.com/r/testimonial.json"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "testimonials-marquee",
+    "title": "Testimonials Marquee",
+    "description": "Scrolling marquee to showcase user testimonials.",
+    "source": "https://chanhdai.com/components/testimonials-marquee",
+    "files": 0,
+    "dependencies": [],
+    "registryDependencies": [
+      "@kibo-ui/marquee",
+      "https://chanhdai.com/r/testimonial.json"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "text-swap",
+    "title": "Text Swap",
+    "description": "Animated text that swaps through items with a fade transition.",
+    "source": "https://chanhdai.com/components/text-swap",
+    "files": 1,
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "theme-switcher",
+    "title": "Theme Switcher",
+    "description": "Toggle between system, light, and dark themes in Next.js apps.",
+    "source": "https://chanhdai.com/components/theme-switcher",
+    "files": 1,
+    "dependencies": [
+      "next-themes",
+      "motion",
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "theme-toggle-effect",
+    "title": "Theme Toggle Effect",
+    "description": "Animated transitions when switching between light and dark themes.",
+    "source": "https://chanhdai.com/components/theme-toggle-effect",
+    "files": 10,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "recipe"
+  },
+  {
+    "id": "timescale",
+    "title": "Timescale",
+    "description": "Ruler-style timeline for plotting milestones along a horizontal or vertical axis.",
+    "source": "https://chanhdai.com/components/timescale",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "toc-minimap",
+    "title": "TOC Minimap",
+    "description": "Navigate page sections with a compact, hoverable TOC minimap.",
+    "source": "https://chanhdai.com/components/toc-minimap",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "hover-card",
+      "@soundcn/u-mini-map-open"
+    ],
+    "status": "source"
+  },
+  {
+    "id": "twemoji",
+    "title": "Twemoji",
+    "description": "Render Unicode emoji as Twemoji SVG images inline with text.",
+    "source": "https://chanhdai.com/components/twemoji",
+    "files": 2,
+    "dependencies": [],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "wallet",
+    "title": "Wallet",
+    "description": "Leather wallet with cards you can peek at and pull out.",
+    "source": "https://chanhdai.com/components/wallet",
+    "files": 1,
+    "dependencies": [
+      "@base-ui/react",
+      "motion"
+    ],
+    "registryDependencies": [],
+    "status": "source"
+  },
+  {
+    "id": "work-experience-component",
+    "title": "Work Experience",
+    "description": "Display work experiences with role details, company logos, and durations.",
+    "source": "https://chanhdai.com/components/work-experience-component",
+    "files": 1,
+    "dependencies": [
+      "react-markdown",
+      "date-fns",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "collapsible",
+      "separator",
+      "https://chanhdai.com/r/chevrons-up-down-icon.json",
+      "https://chanhdai.com/r/typography.json"
+    ],
+    "status": "source",
+    "installName": "work-experience"
+  }
+]

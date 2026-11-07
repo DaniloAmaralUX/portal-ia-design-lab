@@ -1,0 +1,32 @@
+{
+  "name": "spotlight-text",
+  "type": "registry:component",
+  "title": "Spotlight Text",
+  "description": "Dimmed copy with a soft warm spotlight that trails your pointer, bringing the words underneath to full contrast and uncovering a line that isn't there otherwise; on touch, or once you leave, the light drifts on a slow path of its own.",
+  "files": [
+    {
+      "path": "src/registry/items/spotlight-text/spotlight-text.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport { motion, useInView, useMotionTemplate, useMotionValue, useReducedMotion, useSpring } from \"motion/react\";\nimport { type CSSProperties, type PointerEvent, type ReactNode, useEffect, useRef, useState } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface SpotlightTextProps {\n  children: ReactNode;\n  secret?: ReactNode;\n  radius?: number;\n  dim?: number;\n  className?: string;\n}\n\nconst drift = { stiffness: 90, damping: 18, mass: 0.8 };\nconst track = { stiffness: 260, damping: 28, mass: 0.6 };\n\nfunction useSafeReducedMotion() {\n  const prefers = useReducedMotion();\n  const [mounted, setMounted] = useState(false);\n  useEffect(() => setMounted(true), []);\n  return mounted && !!prefers;\n}\n\nexport function SpotlightText({ children, secret, radius = 130, dim = 0.4, className }: SpotlightTextProps) {\n  const root = useRef<HTMLDivElement>(null);\n  const reduce = useSafeReducedMotion();\n  const inView = useInView(root);\n  const [pointing, setPointing] = useState(false);\n  const x = useMotionValue(radius);\n  const y = useMotionValue(radius * 0.6);\n  const sx = useSpring(x, pointing ? track : drift);\n  const sy = useSpring(y, pointing ? track : drift);\n  const r = useMotionValue(radius);\n  const mask = useMotionTemplate`radial-gradient(circle ${r}px at ${sx}px ${sy}px, black 0%, rgb(0 0 0 / 0.85) 40%, transparent 100%)`;\n  const glow = useMotionTemplate`radial-gradient(circle ${r}px at ${sx}px ${sy}px, var(--spotlight-glow), transparent 100%)`;\n\n  useEffect(() => {\n    r.set(radius);\n  }, [radius, r]);\n\n  useEffect(() => {\n    const el = root.current;\n    if (!el || pointing) return;\n    const place = (t: number) => {\n      const w = el.clientWidth;\n      const h = el.clientHeight;\n      x.set(w * (0.5 + 0.36 * Math.sin(t * 0.42)));\n      y.set(h * (0.5 + 0.34 * Math.sin(t * 0.84 + 0.6)));\n    };\n    if (reduce) {\n      x.jump(el.clientWidth * 0.32);\n      y.jump(el.clientHeight * 0.42);\n      sx.jump(x.get());\n      sy.jump(y.get());\n      return;\n    }\n    if (!inView) return;\n    let raf = 0;\n    const start = performance.now() - 2200;\n    const tick = (now: number) => {\n      place((now - start) / 1000);\n      raf = requestAnimationFrame(tick);\n    };\n    raf = requestAnimationFrame(tick);\n    return () => cancelAnimationFrame(raf);\n  }, [pointing, reduce, inView, x, y, sx, sy]);\n\n  const follow = (e: PointerEvent<HTMLDivElement>) => {\n    const el = root.current;\n    if (!el) return;\n    const rect = el.getBoundingClientRect();\n    const scale = rect.width / el.offsetWidth || 1;\n    const px = (e.clientX - rect.left) / scale - el.clientLeft;\n    const py = (e.clientY - rect.top) / scale - el.clientTop;\n    x.set(px);\n    y.set(py);\n    if (reduce) {\n      sx.jump(px);\n      sy.jump(py);\n    }\n  };\n\n  const release = (e: PointerEvent<HTMLDivElement>) => {\n    if (e.pointerType === \"mouse\" && e.type !== \"pointerleave\") return;\n    setPointing(false);\n  };\n\n  return (\n    <div\n      className={cn(\n        \"group relative isolate overflow-hidden [--spotlight-glow:color-mix(in_oklab,var(--color-amber-300)_34%,transparent)] dark:[--spotlight-glow:color-mix(in_oklab,var(--color-amber-300)_22%,transparent)]\",\n        className,\n      )}\n      onPointerCancel={release}\n      onPointerDown={(e) => {\n        setPointing(true);\n        follow(e);\n      }}\n      onPointerEnter={(e) => {\n        if (e.pointerType !== \"mouse\") return;\n        setPointing(true);\n        follow(e);\n      }}\n      onPointerLeave={release}\n      onPointerMove={(e) => {\n        if (e.pointerType !== \"mouse\" && !pointing) return;\n        if (!pointing) setPointing(true);\n        follow(e);\n      }}\n      onPointerUp={release}\n      ref={root}\n    >\n      <motion.div aria-hidden className=\"pointer-events-none absolute inset-0 -z-10\" style={{ backgroundImage: glow }} />\n      <div\n        className=\"opacity-(--spotlight-dim) transition-opacity duration-200 group-has-[:focus-visible]:opacity-100\"\n        style={{ \"--spotlight-dim\": dim } as CSSProperties}\n      >\n        {children}\n        {secret ? <div className=\"blur-[3px]\">{secret}</div> : null}\n      </div>\n      <motion.div\n        aria-hidden\n        className=\"pointer-events-none absolute inset-0 select-none\"\n        inert\n        style={{ padding: \"inherit\", maskImage: mask, WebkitMaskImage: mask }}\n      >\n        {children}\n        {secret ? <div>{secret}</div> : null}\n      </motion.div>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]): string {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://devl.dev/motion/spotlight-text",
+    "commit": "4484fc08d1a461c08772b74612e1a2b5f725dcfd",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

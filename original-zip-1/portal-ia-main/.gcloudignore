@@ -1,0 +1,17 @@
+# What gcloud builds submit sends to Cloud Build. Without this file gcloud uses the .gitignore, which ignores .skills, and
+# the image would be built with no catalog. The exclusions are the ones of .dockerignore, anchored to the root with a
+# leading slash because the syntax here is the one of .gitignore, where a bare name matches at any depth. .skills goes
+# up with its own .git, because the catalog generator reads the history there.
+/.git
+/node_modules
+/dist
+/.env
+/.env.*
+/.tanstack
+/*.tsbuildinfo
+/test-results
+/e2e-results.xml
+*.test.ts
+/e2e
+/playwright.config.ts
+/skills.env

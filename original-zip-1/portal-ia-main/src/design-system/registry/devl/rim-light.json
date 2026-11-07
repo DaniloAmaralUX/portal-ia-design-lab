@@ -1,0 +1,32 @@
+{
+  "name": "rim-light",
+  "type": "registry:component",
+  "title": "Rim Light",
+  "description": "A point of light that laps a card's border at a steady pace with a fading tail, tracing rounded corners exactly; every beam on the page shares one clock, so busy cards pulse in step.",
+  "files": [
+    {
+      "path": "src/registry/items/rim-light/rim-light.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport { useReducedMotion } from \"motion/react\";\nimport { useId, useLayoutEffect, useRef, useState } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface RimLightProps {\n  duration?: number;\n  length?: number;\n  phase?: number;\n  reverse?: boolean;\n  width?: number;\n  className?: string;\n}\n\nconst TAIL = [\n  { share: 0.3, opacity: 1 },\n  { share: 0.6, opacity: 0.45 },\n  { share: 1, opacity: 0.18 },\n];\n\nexport function RimLight({ duration = 6, length = 0.16, phase = 0, reverse = false, width = 1.5, className }: RimLightProps) {\n  const reduce = useReducedMotion();\n  const glowId = `beam-glow-${useId().replace(/:/g, \"\")}`;\n  const ref = useRef<SVGSVGElement>(null);\n  const [box, setBox] = useState<{ w: number; h: number; r: number } | null>(null);\n  const [onScreen, setOnScreen] = useState(true);\n\n  useLayoutEffect(() => {\n    const parent = ref.current?.parentElement;\n    if (!parent) return;\n    const measure = () => {\n      const r = Number.parseFloat(getComputedStyle(parent).borderTopLeftRadius) || 0;\n      setBox({ w: parent.offsetWidth, h: parent.offsetHeight, r });\n    };\n    measure();\n    const ro = new ResizeObserver(measure);\n    ro.observe(parent);\n    const io = new IntersectionObserver(([e]) => setOnScreen(e.isIntersecting));\n    io.observe(parent);\n    return () => {\n      ro.disconnect();\n      io.disconnect();\n    };\n  }, []);\n\n  useLayoutEffect(() => {\n    const svg = ref.current;\n    if (!svg || !box || reduce || !onScreen) return;\n    const anims = [...svg.querySelectorAll<SVGRectElement>(\"[data-dash]\")].map((rect) => {\n      const dash = Number(rect.dataset.dash);\n      const from = dash - phase * 100;\n      const a = rect.animate(\n        { strokeDashoffset: reverse ? [from - 100, from] : [from, from - 100] },\n        { duration: duration * 1000, iterations: Number.POSITIVE_INFINITY, easing: \"linear\" },\n      );\n      a.startTime = 0;\n      return a;\n    });\n    return () => {\n      for (const a of anims) a.cancel();\n    };\n  }, [box, duration, phase, reverse, reduce, onScreen]);\n\n  const rect = box && {\n    x: 0.5,\n    y: 0.5,\n    width: Math.max(box.w - 1, 0),\n    height: Math.max(box.h - 1, 0),\n    rx: Math.max(box.r - 0.5, 0),\n  };\n\n  return (\n    <svg\n      aria-hidden\n      className={cn(\"pointer-events-none absolute -inset-px size-[calc(100%+2px)] overflow-visible\", className)}\n      ref={ref}\n    >\n      {rect && reduce && <rect {...rect} fill=\"none\" opacity={0.35} stroke=\"currentColor\" strokeWidth={1} />}\n      {rect && !reduce && (\n        <>\n          <defs>\n            <filter height=\"200%\" id={glowId} width=\"200%\" x=\"-50%\" y=\"-50%\">\n              <feGaussianBlur stdDeviation={3} />\n            </filter>\n          </defs>\n          <g filter={`url(#${glowId})`} opacity={0.7}>\n            <Dash dash={length * 100 * TAIL[0].share} rect={rect} width={width + 2} />\n          </g>\n          {TAIL.map((t) => (\n            <Dash dash={length * 100 * t.share} key={t.share} opacity={t.opacity} rect={rect} width={width} />\n          ))}\n        </>\n      )}\n    </svg>\n  );\n}\n\nfunction Dash({\n  rect,\n  dash,\n  width,\n  opacity = 1,\n}: {\n  rect: { x: number; y: number; width: number; height: number; rx: number };\n  dash: number;\n  width: number;\n  opacity?: number;\n}) {\n  return (\n    <rect\n      {...rect}\n      data-dash={dash}\n      fill=\"none\"\n      opacity={opacity}\n      pathLength={100}\n      stroke=\"currentColor\"\n      strokeDasharray={`${dash} ${100 - dash}`}\n      strokeDashoffset={dash}\n      strokeLinecap=\"round\"\n      strokeWidth={width}\n    />\n  );\n}\n"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]): string {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://devl.dev/motion/rim-light",
+    "commit": "4484fc08d1a461c08772b74612e1a2b5f725dcfd",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

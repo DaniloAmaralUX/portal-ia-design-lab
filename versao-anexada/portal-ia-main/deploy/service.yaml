@@ -1,0 +1,65 @@
+# The Cloud Run service of the portal. deploy/render-service.sh fills the placeholders from the CI/CD variables of the
+# project, and the deploy job applies the result with gcloud run services replace. No real value lives in this file.
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: ${CLOUD_RUN_SERVICE}
+  annotations:
+    run.googleapis.com/ingress: ${CLOUD_RUN_INGRESS}
+    # Scaling at the service level, which Google recommends over the revision level, so a rollback does not change it.
+    run.googleapis.com/minScale: "${CLOUD_RUN_MIN_INSTANCES}"
+    run.googleapis.com/maxScale: "${CLOUD_RUN_MAX_INSTANCES}"
+spec:
+  template:
+    metadata:
+      annotations:
+        run.googleapis.com/startup-cpu-boost: "true"
+    spec:
+      serviceAccountName: ${GCP_RUNTIME_SERVICE_ACCOUNT}
+      containers:
+        - name: portal
+          # By digest, so the revision runs the bytes the build-image job built and not whatever the tag points to later.
+          image: ${IMAGE}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORTAL_URL
+              value: "${PORTAL_URL}"
+            - name: MICROSOFT_TENANT_ID
+              value: "${MICROSOFT_TENANT_ID}"
+            - name: MICROSOFT_CLIENT_ID
+              value: "${MICROSOFT_CLIENT_ID}"
+            - name: SESSION_DURATION_HOURS
+              value: "${SESSION_DURATION_HOURS}"
+            - name: SHAREPOINT_ORIGIN
+              value: "${SHAREPOINT_ORIGIN}"
+            - name: PUBLISHER_EMAILS
+              value: "${PUBLISHER_EMAILS}"
+            - name: PUBLISH_BUCKET
+              value: "${PUBLISH_BUCKET}"
+            # The secrets come from Secret Manager at a pinned version: Cloud Run resolves them when an instance starts.
+            - name: MICROSOFT_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ${MICROSOFT_CLIENT_SECRET_NAME}
+                  key: "${MICROSOFT_CLIENT_SECRET_VERSION}"
+            - name: SESSION_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ${SESSION_SECRET_NAME}
+                  key: "${SESSION_SECRET_VERSION}"
+          # Cloud Run ignores the HEALTHCHECK of the Dockerfile. The BFF answers /health without a session.
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 24
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            periodSeconds: 30
+            timeoutSeconds: 3
+            failureThreshold: 3

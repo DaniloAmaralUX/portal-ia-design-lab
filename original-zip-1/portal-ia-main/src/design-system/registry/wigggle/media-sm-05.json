@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "media-sm-05",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/media/sm/media-05.tsx",
+      "content": "import {\n  ChevronDownIcon,\n  ChevronLeftIcon,\n  ChevronRightIcon,\n  ChevronUpIcon,\n  CircleIcon,\n} from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\n\nconst WidgetDemo = () => (\n  <Widget className=\"justify-between\">\n    <WidgetContent className=\"inline-grid w-full grid-cols-3 gap-1\">\n      <Button\n        aria-label=\"Pan camera up\"\n        className=\"col-start-2 mx-auto\"\n        size=\"icon\"\n        variant=\"outline\"\n      >\n        <ChevronUpIcon aria-hidden=\"true\" size={16} />\n      </Button>\n      <Button\n        aria-label=\"Pan camera left\"\n        className=\"col-start-1 mx-auto\"\n        size=\"icon\"\n        variant=\"outline\"\n      >\n        <ChevronLeftIcon aria-hidden=\"true\" size={16} />\n      </Button>\n      <div aria-hidden=\"true\" className=\"flex items-center justify-center\">\n        <CircleIcon className=\"opacity-60\" size={20} />\n      </div>\n      <Button\n        aria-label=\"Pan camera right\"\n        size=\"icon\"\n        variant=\"outline\"\n        className=\"mx-auto\"\n      >\n        <ChevronRightIcon aria-hidden=\"true\" size={16} />\n      </Button>\n      <Button\n        aria-label=\"Pan camera down\"\n        className=\"col-start-2 mx-auto\"\n        size=\"icon\"\n        variant=\"outline\"\n      >\n        <ChevronDownIcon aria-hidden=\"true\" size={16} />\n      </Button>\n    </WidgetContent>\n  </Widget>\n);\n\nexport default WidgetDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "media"
+    ],
+    "size": "sm"
+  },
+  "type": "registry:component"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "productivity-md-04",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/separator.json",
+    "https://wigggle-ui.vercel.app/r/circular-progress.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/productivity/md/productivity-04.tsx",
+      "content": "import { Separator } from \"@/components/ui/separator\";\nimport { CircularProgress } from \"@/registry/default/ui/circular-progress\";\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\n\nconst taskChartInfo = [\n  {\n    color: \"stroke-vercel-yellow\",\n    percentage: 62,\n    task: \"Focus\",\n  },\n  {\n    color: \"stroke-vercel-purple\",\n    percentage: 22,\n    task: \"Meetings\",\n  },\n  {\n    color: \"stroke-vercel-teal\",\n    percentage: 10,\n    task: \"Breaks\",\n  },\n  {\n    color: \"stroke-vercel-pink\",\n    percentage: 6,\n    task: \"Others\",\n  },\n];\n\nconst WidgetDemo = () => (\n  <Widget size=\"md\">\n    <WidgetContent className=\"flex flex-col items-center justify-center gap-2\">\n      <div className=\"grid w-full grid-cols-3 items-center gap-4\">\n        <div className=\"flex flex-col items-center justify-center gap-1\">\n          <p className=\"text-muted-foreground text-sm font-normal\">Time</p>\n          <p className=\"text-2xl\">6h</p>\n        </div>\n        <div className=\"flex flex-col items-center justify-center gap-1\">\n          <p className=\"text-muted-foreground text-sm font-normal\">Tasks</p>\n          <p className=\"text-2xl\">55</p>\n        </div>\n        <div className=\"flex flex-col items-center justify-center gap-1\">\n          <p className=\"text-muted-foreground text-sm font-normal\">Work day</p>\n          <p className=\"text-2xl\">79%</p>\n        </div>\n      </div>\n      <Separator />\n      <div className=\"mt-1 grid w-full grid-cols-4 items-center gap-6 px-4\">\n        {taskChartInfo.map((el, i) => (\n          <CircularProgress\n            key={i}\n            percentageComplete={el.percentage}\n            taskType={el.task}\n            ringColor={el.color}\n          />\n        ))}\n      </div>\n    </WidgetContent>\n  </Widget>\n);\n\nexport default WidgetDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "productivity"
+    ],
+    "size": "md"
+  },
+  "type": "registry:component"
+}

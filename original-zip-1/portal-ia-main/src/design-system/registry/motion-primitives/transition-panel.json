@@ -1,0 +1,32 @@
+{
+  "name": "transition-panel",
+  "type": "registry:component",
+  "title": "Transition Panel",
+  "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+  "files": [
+    {
+      "path": "components/core/transition-panel.tsx",
+      "type": "registry:component",
+      "content": "'use client';\nimport {\n  AnimatePresence,\n  Transition,\n  Variant,\n  motion,\n  MotionProps,\n} from 'motion/react';\nimport { cn } from '@/lib/utils';\n\nexport type TransitionPanelProps = {\n  children: React.ReactNode[];\n  className?: string;\n  transition?: Transition;\n  activeIndex: number;\n  variants?: { enter: Variant; center: Variant; exit: Variant };\n} & MotionProps;\n\nexport function TransitionPanel({\n  children,\n  className,\n  transition,\n  variants,\n  activeIndex,\n  ...motionProps\n}: TransitionPanelProps) {\n  return (\n    <div className={cn('relative', className)}>\n      <AnimatePresence\n        initial={false}\n        mode='popLayout'\n        custom={motionProps.custom}\n      >\n        <motion.div\n          key={activeIndex}\n          variants={variants}\n          transition={transition}\n          initial='enter'\n          animate='center'\n          exit='exit'\n          {...motionProps}\n        >\n          {children[activeIndex]}\n        </motion.div>\n      </AnimatePresence>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { clsx, type ClassValue } from 'clsx';\nimport { twMerge } from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://motion-primitives.com/docs/transition-panel",
+    "commit": "120f64f6ca60348e251f929e9c81f11ccbe45eda",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

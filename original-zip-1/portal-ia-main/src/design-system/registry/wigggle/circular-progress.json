@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "circular-progress",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "components/ui/circular-progress.tsx",
+      "content": "interface Props {\n  percentageComplete: number;\n  taskType: string;\n  ringColor?: string;\n}\n\nconst CircularProgress = ({\n  percentageComplete,\n  taskType,\n  ringColor = \"stroke-blue-600\",\n  ...props\n}: React.ComponentProps<\"div\"> & Props) => {\n  const radius = 16;\n  const circumference = 2 * Math.PI * radius;\n  const offset = circumference - (percentageComplete / 100) * circumference;\n\n  return (\n    <div\n      className=\"flex w-full flex-col items-center justify-center gap-1\"\n      {...props}\n    >\n      <div className=\"relative flex size-full items-center justify-center\">\n        <svg\n          className=\"size-full scale-y-[-1] -rotate-90\"\n          viewBox=\"0 0 36 36\"\n          xmlns=\"http://www.w3.org/2000/svg\"\n          preserveAspectRatio=\"xMidYMid meet\"\n        >\n          {/* Background */}\n          <circle\n            cx=\"18\"\n            cy=\"18\"\n            r={radius}\n            fill=\"none\"\n            strokeWidth=\"2\"\n            className=\"stroke-secondary\"\n          />\n\n          {/* Progress Ring */}\n          <circle\n            cx=\"18\"\n            cy=\"18\"\n            r={radius}\n            fill=\"none\"\n            strokeWidth=\"2\"\n            strokeDasharray={circumference}\n            strokeDashoffset={offset}\n            strokeLinecap=\"round\"\n            className={ringColor}\n          />\n        </svg>\n\n        {/* Center Text */}\n        <p className=\"absolute text-sm font-semibold\">{percentageComplete}%</p>\n      </div>\n      <p className=\"text-xs\">{taskType}</p>\n    </div>\n  );\n};\n\nexport { CircularProgress };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

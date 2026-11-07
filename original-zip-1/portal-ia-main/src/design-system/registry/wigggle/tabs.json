@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs",
+  "dependencies": [
+    "@radix-ui/react-tabs"
+  ],
+  "files": [
+    {
+      "path": "components/ui/tabs.tsx",
+      "content": "\"use client\";\n\nimport { Tabs as TabsPrimitive } from \"@base-ui/react/tabs\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst Tabs = ({ className, ...props }: TabsPrimitive.Root.Props) => (\n  <TabsPrimitive.Root\n    data-slot=\"tabs\"\n    className={cn(\n      \"border-border bg-code flex flex-col rounded-md border\",\n      className\n    )}\n    {...props}\n  />\n);\n\nconst TabsList = ({\n  className,\n  hasSvg = false,\n  ...props\n}: TabsPrimitive.List.Props & { hasSvg?: boolean }) => (\n  <TabsPrimitive.List\n    data-slot=\"tabs-list\"\n    className={cn(\n      \"bg-code relative z-0 flex h-fit w-fit items-center justify-center rounded-md p-1\",\n      \"text-muted-foreground\",\n      hasSvg && \"pl-4\",\n      className\n    )}\n    {...props}\n  />\n);\n\nconst TabsIndicator = ({\n  className,\n  ...props\n}: TabsPrimitive.Indicator.Props) => (\n  <TabsPrimitive.Indicator\n    data-slot=\"tabs-indicator\"\n    className={cn(\n      \"dark:bg-foreground absolute bottom-0 left-0 -z-1 h-(--active-tab-height) w-(--active-tab-width) translate-x-(--active-tab-left) -translate-y-(--active-tab-bottom) rounded-md bg-white transition-[width,translate] duration-200 ease-in-out\",\n      \"inset-ring-foreground/10 dark:inset-ring-foreground/6 inset-ring-1\",\n      className\n    )}\n    {...props}\n  />\n);\n\nconst TabsTrigger = ({ className, ...props }: TabsPrimitive.Tab.Props) => (\n  <TabsPrimitive.Tab\n    data-slot=\"tabs-trigger\"\n    className={cn(\n      \"hover:text-foreground focus-visible:inset-ring-ring data-active:text-foreground flex flex-1 shrink-0 items-center justify-center gap-2 rounded-md px-4 py-1 font-sans text-base font-medium whitespace-nowrap transition-[color,background-color] outline-none focus-visible:inset-ring-1 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\n      className\n    )}\n    {...props}\n  />\n);\n\nconst TabsContent = ({ className, ...props }: TabsPrimitive.Panel.Props) => (\n  <TabsPrimitive.Panel\n    data-slot=\"tabs-content\"\n    className={cn(\"bg-background flex-1 rounded-b-md outline-none\", className)}\n    {...props}\n  />\n);\n\nexport { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

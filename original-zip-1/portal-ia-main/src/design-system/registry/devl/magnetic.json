@@ -1,0 +1,32 @@
+{
+  "name": "magnetic",
+  "type": "registry:component",
+  "title": "Magnetic",
+  "description": "Buttons and icons lean toward your pointer as it comes near, labels drifting a little further than their buttons, then spring back the moment you move away.",
+  "files": [
+    {
+      "path": "src/registry/items/magnetic/magnetic.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport { type MotionValue, motion, useMotionValue, useReducedMotion, useSpring } from \"motion/react\";\nimport {\n  type ComponentProps,\n  createContext,\n  type PointerEvent,\n  type ReactNode,\n  useContext,\n  useLayoutEffect,\n  useRef,\n} from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ninterface Magnet {\n  anchor: HTMLElement;\n  x: MotionValue<number>;\n  y: MotionValue<number>;\n  strength: number;\n  radius: number;\n  max: number;\n  group?: string;\n}\n\ntype Registry = Set<Magnet>;\n\nconst FieldContext = createContext<Registry | null>(null);\n\nconst spring = { stiffness: 260, damping: 17, mass: 0.6 };\n\nexport interface MagneticFieldProps extends ComponentProps<\"div\"> {\n  children: ReactNode;\n}\n\nexport function MagneticField({ children, className, onPointerMove, onPointerLeave, ...props }: MagneticFieldProps) {\n  const registry = useRef<Registry>(new Set()).current;\n  const reduce = useReducedMotion();\n\n  const move = (event: PointerEvent<HTMLDivElement>) => {\n    onPointerMove?.(event);\n    if (reduce || event.pointerType !== \"mouse\") return;\n    const pulls: { m: Magnet; dx: number; dy: number; edge: number }[] = [];\n    const nearest = new Map<string, number>();\n    for (const m of registry) {\n      const r = m.anchor.getBoundingClientRect();\n      const dx = event.clientX - (r.left + r.width / 2);\n      const dy = event.clientY - (r.top + r.height / 2);\n      const half = Math.min(r.width, r.height) / 2;\n      const wide = r.width >= r.height;\n      const along = Math.max(Math.abs(wide ? dx : dy) - (Math.max(r.width, r.height) / 2 - half), 0);\n      const edge = Math.max(Math.hypot(along, wide ? dy : dx) - half, 0);\n      pulls.push({ m, dx, dy, edge });\n      if (m.group) nearest.set(m.group, Math.min(nearest.get(m.group) ?? Infinity, edge));\n    }\n    for (const { m, dx, dy, edge } of pulls) {\n      const t = m.group && edge > (nearest.get(m.group) ?? 0) ? 1 : Math.min(edge / m.radius, 1);\n      const pull = 1 - t * t * (3 - 2 * t);\n      m.x.set(m.max * Math.tanh((dx * m.strength * pull) / m.max));\n      m.y.set(m.max * Math.tanh((dy * m.strength * pull) / m.max));\n    }\n  };\n\n  const leave = (event: PointerEvent<HTMLDivElement>) => {\n    onPointerLeave?.(event);\n    for (const m of registry) {\n      m.x.set(0);\n      m.y.set(0);\n    }\n  };\n\n  return (\n    <FieldContext.Provider value={registry}>\n      <div className={className} onPointerLeave={leave} onPointerMove={move} {...props}>\n        {children}\n      </div>\n    </FieldContext.Provider>\n  );\n}\n\nexport interface MagneticProps {\n  children: ReactNode;\n  strength?: number;\n  radius?: number;\n  max?: number;\n  group?: string;\n  className?: string;\n}\n\nexport function Magnetic({ children, strength = 0.35, radius = 72, max = 10, group, className }: MagneticProps) {\n  const registry = useContext(FieldContext);\n  const anchor = useRef<HTMLSpanElement>(null);\n  const tx = useMotionValue(0);\n  const ty = useMotionValue(0);\n  const x = useSpring(tx, spring);\n  const y = useSpring(ty, spring);\n\n  useLayoutEffect(() => {\n    const el = anchor.current;\n    if (!registry || !el) return;\n    const magnet: Magnet = { anchor: el, x: tx, y: ty, strength, radius, max, group };\n    registry.add(magnet);\n    return () => {\n      registry.delete(magnet);\n    };\n  }, [registry, tx, ty, strength, radius, max, group]);\n\n  return (\n    <span className={cn(\"inline-flex\", className)} ref={anchor}>\n      <motion.span className=\"inline-flex will-change-transform\" style={{ x, y }}>\n        {children}\n      </motion.span>\n    </span>\n  );\n}\n"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]): string {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://devl.dev/motion/magnetic",
+    "commit": "4484fc08d1a461c08772b74612e1a2b5f725dcfd",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

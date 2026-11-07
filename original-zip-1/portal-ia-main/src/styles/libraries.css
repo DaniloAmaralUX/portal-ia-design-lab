@@ -1,0 +1,24 @@
+/* Libraries.dev MIT layout adaptation. Measurements and provenance: docs/LIBRARIES-DESIGN.md. */
+.library-content .portal-container {
+  max-width: none;
+  padding-inline: 0;
+}
+.library-content > .portal-container { padding-top: 0; }
+.library-content > section:first-child { padding-top: 0; }
+.library-stage { background: var(--stage); border-radius: 16px; }
+.library-workspace > section { margin-top: 0; }
+.library-workspace > section > .portal-container { height: 100%; }
+.library-workspace [data-slot="widget"] { height: 100%; }
+#conteudo h1 { font-weight: 500; }
+#conteudo .animate-intro,
+#conteudo .reveal-children > * { animation: none; }
+button:focus-visible:active,
+a:focus-visible:active { scale: 1 !important; }
+@media (pointer: coarse) {
+  button[aria-label="Visualizar microfone"],
+  button[aria-label="Parar visualização do microfone"],
+  button[role="tab"] { min-height: 44px; min-width: 44px; }
+}
+@media (max-width: 639px) {
+  .library-stage { min-height: 320px; }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-sm-03",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/dashboard/sm/dashboard-03.tsx",
+      "content": "import { MoveDownIcon, MoveUpIcon } from \"lucide-react\";\n\nimport { Table, TableBody, TableCell, TableRow } from \"@/components/ui/table\";\nimport {\n  Widget,\n  WidgetContent,\n  WidgetHeader,\n  WidgetTitle,\n} from \"@/registry/default/ui/widget\";\n\nconst visitors = [\n  {\n    count: 54,\n    day: \"Today\",\n    hasGrown: true,\n  },\n  {\n    count: 374,\n    day: \"7 days\",\n    hasGrown: false,\n  },\n  {\n    count: 1498,\n    day: \"30 days\",\n    hasGrown: true,\n  },\n  {\n    count: 1498,\n    day: \"90 days\",\n    hasGrown: true,\n  },\n];\n\nconst WidgetDemo = () => (\n  <Widget className=\"gap-3\" design=\"mumbai\">\n    <WidgetHeader>\n      <WidgetTitle className=\"w-full text-center\">acme.com</WidgetTitle>\n    </WidgetHeader>\n    <WidgetContent>\n      <Table className=\"w-full\">\n        <TableBody>\n          {visitors.map((visitor) => (\n            <TableRow key={visitor.day}>\n              <TableCell>\n                <div className=\"text-muted-foreground -my-0.5 font-medium\">\n                  {visitor.day}\n                </div>\n              </TableCell>\n              <TableCell>\n                <div className=\"-my-0.5 flex items-center justify-end gap-1.5 text-right\">\n                  {visitor.count}\n                  {visitor.hasGrown ? (\n                    <MoveUpIcon\n                      className=\"stroke-productive size-4\"\n                      strokeWidth={3}\n                    />\n                  ) : (\n                    <MoveDownIcon\n                      className=\"stroke-destructive size-4\"\n                      strokeWidth={3}\n                    />\n                  )}\n                </div>\n              </TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </WidgetContent>\n  </Widget>\n);\n\nexport default WidgetDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dashboard"
+    ]
+  },
+  "type": "registry:component"
+}

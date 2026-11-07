@@ -1,0 +1,220 @@
+[
+  {
+    "title": "The Age of the Soft Skill",
+    "url": "https://rudyfaile.com/2026/09/24/the-age-of-the-soft-skill/",
+    "status": 200,
+    "final_url": "https://rudyfaile.com/2026/09/24/the-age-of-the-soft-skill/",
+    "page_title": "Rudy Faile - The Age of the Soft Skill",
+    "meta_description": "Every team had one: the engineer who missed meetings, answered Slack when they felt like it, and audibly sighed when you asked them to write something down. No one wanted to work with them. Everybody had to, because they were the only person alive who understood that legacy scala system, or the deploy pipeline, or…"
+  },
+  {
+    "title": "Code as the Source of Truth",
+    "url": "https://www.tonyward.dev/articles/code-as-the-source-of-truth",
+    "status": 200,
+    "final_url": "https://www.tonyward.dev/articles/code-as-the-source-of-truth",
+    "page_title": "Code as the Source of Truth - Tony Ward",
+    "meta_description": "With AI tooling, code being the source of truth just makes sense."
+  },
+  {
+    "title": "Lessons of Design",
+    "url": "https://lessons.design/",
+    "status": 200,
+    "final_url": "https://lessons.design/",
+    "page_title": "Lessons of Design",
+    "meta_description": "The musings of a designer on why he designs the way he does and what he’s learned along the journey."
+  },
+  {
+    "title": "Limit the number of details",
+    "url": "https://design.lightspark.com/limit-the-number-of-details",
+    "status": 200,
+    "final_url": "https://design.lightspark.com/limit-the-number-of-details",
+    "page_title": "Limit the number of details — Lightspark Design",
+    "meta_description": "Every detail asks for attention. Limiting how many we add is what gives us room to make the ones that remain better."
+  },
+  {
+    "title": "How I Design with AI",
+    "url": "https://ref.tools/blog/how-i-design-with-ai",
+    "status": 200,
+    "final_url": "https://ref.tools/blog/how-i-design-with-ai",
+    "page_title": "How I Design with AI.",
+    "meta_description": "As an engineer who is not a designer and hates slop."
+  },
+  {
+    "title": "Inter alternatives: How to choose a UI font",
+    "url": "https://yeptype.com/article/inter-alternatives",
+    "status": 200,
+    "final_url": "https://yeptype.com/article/inter-alternatives",
+    "page_title": "Inter alternatives: How to choose a UI font",
+    "meta_description": "Tired of Inter being everywhere? Two real criteria—cap-centered vertical metrics and a tall x-height—for choosing a UI font, plus 10 alternatives from independent foundries."
+  },
+  {
+    "title": "Anatomy of AI Input",
+    "url": "https://ibelick.com/anatomy-ai-input",
+    "status": 200,
+    "final_url": "https://ibelick.com/anatomy-ai-input",
+    "page_title": "Anatomy of AI Input",
+    "meta_description": "Understanding the structure of an AI input."
+  },
+  {
+    "title": "A Five-Minute Guide to Better Typography",
+    "url": "https://www.pierrickcalvez.com/journal/a-five-minute-guide-to-better-typography",
+    "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1144)>"
+  },
+  {
+    "title": "On AI, systems, taste and the human filter",
+    "url": "https://shedsgns.me/taste",
+    "status": 200,
+    "final_url": "https://shedsgns.me/taste",
+    "page_title": "On AI, systems, taste and the human filter",
+    "meta_description": "On AI, systems, taste and the human filter"
+  },
+  {
+    "title": "Is AI going to steal my job as a design engineer?",
+    "url": "https://twilson.net/writing/ai-design-engineer",
+    "status": 200,
+    "final_url": "https://twilson.net/writing/ai-design-engineer",
+    "page_title": "Is AI going to steal my job as a design engineer? | Tim Wilson",
+    "meta_description": "What's changed, and what still matters."
+  },
+  {
+    "title": "Interface Cheat Sheet",
+    "url": "https://interfaces.dev/cheat-sheet",
+    "status": 200,
+    "final_url": "https://interfaces.dev/cheat-sheet",
+    "page_title": "Interfaces › Cheat Sheet",
+    "meta_description": "A mix of best practices and personal preferences that help build better interfaces."
+  },
+  {
+    "title": "How to become an AI Designer",
+    "url": "https://uxdesign.cc/how-to-become-an-ai-designer-ff8ee8aed205",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "You Don't Need Animations",
+    "url": "https://emilkowal.ski/ui/you-dont-need-animations",
+    "status": 200,
+    "final_url": "https://emilkowal.ski/ui/you-dont-need-animations",
+    "page_title": "You Don't Need Animations",
+    "meta_description": "Why you are animating more often than you should."
+  },
+  {
+    "title": "Front-of-the-front-end and back-of-the-front-end web development",
+    "url": "https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/",
+    "status": 200,
+    "final_url": "https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/",
+    "page_title": "Front-of-the-front-end and back-of-the-front-end web development | Brad Frost",
+    "meta_description": "I'm Brad Frost, an independent creator, web designer & developer, teacher, speaker, writer, musician, and artist based in Pittsburgh, PA."
+  },
+  {
+    "title": "The Concept of Taste",
+    "url": "https://www.raphaelsalaja.com/library/the-concept-of-taste",
+    "status": 200,
+    "final_url": "https://www.raphaelsalaja.com/library/the-concept-of-taste",
+    "page_title": "The Concept of Taste",
+    "meta_description": "Why taste feels like instinct, and how it actually gets built."
+  },
+  {
+    "title": "Using AI as a Design Engineer",
+    "url": "https://jakub.kr/work/using-ai-as-a-design-engineer",
+    "status": 200,
+    "final_url": "https://jakub.kr/work/using-ai-as-a-design-engineer",
+    "page_title": "Using AI as a design engineer",
+    "meta_description": "How I use AI as a design engineer on a daily basis."
+  },
+  {
+    "title": "Details That Make Interfaces Feel Better",
+    "url": "https://jakub.kr/writing/details-that-make-interfaces-feel-better",
+    "status": 200,
+    "final_url": "https://jakub.kr/writing/details-that-make-interfaces-feel-better",
+    "page_title": "Details that make interfaces feel better",
+    "meta_description": "A collection of details that make your interfaces feel better."
+  },
+  {
+    "title": "The Attributes of a Design Engineer",
+    "url": "https://www.ryngonzalez.com/blog/the-attributes-of-a-design-engineer",
+    "status": 200,
+    "final_url": "https://www.ryngonzalez.com/blog/the-attributes-of-a-design-engineer",
+    "page_title": "The Attributes of a Design Engineer - Kathryn Gonzalez - Independent Design and Engineering Director",
+    "meta_description": "My definition of design engineering after building the practice at DoorDash."
+  },
+  {
+    "title": "Becoming a Design Engineer",
+    "url": "https://marcel.io/posts/becoming-a-design-engineer",
+    "status": 200,
+    "final_url": "https://marcel.io/posts/becoming-a-design-engineer",
+    "page_title": "Becoming a Design Engineer | Marcel Wichmann",
+    "meta_description": "I've been coding for about two years now and it changed my relationship to my role as a run-of-the-mill product designer spending most of his day in some sort o…"
+  },
+  {
+    "title": "Design Engineering",
+    "url": "https://www.designengineer.xyz/design-engineering",
+    "status": 200,
+    "final_url": "https://www.designengineer.xyz/design-engineering",
+    "page_title": "What is Design Engineering? | Design Engineer",
+    "meta_description": "Design Engineering sits at the intersection of design and front-end development. Learn what Design Engineers do, the skills they need, why companies like Apple, Stripe and Vercel hire them, and how to become one."
+  },
+  {
+    "title": "Invisible Details of Interaction Design",
+    "url": "https://rauno.me/craft/interaction-design",
+    "status": 200,
+    "final_url": "https://rauno.me/craft/interaction-design",
+    "page_title": "Invisible Details of Interaction Design",
+    "meta_description": ""
+  },
+  {
+    "title": "Family Values",
+    "url": "https://benji.org/family-values",
+    "status": 200,
+    "final_url": "https://benji.org/family-values",
+    "page_title": "Family Values",
+    "meta_description": "What makes Family, Family."
+  },
+  {
+    "title": "Web Interface Guidelines",
+    "url": "https://interfaces.rauno.me/",
+    "status": 200,
+    "final_url": "https://interfaces.rauno.me/",
+    "page_title": "Web Interface Guidelines",
+    "meta_description": "A non-exhaustive list of details that make a good web interface."
+  },
+  {
+    "title": "Design Engineering: A State of Mind",
+    "url": "https://blog.designeng.club/p/design-engineering-a-state-of-mind",
+    "status": 200,
+    "final_url": "https://blog.designeng.club/p/design-engineering-a-state-of-mind",
+    "page_title": "Design Engineering - a State of Mind - by Andy 👨‍💻",
+    "meta_description": "Finding my dream role blending code, design, and product thinking"
+  },
+  {
+    "title": "Design Engineering 101",
+    "url": "https://www.designdisciplin.com/p/design-engineering-101",
+    "status": 200,
+    "final_url": "https://www.designdisciplin.com/p/design-engineering-101",
+    "page_title": "Design Engineering 101 - by Baytaş - Design Discipline",
+    "meta_description": "Practical guide to the jobs and skills of the design engineer in tech"
+  },
+  {
+    "title": "12 Principles of Animation",
+    "url": "https://www.raphaelsalaja.com/library/12-principles-of-animation",
+    "status": 200,
+    "final_url": "https://www.raphaelsalaja.com/library/12-principles-of-animation",
+    "page_title": "12 Principles of Animation",
+    "meta_description": "Disney's 12 principles of animation, from squash and stretch to appeal, and how each one carries over to interfaces."
+  },
+  {
+    "title": "Developing Taste",
+    "url": "https://emilkowal.ski/ui/developing-taste",
+    "status": 200,
+    "final_url": "https://emilkowal.ski/ui/developing-taste",
+    "page_title": "Developing Taste",
+    "meta_description": "Why taste matters and how to develop it."
+  },
+  {
+    "title": "Design Engineering at Vercel",
+    "url": "https://vercel.com/blog/design-engineering-at-vercel",
+    "status": 200,
+    "final_url": "https://vercel.com/blog/design-engineering-at-vercel",
+    "page_title": "Design Engineering at Vercel: What we do and how we do it - Vercel",
+    "meta_description": "Design Engineers at Vercel blend aesthetic sensibility with technical skills. Learn about Vercel's philosophy on what Design Engineering is and how we work."
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "name": "typewriter",
+  "type": "registry:component",
+  "title": "Typewriter",
+  "description": "Types a phrase with a human rhythm, holds it long enough to read, then backspaces or selects it away and moves on; the caret only blinks while it waits.",
+  "files": [
+    {
+      "path": "src/registry/items/typewriter/typewriter.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport { motion, useReducedMotion } from \"motion/react\";\nimport { type ComponentProps, useEffect, useRef, useState } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nfunction useReduce() {\n  const reduce = useReducedMotion();\n  const [mounted, setMounted] = useState(false);\n  useEffect(() => setMounted(true), []);\n  return mounted && !!reduce;\n}\n\ntype Phase = \"typing\" | \"reading\" | \"selecting\" | \"deleting\" | \"resting\";\n\nexport interface TypewriterOptions {\n  typeSpeed?: number;\n  deleteSpeed?: number;\n  wpm?: number;\n  erase?: \"backspace\" | \"select\";\n  loop?: boolean;\n  paused?: boolean;\n}\n\nfunction readingTime(phrase: string, wpm: number) {\n  const words = phrase.trim().split(/\\s+/).length;\n  return Math.max(1400, (words / wpm) * 60_000 + 700);\n}\n\nfunction keystroke(next: string | undefined, base: number) {\n  const jitter = base * (0.55 + Math.random() * 0.9);\n  if (next === \",\" || next === \";\") return jitter + 160;\n  if (next === \".\" || next === \"?\" || next === \"!\") return jitter + 260;\n  if (next === \" \") return jitter * 0.7;\n  return jitter;\n}\n\nexport function useTypewriter(\n  phrases: string[],\n  { typeSpeed = 58, deleteSpeed = 26, wpm = 200, erase = \"backspace\", loop = true, paused = false }: TypewriterOptions = {},\n) {\n  const reduce = useReduce();\n  const [index, setIndex] = useState(0);\n  const [count, setCount] = useState(0);\n  const [phase, setPhase] = useState<Phase>(\"typing\");\n  const [visible, setVisible] = useState(true);\n  const ref = useRef<HTMLElement>(null);\n  const phrase = phrases[index % phrases.length] ?? \"\";\n\n  useEffect(() => {\n    const el = ref.current;\n    if (!el) return;\n    const io = new IntersectionObserver(([e]) => setVisible(e.isIntersecting));\n    io.observe(el);\n    return () => io.disconnect();\n  }, []);\n\n  useEffect(() => {\n    if (paused || !visible) return;\n    const last = !loop && index === phrases.length - 1;\n    let ms = 0;\n    let step = () => {};\n\n    if (reduce) {\n      if (count !== phrase.length) {\n        setCount(phrase.length);\n        setPhase(\"reading\");\n        return;\n      }\n      if (last) return;\n      ms = readingTime(phrase, wpm);\n      step = () => {\n        setIndex((i) => i + 1);\n        setCount(0);\n      };\n    } else if (phase === \"typing\") {\n      if (count >= phrase.length) {\n        setPhase(\"reading\");\n        return;\n      }\n      ms = count === 0 ? 120 : keystroke(phrase[count], typeSpeed);\n      step = () => setCount((c) => c + 1);\n    } else if (phase === \"reading\") {\n      if (last) return;\n      ms = readingTime(phrase, wpm);\n      step = () => setPhase(erase === \"select\" ? \"selecting\" : \"deleting\");\n    } else if (phase === \"selecting\") {\n      ms = 420;\n      step = () => {\n        setCount(0);\n        setPhase(\"resting\");\n      };\n    } else if (phase === \"deleting\") {\n      if (count <= 0) {\n        setPhase(\"resting\");\n        return;\n      }\n      ms = count === phrase.length ? 180 : deleteSpeed;\n      step = () => setCount((c) => c - 1);\n    } else {\n      ms = 360;\n      step = () => {\n        setIndex((i) => i + 1);\n        setPhase(\"typing\");\n      };\n    }\n\n    const id = setTimeout(step, ms);\n    return () => clearTimeout(id);\n  }, [phase, count, index, phrase, paused, visible, reduce, loop, phrases.length, typeSpeed, deleteSpeed, wpm, erase]);\n\n  return { ref, text: phrase.slice(0, count), phrase, index, phase, reduce, visible };\n}\n\nexport interface TypewriterProps extends Omit<ComponentProps<\"span\">, \"children\">, TypewriterOptions {\n  phrases: string[];\n  caretClassName?: string;\n}\n\nexport function Typewriter({ phrases, caretClassName, className, ...props }: TypewriterProps) {\n  const { typeSpeed, deleteSpeed, wpm, erase, loop, paused, ...rest } = props;\n  const { ref, text, phrase, phase, reduce, visible } = useTypewriter(phrases, {\n    typeSpeed,\n    deleteSpeed,\n    wpm,\n    erase,\n    loop,\n    paused,\n  });\n  const idle = visible && (phase === \"reading\" || phase === \"resting\" || paused);\n\n  return (\n    <span className={cn(\"relative\", className)} ref={ref} {...rest}>\n      <span className=\"sr-only\">{phrases.join(\", \")}</span>\n      <span aria-hidden>\n        {reduce ? (\n          <span>{phrase}</span>\n        ) : (\n          <>\n            <span\n              className={cn(\n                \"rounded-[0.15em] transition-colors duration-150 [box-decoration-break:clone]\",\n                phase === \"selecting\" && \"bg-info/25\",\n              )}\n            >\n              {text}\n            </span>\n            <motion.span\n              animate={idle ? { opacity: [1, 1, 0, 0, 1] } : { opacity: 1 }}\n              className={cn(\n                \"ml-[0.06em] inline-block h-[1.1em] w-[0.08em] min-w-0.5 translate-y-[0.18em] rounded-full bg-current align-baseline\",\n                caretClassName,\n              )}\n              key={idle ? \"blink\" : \"solid\"}\n              transition={idle ? { duration: 1.1, times: [0, 0.5, 0.58, 0.92, 1], repeat: Number.POSITIVE_INFINITY } : { duration: 0 }}\n            />\n          </>\n        )}\n      </span>\n    </span>\n  );\n}\n"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]): string {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://devl.dev/motion/typewriter",
+    "commit": "4484fc08d1a461c08772b74612e1a2b5f725dcfd",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "press-ripple",
+  "type": "registry:component",
+  "title": "Press Ripple",
+  "description": "A quiet wave that spreads from exactly where you pressed, clipped to the element's corners, finishes filling even on a quick tap, and gives Enter and Space the same feedback from the centre.",
+  "files": [
+    {
+      "path": "src/registry/items/press-ripple/press-ripple.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport { AnimatePresence, motion, useReducedMotion } from \"motion/react\";\nimport { useEffect, useRef, useState } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ninterface Wave {\n  id: number;\n  x: number;\n  y: number;\n  r: number;\n}\n\nconst SPREAD = 0.42;\n\nexport interface RippleProps {\n  strength?: number;\n  className?: string;\n}\n\nexport function Ripple({ strength = 0.12, className }: RippleProps) {\n  const reduce = useReducedMotion();\n  const ref = useRef<HTMLSpanElement>(null);\n  const [waves, setWaves] = useState<Wave[]>([]);\n\n  useEffect(() => {\n    const host = ref.current?.parentElement;\n    if (!host) return;\n    let next = 0;\n    const live = new Map<number, number>();\n    const timers = new Set<ReturnType<typeof setTimeout>>();\n    let pressing: number | null = null;\n    let keyHeld = false;\n\n    const start = (clientX?: number, clientY?: number) => {\n      const b = host.getBoundingClientRect();\n      const x = clientX === undefined ? b.width / 2 : clientX - b.left;\n      const y = clientY === undefined ? b.height / 2 : clientY - b.top;\n      const r = Math.hypot(Math.max(x, b.width - x), Math.max(y, b.height - y)) / 0.78;\n      const id = next++;\n      live.set(id, performance.now());\n      setWaves((w) => [...w, { id, x, y, r }]);\n      return id;\n    };\n\n    const end = (id: number | null) => {\n      if (id === null || !live.has(id)) return;\n      const born = live.get(id) ?? 0;\n      live.delete(id);\n      const wait = Math.max(0, SPREAD * 1000 - (performance.now() - born));\n      const t = setTimeout(() => {\n        timers.delete(t);\n        setWaves((w) => w.filter((wave) => wave.id !== id));\n      }, wait);\n      timers.add(t);\n    };\n\n    const down = (e: PointerEvent) => {\n      if (e.button !== 0 || (host as HTMLButtonElement).disabled) return;\n      end(pressing);\n      pressing = start(e.clientX, e.clientY);\n    };\n    const up = () => {\n      end(pressing);\n      pressing = null;\n    };\n    const keydown = (e: KeyboardEvent) => {\n      if ((e.key !== \"Enter\" && e.key !== \" \") || e.repeat || keyHeld || e.target !== host) return;\n      keyHeld = e.key === \" \";\n      const id = start();\n      if (e.key === \"Enter\") end(id);\n      else pressing = id;\n    };\n    const keyup = (e: KeyboardEvent) => {\n      if (e.key !== \" \") return;\n      keyHeld = false;\n      up();\n    };\n\n    host.addEventListener(\"pointerdown\", down);\n    host.addEventListener(\"pointerup\", up);\n    host.addEventListener(\"pointerleave\", up);\n    host.addEventListener(\"pointercancel\", up);\n    host.addEventListener(\"keydown\", keydown);\n    host.addEventListener(\"keyup\", keyup);\n    host.addEventListener(\"blur\", up);\n    return () => {\n      host.removeEventListener(\"pointerdown\", down);\n      host.removeEventListener(\"pointerup\", up);\n      host.removeEventListener(\"pointerleave\", up);\n      host.removeEventListener(\"pointercancel\", up);\n      host.removeEventListener(\"keydown\", keydown);\n      host.removeEventListener(\"keyup\", keyup);\n      host.removeEventListener(\"blur\", up);\n      for (const t of timers) clearTimeout(t);\n    };\n  }, []);\n\n  return (\n    <span aria-hidden className={cn(\"pointer-events-none absolute inset-0 overflow-hidden rounded-[inherit]\", className)} ref={ref}>\n      <AnimatePresence>\n        {waves.map((w) => (\n          <motion.span\n            animate={{ scale: 1, opacity: strength }}\n            className=\"absolute rounded-full\"\n            exit={{ opacity: 0, transition: { duration: 0.32, ease: \"easeOut\" } }}\n            initial={reduce ? { scale: 1, opacity: 0 } : { scale: 0.1, opacity: strength * 0.6 }}\n            key={w.id}\n            style={{\n              left: w.x - w.r,\n              top: w.y - w.r,\n              width: w.r * 2,\n              height: w.r * 2,\n              background: \"radial-gradient(closest-side, currentColor 78%, transparent)\",\n            }}\n            transition={\n              reduce\n                ? { duration: 0.12 }\n                : { scale: { duration: SPREAD, ease: [0.23, 1, 0.32, 1] }, opacity: { duration: 0.1 } }\n            }\n          />\n        ))}\n      </AnimatePresence>\n    </span>\n  );\n}\n"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]): string {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://devl.dev/motion/press-ripple",
+    "commit": "4484fc08d1a461c08772b74612e1a2b5f725dcfd",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

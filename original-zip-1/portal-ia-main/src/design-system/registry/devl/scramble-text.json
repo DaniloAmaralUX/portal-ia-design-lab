@@ -1,0 +1,32 @@
+{
+  "name": "scramble-text",
+  "type": "registry:component",
+  "title": "Scramble Text",
+  "description": "Text that decodes from random glyphs into the real words, sweeping left to right on view, on hover or on demand, with a monospace variant for codes and labels.",
+  "files": [
+    {
+      "path": "src/registry/items/scramble-text/scramble-text.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport { useReducedMotion } from \"motion/react\";\nimport {\n  type ComponentProps,\n  type ElementType,\n  type FocusEvent,\n  type PointerEvent,\n  useCallback,\n  useEffect,\n  useLayoutEffect,\n  useRef,\n  useState,\n} from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nconst POOLS = {\n  upper: \"ABCDEFGHKLNOPQRSTUVXYZ\",\n  lower: \"abcdeghknopqsuvxyz\",\n  narrow: \"fijlrt\",\n  digit: \"0123456789\",\n  mono: \"!<>-_\\\\/[]{}=+*^?#%&$\",\n};\n\nfunction noise(ch: string, mono: boolean) {\n  if (ch.trim() === \"\") return ch;\n  const pool = mono\n    ? POOLS.mono\n    : /[fijlrtI1]/.test(ch)\n      ? POOLS.narrow\n      : /[A-Z]/.test(ch)\n        ? POOLS.upper\n        : /[0-9]/.test(ch)\n          ? POOLS.digit\n          : /[a-z]/.test(ch)\n            ? POOLS.lower\n            : POOLS.mono;\n  return pool[Math.floor(Math.random() * pool.length)];\n}\n\ntype Cell = { ch: string; glyph: string | null };\n\nexport interface ScrambleTextProps extends Omit<ComponentProps<\"span\">, \"children\"> {\n  text: string;\n  trigger?: \"view\" | \"hover\" | \"mount\";\n  mono?: boolean;\n  hold?: number;\n  stagger?: number;\n  delay?: number;\n  replay?: number;\n  as?: ElementType;\n  href?: string;\n}\n\nexport function ScrambleText({\n  text,\n  trigger = \"view\",\n  mono = false,\n  hold = 260,\n  stagger = 28,\n  delay = 0,\n  replay,\n  as: Tag = \"span\",\n  className,\n  onPointerEnter,\n  onFocus,\n  ...props\n}: ScrambleTextProps) {\n  const reduce = useReducedMotion();\n  const ref = useRef<HTMLElement>(null);\n  const raf = useRef(0);\n  const [cells, setCells] = useState<Cell[] | null>(null);\n\n  const run = useCallback(() => {\n    if (reduce || raf.current) return;\n    const chars = [...text];\n    const settle = chars.map((_, i) => delay + hold + i * stagger + Math.random() * stagger * 2);\n    const end = Math.max(...settle);\n    const start = performance.now();\n    let lastSwap = -1;\n    const tick = (now: number) => {\n      const t = now - start;\n      const swap = Math.floor(t / 45);\n      if (swap !== lastSwap || t >= end) {\n        lastSwap = swap;\n        setCells(chars.map((ch, i) => ({ ch, glyph: t >= settle[i] ? null : noise(ch, mono) })));\n      }\n      if (t < end) raf.current = requestAnimationFrame(tick);\n      else {\n        raf.current = 0;\n        setCells(null);\n      }\n    };\n    raf.current = requestAnimationFrame(tick);\n  }, [text, hold, stagger, delay, mono, reduce]);\n\n  useEffect(() => () => cancelAnimationFrame(raf.current), []);\n\n  useLayoutEffect(() => {\n    if (reduce || trigger === \"hover\") return;\n    setCells([...text].map((ch) => ({ ch, glyph: noise(ch, mono) })));\n  }, [text, trigger, mono, reduce]);\n\n  useEffect(() => {\n    if (reduce) {\n      setCells(null);\n      return;\n    }\n    if (trigger === \"mount\") return run();\n    if (trigger !== \"view\" || !ref.current) return;\n    const io = new IntersectionObserver(\n      ([entry]) => {\n        if (!entry.isIntersecting) return;\n        io.disconnect();\n        run();\n      },\n      { threshold: 0.6 },\n    );\n    io.observe(ref.current);\n    return () => io.disconnect();\n  }, [trigger, run, reduce]);\n\n  const replayed = useRef(replay);\n  useEffect(() => {\n    if (replayed.current === replay) return;\n    replayed.current = replay;\n    cancelAnimationFrame(raf.current);\n    raf.current = 0;\n    run();\n  }, [replay, run]);\n\n  return (\n    <Tag\n      className={cn(mono && \"font-mono\", className)}\n      onFocus={(e: FocusEvent<HTMLElement>) => {\n        onFocus?.(e as FocusEvent<HTMLSpanElement>);\n        if (trigger === \"hover\" && e.currentTarget.matches(\":focus-visible\")) run();\n      }}\n      onPointerEnter={(e: PointerEvent<HTMLElement>) => {\n        onPointerEnter?.(e as PointerEvent<HTMLSpanElement>);\n        if (trigger === \"hover\" && e.pointerType === \"mouse\") run();\n      }}\n      ref={ref}\n      {...props}\n    >\n      <span className=\"sr-only\">{text}</span>\n      <span aria-hidden>\n        {cells\n          ? text.split(/(\\s+)/).map((word, w, words) => {\n              const offset = words.slice(0, w).join(\"\").length;\n              if (/^\\s+$/.test(word)) return word;\n              return (\n                <span className=\"inline-block whitespace-nowrap\" key={`${w}-${word}`}>\n                  {[...word].map((ch, i) => {\n                    const cell = cells[[...text.slice(0, offset)].length + i];\n                    if (!cell?.glyph) return <span key={i}>{ch}</span>;\n                    return (\n                      <span className=\"relative inline-block\" key={i}>\n                        <span className=\"invisible\">{ch}</span>\n                        <span className=\"absolute inset-0 text-center text-muted-foreground\">{cell.glyph}</span>\n                      </span>\n                    );\n                  })}\n                </span>\n              );\n            })\n          : text}\n      </span>\n    </Tag>\n  );\n}\n"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]): string {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://devl.dev/motion/scramble-text",
+    "commit": "4484fc08d1a461c08772b74612e1a2b5f725dcfd",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

@@ -1,0 +1,1778 @@
+[
+  {
+    "id": "widget",
+    "title": "widget",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/widget"
+  },
+  {
+    "id": "icons",
+    "title": "icons",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/icons"
+  },
+  {
+    "id": "avatar",
+    "title": "avatar",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-avatar",
+      "class-variance-authority"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/avatar"
+  },
+  {
+    "id": "badge",
+    "title": "badge",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-slot",
+      "class-variance-authority"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/badge"
+  },
+  {
+    "id": "button",
+    "title": "button",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-slot",
+      "class-variance-authority"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/button"
+  },
+  {
+    "id": "carousel",
+    "title": "carousel",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "embla-carousel-react",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/carousel"
+  },
+  {
+    "id": "circular-progress",
+    "title": "circular-progress",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/circular"
+  },
+  {
+    "id": "dialog",
+    "title": "dialog",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-dialog"
+    ],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/dialog"
+  },
+  {
+    "id": "dropdown-menu",
+    "title": "dropdown-menu",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-dropdown-menu",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dropdown"
+  },
+  {
+    "id": "input",
+    "title": "input",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-input"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/input"
+  },
+  {
+    "id": "label",
+    "title": "label",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-label"
+    ],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/label"
+  },
+  {
+    "id": "popover",
+    "title": "popover",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-popover"
+    ],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/popover"
+  },
+  {
+    "id": "progress",
+    "title": "progress",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-progress"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/progress"
+  },
+  {
+    "id": "select",
+    "title": "select",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-select",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/select"
+  },
+  {
+    "id": "scroll-area",
+    "title": "scroll-area",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-scroll-area"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/scroll"
+  },
+  {
+    "id": "separator",
+    "title": "separator",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-separator"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/separator"
+  },
+  {
+    "id": "switch",
+    "title": "switch",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-switch"
+    ],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/switch"
+  },
+  {
+    "id": "tabs",
+    "title": "tabs",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-tabs"
+    ],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/tabs"
+  },
+  {
+    "id": "textarea",
+    "title": "textarea",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/textarea"
+  },
+  {
+    "id": "tooltip",
+    "title": "tooltip",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-tooltip"
+    ],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/tooltip"
+  },
+  {
+    "id": "item",
+    "title": "item",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@radix-ui/react-slot",
+      "class-variance-authority"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/separator.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/item"
+  },
+  {
+    "id": "wheel-picker",
+    "title": "wheel-picker",
+    "type": "registry:ui",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "@ncdai/react-wheel-picker"
+    ],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/wheel"
+  },
+  {
+    "id": "utils",
+    "title": "utils",
+    "type": "registry:lib",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/utils"
+  },
+  {
+    "id": "calendar-sm-01",
+    "title": "calendar-sm-01",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-sm-02",
+    "title": "calendar-sm-02",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/badge.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-sm-03",
+    "title": "calendar-sm-03",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/badge.json",
+      "https://wigggle-ui.vercel.app/r/separator.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-sm-04",
+    "title": "calendar-sm-04",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/badge.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/separator.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-sm-05",
+    "title": "calendar-sm-05",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/badge.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-sm-06",
+    "title": "calendar-sm-06",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-sm-07",
+    "title": "calendar-sm-07",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/tabs.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-sm-08",
+    "title": "calendar-sm-08",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-sm-09",
+    "title": "calendar-sm-09",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-md-01",
+    "title": "calendar-md-01",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/badge.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-md-02",
+    "title": "calendar-md-02",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/badge.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-md-03",
+    "title": "calendar-md-03",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/badge.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-md-04",
+    "title": "calendar-md-04",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/badge.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-md-05",
+    "title": "calendar-md-05",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-md-06",
+    "title": "calendar-md-06",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-lg-01",
+    "title": "calendar-lg-01",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/separator.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-lg-02",
+    "title": "calendar-lg-02",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/separator.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-lg-03",
+    "title": "calendar-lg-03",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/avatar.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-lg-04",
+    "title": "calendar-lg-04",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/separator.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-lg-05",
+    "title": "calendar-lg-05",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/textarea.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "calendar-lg-06",
+    "title": "calendar-lg-06",
+    "type": "registry:component",
+    "category": "calendar",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/badge.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/calendar"
+  },
+  {
+    "id": "clock-sm-01",
+    "title": "clock-sm-01",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-02",
+    "title": "clock-sm-02",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-03",
+    "title": "clock-sm-03",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-04",
+    "title": "clock-sm-04",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-05",
+    "title": "clock-sm-05",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-06",
+    "title": "clock-sm-06",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-07",
+    "title": "clock-sm-07",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/separator.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-08",
+    "title": "clock-sm-08",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-09",
+    "title": "clock-sm-09",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-10",
+    "title": "clock-sm-10",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/switch.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-11",
+    "title": "clock-sm-11",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-12",
+    "title": "clock-sm-12",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "clock-sm-13",
+    "title": "clock-sm-13",
+    "type": "registry:component",
+    "category": "clock",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://chanhdai.com/r/wheel-picker.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/clock"
+  },
+  {
+    "id": "dashboard-sm-01",
+    "title": "dashboard-sm-01",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/utils.json",
+      "https://wigggle-ui.vercel.app/r/tooltip.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "dashboard-sm-02",
+    "title": "dashboard-sm-02",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [
+      "recharts"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/chart.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "dashboard-sm-03",
+    "title": "dashboard-sm-03",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/table.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "dashboard-sm-04",
+    "title": "dashboard-sm-04",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [
+      "recharts"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/chart.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "dashboard-sm-05",
+    "title": "dashboard-sm-05",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/avatar.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "dashboard-sm-06",
+    "title": "dashboard-sm-06",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [
+      "recharts"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/textarea.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "dashboard-md-01",
+    "title": "dashboard-md-01",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [
+      "recharts"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/table.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "dashboard-md-02",
+    "title": "dashboard-md-02",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/avatar.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/icons.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/dropdown-menu.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "dashboard-lg-01",
+    "title": "dashboard-lg-01",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [
+      "recharts",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/chart.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "dashboard-lg-02",
+    "title": "dashboard-lg-02",
+    "type": "registry:component",
+    "category": "dashboard",
+    "files": 1,
+    "dependencies": [
+      "recharts",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/select.json",
+      "https://wigggle-ui.vercel.app/r/chart.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/dashboard"
+  },
+  {
+    "id": "media-sm-01",
+    "title": "media-sm-01",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/avatar.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/audio-player.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-sm-02",
+    "title": "media-sm-02",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/avatar.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/audio-player.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-sm-03",
+    "title": "media-sm-03",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/audio-player.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-sm-04",
+    "title": "media-sm-04",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/audio-player.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-sm-05",
+    "title": "media-sm-05",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-sm-06",
+    "title": "media-sm-06",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-sm-07",
+    "title": "media-sm-07",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-sm-08",
+    "title": "media-sm-08",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-md-01",
+    "title": "media-md-01",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/audio-player.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/avatar.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-md-02",
+    "title": "media-md-02",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/audio-player.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-md-03",
+    "title": "media-md-03",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/audio-player.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-md-04",
+    "title": "media-md-04",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/carousel.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "media-md-05",
+    "title": "media-md-05",
+    "type": "registry:component",
+    "category": "media",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/audio-player.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/media"
+  },
+  {
+    "id": "productivity-sm-01",
+    "title": "productivity-sm-01",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/utils.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-sm-02",
+    "title": "productivity-sm-02",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/select.json",
+      "https://wigggle-ui.vercel.app/r/textarea.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-sm-03",
+    "title": "productivity-sm-03",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/button.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-sm-04",
+    "title": "productivity-sm-04",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/separator.json",
+      "https://wigggle-ui.vercel.app/r/tooltip.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-sm-05",
+    "title": "productivity-sm-05",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/button.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-sm-06",
+    "title": "productivity-sm-06",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-sm-07",
+    "title": "productivity-sm-07",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/separator.json",
+      "https://wigggle-ui.vercel.app/r/badge.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-md-01",
+    "title": "productivity-md-01",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [
+      "recharts"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/chart.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/icons.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-md-02",
+    "title": "productivity-md-02",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-md-03",
+    "title": "productivity-md-03",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [
+      "lucide-react",
+      "recharts"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "productivity-md-04",
+    "title": "productivity-md-04",
+    "type": "registry:component",
+    "category": "productivity",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/separator.json",
+      "https://wigggle-ui.vercel.app/r/circular-progress.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/productivity"
+  },
+  {
+    "id": "sports-sm-01",
+    "title": "sports-sm-01",
+    "type": "registry:component",
+    "category": "sports",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/sports"
+  },
+  {
+    "id": "sports-sm-02",
+    "title": "sports-sm-02",
+    "type": "registry:component",
+    "category": "sports",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/badge.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/sports"
+  },
+  {
+    "id": "sports-sm-03",
+    "title": "sports-sm-03",
+    "type": "registry:component",
+    "category": "sports",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/sports"
+  },
+  {
+    "id": "sports-sm-04",
+    "title": "sports-sm-04",
+    "type": "registry:component",
+    "category": "sports",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/sports"
+  },
+  {
+    "id": "sports-sm-05",
+    "title": "sports-sm-05",
+    "type": "registry:component",
+    "category": "sports",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/sports"
+  },
+  {
+    "id": "sports-sm-06",
+    "title": "sports-sm-06",
+    "type": "registry:component",
+    "category": "sports",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/separator.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/sports"
+  },
+  {
+    "id": "sports-sm-07",
+    "title": "sports-sm-07",
+    "type": "registry:component",
+    "category": "sports",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/table.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/sports"
+  },
+  {
+    "id": "stock-sm-01",
+    "title": "stock-sm-01",
+    "type": "registry:component",
+    "category": "stocks",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/stock"
+  },
+  {
+    "id": "stock-sm-02",
+    "title": "stock-sm-02",
+    "type": "registry:component",
+    "category": "stocks",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/stock"
+  },
+  {
+    "id": "stock-sm-03",
+    "title": "stock-sm-03",
+    "type": "registry:component",
+    "category": "stocks",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/stock"
+  },
+  {
+    "id": "stock-sm-04",
+    "title": "stock-sm-04",
+    "type": "registry:component",
+    "category": "stocks",
+    "files": 1,
+    "dependencies": [
+      "lucide-react",
+      "recharts"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/chart.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/stock"
+  },
+  {
+    "id": "stock-sm-05",
+    "title": "stock-sm-05",
+    "type": "registry:component",
+    "category": "stocks",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/icons.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/tooltip.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/stock"
+  },
+  {
+    "id": "stock-sm-06",
+    "title": "stock-sm-06",
+    "type": "registry:component",
+    "category": "stocks",
+    "files": 1,
+    "dependencies": [
+      "lucide-react",
+      "recharts"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/chart.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/stock"
+  },
+  {
+    "id": "weather-sm-01",
+    "title": "weather-sm-01",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-sm-02",
+    "title": "weather-sm-02",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-sm-03",
+    "title": "weather-sm-03",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-sm-04",
+    "title": "weather-sm-04",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-sm-05",
+    "title": "weather-sm-05",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-sm-06",
+    "title": "weather-sm-06",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-sm-07",
+    "title": "weather-sm-07",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-sm-08",
+    "title": "weather-sm-08",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-sm-09",
+    "title": "weather-sm-09",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-md-01",
+    "title": "weather-md-01",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/tooltip.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "weather-md-02",
+    "title": "weather-md-02",
+    "type": "registry:component",
+    "category": "weather",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [
+      "https://wigggle-ui.vercel.app/r/widget.json",
+      "https://wigggle-ui.vercel.app/r/label.json",
+      "https://wigggle-ui.vercel.app/r/use-location.json",
+      "https://wigggle-ui.vercel.app/r/use-weather.json",
+      "https://wigggle-ui.vercel.app/r/weather-utils.json"
+    ],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  },
+  {
+    "id": "use-location",
+    "title": "use-location",
+    "type": "registry:hook",
+    "category": "support",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/use"
+  },
+  {
+    "id": "use-weather",
+    "title": "use-weather",
+    "type": "registry:hook",
+    "category": "support",
+    "files": 1,
+    "dependencies": [],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/use"
+  },
+  {
+    "id": "weather-utils",
+    "title": "weather-utils",
+    "type": "registry:lib",
+    "category": "support",
+    "files": 1,
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "source": "https://wigggle-ui.vercel.app/widgets/weather"
+  }
+]

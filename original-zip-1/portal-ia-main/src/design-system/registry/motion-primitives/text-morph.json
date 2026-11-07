@@ -1,0 +1,32 @@
+{
+  "name": "text-morph",
+  "type": "registry:component",
+  "title": "Text Morph",
+  "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+  "files": [
+    {
+      "path": "components/core/text-morph.tsx",
+      "type": "registry:component",
+      "content": "'use client';\nimport { cn } from '@/lib/utils';\nimport { AnimatePresence, motion, Transition, Variants } from 'motion/react';\nimport { useMemo, useId } from 'react';\n\nexport type TextMorphProps = {\n  children: string;\n  as?: React.ElementType;\n  className?: string;\n  style?: React.CSSProperties;\n  variants?: Variants;\n  transition?: Transition;\n};\n\nexport function TextMorph({\n  children,\n  as: Component = 'p',\n  className,\n  style,\n  variants,\n  transition,\n}: TextMorphProps) {\n  const uniqueId = useId();\n\n  const characters = useMemo(() => {\n    const charCounts: Record<string, number> = {};\n\n    return children.split('').map((char) => {\n      const lowerChar = char.toLowerCase();\n      charCounts[lowerChar] = (charCounts[lowerChar] || 0) + 1;\n\n      return {\n        id: `${uniqueId}-${lowerChar}${charCounts[lowerChar]}`,\n        label: char === ' ' ? '\\u00A0' : char,\n      };\n    });\n  }, [children, uniqueId]);\n\n  const defaultVariants: Variants = {\n    initial: { opacity: 0 },\n    animate: { opacity: 1 },\n    exit: { opacity: 0 },\n  };\n\n  const defaultTransition: Transition = {\n    type: 'spring',\n    stiffness: 280,\n    damping: 18,\n    mass: 0.3,\n  };\n\n  return (\n    <Component className={cn(className)} aria-label={children} style={style}>\n      <AnimatePresence mode='popLayout' initial={false}>\n        {characters.map((character) => (\n          <motion.span\n            key={character.id}\n            layoutId={character.id}\n            className='inline-block'\n            aria-hidden='true'\n            initial='initial'\n            animate='animate'\n            exit='exit'\n            variants={variants || defaultVariants}\n            transition={transition || defaultTransition}\n          >\n            {character.label}\n          </motion.span>\n        ))}\n      </AnimatePresence>\n    </Component>\n  );\n}\n"
+    },
+    {
+      "path": "lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { clsx, type ClassValue } from 'clsx';\nimport { twMerge } from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://motion-primitives.com/docs/text-morph",
+    "commit": "120f64f6ca60348e251f929e9c81f11ccbe45eda",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}

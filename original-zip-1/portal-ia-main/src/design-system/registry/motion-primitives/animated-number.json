@@ -1,0 +1,32 @@
+{
+  "name": "animated-number",
+  "type": "registry:component",
+  "title": "Animated Number",
+  "description": "Primitiva de movimento original; adapte a interação e respeite movimento reduzido.",
+  "files": [
+    {
+      "path": "components/core/animated-number.tsx",
+      "type": "registry:component",
+      "content": "'use client';\nimport { cn } from '@/lib/utils';\nimport { motion, SpringOptions, useSpring, useTransform } from 'motion/react';\nimport { useEffect } from 'react';\n\nexport type AnimatedNumberProps = {\n  value: number;\n  className?: string;\n  springOptions?: SpringOptions;\n  as?: React.ElementType;\n};\n\nexport function AnimatedNumber({\n  value,\n  className,\n  springOptions,\n  as = 'span',\n}: AnimatedNumberProps) {\n  const MotionComponent = motion.create(as as keyof JSX.IntrinsicElements);\n\n  const spring = useSpring(value, springOptions);\n  const display = useTransform(spring, (current) =>\n    Math.round(current).toLocaleString()\n  );\n\n  useEffect(() => {\n    spring.set(value);\n  }, [spring, value]);\n\n  return (\n    <MotionComponent className={cn('tabular-nums', className)}>\n      {display}\n    </MotionComponent>\n  );\n}\n"
+    },
+    {
+      "path": "lib/utils.ts",
+      "type": "registry:component",
+      "content": "import { clsx, type ClassValue } from 'clsx';\nimport { twMerge } from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "portalSource": {
+    "url": "https://motion-primitives.com/docs/animated-number",
+    "commit": "120f64f6ca60348e251f929e9c81f11ccbe45eda",
+    "license": "MIT",
+    "requiredLocalImports": [],
+    "status": "source-only; review framework and dependencies before installation",
+    "unresolvedImports": []
+  }
+}
