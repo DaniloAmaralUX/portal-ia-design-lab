@@ -29,7 +29,9 @@ const components = (s: Source) => [...s.text.matchAll(/^export (?:async )?(?:fun
 
 describe("src/ structure", () => {
   it("has an index.ts, the public API, in every feature", () => {
-    const features = readdirSync(path.join(SRC, "features"), { withFileTypes: true }).filter((e) => e.isDirectory());
+    // Git does not track empty directories left behind when a feature is removed.
+    const features = readdirSync(path.join(SRC, "features"), { withFileTypes: true })
+      .filter((e) => e.isDirectory() && readdirSync(path.join(SRC, "features", e.name)).length > 0);
     expect(features.length).toBeGreaterThan(0);
     for (const feature of features) expect(existsSync(path.join(SRC, "features", feature.name, "index.ts")), feature.name).toBe(true);
   });

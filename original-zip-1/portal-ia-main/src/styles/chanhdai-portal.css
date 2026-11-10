@@ -1,6 +1,48 @@
-﻿/* Cosmetic Chanh Dai treatment. Copy, hierarchy, type scale and spacing come from the downloaded original. */
-:root.chanhdai-preset { --radius: .5rem; --background: #fff; --foreground: #18181b; --card: #fff; --card-foreground: #18181b; --popover: #fff; --popover-foreground: #18181b; --secondary: #f4f4f5; --secondary-foreground: #18181b; --muted: #f4f4f5; --muted-foreground: #62626b; --accent: #f4f4f5; --accent-foreground: #18181b; --border: #e4e4e7; }
-:root.chanhdai-preset.dark { --background: #111113; --foreground: #fafafa; --card: #18181b; --card-foreground: #fafafa; --popover: #18181b; --popover-foreground: #fafafa; --secondary: #202023; --secondary-foreground: #fafafa; --muted: #202023; --muted-foreground: #a1a1aa; --accent: #27272a; --accent-foreground: #fafafa; --border: #303034; }
-.chanhdai-preset header:has(> .portal-container) { border-bottom-color: var(--border); }
-.chanhdai-preset footer { border-top-style: dashed; }
-@media (prefers-contrast: more) { :root.chanhdai-preset { --muted-foreground: #3f3f46; --border: #71717a; } :root.chanhdai-preset.dark { --muted-foreground: #e4e4e7; --border: #a1a1aa; } }
+/* Cosmetic preset. Copy, hierarchy and type scale remain those of the original portal. */
+:root.chanhdai-preset {
+  --radius: 0.5rem;
+  --background: #fff;
+  --foreground: #18181b;
+  --card: #fff;
+  --card-foreground: #18181b;
+  --popover: #fff;
+  --popover-foreground: #18181b;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #62626b;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --border: #e4e4e7;
+}
+
+:root.chanhdai-preset.dark {
+  --background: #111113;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --popover: #18181b;
+  --popover-foreground: #fafafa;
+  --secondary: #202023;
+  --secondary-foreground: #fafafa;
+  --muted: #202023;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  --border: #303034;
+}
+
+.chanhdai-preset footer {
+  border-top-style: dashed;
+}
+
+@media (prefers-contrast: more) {
+  :root.chanhdai-preset {
+    --muted-foreground: #3f3f46;
+    --border: #71717a;
+  }
+  :root.chanhdai-preset.dark {
+    --muted-foreground: #e4e4e7;
+    --border: #a1a1aa;
+  }
+}

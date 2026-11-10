@@ -17,7 +17,6 @@ const groups = [
   ] },
   { label: "Participe", items: [
     { to: "/contribuir", label: "Contribuir", icon: Lightbulb },
-    { to: "/design-system", label: "Design system", icon: Blocks },
     { to: "/novidades", label: "Novidades", icon: Newspaper },
   ] },
 ] as const;

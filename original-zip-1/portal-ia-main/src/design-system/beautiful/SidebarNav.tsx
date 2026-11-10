@@ -150,7 +150,7 @@ function WorkspaceMenu({
       style={{
         top: position.top,
         left: position.left,
-        animation: "pop-in 180ms cubic-bezier(0.23,1,0.32,1) both",
+        animation: "beautiful-pop-in 180ms cubic-bezier(0.23,1,0.32,1) both",
         transformOrigin: "top left",
       }}
     >

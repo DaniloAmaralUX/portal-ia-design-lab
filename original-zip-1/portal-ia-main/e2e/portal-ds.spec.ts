@@ -20,13 +20,3 @@ for (const width of [1440, 390]) {
     await expect(page).toHaveURL(/metodo\/sdd/);
   });
 }
-
-test("source collections expose the complete source files", async ({ page }) => {
-  await page.goto("/design-system");
-  for (const name of ["devl / 106", "motion-primitives / 33"]) {
-    await page.getByRole("button", { name, exact: true }).click();
-    await expect(page.locator("#library-file")).toBeVisible();
-    expect(await page.locator("#library-file option").count()).toBeGreaterThan(0);
-    await expect(page.getByRole("link", { name: "Baixar componente e dependências" })).toHaveAttribute("href", /json/);
-  }
-});

@@ -419,7 +419,7 @@ export function PromptBar({
         <div
           onMouseLeave={() => setEngaged(false)}
           className="absolute inset-x-0 bottom-full z-10 mb-2 rounded-[10px] bg-surface p-1 shadow-raised"
-          style={{ animation: "pop-in 180ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "bottom center" }}
+          style={{ animation: "beautiful-pop-in 180ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "bottom center" }}
         >
           {/* single gliding highlight — appears once a row is hovered */}
           <span
@@ -493,7 +493,7 @@ export function PromptBar({
         <div
           onMouseLeave={() => setModelHovered(null)}
           className="absolute z-10 w-44 rounded-[10px] bg-surface p-1 shadow-raised"
-          style={{ left: modelMenuLeft, bottom: modelMenuBottom, animation: "pop-in 180ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "bottom left" }}
+          style={{ left: modelMenuLeft, bottom: modelMenuBottom, animation: "beautiful-pop-in 180ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "bottom left" }}
         >
           {/* single gliding highlight — floats to the hovered / selected row */}
           <span
@@ -565,7 +565,7 @@ export function PromptBar({
                 className={`flex h-6.5 items-center gap-1.5 bg-field py-1 pr-1 pl-1.5 text-[11.5px] text-ink-2 shadow-hairline ${
                   pill ? "rounded-full" : "rounded-chip"
                 }`}
-                style={{ animation: "pop-in 200ms cubic-bezier(0.23,1,0.32,1) both" }}
+                style={{ animation: "beautiful-pop-in 200ms cubic-bezier(0.23,1,0.32,1) both" }}
               >
                 <Icon size={12}><g><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /></g></Icon>
                 <span className="max-w-36 truncate">{file}</span>

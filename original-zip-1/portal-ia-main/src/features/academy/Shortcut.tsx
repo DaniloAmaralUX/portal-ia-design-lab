@@ -20,7 +20,7 @@ export function Shortcut({
   return (
     <Link
       to={to}
-      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
+      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs interactive-surface"
     >
       <span aria-hidden className="inline-flex size-10 items-center justify-center rounded-xl bg-muted text-foreground/80">
         {icon}

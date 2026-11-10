@@ -40,7 +40,7 @@ function NextStep({ step }: { step: Step }) {
           {progress && <Progress completed={progress.done} total={progress.total} noun={progress.noun} className="mb-3" insideLink />}
           <span className="flex items-center justify-between gap-2 text-caption font-medium text-foreground/85">
             {cta}
-            <ArrowRight aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 motion-safe:group-hover:translate-x-0.5" />
+            <ArrowRight aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform duration-(--duration-interaction) motion-safe:group-hover:translate-x-0.5" />
           </span>
         </span>
       </Link>

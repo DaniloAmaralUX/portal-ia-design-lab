@@ -270,7 +270,7 @@ export function ToolChips({
                 className="inline-flex h-7 max-w-full items-center gap-2 rounded-chip
                   bg-surface px-2 font-mono text-[11.5px] text-ink shadow-btn
                   transition-colors duration-100 hover:bg-hover"
-                style={{ animation: `pop-in 250ms cubic-bezier(0.23,1,0.32,1) ${i * 80}ms both` }}
+                style={{ animation: `beautiful-pop-in 250ms cubic-bezier(0.23,1,0.32,1) ${i * 80}ms both` }}
               >
                 <span className="min-w-0 truncate">{d.file}</span>
                 <span className="shrink-0 text-green tabular-nums">+{d.add}</span>
@@ -299,7 +299,7 @@ export function ToolChips({
             left: preview.x,
             top: preview.top,
             bottom: preview.bottom,
-            animation: "pop-in 160ms cubic-bezier(0.23,1,0.32,1) both",
+            animation: "beautiful-pop-in 160ms cubic-bezier(0.23,1,0.32,1) both",
             transformOrigin: preview.top === undefined ? "bottom left" : "top left",
           }}
         >

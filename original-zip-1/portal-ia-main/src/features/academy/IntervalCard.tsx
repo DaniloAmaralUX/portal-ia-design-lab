@@ -31,7 +31,7 @@ export function IntervalCard({ interval }: { interval: Interval }) {
           {area ? <AreaDot area={area.id} /> : null}
           {area ? area.name : "Todas as áreas"}
         </span>
-        <ArrowRight aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 motion-safe:group-hover:translate-x-0.5" />
+        <ArrowRight aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform duration-(--duration-interaction) motion-safe:group-hover:translate-x-0.5" />
       </span>
     </Link>
   );

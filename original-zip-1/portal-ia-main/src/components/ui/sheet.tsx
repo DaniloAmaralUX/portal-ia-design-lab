@@ -3,6 +3,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
 import { useReturnFocus } from "@/hooks/use-return-focus";
 import { cn, scrollActiveIntoView } from "@/lib/utils";
+import { IconButton } from "./icon-button";
 
 export function Sheet({
   open,
@@ -46,11 +47,8 @@ export function Sheet({
             <Dialog.Title className={size === "lg" ? "min-w-0 truncate font-mono text-small font-medium" : "text-small font-semibold"}>
               {title}
             </Dialog.Title>
-            <Dialog.Close
-              aria-label="Fechar"
-              className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-            >
-              <X className="size-4" />
+            <Dialog.Close asChild>
+              <IconButton label="Fechar" size="sm"><X aria-hidden className="size-4" /></IconButton>
             </Dialog.Close>
           </div>
           <div ref={scroll} className="flex-1 overflow-y-auto overscroll-contain p-5">

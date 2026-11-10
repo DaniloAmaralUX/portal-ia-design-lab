@@ -70,3 +70,30 @@ test('unsafe redirects are normalized and absent secrets fail closed', async () 
   await new Promise((resolve) => closed.listen(0, '127.0.0.1', resolve));
   try { assert.equal((await fetch(`http://127.0.0.1:${closed.address().port}/`)).status, 503); } finally { await new Promise((resolve) => closed.close(resolve)); }
 });
+
+test('the public preview opens without a password and remains read-only', async () => {
+  const publicServer = createServer(createGateway({ publicAccess: true, root: path.resolve('dist/client') }));
+  await new Promise((resolve) => publicServer.listen(0, '127.0.0.1', resolve));
+  const base = `http://127.0.0.1:${publicServer.address().port}`;
+  try {
+    const page = await fetch(base + '/', { redirect: 'manual' });
+    assert.equal(page.status, 200);
+    assert.equal(page.headers.get('set-cookie'), null);
+    const html = await page.text();
+    assert.match(html, /<script nonce="[\w-]+"/);
+    assert.ok(!html.includes('type="password"'));
+    const assets = (await readdir('dist/client/assets')).filter((name) => name.startsWith('index-') && name.endsWith('.js'));
+    assert.equal((await fetch(base + `/assets/${assets[0]}`)).status, 200);
+    const account = await fetch(base + '/api/me');
+    assert.equal(account.status, 200);
+    assert.equal((await account.json()).canPublish, false);
+    const oldEntry = await fetch(base + '/entrar', { redirect: 'manual' });
+    assert.equal(oldEntry.status, 303);
+    assert.equal(oldEntry.headers.get('location'), '/');
+    assert.equal((await fetch(base + '/api/publish', { method: 'POST' })).status, 405);
+    assert.equal((await fetch(base + '/private-client/index.html')).status, 404);
+    assert.equal((await fetch(base + '/api/gateway?path=/.env')).status, 400);
+  } finally {
+    await new Promise((resolve) => publicServer.close(resolve));
+  }
+});

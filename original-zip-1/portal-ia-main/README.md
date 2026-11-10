@@ -1,5 +1,7 @@
 # Portal IA da Pitang
 
+**Prévia atual:** https://portal-ia-craft-preview.vercel.app, com acesso público e sem senha, conforme solicitado. A galeria de design system foi removida do portal; a biblioteca de componentes permanece interna ao código. [Padronização e validação desta entrega](docs/STANDARDIZATION.md).
+
 **Versão isolada para continuidade:** [handoff e instruções](docs/HANDOFF-PORTAL.md), branch `handoff/portal-original-ui-audit`.
 
 **Rodada atual de refinamento:** [craft, movimento e validação](docs/CRAFT-POLISH.md), branch `polish/jakub-emil`. A branch de handoff acima permanece preservada.

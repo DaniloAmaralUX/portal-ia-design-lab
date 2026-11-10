@@ -8,6 +8,7 @@ import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { isCurrent, NAV } from "@/components/layout/nav";
 import { Container } from "@/components/ui/container";
+import { IconButton } from "@/components/ui/icon-button";
 import { Kbd } from "@/components/ui/kbd";
 import { useScrolled } from "@/hooks/use-scrolled";
 import { useUi } from "@/store/ui";
@@ -85,33 +86,25 @@ export function SiteHeader() {
               <Kbd>K</Kbd>
             </span>
           </button>
-          <button
-            type="button"
+          <IconButton
             onClick={() => setPaletteOpen(true)}
-            aria-label="Buscar no site"
+            label="Buscar no site"
             aria-keyshortcuts="Meta+K Control+K"
             title="Buscar no site (⌘K)"
-            className={cn(
-              "inline-flex size-9 items-center justify-center rounded-full text-muted-foreground hover:bg-accent hover:text-foreground sm:hidden min-[56rem]:inline-flex min-[72rem]:hidden",
-              press,
-            )}
+            className="sm:hidden min-[56rem]:inline-flex min-[72rem]:hidden"
           >
             <Search className="size-[18px]" />
-          </button>
+          </IconButton>
           <ThemeToggle />
           <GithubHandoff />
           <HeaderAccount />
-          <button
-            type="button"
+          <IconButton
             onClick={() => setMenuOpen(true)}
-            aria-label="Abrir o menu"
-            className={cn(
-              "inline-flex size-9 items-center justify-center rounded-full text-muted-foreground hover:bg-accent hover:text-foreground min-[56rem]:hidden",
-              press,
-            )}
+            label="Abrir o menu"
+            className="min-[56rem]:hidden"
           >
             <Menu className="size-[18px]" />
-          </button>
+          </IconButton>
         </div>
       </Container>
       <MobileNav open={menuOpen} onClose={() => setMenuOpen(false)} />

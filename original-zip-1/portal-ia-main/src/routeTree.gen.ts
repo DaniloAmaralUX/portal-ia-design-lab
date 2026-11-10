@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as CatalystRouteImport } from './routes/catalyst'
 import { Route as ContribuirRouteImport } from './routes/contribuir'
-import { Route as DesignSystemRouteImport } from './routes/design-system'
 import { Route as ExplorarRouteImport } from './routes/explorar'
 import { Route as FerramentasRouteImport } from './routes/ferramentas'
 import { Route as ManifestoRouteImport } from './routes/manifesto'
@@ -67,11 +66,6 @@ const CatalystRoute = CatalystRouteImport.update({
 const ContribuirRoute = ContribuirRouteImport.update({
   id: '/contribuir',
   path: '/contribuir',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DesignSystemRoute = DesignSystemRouteImport.update({
-  id: '/design-system',
-  path: '/design-system',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExplorarRoute = ExplorarRouteImport.update({
@@ -255,7 +249,6 @@ export interface FileRoutesByFullPath {
   '/academy': typeof AcademyRouteWithChildren
   '/catalyst': typeof CatalystRoute
   '/contribuir': typeof ContribuirRoute
-  '/design-system': typeof DesignSystemRoute
   '/explorar': typeof ExplorarRoute
   '/ferramentas': typeof FerramentasRouteWithChildren
   '/manifesto': typeof ManifestoRoute
@@ -295,7 +288,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/catalyst': typeof CatalystRoute
   '/contribuir': typeof ContribuirRoute
-  '/design-system': typeof DesignSystemRoute
   '/explorar': typeof ExplorarRoute
   '/manifesto': typeof ManifestoRoute
   '/novidades': typeof NovidadesRoute
@@ -333,7 +325,6 @@ export interface FileRoutesById {
   '/academy': typeof AcademyRouteWithChildren
   '/catalyst': typeof CatalystRoute
   '/contribuir': typeof ContribuirRoute
-  '/design-system': typeof DesignSystemRoute
   '/explorar': typeof ExplorarRoute
   '/ferramentas': typeof FerramentasRouteWithChildren
   '/manifesto': typeof ManifestoRoute
@@ -376,7 +367,6 @@ export interface FileRouteTypes {
     | '/academy'
     | '/catalyst'
     | '/contribuir'
-    | '/design-system'
     | '/explorar'
     | '/ferramentas'
     | '/manifesto'
@@ -416,7 +406,6 @@ export interface FileRouteTypes {
     | '/'
     | '/catalyst'
     | '/contribuir'
-    | '/design-system'
     | '/explorar'
     | '/manifesto'
     | '/novidades'
@@ -453,7 +442,6 @@ export interface FileRouteTypes {
     | '/academy'
     | '/catalyst'
     | '/contribuir'
-    | '/design-system'
     | '/explorar'
     | '/ferramentas'
     | '/manifesto'
@@ -495,7 +483,6 @@ export interface RootRouteChildren {
   AcademyRoute: typeof AcademyRouteWithChildren
   CatalystRoute: typeof CatalystRoute
   ContribuirRoute: typeof ContribuirRoute
-  DesignSystemRoute: typeof DesignSystemRoute
   ExplorarRoute: typeof ExplorarRoute
   FerramentasRoute: typeof FerramentasRouteWithChildren
   ManifestoRoute: typeof ManifestoRoute
@@ -542,13 +529,6 @@ declare module '@tanstack/react-router' {
       path: '/contribuir'
       fullPath: '/contribuir'
       preLoaderRoute: typeof ContribuirRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/design-system': {
-      id: '/design-system'
-      path: '/design-system'
-      fullPath: '/design-system'
-      preLoaderRoute: typeof DesignSystemRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/explorar': {
@@ -880,7 +860,6 @@ const rootRouteChildren: RootRouteChildren = {
   AcademyRoute: AcademyRouteWithChildren,
   CatalystRoute: CatalystRoute,
   ContribuirRoute: ContribuirRoute,
-  DesignSystemRoute: DesignSystemRoute,
   ExplorarRoute: ExplorarRoute,
   FerramentasRoute: FerramentasRouteWithChildren,
   ManifestoRoute: ManifestoRoute,

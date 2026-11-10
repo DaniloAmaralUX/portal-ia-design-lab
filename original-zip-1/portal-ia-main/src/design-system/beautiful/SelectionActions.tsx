@@ -348,7 +348,7 @@ export function SelectionActions({
               ...(visible
                 ? {
                     animation:
-                      "pop-in 220ms cubic-bezier(0.23,1,0.32,1) both",
+                      "beautiful-pop-in 220ms cubic-bezier(0.23,1,0.32,1) both",
                   }
                 : {}),
             }}

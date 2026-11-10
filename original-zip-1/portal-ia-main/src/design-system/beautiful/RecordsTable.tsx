@@ -364,7 +364,7 @@ function ConfigPicker({
       role="menu"
       aria-label={label}
       className="absolute left-full top-0 z-30 ml-5 w-[210px] rounded-[12px] bg-surface p-1.5 shadow-overlay"
-      style={{ animation: "pop-in 140ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top left" }}
+      style={{ animation: "beautiful-pop-in 140ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top left" }}
     >
       <div className="px-2 pb-1 pt-0.5 text-[11.5px] font-medium text-ink-3">{label}</div>
       <GlideMenu className="flex flex-col gap-px">
@@ -404,7 +404,7 @@ function InputPicker({
       role="menu"
       aria-label="Calculation inputs"
       className="absolute left-full top-0 z-30 ml-5 w-[220px] rounded-[12px] bg-surface p-1.5 shadow-overlay"
-      style={{ animation: "pop-in 140ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top left" }}
+      style={{ animation: "beautiful-pop-in 140ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top left" }}
     >
       <div className="px-2 pb-1 pt-0.5 text-[11.5px] font-medium text-ink-3">Use values from</div>
       <GlideMenu className="flex flex-col gap-px">
@@ -750,7 +750,7 @@ export function RecordsTable({ rows = INITIAL_ROWS, fill = false }: { rows?: Rec
         <div
           data-recpop
           className="fixed z-50 w-[320px] rounded-[14px] bg-surface px-3 pt-3 pb-1.5 shadow-overlay"
-          style={{ top: prop.y, left: prop.x, animation: "pop-in 160ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top left" }}
+          style={{ top: prop.y, left: prop.x, animation: "beautiful-pop-in 160ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top left" }}
         >
           <div className="pb-2 text-[13.5px] font-medium text-ink">{prop.col}</div>
 
@@ -962,7 +962,7 @@ export function RecordsTable({ rows = INITIAL_ROWS, fill = false }: { rows?: Rec
         <div
           data-recpop
           className="fixed z-50 w-[260px] rounded-[14px] bg-surface p-1.5 shadow-overlay"
-          style={{ top: addOpen.y, left: addOpen.x, animation: "pop-in 160ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top left" }}
+          style={{ top: addOpen.y, left: addOpen.x, animation: "beautiful-pop-in 160ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top left" }}
         >
           <div className="px-2 pb-1 pt-1 text-[12px] font-medium text-ink-3">New property</div>
           <GlideMenu className="flex flex-col gap-px">
@@ -992,7 +992,7 @@ export function RecordsTable({ rows = INITIAL_ROWS, fill = false }: { rows?: Rec
         <div
           data-recpop
           className="fixed z-50 w-[220px] rounded-[14px] bg-surface p-1.5 shadow-overlay"
-          style={{ top: tableMenuOpen.y, left: tableMenuOpen.x, animation: "pop-in 160ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top right" }}
+          style={{ top: tableMenuOpen.y, left: tableMenuOpen.x, animation: "beautiful-pop-in 160ms cubic-bezier(0.23,1,0.32,1) both", transformOrigin: "top right" }}
         >
           <div className="px-2 pb-1 pt-1 text-[12px] font-medium text-ink-3">Table options</div>
           <GlideMenu className="flex flex-col gap-px">

@@ -31,7 +31,7 @@ export function RoleCard({ role }: { role: Role }) {
         {completedHere > 0 && <Progress completed={completedHere} total={courses.length} noun="cursos feitos" className="mb-3" insideLink />}
         <span className="flex items-center justify-between gap-2 text-caption font-medium text-foreground/85">
           {essentials && `Anthropic: ${plural(essentials.courses, "essential", "essenciais")} · ${durationLabel(essentials)}`}
-          <ArrowRight aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 motion-safe:group-hover:translate-x-0.5" />
+          <ArrowRight aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform duration-(--duration-interaction) motion-safe:group-hover:translate-x-0.5" />
         </span>
       </span>
     </Link>

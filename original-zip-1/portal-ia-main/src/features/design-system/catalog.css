@@ -1,8 +1,0 @@
-﻿.ds-catalog { min-width: 0; padding-block: 8px 48px; }
-.beautiful-catalog.ds-preview { min-height: 440px; padding: clamp(16px, 3vw, 40px); border: 1px solid var(--line); border-radius: 16px; background: var(--surface); color: var(--ink); font-family: 'Inter Variable', sans-serif; isolation: isolate; }
-.beautiful-catalog .ds-specimen { display: flex; min-height: 350px; align-items: center; justify-content: center; min-width: 0; }
-.beautiful-catalog .ds-specimen > * { max-width: 100%; }
-.beautiful-catalog :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
-.beautiful-catalog [data-menu-row]:focus-visible { background: var(--hover); }
-.beautiful-catalog[data-demo='records-table'] .ds-specimen { display: block; overflow-x: auto; }
-@media (prefers-reduced-motion: reduce) { .beautiful-catalog *, .beautiful-catalog *::before, .beautiful-catalog *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }

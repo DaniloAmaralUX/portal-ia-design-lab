@@ -216,7 +216,7 @@ export function DiffTable({
             {accepted ? (
               <span
                 className="inline-flex items-center gap-1.5 rounded-full bg-green-tint py-1 pr-2.5 pl-1 text-[12.5px] font-medium text-green"
-                style={{ animation: "pop-in 180ms cubic-bezier(0.23,1,0.32,1) both" }}
+                style={{ animation: "beautiful-pop-in 180ms cubic-bezier(0.23,1,0.32,1) both" }}
               >
                 <span className="flex size-4.5 items-center justify-center rounded-full bg-green text-white">
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>

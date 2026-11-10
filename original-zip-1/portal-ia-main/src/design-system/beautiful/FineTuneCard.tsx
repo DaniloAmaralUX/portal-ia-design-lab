@@ -209,7 +209,7 @@ export function FineTuneCard({
         {done ? (
           <span
             className="flex items-center gap-1.5 text-[12px] font-medium text-green"
-            style={{ animation: "pop-in 250ms cubic-bezier(0.23,1,0.32,1) both" }}
+            style={{ animation: "beautiful-pop-in 250ms cubic-bezier(0.23,1,0.32,1) both" }}
           >
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20 6L9 17l-5-5" />
@@ -314,7 +314,7 @@ export function FineTuneCard({
             <div
               className="absolute right-0 bottom-8 z-10 w-30 rounded-[10px] bg-surface p-1 shadow-raised"
               style={{
-                animation: "pop-in 200ms cubic-bezier(0.23,1,0.32,1) both",
+                animation: "beautiful-pop-in 200ms cubic-bezier(0.23,1,0.32,1) both",
                 transformOrigin: "bottom right",
               }}
             >

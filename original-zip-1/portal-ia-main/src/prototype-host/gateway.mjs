@@ -55,7 +55,7 @@ async function formBody(request) {
   return new URLSearchParams(Buffer.concat(chunks).toString('utf8'));
 }
 
-export function createGateway({ password, root = path.join(process.cwd(), 'private-client') }) {
+export function createGateway({ password, publicAccess = false, root = path.join(process.cwd(), 'private-client') }) {
   const privateRoot = path.resolve(root);
   return async function gateway(request, response) {
     const nonce = randomBytes(18).toString('base64url');
@@ -75,12 +75,13 @@ export function createGateway({ password, root = path.join(process.cwd(), 'priva
       response.end(request.method === 'HEAD' ? undefined : content);
     };
     const redirect = (location) => { response.setHeader('Location', location); send(303, ''); };
-    if (typeof password !== 'string' || password.length < 20) return send(503, 'Prévia indisponível.');
+    if (!publicAccess && (typeof password !== 'string' || password.length < 20)) return send(503, 'Prévia indisponível.');
     const url = new URL(request.url ?? '/', `https://${request.headers.host ?? 'localhost'}`);
     let pathname;
     try { pathname = decodeURIComponent(url.searchParams.get('path') ?? url.pathname); } catch { return send(400, 'Caminho inválido.'); }
     if (!pathname.startsWith('/') || /[\\:%]/.test(pathname) || [...pathname].some((c) => c.charCodeAt(0) < 32) || pathname.split('/').some((part) => part.startsWith('.'))) return send(400, 'Caminho inválido.');
-    const authed = authenticated(request.headers.cookie, password);
+    const authed = publicAccess || authenticated(request.headers.cookie, password);
+    if (publicAccess && (pathname === '/entrar' || pathname === '/auth/prototype')) return redirect('/');
     if (pathname === '/auth/prototype' && request.method === 'POST') {
       const origin = request.headers.origin;
       try { if (!origin || new URL(origin).host !== request.headers.host) return send(403, 'Pedido recusado.'); } catch { return send(403, 'Pedido recusado.'); }
@@ -101,6 +102,7 @@ export function createGateway({ password, root = path.join(process.cwd(), 'priva
     }
     if (pathname === '/auth/logout' && request.method === 'POST') {
       if (request.headers['x-portal'] !== 'logout') return send(403, 'Pedido recusado.');
+      if (publicAccess) return send(200, JSON.stringify({ destination: '/' }), 'application/json');
       setCookie(response, password, true);
       return send(200, JSON.stringify({ destination: '/entrar' }), 'application/json');
     }
@@ -127,5 +129,6 @@ export function createGateway({ password, root = path.join(process.cwd(), 'priva
 }
 
 export default function handler(request, response) {
-  return createGateway({ password: process.env.PROTOTYPE_PASSWORD })(request, response);
+  // This preview is public by the owner's explicit request; the institutional BFF is unchanged.
+  return createGateway({ publicAccess: true })(request, response);
 }

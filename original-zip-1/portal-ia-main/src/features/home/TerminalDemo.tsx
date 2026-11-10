@@ -1,9 +1,9 @@
 import { CopyButton } from "@/components/CopyButton";
 import { Pause, Play } from "lucide-react";
+import { IconButton } from "@/components/ui/icon-button";
 import { WindowDots } from "@/components/WindowDots";
 import { marketplaceAdd } from "@/lib/commands";
 import { cn } from "@/lib/utils";
-import { press } from "@/lib/motion";
 import { DEMO_SCRIPT, viewOf, type Kind, type LineView } from "./terminal-script";
 import { useTerminalDemo } from "./use-terminal-demo";
 
@@ -107,16 +107,15 @@ export function TerminalDemo({ className }: { className?: string }) {
         <WindowDots />
         <span className="ml-2 min-w-0 flex-1 font-mono text-micro text-terminal-muted">claude · ~/meu-projeto</span>
         {!still && (
-          <button
-            type="button"
-            aria-label={paused ? "Retomar demonstração" : "Pausar demonstração"}
-            aria-pressed={paused}
-            title={paused ? "Retomar demonstração" : "Pausar demonstração"}
+          <IconButton
+            label={paused ? "Retomar demonstração" : "Pausar demonstração"}
             onClick={() => setPaused(!paused)}
-            className={cn("inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-terminal-muted hover:bg-white/10 hover:text-terminal-foreground focus-visible:outline-terminal-gold", press)}
+            size="sm"
+            shape="rounded"
+            tone="terminal"
           >
             {paused ? <Play aria-hidden className="size-3.5" /> : <Pause aria-hidden className="size-3.5" />}
-          </button>
+          </IconButton>
         )}
         <CopyButton text={marketplaceAdd} tone="terminal" message="Comando copiado" label="Copiar o comando do marketplace" />
       </div>
@@ -131,7 +130,7 @@ export function TerminalDemo({ className }: { className?: string }) {
         data-terminal-screen
         className={cn(
           "space-y-2.5 px-4 py-4 font-mono text-micro leading-relaxed transition-opacity duration-[400ms] sm:px-5 sm:text-caption",
-          progress.clearing && "opacity-0",
+          progress.clearing && !held && "opacity-0",
           progress.run > 0 && "animate-overlay-in",
         )}
       >

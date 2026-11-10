@@ -1,0 +1,7 @@
+@import './reference.css';
+
+/* Map the source's generated font variables to the portal's self-hosted faces. */
+.beautiful-catalog {
+  --font-inter: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono-face: 'JetBrains Mono Variable', ui-monospace, monospace;
+}

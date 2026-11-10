@@ -17,7 +17,7 @@ export function SkillCard({ skill, className, style }: { skill: Skill; className
       data-result
       style={style}
       className={cn(
-        "group relative flex flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[box-shadow,border-color] duration-(--duration-fast) ease-out hover:border-foreground/15 hover:shadow-md",
+        "group relative flex flex-col rounded-2xl border border-border bg-card p-5 shadow-xs interactive-surface",
         className,
       )}
     >

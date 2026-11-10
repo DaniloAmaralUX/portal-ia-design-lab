@@ -308,7 +308,7 @@ export function AgentScreen({
             />
             <div
               className="relative flex max-h-full flex-col overflow-hidden rounded-[16px] bg-surface p-2 pt-0 shadow-overlay"
-              style={{ animation: "pop-in 240ms cubic-bezier(0.23,1,0.32,1) both" }}
+              style={{ animation: "beautiful-pop-in 240ms cubic-bezier(0.23,1,0.32,1) both" }}
             >
               {/* title bar — agent name far left, controls right */}
               <div className="flex h-11 shrink-0 items-center justify-between gap-3 px-1.5">

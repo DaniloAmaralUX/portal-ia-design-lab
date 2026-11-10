@@ -62,7 +62,7 @@ function SourceChip({ source }: { source?: StreamingSource }) {
       className="ml-0 mr-1 inline-flex h-4.5 translate-y-[-1px] items-center gap-1 rounded-[5px]
         bg-inset pr-[3px] pl-[3px] align-middle font-mono text-[10.5px] text-ink-2 shadow-hairline
         transition-colors duration-150 hover:bg-hover hover:text-ink"
-      style={{ animation: "pop-in 250ms cubic-bezier(0.23,1,0.32,1) both" }}
+      style={{ animation: "beautiful-pop-in 250ms cubic-bezier(0.23,1,0.32,1) both" }}
     >
       <img src={sourceImage(source)} alt="" className="source-avatar size-3 rounded-[3px]" />
       <span>{source.domain}</span>

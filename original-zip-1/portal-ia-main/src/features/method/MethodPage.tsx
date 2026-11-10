@@ -90,7 +90,7 @@ export function MethodPage() {
                 <Link
                   to="/metodo/roteiros/$area"
                   params={{ area: roadmap.area }}
-                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
+                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs interactive-surface"
                 >
                   <AreaMark area={roadmap.area} size="md" />
                   <span data-vt="title" className="mt-4 self-start font-display text-subheading font-bold">

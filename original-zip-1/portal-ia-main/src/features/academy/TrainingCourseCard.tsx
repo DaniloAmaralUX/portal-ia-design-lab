@@ -30,7 +30,7 @@ export function TrainingCourseCard({ course }: { course: TrainingCourse }) {
         </span>
         <ArrowRight
           aria-hidden
-          className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 motion-safe:group-hover:translate-x-0.5"
+          className="size-4 shrink-0 text-muted-foreground transition-transform duration-(--duration-interaction) motion-safe:group-hover:translate-x-0.5"
         />
       </span>
     </Link>

@@ -57,10 +57,8 @@ export function ToolsPage() {
                 aria-labelledby={`ferramenta-${guide.slug}`}
                 className={cn(
                   "group relative grid overflow-hidden rounded-3xl border border-border bg-card shadow-sm md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]",
-                  "transition-[translate,box-shadow,border-color] duration-(--duration-slow) ease-(--ease-out-soft)",
-                  "hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-lg has-[a:focus-visible]:-translate-y-0.5 has-[a:focus-visible]:shadow-lg",
+                  "interactive-surface",
                   "has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-ring",
-                  "motion-reduce:hover:translate-y-0 motion-reduce:has-[a:focus-visible]:translate-y-0",
                 )}
               >
                 <div

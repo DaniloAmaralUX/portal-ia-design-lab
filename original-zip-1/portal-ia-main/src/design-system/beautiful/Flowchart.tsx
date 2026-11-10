@@ -143,7 +143,7 @@ function Menu({
       className={`absolute bottom-full z-20 mb-1.5 rounded-[10px] bg-surface p-1 shadow-raised ${width}
         ${align === "right" ? "right-0" : "left-0"}`}
       style={{
-        animation: "pop-in 180ms cubic-bezier(0.23,1,0.32,1) both",
+        animation: "beautiful-pop-in 180ms cubic-bezier(0.23,1,0.32,1) both",
         transformOrigin: align === "right" ? "bottom right" : "bottom left",
       }}
     >

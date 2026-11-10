@@ -2,9 +2,10 @@ import type { ComponentProps } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { press } from "@/lib/motion";
 
 export const buttonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full text-small font-semibold transition-[color,background-color,border-color,box-shadow,scale] duration-(--duration-fast) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 motion-safe:active:not-focus-visible:scale-[0.96] [&_svg]:size-4 [&_svg]:shrink-0",
+  cn("inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full text-small font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0", press),
   {
     variants: {
       variant: {
