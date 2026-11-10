@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { MotionConfig } from "motion/react";
-import { HeadContent, Outlet, useRouterState } from "@tanstack/react-router";
+import { HeadContent, Outlet } from "@tanstack/react-router";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { NavigationProgress } from "@/components/layout/NavigationProgress";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -10,10 +9,8 @@ import { focusRegion, useRouteFocus } from "@/hooks/use-route-focus";
 import { useGlobalShortcuts } from "./use-shortcuts";
 import { useUi } from "@/store/ui";
 import { AppToaster } from "./AppToaster";
-import { PageFrame } from "./PageFrame";
 
 export function RootLayout() {
-  const prototype = useRouterState({ select: state => state.location.pathname.startsWith("/prototipos/") });
   useGlobalShortcuts();
   useRouteFocus("conteudo");
   useEffect(() => useUi.getState().syncTheme(), []);
@@ -23,7 +20,6 @@ export function RootLayout() {
   }, []);
 
   return (
-    <MotionConfig reducedMotion="user" transition={{ type: "spring", stiffness: 320, damping: 30 }}>
     <Tooltip.Provider delayDuration={150}>
       {/* The router writes the title and the description of each route here; index.html has no <title>. */}
       <HeadContent />
@@ -35,14 +31,13 @@ export function RootLayout() {
         Pular para o conteúdo
       </a>
       <NavigationProgress />
-      {!prototype && <SiteHeader />}
-      <main id="conteudo" className={prototype ? "min-h-[60vh] outline-none" : "employee-portal min-h-[60vh] outline-none"}>
-        {prototype ? <Outlet /> : <PageFrame><Outlet /></PageFrame>}
+      <SiteHeader />
+      <main id="conteudo" className="min-h-[60vh] outline-none">
+        <Outlet />
       </main>
-      {!prototype && <SiteFooter />}
+      <SiteFooter />
       <CommandPalette />
       <AppToaster />
     </Tooltip.Provider>
-    </MotionConfig>
   );
 }

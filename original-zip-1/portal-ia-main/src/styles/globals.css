@@ -5,36 +5,32 @@
 @import '@fontsource-variable/jetbrains-mono/wght-italic.css';
 @import '@fontsource-variable/montserrat';
 @import '@fontsource-variable/montserrat/wght-italic.css';
-@import './libraries.css';
-@import './employee-portal.css';
 
 @custom-variant dark (&:is(.dark *));
 @custom-variant mac (&:is([data-platform="mac"] *));
 
-/* Shared surfaces for the portal redesign. Semantic brand and area colors remain available below. */
 :root {
-  --radius: 0.5rem;
+  --radius: 0.875rem;
 
-  --background: #fdfdfd;
-  --foreground: #0d0d0d;
-  --card: #f8f8f8;
-  --card-foreground: #171717;
+  --background: #fbfaf7;
+  --foreground: #1d1b18;
+  --card: #ffffff;
+  --card-foreground: #1d1b18;
   --popover: #ffffff;
-  --popover-foreground: #171717;
+  --popover-foreground: #1d1b18;
 
-  --primary: #171717;
+  --primary: #e11b22;
   --primary-foreground: #ffffff;
-  --secondary: #f5f5f5;
-  --secondary-foreground: #171717;
-  --muted: #f1f1f1;
-  --muted-foreground: #6c6c6c;
-  --accent: #f0f0f0;
-  --accent-foreground: #171717;
+  --secondary: #f2eee7;
+  --secondary-foreground: #1d1b18;
+  --muted: #f4f1eb;
+  --muted-foreground: #6a635a;
+  --accent: #f2eee7;
+  --accent-foreground: #1d1b18;
 
-  --border: #e9e9e9;
-  --stage: #f5f5f5;
-  --input: #a3a3a3;
-  --ring: #737373;
+  --border: #e9e4db;
+  --input: #928a7d;
+  --ring: #e11b22;
   --link: #c4161c;
 
   --brand-red: #ed1c24;
@@ -78,31 +74,30 @@
 
   --success: #2f6b17;
 
-  --shadow-color: 0 0 0;
+  --shadow-color: 29 27 24;
 }
 
 .dark {
   color-scheme: dark;
-  --background: #121212;
-  --foreground: #ffffff;
-  --card: #181818;
-  --card-foreground: #ffffff;
-  --popover: #242424;
-  --popover-foreground: #fafafa;
+  --background: #11100f;
+  --foreground: #f3f0eb;
+  --card: #1a1817;
+  --card-foreground: #f3f0eb;
+  --popover: #1f1c1a;
+  --popover-foreground: #f3f0eb;
 
-  --primary: #fafafa;
-  --primary-foreground: #171717;
-  --secondary: #292929;
-  --secondary-foreground: #fafafa;
-  --muted: #202020;
-  --muted-foreground: #a1a1a1;
-  --accent: #2a2a2a;
-  --accent-foreground: #fafafa;
+  --primary: #e11b22;
+  --primary-foreground: #ffffff;
+  --secondary: #262220;
+  --secondary-foreground: #f3f0eb;
+  --muted: #221f1d;
+  --muted-foreground: #bfb6ab;
+  --accent: #2a2623;
+  --accent-foreground: #f3f0eb;
 
-  --border: #2b2b2b;
-  --stage: #181818;
-  --input: #858585;
-  --ring: #b5b5b5;
+  --border: #2e2a27;
+  --input: #7e7871;
+  --ring: #ff4d45;
   --link: #ff9989;
 
   --brand-red-text: #ff5c53;
@@ -149,8 +144,8 @@
   --radius-md: calc(var(--radius) - 4px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 16px);
+  --radius-2xl: calc(var(--radius) + 10px);
+  --radius-3xl: calc(var(--radius) + 31px);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -206,7 +201,7 @@
   --color-window-zoom: #28c840;
 
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-display: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Montserrat Variable', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
   --shadow-xs: 0 1px 2px rgb(var(--shadow-color) / 0.05);
@@ -227,13 +222,13 @@
   --text-display-wide: min(3.4rem, 8.7cqi);
   --text-display-wide--line-height: 1.04;
   --text-display-wide--letter-spacing: -0.035em;
-  --text-title: clamp(1.875rem, 1.5rem + 1vw, 2.25rem);
-  --text-title--line-height: 1.17;
-  --text-title--letter-spacing: -0.04em;
+  --text-title: clamp(1.875rem, 1.35rem + 2.2vw, 2.75rem);
+  --text-title--line-height: 1.06;
+  --text-title--letter-spacing: -0.03em;
   --text-headline: clamp(1.625rem, 1.3rem + 1.2vw, 2rem);
   --text-headline--line-height: 1.15;
   --text-headline--letter-spacing: -0.02em;
-  --text-heading: 1.125rem;
+  --text-heading: 1.25rem;
   --text-heading--line-height: 1.3;
   --text-heading--letter-spacing: -0.015em;
   --text-doc-heading: 1.125rem;
@@ -924,4 +919,3 @@ html:active-view-transition-type(close)::view-transition-new(root) {
   text-transform: uppercase;
   color: var(--muted-foreground);
 }
-

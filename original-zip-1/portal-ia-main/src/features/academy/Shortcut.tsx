@@ -1,4 +1,3 @@
-import { ResourceCard } from "@/design-system/blocks/ResourceCard";
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
@@ -19,9 +18,9 @@ export function Shortcut({
 }) {
   const { readIds } = useReadChapters();
   return (
-    <ResourceCard><Link
+    <Link
       to={to}
-      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-xs transition-[border-color,box-shadow] duration-(--duration-fast) hover:border-foreground/20 hover:shadow-sm"
+      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
     >
       <span aria-hidden className="inline-flex size-10 items-center justify-center rounded-xl bg-muted text-foreground/80">
         {icon}
@@ -34,6 +33,6 @@ export function Shortcut({
       <span className="mt-auto flex justify-end pt-4">
         <ArrowRight aria-hidden className="size-4 text-muted-foreground transition-transform duration-(--duration-base) group-hover:translate-x-0.5" />
       </span>
-    </Link></ResourceCard>
+    </Link>
   );
 }

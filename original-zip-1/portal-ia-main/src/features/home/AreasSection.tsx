@@ -30,14 +30,14 @@ function UpcomingArea() {
 
 export function AreasSection() {
   return (
-    <section className="mt-14 sm:mt-16" aria-labelledby="areas-title">
+    <section className="mt-24 sm:mt-28" aria-labelledby="areas-title">
       <Container>
         <SectionHeading
           id="areas-title"
           title="Comece pela sua área"
           description="Você não precisa saber o nome da skill. A sua área leva às skills dela, à trilha de capacitação do seu papel e ao roteiro do Método, com os guias e as skills na ordem."
         />
-        <div className="reveal-children mt-6 grid grid-cols-1 gap-4 md:auto-rows-fr md:grid-cols-2">
+        <div className="reveal-children mt-10 grid grid-cols-1 gap-4 md:auto-rows-fr md:grid-cols-2">
           {areas.map((area) => {
             const tone = areaStyle[area.id];
             const count = skillCountIn(area);
@@ -48,7 +48,7 @@ export function AreasSection() {
               <div
                 key={area.id}
                 className={cn(
-                  "group relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-xs transition-[border-color,box-shadow] duration-(--duration-fast) hover:shadow-sm sm:p-7",
+                  "group relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:shadow-md motion-reduce:hover:translate-y-0 sm:p-7",
                   tone.border,
                 )}
               >

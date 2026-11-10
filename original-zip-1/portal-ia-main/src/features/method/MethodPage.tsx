@@ -1,9 +1,8 @@
-import { GuideResources } from "./GuideResources";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Presentation } from "lucide-react";
 import { AreaMark } from "@/components/AreaMark";
 import { InlineCode } from "@/components/InlineCode";
-import { Button } from "@/design-system/primitives";
+import { Button } from "@/components/ui/button";
 import { areaById } from "@/data/areas";
 import { DIAGRAM_GUIDES, METHOD_GROUPS, guidesIn, readingOrder, readingTime, type Guide } from "@/data/guides";
 import { ROADMAPS } from "@/data/roadmaps";
@@ -79,7 +78,6 @@ export function MethodPage() {
           {formatDuration(readingTime.tool.max)}.
         </p>
       </header>
-      <GuideResources />
 
       <div className={intro} style={delay(4)}>
         <section aria-labelledby="roteiros" className="mt-12">
@@ -92,7 +90,7 @@ export function MethodPage() {
                 <Link
                   to="/metodo/roteiros/$area"
                   params={{ area: roadmap.area }}
-                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-xs transition-[border-color,box-shadow] duration-(--duration-fast) hover:border-foreground/20 hover:shadow-sm"
+                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
                 >
                   <AreaMark area={roadmap.area} size="md" />
                   <span data-vt="title" className="mt-4 self-start font-display text-subheading font-bold">

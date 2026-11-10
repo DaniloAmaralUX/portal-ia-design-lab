@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ModeBadge } from "@/components/ModeBadge";
-import { Card } from "@/design-system/primitives";
+import { Card } from "@/components/ui/card";
 import type { Plugin, Skill } from "@/data/types";
 
 export function SiblingSkills({ plugin, siblings }: { plugin: Plugin; siblings: Skill[] }) {

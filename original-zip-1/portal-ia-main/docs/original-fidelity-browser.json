@@ -1,0 +1,1755 @@
+{
+  "results": [
+    {
+      "route": "/",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Peça em português.O Claude faz do jeito Pitang.",
+          "size": "53.7864px",
+          "weight": "800",
+          "lineHeight": "55.9378px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Qual é o seu papel?",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Aprender, aplicar, usar e contribuir",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Academy",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Método",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Catálogo",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Crie a sua skill",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Comece pela sua área",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Produto, com as skills em breve",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Qualidade, com as skills em breve",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Engenharia, com as skills em breve",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Meio, com as skills em breve",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Design",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Instale uma vez. Depois, é só pedir.",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Adicione o marketplaceCatálogo de onde o Claude Code instala plugins. O da Pitang fica no GitLab, e você adiciona uma vez só.",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Instale o plugin da sua área",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Peça em português",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Novidades",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "/academy",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Trilhas de capacitação em IA",
+          "size": "44px",
+          "weight": "800",
+          "lineHeight": "46.64px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Escolha a sua trilha",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Antes de começar",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Novo em IA? Comece por aqui",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "AI Capabilities and Limitations (abre em outra aba)",
+          "size": "15px",
+          "weight": "600",
+          "lineHeight": "24.75px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "AI Foundations (abre em outra aba)",
+          "size": "15px",
+          "weight": "600",
+          "lineHeight": "24.75px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "AI-901: Introduction to AI in Azure (abre em outra aba)",
+          "size": "15px",
+          "weight": "600",
+          "lineHeight": "24.75px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Como ler a classificação",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "/metodo",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Do PBI ao código revisado, com IA",
+          "size": "44px",
+          "weight": "800",
+          "lineHeight": "46.64px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Roteiros por área",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Os guias, em ordem",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Comece aqui",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Requisitos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Ciclo SDD",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Prova real",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "/explorar",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Catálogo de skills",
+          "size": "44px",
+          "weight": "800",
+          "lineHeight": "46.64px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Resultados",
+          "size": "16px",
+          "weight": "400",
+          "lineHeight": "24px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/primeiros-passos",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Do zero ao primeiro pedido, em cinco minutos",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O que é uma skill",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O que é um plugin",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Passo a passo",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Tenha o Claude Code",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Salve a credencial do GitLab",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Adicione o marketplace",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Instale o plugin da sua área",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Peça em português",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Dispara sozinha ou só manual?",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Depois de instalar",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Atualizar",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Desinstalar",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Para o time inteiro de um projeto",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Para quem administra o Claude Code na empresa",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "O que cada parte faz",
+          "size": "16px",
+          "weight": "600",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "O bloco opcional: só os marketplaces que a Pitang aprova",
+          "size": "16px",
+          "weight": "600",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "O que a managed settings do admin não alcança",
+          "size": "16px",
+          "weight": "600",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Perguntas frequentes",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Você terminou os primeiros passos",
+          "size": "14px",
+          "weight": "600",
+          "lineHeight": "21.7px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/contribuir",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Tem uma tarefa que o seu time repete toda semana? Ela pode virar skill.",
+          "size": "44px",
+          "weight": "800",
+          "lineHeight": "46.64px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Skill, rule, agente ou plugin?",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Do rascunho ao MR",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O padrão da casa",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O que a curadoria olha",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Pedir uma skill",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/ferramentas",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Ferramentas",
+          "size": "44px",
+          "weight": "800",
+          "lineHeight": "46.64px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Catalyst Toolkit",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/academy/trilhas/produto",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Analista de requisitos / PO",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Tempo da trilha por classificação",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Anthropic Academy",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 1Fundamentos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 2Aplicação",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 3Aprofundamento",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "OpenAI Academy",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 1Fundamentos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 2Aplicação",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 3Aprofundamento",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Microsoft Learn",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 1Fundamentos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 2Aplicação",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 3Aprofundamento",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Depois dos cursos",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/metodo/sdd",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "SDD na prática: do PBI ao código revisado",
+          "size": "32px",
+          "weight": "700",
+          "lineHeight": "36.8px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O ciclo em quatro passos",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Três guias de implementação",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Antes de escolher",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Você terminou este guia",
+          "size": "14px",
+          "weight": "600",
+          "lineHeight": "21.7px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/manifesto",
+      "width": 1440,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "O Pé de IA é uma Pitangueira",
+          "size": "44px",
+          "weight": "800",
+          "lineHeight": "46.64px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Por que agora",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "A pitangueira",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Raízes",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Tronco",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Copa",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Frutos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Sementes",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Por onde começar",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Suporte",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Pitang Labs",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Contato direto",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Por onde seguir",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Academy",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Método",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Você terminou este guia",
+          "size": "14px",
+          "weight": "600",
+          "lineHeight": "21.7px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Peça em português.O Claude faz do jeito Pitang.",
+          "size": "39.2px",
+          "weight": "800",
+          "lineHeight": "40.768px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Qual é o seu papel?",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Aprender, aplicar, usar e contribuir",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Academy",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Método",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Catálogo",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Crie a sua skill",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Comece pela sua área",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Produto, com as skills em breve",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Qualidade, com as skills em breve",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Engenharia, com as skills em breve",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Meio, com as skills em breve",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Design",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Instale uma vez. Depois, é só pedir.",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Adicione o marketplaceCatálogo de onde o Claude Code instala plugins. O da Pitang fica no GitLab, e você adiciona uma vez só.",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Instale o plugin da sua área",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Peça em português",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Novidades",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "/academy",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Trilhas de capacitação em IA",
+          "size": "30.18px",
+          "weight": "800",
+          "lineHeight": "31.9908px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Escolha a sua trilha",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Antes de começar",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Novo em IA? Comece por aqui",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "AI Capabilities and Limitations (abre em outra aba)",
+          "size": "15px",
+          "weight": "600",
+          "lineHeight": "24.75px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "AI Foundations (abre em outra aba)",
+          "size": "15px",
+          "weight": "600",
+          "lineHeight": "24.75px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "AI-901: Introduction to AI in Azure (abre em outra aba)",
+          "size": "15px",
+          "weight": "600",
+          "lineHeight": "24.75px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Como ler a classificação",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "/metodo",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Do PBI ao código revisado, com IA",
+          "size": "30.18px",
+          "weight": "800",
+          "lineHeight": "31.9908px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Roteiros por área",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Os guias, em ordem",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Comece aqui",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Requisitos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Ciclo SDD",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Prova real",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "/explorar",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Catálogo de skills",
+          "size": "30.18px",
+          "weight": "800",
+          "lineHeight": "31.9908px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Resultados",
+          "size": "16px",
+          "weight": "400",
+          "lineHeight": "24px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/primeiros-passos",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Do zero ao primeiro pedido, em cinco minutos",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O que é uma skill",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O que é um plugin",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Passo a passo",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Tenha o Claude Code",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Salve a credencial do GitLab",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Adicione o marketplace",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Instale o plugin da sua área",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Peça em português",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Dispara sozinha ou só manual?",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Depois de instalar",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Atualizar",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Desinstalar",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Para o time inteiro de um projeto",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Para quem administra o Claude Code na empresa",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "O que cada parte faz",
+          "size": "16px",
+          "weight": "600",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "O bloco opcional: só os marketplaces que a Pitang aprova",
+          "size": "16px",
+          "weight": "600",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "O que a managed settings do admin não alcança",
+          "size": "16px",
+          "weight": "600",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Perguntas frequentes",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Você terminou os primeiros passos",
+          "size": "14px",
+          "weight": "600",
+          "lineHeight": "21.7px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/contribuir",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Tem uma tarefa que o seu time repete toda semana? Ela pode virar skill.",
+          "size": "30.18px",
+          "weight": "800",
+          "lineHeight": "31.9908px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Skill, rule, agente ou plugin?",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Do rascunho ao MR",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O padrão da casa",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O que a curadoria olha",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Pedir uma skill",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/ferramentas",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Ferramentas",
+          "size": "30.18px",
+          "weight": "800",
+          "lineHeight": "31.9908px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Catalyst Toolkit",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/academy/trilhas/produto",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Analista de requisitos / PO",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Tempo da trilha por classificação",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Anthropic Academy",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 1Fundamentos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 2Aplicação",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 3Aprofundamento",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "OpenAI Academy",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 1Fundamentos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 2Aplicação",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 3Aprofundamento",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Microsoft Learn",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 1Fundamentos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 2Aplicação",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Fase 3Aprofundamento",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Depois dos cursos",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/metodo/sdd",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "SDD na prática: do PBI ao código revisado",
+          "size": "26px",
+          "weight": "700",
+          "lineHeight": "29.9px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "O ciclo em quatro passos",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Três guias de implementação",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Antes de escolher",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Você terminou este guia",
+          "size": "14px",
+          "weight": "600",
+          "lineHeight": "21.7px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    },
+    {
+      "route": "/manifesto",
+      "width": 390,
+      "headings": [
+        {
+          "level": "H1",
+          "text": "O Pé de IA é uma Pitangueira",
+          "size": "30.18px",
+          "weight": "800",
+          "lineHeight": "31.9908px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Por que agora",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "A pitangueira",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Raízes",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Tronco",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Copa",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Frutos",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Sementes",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Por onde começar",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Suporte",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Pitang Labs",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Contato direto",
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "21.6px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Por onde seguir",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Academy",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H3",
+          "text": "Método",
+          "size": "20px",
+          "weight": "700",
+          "lineHeight": "26px",
+          "font": "\"Montserrat Variable\", \"Inter Variable\", ui-sans-serif, system-ui, sans-serif"
+        },
+        {
+          "level": "H2",
+          "text": "Você terminou este guia",
+          "size": "14px",
+          "weight": "600",
+          "lineHeight": "21.7px",
+          "font": "\"Inter Variable\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+        }
+      ],
+      "hierarchyPreserved": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

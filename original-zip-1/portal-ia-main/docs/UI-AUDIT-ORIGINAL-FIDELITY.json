@@ -1,0 +1,117 @@
+{
+  "title": "Portal IA Pitang - original copy and visual hierarchy",
+  "project": "portal-ia",
+  "date": "2026-11-10",
+  "skill": "https://github.com/tommygeoco/ui-audit",
+  "macro_bets": [
+    {
+      "category": "efficiency",
+      "description": "Preserve institutional information architecture so employees can find training, guidance and skills.",
+      "alignment": "strong"
+    }
+  ],
+  "jtbd": [
+    {
+      "user": "Pitang employee",
+      "situation": "Needs company AI guidance",
+      "motivation": "Find the correct course, method or skill",
+      "outcome": "Apply AI using the company practices"
+    }
+  ],
+  "visual_hierarchy": {
+    "checks": [
+      {
+        "label": "Original source fidelity",
+        "status": "pass",
+        "notes": "65 restored files match portal-codigo-original.zip exactly after newline normalization. See original-copy-restoration.json."
+      },
+      {
+        "label": "Heading order and typography",
+        "status": "pass",
+        "notes": "20 route/viewport combinations retain identical heading text, levels, font family, size, weight and line height with the cosmetic preset enabled and disabled."
+      },
+      {
+        "label": "Home reading order",
+        "status": "pass",
+        "notes": "Hero, role selection, entry points, areas, installation and news restored from archive."
+      }
+    ]
+  },
+  "visual_style": {
+    "checks": [
+      {
+        "label": "Original type and layout system",
+        "status": "pass",
+        "notes": "Original globals.css and component layouts restored. Cosmetic preset contains no spacing, font, grid or heading metric overrides."
+      },
+      {
+        "label": "Brand emphasis",
+        "status": "pass",
+        "notes": "Original red emphasis and Montserrat display hierarchy preserved."
+      },
+      {
+        "label": "Responsive layout",
+        "status": "pass",
+        "notes": "No horizontal overflow at 1440px or 390px on 10 principal routes."
+      }
+    ]
+  },
+  "accessibility": {
+    "checks": [
+      {
+        "label": "Automated browser checks",
+        "status": "pass",
+        "notes": "Six axe scans: home, Academy and Method at desktop and mobile with reduced motion; no WCAG A/AA violations detected."
+      },
+      {
+        "label": "Browser errors",
+        "status": "pass",
+        "notes": "No page errors on 20 route/viewport combinations."
+      },
+      {
+        "label": "Manual assistive technology coverage",
+        "status": "warn",
+        "notes": "Automated checks do not replace screen-reader or user testing."
+      }
+    ]
+  },
+  "navigation": {
+    "checks": [
+      {
+        "label": "Original navigation and reading structure",
+        "status": "pass",
+        "notes": "Original header, root layout, documentation layout and navigation components restored."
+      }
+    ]
+  },
+  "usability": {
+    "checks": [
+      {
+        "label": "Private catalogue availability",
+        "status": "warn",
+        "notes": "Preview has no private skills catalogue. Counts and generated demo results are not production content; original static copy is preserved."
+      }
+    ]
+  },
+  "priority_fixes": [
+    {
+      "rank": 1,
+      "title": "Restore original copy and hierarchy",
+      "description": "Completed using the downloaded archive as institutional evidence.",
+      "framework_reference": "23-patterns-visual-hierarchy.md"
+    },
+    {
+      "rank": 2,
+      "title": "Preserve familiar navigation",
+      "description": "Completed by restoring original navigation source and removing competing hierarchy overrides.",
+      "framework_reference": "31-patterns-navigation.md"
+    },
+    {
+      "rank": 3,
+      "title": "Validate against the private catalogue",
+      "description": "Requires the private catalogue; no private content or statistics were invented.",
+      "framework_reference": "00-core-framework.md"
+    }
+  ],
+  "notes": "Evidence: original-copy-restoration.json, original-fidelity-browser.json and browser screenshots in node_modules/.cache. No user research claims."
+}

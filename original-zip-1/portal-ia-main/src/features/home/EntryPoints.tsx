@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Blocks, Lightbulb } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AcademyEntryPoint } from "@/components/AcademyEntryPoint";
 import { entryLink, entryLinkSecondary } from "@/components/entry-point-class";
 import { EntryPoint } from "@/components/EntryPoint";
@@ -10,18 +10,17 @@ import { SectionHeading } from "./SectionHeading";
 
 export function EntryPoints() {
   return (
-    <section className="mt-14 sm:mt-16" aria-labelledby="portas-title">
+    <section className="mt-24 sm:mt-28" aria-labelledby="portas-title">
       <Container>
         <SectionHeading
           id="portas-title"
-          title="O que você quer fazer?"
-          description="Escolha o conteúdo de acordo com a sua tarefa de hoje."
+          title="Aprender, aplicar, usar e contribuir"
+          description="A Academy ensina IA do zero, o Método mostra como a Pitang trabalha com ela, o Catálogo traz as skills que fazem o trabalho no Claude Code, e qualquer time pode trazer a sua."
         />
-        <ul className="reveal-children mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <ul className="reveal-children mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <AcademyEntryPoint />
           <MethodEntryPoint />
           <EntryPoint
-            icon={Blocks}
             label="Usar"
             title="Catálogo"
             text={`${catalogSkills.length} skills em ${catalogPlugins.length} plugins. Ache pela tarefa, em português, ou pela sua área.`}
@@ -35,7 +34,6 @@ export function EntryPoints() {
             </Link>
           </EntryPoint>
           <EntryPoint
-            icon={Lightbulb}
             label="Contribuir"
             title="Crie a sua skill"
             text="Transforme a tarefa que o seu time repete em skill, no padrão da casa, com o teste com e sem ela antes do MR."

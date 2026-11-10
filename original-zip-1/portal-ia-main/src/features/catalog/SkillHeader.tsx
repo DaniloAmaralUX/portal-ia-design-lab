@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowDown } from "lucide-react";
 import { AreaDot } from "@/components/AreaDot";
-import { CopyButton } from "@/design-system/primitives";
+import { CopyButton } from "@/components/CopyButton";
 import { Crumb } from "@/components/Crumb";
 import { MetaSep } from "./MetaSep";
 import { Term } from "@/components/Term";
-import { Badge } from "@/design-system/primitives";
-import { Button } from "@/design-system/primitives";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { areaOf, pluginOf } from "@/data/catalog";
 import { MODES, modeOf } from "@/data/modes";
 import type { Skill } from "@/data/types";

@@ -1,4 +1,4 @@
-import { CopyButton } from "@/design-system/primitives";
+import { CopyButton } from "@/components/CopyButton";
 import { WindowDots } from "@/components/WindowDots";
 import { marketplaceAdd } from "@/lib/commands";
 import { cn } from "@/lib/utils";

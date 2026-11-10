@@ -3,11 +3,11 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, Search } from "lucide-react";
 import { PitangLogo } from "@/components/layout/PitangLogo";
 import { HeaderAccount } from "@/components/layout/HeaderAccount";
+import { GithubHandoff } from "@/components/layout/GithubHandoff";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { isCurrent, NAV } from "@/components/layout/nav";
 import { Container } from "@/components/ui/container";
-import { FluidGroup } from "@/components/fluid/FluidGroup";
 import { Kbd } from "@/components/ui/kbd";
 import { useScrolled } from "@/hooks/use-scrolled";
 import { useUi } from "@/store/ui";
@@ -27,30 +27,28 @@ export function SiteHeader() {
         "sticky top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-300 [view-transition-name:site-header]",
         scrolled
           ? "border-border/70 bg-background/95 shadow-[0_1px_0_rgb(var(--shadow-color)/0.02)] backdrop-blur-xl backdrop-saturate-150"
-          : "border-transparent bg-background",
+          : "border-transparent bg-background/0",
       )}
     >
-      <Container className="flex h-17 items-center gap-3 sm:gap-5">
+      <Container className="flex h-16 items-center gap-3 sm:gap-5">
         <Link to="/" className="group flex shrink-0 items-center gap-2 sm:gap-2.5" aria-label={`${SITE_NAME}, página inicial`}>
           <PitangLogo className="h-[21px] w-auto" />
-          <span aria-hidden className="h-5 w-px bg-border max-[19.5rem]:hidden" />
-          <span className="whitespace-nowrap font-display text-body font-semibold tracking-[-0.01em] max-[19.5rem]:hidden">{BRAND_NAME}</span>
+          <span aria-hidden className="h-5 w-px bg-border max-[23rem]:hidden" />
+          <span className="whitespace-nowrap font-display text-body font-semibold tracking-[-0.01em] max-[23rem]:hidden">{BRAND_NAME}</span>
         </Link>
 
         {/* The menu shows from 896px, as before the sixth section. To fit beside a classic scrollbar (15px), up to 1024px the items
             and the gaps are a step tighter, and up to 1152px the search is only its icon; below 896px, the button opens the menu. */}
         <nav aria-label="Principal" className="hidden items-center gap-0.5 min-[56rem]:flex min-[64rem]:ml-2">
-          <FluidGroup className="flex items-center gap-0.5 rounded-lg">
           {NAV.map((item) => {
             const current = isCurrent(pathname, item.match);
             return (
               <Link
                 key={item.to}
                 to={item.to}
-                data-fluid-item
                 aria-current={current ? "page" : undefined}
                 className={cn(
-                  "relative whitespace-nowrap rounded-lg px-2 py-1.5 text-small font-medium transition-colors hover:text-foreground min-[64rem]:px-3 min-[72rem]:px-3.5",
+                  "relative whitespace-nowrap rounded-full px-2 py-1.5 text-small font-medium transition-colors hover:bg-accent hover:text-foreground min-[64rem]:px-3 min-[72rem]:px-3.5",
                   current ? "bg-accent text-foreground" : "text-muted-foreground",
                 )}
               >
@@ -64,7 +62,6 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          </FluidGroup>
         </nav>
 
         <div className="ml-auto flex items-center gap-1.5 min-[56rem]:gap-1 min-[64rem]:gap-1.5">
@@ -102,6 +99,7 @@ export function SiteHeader() {
             <Search className="size-[18px]" />
           </button>
           <ThemeToggle />
+          <GithubHandoff />
           <HeaderAccount />
           <button
             type="button"

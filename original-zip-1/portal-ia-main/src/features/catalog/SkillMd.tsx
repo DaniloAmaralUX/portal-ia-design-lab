@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { CodeBlock } from "@/components/CodeBlock";
 import { SkillDoc } from "./SkillDoc";
 import { Term } from "@/components/Term";
-import { Card } from "@/design-system/primitives";
+import { Card } from "@/components/ui/card";
 import { focusRegion } from "@/hooks/use-route-focus";
 import { press } from "@/lib/motion";
 import { cn } from "@/lib/utils";

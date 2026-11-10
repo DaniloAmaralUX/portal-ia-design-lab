@@ -3,7 +3,7 @@ import { getRouteApi, useNavigate } from "@tanstack/react-router";
 import { X } from "lucide-react";
 import { areaStyle } from "@/components/area-style";
 import { CatalogTabs } from "@/components/CatalogTabs";
-import { Button } from "@/design-system/primitives";
+import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { areaById } from "@/data/areas";
 import { AcademyCard } from "@/features/method";

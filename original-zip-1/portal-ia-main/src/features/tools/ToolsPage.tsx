@@ -8,6 +8,7 @@ import { delay } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import { travelling } from "@/lib/view-transition";
 import { PITA_IA } from "./pita-ia";
+import { ToolTiles } from "./ToolTiles";
 
 // What the showcase of each tool shows: its mark, in its own colors, and one line of what it does.
 // The mark travels into the top of the page of the tool when its card opens it (src/lib/view-transition.ts), and back on return.
@@ -32,8 +33,9 @@ export function ToolsPage() {
   return (
     <div className="mx-auto max-w-5xl">
       <div className="relative">
-        <header className="relative max-w-2xl pb-8 text-left">
-          <h1 className="flex flex-wrap items-center gap-x-4 gap-y-3 font-display text-title font-medium tracking-[-0.02em]">
+        <ToolTiles layout="around" arrive={arrive} />
+        <header className="relative mx-auto max-w-2xl pb-14 pt-14 text-center sm:pb-20 sm:pt-24">
+          <h1 className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 font-display text-title font-extrabold tracking-[-0.02em]">
             <span className={enter}>Ferramentas</span>
             <span className={cn("inline-flex rounded-xl bg-pita-ia-plate px-3 py-2", enter)} style={delay(1)}>
               <img src={PITA_IA.src} alt="Pita.IA" width={PITA_IA.width} height={PITA_IA.height} className="block h-[0.9em] w-auto" />
@@ -42,6 +44,7 @@ export function ToolsPage() {
           <p className={cn("mt-5 text-lead leading-relaxed text-muted-foreground text-pretty", enter)} style={delay(2)}>
             As ferramentas da Pita.IA para o dia a dia de quem desenvolve, prontas para instalar no seu computador.
           </p>
+          <ToolTiles layout="row" arrive={arrive} />
         </header>
       </div>
       <ul className="grid gap-8">
@@ -54,16 +57,17 @@ export function ToolsPage() {
                 aria-labelledby={`ferramenta-${guide.slug}`}
                 className={cn(
                   "group relative grid overflow-hidden rounded-3xl border border-border bg-card shadow-sm md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]",
-                  "transition-[translate,box-shadow,border-color] duration-(--duration-base) ease-(--ease-out-soft)",
-                  "motion-safe:pointer-fine:hover:-translate-y-0.5 pointer-fine:hover:border-foreground/15 pointer-fine:hover:shadow-lg",
+                  "transition-[translate,box-shadow,border-color] duration-(--duration-slow) ease-(--ease-out-soft)",
+                  "hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-lg has-[a:focus-visible]:-translate-y-0.5 has-[a:focus-visible]:shadow-lg",
                   "has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-ring",
+                  "motion-reduce:hover:translate-y-0 motion-reduce:has-[a:focus-visible]:translate-y-0",
                 )}
               >
                 <div
                   aria-hidden
                   className="grid min-h-60 place-items-center bg-terminal bg-[radial-gradient(var(--terminal-border)_1px,transparent_1px)] bg-size-[14px_14px] px-10 py-16 sm:min-h-72"
                 >
-                  <div className="w-full max-w-md transition-transform duration-(--duration-base) ease-(--ease-out-soft) motion-safe:pointer-fine:group-hover:scale-[1.02]">
+                  <div className="w-full max-w-md transition-transform duration-(--duration-slow) ease-(--ease-out-soft) group-hover:scale-[1.02] group-has-[a:focus-visible]:scale-[1.02] motion-reduce:transform-none">
                     {showcase?.art}
                   </div>
                 </div>
@@ -80,7 +84,7 @@ export function ToolsPage() {
                     Conhecer<span className="sr-only"> o {guide.label}</span>
                     <ArrowRight
                       aria-hidden
-                      className="size-4 transition-transform duration-(--duration-base) ease-(--ease-out-soft) motion-safe:pointer-fine:group-hover:translate-x-1"
+                      className="size-4 transition-transform duration-(--duration-slow) ease-(--ease-out-soft) group-hover:translate-x-1 group-has-[a:focus-visible]:translate-x-1 motion-reduce:transform-none"
                     />
                   </Link>
                 </div>

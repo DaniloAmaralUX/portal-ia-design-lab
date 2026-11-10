@@ -1,5 +1,7 @@
 # Portal IA da Pitang
 
+**Versão isolada para continuidade:** [handoff e instruções](docs/HANDOFF-PORTAL.md), branch `handoff/portal-original-ui-audit`.
+
 O portal de IA da Pitang tem quatro portas:
 
 - **Manifesto:** por que a Pitang adota IA.

@@ -2,7 +2,6 @@ import { useEffect, useRef, useState, type ComponentType } from "react";
 import { Outlet, useRouterState } from "@tanstack/react-router";
 import { ChevronRight, Menu } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { PortalNav } from "@/components/layout/PortalNav";
 import { Sheet } from "@/components/ui/sheet";
 import { focusRegion } from "@/hooks/use-route-focus";
 import { press } from "@/lib/motion";
@@ -16,12 +15,12 @@ export function DocsLayout({ title, label, Menu: SectionNav }: { title: string; 
     if (sidebar.current) scrollActiveIntoView(sidebar.current);
   }, [pathname]);
   return (
-    <Container className="portal-docs grid grid-cols-1 gap-8 pb-20 pt-8 lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-14">
+    <Container className="grid grid-cols-1 gap-10 pb-20 pt-6 sm:pt-8 lg:grid-cols-[208px_minmax(0,1fr)] lg:gap-12">
       <div className="hidden lg:block">
         {/* No overscroll-contain: with it, the wheel over a menu with nothing left to scroll did not move the page under the cursor. */}
         <div
           ref={sidebar}
-          className="sticky top-25 -m-1 max-h-[calc(100dvh-7rem)] scroll-py-1 overflow-y-auto p-1 pb-6 [view-transition-class:fixed] [view-transition-name:section-menu]"
+          className="sticky top-24 -m-1 max-h-[calc(100dvh-7rem)] scroll-py-1 overflow-y-auto p-1 pb-6 [view-transition-class:fixed] [view-transition-name:section-menu]"
         >
           <a
             href="#texto"
@@ -33,8 +32,7 @@ export function DocsLayout({ title, label, Menu: SectionNav }: { title: string; 
           >
             Pular o menu da seção
           </a>
-          <PortalNav />
-          <div className="mt-8 border-t border-border pt-5"><SectionNav /></div>
+          <SectionNav />
         </div>
       </div>
       <div id="texto" className="@container min-w-0 outline-none">

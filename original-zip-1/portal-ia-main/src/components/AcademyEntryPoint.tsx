@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, GraduationCap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ROLES } from "@/data/roles";
 import { EntryPoint } from "./EntryPoint";
 import { entryLink, entryLinkSecondary } from "./entry-point-class";
@@ -7,7 +7,6 @@ import { entryLink, entryLinkSecondary } from "./entry-point-class";
 export function AcademyEntryPoint() {
   return (
     <EntryPoint
-      icon={GraduationCap}
       label="Aprender"
       title="Academy"
       text={`${ROLES.length} trilhas de capacitação, uma por papel, com cursos gratuitos da Anthropic, da OpenAI e da Microsoft em três fases.`}

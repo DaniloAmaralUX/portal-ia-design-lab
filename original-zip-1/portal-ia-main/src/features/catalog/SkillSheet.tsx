@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { AreaDot } from "@/components/AreaDot";
-import { Card } from "@/design-system/primitives";
+import { Card } from "@/components/ui/card";
 import { areaOf, pluginOf } from "@/data/catalog";
 import { MODES, modeOf } from "@/data/modes";
 import type { Skill } from "@/data/types";

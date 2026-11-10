@@ -1,72 +1,89 @@
-import { useId, useRef, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Blocks } from "lucide-react";
-import { motion, useReducedMotion } from "motion/react";
-import { CopyButton } from "@/design-system/primitives";
-import { useCraft } from "@/components/craft/craft-context";
-import { marketplaceAdd } from "@/lib/commands";
-import { suggestions } from "@/data/areas";
+import { ArrowRight, Search } from "lucide-react";
+import { BrandArcs } from "@/components/BrandArcs";
+import { Container } from "@/components/ui/container";
+import { Term } from "@/components/Term";
+import { TerminalDemo } from "./TerminalDemo";
+import { Button } from "@/components/ui/button";
+import { Kbd } from "@/components/ui/kbd";
+import { useIntro } from "@/hooks/use-intro";
+import { delay } from "@/lib/motion";
 import { cn } from "@/lib/utils";
-import { HowItWorks } from "./HowItWorks";
-import { VoiceSearch } from "./VoiceSearch";
-
-const modes = [{ id: "preview", label: "Explorar" }, { id: "install", label: "Instalar" }] as const;
-type Mode = typeof modes[number]["id"];
+import { catalogPlugins, catalogSkills } from "@/data/catalog-index";
+import { suggestions } from "@/data/areas";
 
 export function Hero() {
+  useIntro();
+  const intro = "animate-intro";
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
-  const [mode, setMode] = useState<Mode>("preview");
-  const [instant, setInstant] = useState(true);
-  const tabs = useRef<HTMLDivElement>(null);
-  const id = useId();
-  const reduce = useReducedMotion();
-  const { stiffness, damping } = useCraft();
 
-  function submit(event: FormEvent) {
-    event.preventDefault();
+  function submit(e: FormEvent) {
+    e.preventDefault();
     const q = query.trim();
     void navigate({ to: "/explorar", search: q ? { q } : {} });
   }
 
   return (
-    <section aria-labelledby="portal-title">
-      <header className="pb-6">
-        <span aria-hidden className="mb-3 flex size-11 items-center justify-center rounded-xl bg-foreground/8 text-muted-foreground"><Blocks className="size-6" strokeWidth={1.5} /></span>
-        <h1 id="portal-title" className="font-display text-title font-medium">IA no seu trabalho, com a Pitang</h1>
-        <p className="mt-3 max-w-2xl text-small leading-relaxed text-muted-foreground">Encontre o que precisa para aprender IA, aplicar o Método da Pitang e usar as ferramentas da empresa.</p>
-      </header>
+    <section className="relative overflow-hidden">
+      <Container className="relative grid grid-cols-1 items-center gap-14 pb-16 pt-10 sm:pt-16 lg:grid-cols-[1.12fr_0.88fr] lg:gap-8 lg:pb-24 lg:pt-20">
+        <div className="relative z-10 @container">
+          <h1 className={cn("font-display text-display font-extrabold @min-[30rem]:text-display-wide", intro)}>
+            <span className="block">Peça em português.</span>
+            <span className="block text-balance text-brand-red-text">O Claude faz do jeito Pitang.</span>
+          </h1>
 
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <div ref={tabs} role="tablist" aria-label="Modo do portal" className="inline-flex items-center gap-1 rounded-full bg-muted/50 p-1" onKeyDown={(event) => {
-          if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
-          event.preventDefault();
-          const next = event.key === "Home" ? "preview" : event.key === "End" ? "install" : mode === "preview" ? "install" : "preview";
-          setInstant(true);
-          setMode(next);
-          tabs.current?.querySelector<HTMLButtonElement>(`[data-mode="${next}"]`)?.focus();
-        }}>
-          {modes.map((entry) => (
-            <button key={entry.id} id={`${id}-${entry.id}-tab`} data-mode={entry.id} role="tab" type="button" tabIndex={mode === entry.id ? 0 : -1} aria-selected={mode === entry.id} aria-controls={`${id}-${entry.id}-panel`} onClick={(event) => { setInstant(event.detail === 0); setMode(entry.id); }} className={cn("relative isolate min-h-8 rounded-full px-3 text-caption font-medium transition-colors", mode === entry.id ? "text-foreground" : "text-muted-foreground hover:text-foreground")}>
-              {mode === entry.id && <motion.span aria-hidden className="absolute inset-0 -z-10 rounded-full bg-accent" layoutId={`${id}-mode-pill`} transition={instant || reduce ? { duration: 0 } : { type: "spring", stiffness, damping }} />}
-              {entry.label}
-            </button>
-          ))}
-        </div>
-        <CopyButton withLabel text={marketplaceAdd} label="Copiar comando" name="Copiar comando de instalação" />
-      </div>
+          {/* On a phone the sentence is the biggest text of the top, the paint the LCP counts, so it shows at once: Chrome takes a
+              text that comes in from transparent only when it paints again, a second later, when the intro ends. */}
+          <p className="mt-6 max-w-[34rem] text-lead leading-relaxed text-muted-foreground text-pretty">
+            São {catalogSkills.length} <Term id="skill">skills</Term> em {catalogPlugins.length} <Term id="plugin">plugins</Term> para revisar PR, especificar requisitos, automatizar testes e
+            documentar sistemas. Ache a que resolve o seu problema e instale com dois comandos.
+          </p>
 
-      <div id={`${id}-preview-panel`} role="tabpanel" aria-labelledby={`${id}-preview-tab`} hidden={mode !== "preview"}>
-        {mode === "preview" && <div className="library-stage flex min-h-[210px] flex-col items-center justify-center gap-6 px-5 py-7 sm:px-8">
-          <VoiceSearch value={query} onChange={setQuery} onSubmit={submit} />
-          <div className="flex max-w-xl flex-wrap justify-center gap-x-4 gap-y-2" aria-label="Sugestões de busca">
-            {suggestions.map((s) => <Link key={s.q} to="/explorar" search={{ q: s.q }} className="text-caption text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-foreground">{s.label}</Link>)}
+          <form onSubmit={submit} role="search" className={cn("mt-8 max-w-[36rem]", intro)} style={delay(2)}>
+            <label htmlFor="hero-search" className="sr-only">
+              O que você precisa fazer?
+            </label>
+            <div className="flex items-center gap-2 rounded-2xl border border-input bg-card p-1.5 pl-4 shadow-md transition-[border-color,box-shadow] focus-within:border-foreground/60 focus-within:shadow-lg contrast-more:focus-within:border-foreground has-[input:focus-visible]:outline-2 has-[input:focus-visible]:outline-offset-2 has-[input:focus-visible]:outline-ring">
+              <Search strokeWidth={1.5} className="size-5 shrink-0 text-muted-foreground max-sm:hidden" />
+              <input
+                id="hero-search"
+                data-page-search
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="O que você precisa fazer?"
+                autoComplete="off"
+                className="h-11 min-w-0 flex-1 bg-transparent text-field outline-none placeholder:text-muted-foreground focus-visible:outline-none"
+              />
+              <Kbd className="mr-1 hidden sm:inline-flex">/</Kbd>
+              <Button type="submit" className="rounded-xl max-sm:w-10 max-sm:px-0 sm:pe-4.5">
+                <span className="max-sm:sr-only">Buscar</span>
+                <ArrowRight aria-hidden />
+              </Button>
+            </div>
+          </form>
+
+          <div className={cn("mt-4 flex flex-wrap items-center gap-2", intro)} style={delay(3)}>
+            <span className="mr-0.5 text-caption text-muted-foreground">Sugestões:</span>
+            {suggestions.map((s) => (
+              <Link
+                key={s.q}
+                to="/explorar"
+                search={{ q: s.q }}
+                className="rounded-full border border-border bg-card/80 px-3 py-1 text-caption text-foreground/85 transition-colors hover:border-foreground/20 hover:bg-accent hover:text-foreground"
+              >
+                {s.label}
+              </Link>
+            ))}
           </div>
-        </div>}
-      </div>
-      <div id={`${id}-install-panel`} role="tabpanel" aria-labelledby={`${id}-install-tab`} hidden={mode !== "install"}>
-        {mode === "install" && <HowItWorks compact />}
-      </div>
+        </div>
+
+        <div className={cn("relative mx-auto w-full max-w-[560px] sm:py-14 lg:mx-0 lg:justify-self-end lg:py-0", intro)} style={delay(2)}>
+          <BrandArcs className="floating-arcs pointer-events-none absolute left-1/2 top-1/2 hidden w-[108%] max-w-none -translate-x-[47%] -translate-y-1/2 sm:block" />
+          <TerminalDemo className="relative mx-auto sm:w-[90%]" />
+        </div>
+      </Container>
     </section>
   );
 }

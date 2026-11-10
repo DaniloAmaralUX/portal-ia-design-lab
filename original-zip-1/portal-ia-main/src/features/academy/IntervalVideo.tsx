@@ -1,5 +1,5 @@
 import { ArrowUpRight, CirclePlay } from "lucide-react";
-import { Button } from "@/design-system/primitives";
+import { Button } from "@/components/ui/button";
 import type { Interval } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { playsEmbedded } from "./plays-embedded";

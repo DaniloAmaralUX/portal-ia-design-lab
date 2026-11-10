@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Hand } from "lucide-react";
-import { Badge } from "@/design-system/primitives";
+import { Badge } from "@/components/ui/badge";
 import { press } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import { FileTree } from "./FileTree";

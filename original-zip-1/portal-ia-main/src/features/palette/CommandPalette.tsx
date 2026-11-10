@@ -77,11 +77,11 @@ export function CommandPalette() {
   return (
     <Dialog.Root open={open} onOpenChange={(next) => (next ? setOpen(true) : close())}>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-[80] bg-black/45 backdrop-blur-sm" />
+        <Dialog.Overlay className="animate-overlay-in fixed inset-0 z-[80] bg-black/45 backdrop-blur-sm" />
         <Dialog.Content
           aria-describedby={undefined}
           {...returnFocus}
-          className="fixed left-1/2 top-[10vh] z-[81] w-[min(94vw,640px)] -translate-x-1/2 overflow-hidden rounded-2xl border border-border bg-popover text-popover-foreground shadow-xl outline-none"
+          className="animate-pop-in fixed left-1/2 top-[10vh] z-[81] w-[min(94vw,640px)] -translate-x-1/2 overflow-hidden rounded-2xl border border-border bg-popover text-popover-foreground shadow-xl outline-none"
         >
           <Dialog.Title className="sr-only">Buscar no site</Dialog.Title>
           <p role="status" className="sr-only">

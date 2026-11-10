@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { platformOf, totalsOf } from "./courses";
-import { Progress } from "@/design-system/primitives";
+import { Progress } from "@/components/Progress";
 import { phaseId } from "./track-outline";
 import { TrackCourse } from "./TrackCourse";
 import { PHASES, PRIORITIES, stepsOf, type PlatformTrack } from "./training";

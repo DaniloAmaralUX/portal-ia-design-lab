@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Route } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { readingOrder } from "@/data/guides";
 import { EntryPoint } from "./EntryPoint";
 import { entryLink, entryLinkSecondary } from "./entry-point-class";
@@ -7,7 +7,6 @@ import { entryLink, entryLinkSecondary } from "./entry-point-class";
 export function MethodEntryPoint() {
   return (
     <EntryPoint
-      icon={Route}
       label="Aplicar"
       title="Método"
       text={`${readingOrder.length} guias: por que adotar o SDD, os requisitos, o ciclo em três ferramentas e um caso real, com um roteiro por área.`}

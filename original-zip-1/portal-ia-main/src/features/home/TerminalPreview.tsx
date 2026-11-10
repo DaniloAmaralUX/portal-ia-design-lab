@@ -1,4 +1,4 @@
-import { CopyButton } from "@/design-system/primitives";
+import { CopyButton } from "@/components/CopyButton";
 import { CommandText } from "./CommandText";
 import { WindowBar } from "./WindowBar";
 

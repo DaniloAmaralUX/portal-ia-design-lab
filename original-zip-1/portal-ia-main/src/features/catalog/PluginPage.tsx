@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { getRouteApi } from "@tanstack/react-router";
 import { CircleCheck } from "lucide-react";
 import { InlineCode } from "@/components/InlineCode";
-import { Card } from "@/design-system/primitives";
+import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { areaOf, skillsOf } from "@/data/catalog";
 import { InstallPanel } from "@/features/install";

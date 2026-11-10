@@ -18,7 +18,7 @@ export function SearchField({
   inputRef: Ref<HTMLInputElement>;
 }) {
   return (
-    <div className="mt-8 flex items-center gap-2 rounded-2xl border border-border bg-card p-2 pl-5 shadow-xs transition-[border-color,box-shadow] focus-within:border-foreground/60 focus-within:shadow-md contrast-more:focus-within:border-foreground has-[input:focus-visible]:outline-2 has-[input:focus-visible]:outline-offset-2 has-[input:focus-visible]:outline-ring">
+    <div className="mt-8 flex items-center gap-2 rounded-2xl border border-input bg-card p-1.5 pl-4 shadow-sm transition-[border-color,box-shadow] focus-within:border-foreground/60 focus-within:shadow-md contrast-more:focus-within:border-foreground has-[input:focus-visible]:outline-2 has-[input:focus-visible]:outline-offset-2 has-[input:focus-visible]:outline-ring">
       <Search strokeWidth={1.5} className="size-5 shrink-0 text-muted-foreground" />
       <label htmlFor="explore-search" className="sr-only">
         Buscar skills

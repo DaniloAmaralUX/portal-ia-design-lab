@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/design-system/primitives";
+import { Button } from "@/components/ui/button";
 import { COMMAND, TOOLKIT } from "@/data/catalyst-toolkit";
 import { cn } from "@/lib/utils";
 import { CopyCommand } from "./CopyCommand";

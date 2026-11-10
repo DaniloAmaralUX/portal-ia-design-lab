@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, X } from "lucide-react";
 import { EmptyState } from "@/components/EmptyState";
-import { Button } from "@/design-system/primitives";
+import { Button } from "@/components/ui/button";
 import { skills } from "@/data/catalog";
 import { suggestions } from "@/data/areas";
 import { suggestionChip } from "./chip-class";

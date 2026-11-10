@@ -4,13 +4,12 @@ export type Kind = "input" | "ok" | "skill" | "note";
 export type ScriptLine = { kind: Kind; text: string };
 
 const DEMO = "communication";
-const demoCount = findPlugin(DEMO)?.skills.length;
 
 export const DEMO_SCRIPT: ScriptLine[] = [
   { kind: "input", text: `/plugin marketplace add ${MARKETPLACE_URL}` },
   { kind: "ok", text: `Marketplace pitang adicionado · ${catalogPlugins.length} plugins` },
   { kind: "input", text: `/plugin install ${DEMO}@pitang` },
-  { kind: "ok", text: `${DEMO} instalado${demoCount === undefined ? "" : ` · ${demoCount} skills`}` },
+  { kind: "ok", text: `${DEMO} instalado · ${findPlugin(DEMO)?.skills.length} skills` },
   { kind: "input", text: "Monte uma apresentação sobre o projeto para a diretoria" },
   { kind: "skill", text: `${DEMO}:pg-criar-apresentacao` },
   { kind: "note", text: "8 slides no molde da Pitang, gravados em apresentacao-diretoria.pptx" },

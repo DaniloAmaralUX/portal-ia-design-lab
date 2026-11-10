@@ -1,5 +1,4 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { CraftTuning } from "./CraftTuning";
 import { PointerMotionContext } from "./craft-context";
 
 export function CraftProvider({ children }: { children: ReactNode }) {
@@ -14,5 +13,5 @@ export function CraftProvider({ children }: { children: ReactNode }) {
       window.removeEventListener("keydown", onKey, true);
     };
   }, []);
-  return <PointerMotionContext.Provider value={pointer}>{import.meta.env.DEV ? <CraftTuning>{children}</CraftTuning> : children}</PointerMotionContext.Provider>;
+  return <PointerMotionContext.Provider value={pointer}>{children}</PointerMotionContext.Provider>;
 }

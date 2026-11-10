@@ -99,7 +99,7 @@ export function ToolPage({ guide, chapters }: { guide: Guide; chapters: ChapterM
                   <Link
                     to="/ferramentas/$guide/$chapter"
                     params={{ guide: guide.slug, chapter: card.chapter }}
-                    className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-xs transition-[border-color,box-shadow] duration-(--duration-fast) hover:border-foreground/20 hover:shadow-sm"
+                    className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
                   >
                     <span className="grid size-9 place-items-center rounded-lg bg-muted text-foreground">
                       <Icon aria-hidden strokeWidth={1.75} className="size-4.5" />

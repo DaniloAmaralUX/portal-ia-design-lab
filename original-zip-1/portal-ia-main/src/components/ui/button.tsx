@@ -4,14 +4,13 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 export const buttonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-xl text-small font-medium transition-[color,background-color,border-color,box-shadow,scale] duration-(--duration-fast) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 active:scale-[0.96] [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full text-small font-semibold transition-[color,background-color,border-color,box-shadow,scale] duration-(--duration-fast) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 active:scale-[0.96] [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow-xs hover:opacity-90",
+        default: "bg-primary text-primary-foreground shadow-sm hover:bg-[color-mix(in_oklch,var(--primary)_88%,black)]",
         secondary: "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary)_85%,var(--foreground))]",
         outline: "border border-border bg-card text-foreground shadow-xs hover:border-foreground/20 hover:bg-accent",
-        choice: "border border-transparent bg-transparent text-foreground hover:text-foreground",
         inverse: "bg-foreground text-background shadow-sm hover:bg-[color-mix(in_oklch,var(--foreground)_85%,var(--background))]",
         ghost: "text-foreground/80 hover:bg-accent hover:text-foreground",
         link: "h-auto rounded-none px-0 text-link underline decoration-link underline-offset-4 hover:decoration-2",

@@ -3,7 +3,7 @@ import { ArrowRight, Presentation } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Crumb } from "@/components/Crumb";
 import { ReadMark } from "@/components/ReadMark";
-import { Button } from "@/design-system/primitives";
+import { Button } from "@/components/ui/button";
 import { GUIDE_GROUPS, type Guide } from "@/data/guides";
 import { useReadChapters } from "@/hooks/use-read-chapters";
 import { partsOf, type ChapterMeta } from "@/lib/guide-text";

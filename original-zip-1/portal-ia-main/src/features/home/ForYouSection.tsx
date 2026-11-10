@@ -1,14 +1,9 @@
 import { useEffect, useRef } from "react";
 import { Link, type LinkProps } from "@tanstack/react-router";
-import { motion, useReducedMotion } from "motion/react";
-import { FluidGroup } from "@/components/fluid/FluidGroup";
-import { useCraft } from "@/components/craft/craft-context";
-import { usePointerFeedback } from "@/components/craft/StateIcon";
 import { ArrowRight } from "lucide-react";
 import { AreaMark } from "@/components/AreaMark";
-import { Progress } from "@/design-system/primitives";
-import { Widget } from "@/components/ui/widget";
-import { Button } from "@/design-system/primitives";
+import { Progress } from "@/components/Progress";
+import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { areaById } from "@/data/areas";
 import { pluginsOfArea, skillCountIn } from "@/data/catalog-index";
@@ -34,10 +29,9 @@ function NextStep({ step }: { step: Step }) {
   const { eyebrow, title, detail, progress, cta, link } = step;
   return (
     <li>
-      <Widget className="h-full w-full whitespace-normal rounded-xl border bg-card p-0 shadow-xs">
       <Link
         {...link}
-        className="group flex h-full flex-col rounded-xl p-5 transition-colors hover:bg-accent/40"
+        className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
       >
         <span className="eyebrow block">{eyebrow}</span>
         <span className="mt-2 font-display text-subheading font-bold text-balance">{title}</span>
@@ -50,7 +44,6 @@ function NextStep({ step }: { step: Step }) {
           </span>
         </span>
       </Link>
-      </Widget>
     </li>
   );
 }
@@ -107,15 +100,12 @@ export function ForYouSection() {
   const { readIds } = useReadChapters();
   const section = useRef<HTMLElement>(null);
   const moveFocus = useRef(false);
-  const { instant, record } = usePointerFeedback();
-  const reduce = useReducedMotion();
-  const { duration, distance } = useCraft();
 
   // The button pressed leaves the page with the choice, so the focus goes to the section that took its place.
   useEffect(() => {
     if (!moveFocus.current) return;
     moveFocus.current = false;
-    section.current?.focus({ preventScroll: true });
+    section.current?.focus();
   }, [area]);
 
   function pick(next: AreaId | null) {
@@ -128,9 +118,8 @@ export function ForYouSection() {
   const started = steps.some((s) => s.progress && s.progress.done > 0);
 
   return (
-    <section ref={section} tabIndex={-1} aria-labelledby="para-voce-title" className="mt-2 outline-none sm:mt-4">
+    <section ref={section} tabIndex={-1} aria-labelledby="para-voce-title" className="mt-8 outline-none sm:mt-12 lg:mt-4">
       <Container>
-        <motion.div key={area ?? "choose"} initial={instant || reduce ? false : { opacity: 0, y: distance }} animate={{ opacity: 1, y: 0 }} transition={{ duration: duration / 1000, ease: [0.23, 1, 0.32, 1] }}>
         {role ? (
           <>
             <SectionHeading
@@ -138,7 +127,7 @@ export function ForYouSection() {
               title={started ? "Continue de onde parou" : "Por onde começar"}
               description={`Pelo seu papel, ${role.name}. O andamento vem dos cursos que você marcou e do que leu neste navegador.`}
               action={
-                <Button variant="ghost" size="sm" onClick={(event) => { record(event); pick(null); }}>
+                <Button variant="ghost" size="sm" onClick={() => pick(null)}>
                   Trocar o papel
                 </Button>
               }
@@ -151,33 +140,32 @@ export function ForYouSection() {
           </>
         ) : (
           // The roles take two columns as wide as the longest role on one line, beside the text only where both fit.
-          <Widget className="h-auto w-full whitespace-normal rounded-2xl bg-card p-6">
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-xs sm:p-7 xl:grid xl:grid-cols-[minmax(0,1fr)_auto] xl:items-center xl:gap-8">
             <div>
               <h2 id="para-voce-title" className="font-display text-heading font-bold">
                 Qual é o seu papel?
               </h2>
               <p className="mt-2 max-w-measure text-small leading-relaxed text-muted-foreground text-pretty">
-                Selecione seu papel para ver a trilha de capacitação e o próximo passo do Método. Seu progresso fica salvo neste navegador.
+                Com o papel, esta página mostra o próximo curso da sua trilha, o próximo passo do roteiro da sua área e o guia que você
+                deixou no meio. A escolha fica guardada só neste navegador.
               </p>
             </div>
-            <FluidGroup className="mt-5 grid gap-1 rounded-xl md:grid-cols-2" label="Seu papel">
+            <div className="mt-5 grid gap-2 md:grid-cols-2 xl:mt-0">
               {ROLES.map((r) => (
                 <Button
                   key={r.area}
-                  variant="choice"
+                  variant="outline"
                   size="lg"
-                  data-fluid-item
-                  className="h-auto min-h-12 w-full justify-start whitespace-normal rounded-lg py-2 ps-3 text-left"
-                  onClick={(event) => { record(event); pick(r.area); }}
+                  className="h-auto min-h-12 w-full justify-start whitespace-normal rounded-xl py-2 ps-3 text-left"
+                  onClick={() => pick(r.area)}
                 >
                   <AreaMark area={r.area} size="sm" />
                   {r.name}
                 </Button>
               ))}
-            </FluidGroup>
-          </Widget>
+            </div>
+          </div>
         )}
-        </motion.div>
       </Container>
     </section>
   );

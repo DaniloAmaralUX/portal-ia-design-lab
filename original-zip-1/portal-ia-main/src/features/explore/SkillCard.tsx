@@ -1,10 +1,9 @@
-import { ResourceCard } from "@/design-system/blocks/ResourceCard";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { AreaDot } from "@/components/AreaDot";
 import { PluginMark } from "@/components/PluginMark";
 import { ModeBadge } from "@/components/ModeBadge";
-import { Badge } from "@/design-system/primitives";
+import { Badge } from "@/components/ui/badge";
 import { pluginOf } from "@/data/catalog";
 import type { Skill } from "@/data/types";
 import { cn } from "@/lib/utils";
@@ -12,13 +11,13 @@ import { cn } from "@/lib/utils";
 export function SkillCard({ skill, className, style }: { skill: Skill; className?: string; style?: React.CSSProperties }) {
   const plugin = pluginOf(skill);
   return (
-    <ResourceCard><Link
+    <Link
       to="/plugins/$plugin/$skill"
       params={{ plugin: skill.plugin, skill: skill.slug }}
       data-result
       style={style}
       className={cn(
-        "group relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-xs transition-[box-shadow,border-color] duration-(--duration-fast) ease-out hover:border-foreground/15 hover:shadow-sm",
+        "group relative flex flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[box-shadow,border-color] duration-(--duration-fast) ease-out hover:border-foreground/15 hover:shadow-md",
         className,
       )}
     >
@@ -41,6 +40,6 @@ export function SkillCard({ skill, className, style }: { skill: Skill; className
         <ModeBadge manual={skill.manual} />
         {skill.news && <Badge variant="outline">{skill.news.label}</Badge>}
       </div>
-    </Link></ResourceCard>
+    </Link>
   );
 }

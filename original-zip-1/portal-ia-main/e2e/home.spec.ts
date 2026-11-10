@@ -12,7 +12,6 @@ function typed(page: Page): Promise<number> {
 
 test("the demo of the terminal plays by itself and holds while the pointer is over it", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("tab", { name: "Instalar", exact: true }).click();
   await page.locator("[data-terminal-screen]").scrollIntoViewIfNeeded();
   const start = await typed(page);
   await expect.poll(() => typed(page)).toBeGreaterThan(start);
@@ -29,7 +28,6 @@ test.describe("with reduced motion", () => {
 
   test("the terminal shows the whole conversation at once, and it stays as it is", async ({ page }) => {
     await page.goto("/");
-    await page.getByRole("tab", { name: "Instalar", exact: true }).click();
     const whole = await typed(page);
     expect(whole).toBeGreaterThan(0);
     await page.waitForTimeout(1500);

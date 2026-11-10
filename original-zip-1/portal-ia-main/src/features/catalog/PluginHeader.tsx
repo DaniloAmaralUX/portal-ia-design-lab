@@ -4,7 +4,7 @@ import { AreaDot } from "@/components/AreaDot";
 import { Crumb } from "@/components/Crumb";
 import { MetaSep } from "./MetaSep";
 import { Term } from "@/components/Term";
-import { Button } from "@/design-system/primitives";
+import { Button } from "@/components/ui/button";
 import { areaOf, skillsOf } from "@/data/catalog";
 import { MARKETPLACE_NAME } from "@/data/catalog-index";
 import type { Plugin } from "@/data/types";

@@ -4,7 +4,7 @@ import { ExamplePrompt } from "@/components/ExamplePrompt";
 import { InlineCode } from "@/components/InlineCode";
 import { SkillLinkedText } from "@/components/SkillLinkedText";
 import { Term } from "@/components/Term";
-import { Card } from "@/design-system/primitives";
+import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { getPlugin, pluginOf, skillsOf } from "@/data/catalog";
 import type { Skill } from "@/data/types";

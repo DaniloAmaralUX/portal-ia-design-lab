@@ -21,7 +21,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Acronym } from "@/components/Acronym";
-import { Badge } from "@/design-system/primitives";
+import { Badge } from "@/components/ui/badge";
 import { getPlugin } from "@/data/catalog";
 import { ACRONYMS } from "@/data/glossary";
 import { cn } from "@/lib/utils";

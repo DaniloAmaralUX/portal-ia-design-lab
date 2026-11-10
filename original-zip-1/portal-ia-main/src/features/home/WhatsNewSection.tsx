@@ -52,7 +52,7 @@ export function WhatsNewSection() {
   if (items.length === 0) return null;
 
   return (
-    <section className="mt-14 sm:mt-16" aria-labelledby="novidades-title">
+    <section className="mt-24 sm:mt-28" aria-labelledby="novidades-title">
       <Container>
         <SectionHeading
           id="novidades-title"
@@ -68,7 +68,7 @@ export function WhatsNewSection() {
             </Link>
           }
         />
-        <ul className="reveal-children mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <ul className="reveal-children mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {items.map((item) =>
             item.kind === "Skill" ? (
               <li key={`${item.kind}-${item.text}`} className="rounded-2xl border border-border bg-card p-5 shadow-xs">
@@ -85,7 +85,7 @@ export function WhatsNewSection() {
                 <Link
                   to={item.to}
                   params={item.params}
-                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-xs transition-[border-color,box-shadow] duration-(--duration-fast) hover:border-foreground/20 hover:shadow-sm"
+                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
                 >
                   <span className="flex items-center gap-2 text-caption tabular-nums text-muted-foreground">
                     <PlayCircle aria-hidden className="size-4 shrink-0" />

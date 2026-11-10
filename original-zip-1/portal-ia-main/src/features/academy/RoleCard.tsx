@@ -1,8 +1,7 @@
-import { ResourceCard } from "@/design-system/blocks/ResourceCard";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { AreaMark } from "@/components/AreaMark";
-import { Progress } from "@/design-system/primitives";
+import { Progress } from "@/components/Progress";
 import type { Role } from "@/data/roles";
 import { plural } from "@/lib/utils";
 import { totalsOf } from "./courses";
@@ -18,10 +17,10 @@ export function RoleCard({ role }: { role: Role }) {
   const courses = training ? coursesOf(training) : [];
   const completedHere = courses.filter((c) => completed.has(c)).length;
   return (
-    <ResourceCard><Link
+    <Link
       to="/academy/trilhas/$area"
       params={{ area: role.area }}
-      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-xs transition-[border-color,box-shadow] duration-(--duration-fast) hover:border-foreground/20 hover:shadow-sm"
+      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
     >
       <AreaMark area={role.area} size="md" />
       <span data-vt="title" className="mt-4 self-start font-display text-subheading font-bold text-balance">
@@ -35,6 +34,6 @@ export function RoleCard({ role }: { role: Role }) {
           <ArrowRight aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform duration-(--duration-base) group-hover:translate-x-0.5" />
         </span>
       </span>
-    </Link></ResourceCard>
+    </Link>
   );
 }

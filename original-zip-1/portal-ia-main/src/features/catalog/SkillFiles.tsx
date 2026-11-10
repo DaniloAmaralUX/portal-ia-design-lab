@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FileText } from "lucide-react";
-import { Sheet } from "@/design-system/primitives";
+import { Sheet } from "@/components/ui/sheet";
 import type { Skill } from "@/data/types";
 import { BINARY_EXTENSIONS } from "./binary-extensions";
 import { SkillFileContent } from "./SkillFileContent";

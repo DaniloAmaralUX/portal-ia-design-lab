@@ -3,16 +3,12 @@ import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Container } from "@/components/ui/container";
 import { Term } from "@/components/Term";
-import { findPlugin } from "@/data/catalog-index";
-import { pluginInstall } from "@/lib/commands";
-import { TaskRows } from "@/components/beautiful-ui/TaskRows";
-import { TerminalDemo } from "./TerminalDemo";
+import { catalogPlugins, findPlugin } from "@/data/catalog-index";
+import { marketplaceAdd, pluginInstall } from "@/lib/commands";
+import { cn } from "@/lib/utils";
 import { ChatPreview } from "./ChatPreview";
 import { DEMO_PLUGIN } from "./demo-plugin";
 import { TerminalPreview } from "./TerminalPreview";
-import { cn } from "@/lib/utils";
-
-const demoCount = findPlugin(DEMO_PLUGIN)?.skills.length;
 
 const steps = [
   {
@@ -34,12 +30,12 @@ const steps = [
         : sem ela, o comando falha. Depois disso, ele conhece todos os plugins da Pitang.
       </>
     ),
-    preview: <TerminalDemo />,
+    preview: <TerminalPreview command={marketplaceAdd} result={`Marketplace pitang adicionado · ${catalogPlugins.length} plugins`} />,
   },
   {
     title: "Instale o plugin da sua área",
     text: "Cada plugin traz as skills de um tema, e as descrições delas entram em toda sessão. Instale os que você vai usar.",
-    preview: <TerminalPreview command={pluginInstall(DEMO_PLUGIN)} result={`${DEMO_PLUGIN} instalado${demoCount === undefined ? "" : ` · ${demoCount} skills`}`} />,
+    preview: <TerminalPreview command={pluginInstall(DEMO_PLUGIN)} result={`${DEMO_PLUGIN} instalado · ${findPlugin(DEMO_PLUGIN)?.skills.length} skills`} />,
   },
   {
     title: "Peça em português",
@@ -48,9 +44,9 @@ const steps = [
   },
 ];
 
-export function HowItWorks({ compact = false }: { compact?: boolean }) {
+export function HowItWorks() {
   return (
-    <section className={cn(!compact && "mt-14 sm:mt-16")} aria-labelledby="como-title">
+    <section className="mt-24 sm:mt-28" aria-labelledby="como-title">
       <Container>
         <SectionHeading
           id="como-title"
@@ -63,10 +59,33 @@ export function HowItWorks({ compact = false }: { compact?: boolean }) {
             </Link>
           }
         />
-        <TaskRows items={steps.map((step) => ({
-          title: typeof step.title === "string" ? step.title : "Adicione o marketplace",
-          content: <div className="grid gap-5 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)]"><p className="text-small leading-relaxed text-muted-foreground">{step.text}</p><div className="min-w-0">{step.preview}</div></div>,
-        }))} />
+        <ol className="reveal-children mt-12">
+          {steps.map((step, i) => {
+            const last = i === steps.length - 1;
+            return (
+              <li
+                key={i}
+                className="grid grid-cols-[2rem_minmax(0,1fr)] gap-x-4 lg:grid-cols-[2.5rem_minmax(0,0.6fr)_minmax(0,1.6fr)] lg:gap-x-6"
+              >
+                <div className="row-span-2 flex flex-col items-center lg:row-span-1">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-foreground font-display text-small font-bold tabular-nums text-background lg:size-10">
+                    {i + 1}
+                  </span>
+                  {!last && <span aria-hidden className="mt-2 w-px flex-1 bg-border" />}
+                </div>
+                <div className="pt-1 lg:pt-2">
+                  <h3 className="font-display text-heading font-bold">{step.title}</h3>
+                  <p className="mt-2 max-w-md text-small leading-relaxed text-muted-foreground">{step.text}</p>
+                </div>
+                <div className={cn("mt-5 lg:mt-0", !last && "pb-12 lg:pb-14")}>
+                  <div className="rounded-2xl bg-muted/60 p-2.5">
+                    {step.preview}
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
       </Container>
     </section>
   );
