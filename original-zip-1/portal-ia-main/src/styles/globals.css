@@ -460,50 +460,20 @@ html:active-view-transition-type(close)::view-transition-new(root) {
   }
 }
 
-@supports (animation-timeline: view()) {
-  @media screen and (prefers-reduced-motion: no-preference) {
-    /* The reveal ends while the first quarter of the item comes in: an item that stops at the bottom of the screen shows whole,
-       at full contrast, and only a sliver below the fold is still on its way. */
-    .reveal-children > * {
-      animation: reveal linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 25%;
-    }
-    .reveal-children > :nth-child(3n + 2) {
-      animation-range: entry 4% entry 29%;
-    }
-    .reveal-children > :nth-child(3n + 3) {
-      animation-range: entry 8% entry 33%;
-    }
-    /* What is on the screen when the page opens shows whole (src/lib/reveal.ts): tied to the scroll, an item that opens with its top
-       inside the screen would wait there, faint, for a scroll that may never come. */
-    .reveal-children > [data-shown] {
-      animation: none;
-    }
-  }
+/* Reading surfaces stay fully visible while scrolling. The brand arcs stay still. */
+.interactive-surface {
+  transition: border-color 150ms cubic-bezier(0.2, 0, 0, 1), background-color 150ms cubic-bezier(0.2, 0, 0, 1);
 }
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
+.interactive-surface:focus-within {
+  border-color: var(--ring);
+}
+@media (hover: hover) and (pointer: fine) {
+  .interactive-surface:hover {
+    border-color: color-mix(in oklch, var(--foreground) 24%, var(--border));
+    background-color: color-mix(in oklch, var(--card) 98%, var(--foreground));
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .floating-arcs > g {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: floating-arcs 12s ease-in-out infinite alternate;
-  }
-}
-@keyframes floating-arcs {
-  from {
-    transform: rotate(-2deg) translateY(-6px);
-  }
-  to {
-    transform: rotate(2deg) translateY(6px);
-  }
-}
 @keyframes vt-enter {
   0% {
     opacity: 0;

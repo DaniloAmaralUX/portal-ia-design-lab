@@ -24,6 +24,8 @@ export const useUi = create<UiState>((set, get) => ({
   setTheme: (theme) => {
     const html = document.documentElement;
     html.dataset.switchingTheme = "";
+    // Flush the transition suppression before changing theme tokens.
+    void window.getComputedStyle(html).transitionDuration;
     html.classList.toggle("dark", theme === "dark");
     requestAnimationFrame(() => requestAnimationFrame(() => delete html.dataset.switchingTheme));
     writeStorage("localStorage", THEME_KEY, theme);

@@ -35,7 +35,7 @@ const steps = [
   {
     title: "Instale o plugin da sua área",
     text: "Cada plugin traz as skills de um tema, e as descrições delas entram em toda sessão. Instale os que você vai usar.",
-    preview: <TerminalPreview command={pluginInstall(DEMO_PLUGIN)} result={`${DEMO_PLUGIN} instalado · ${findPlugin(DEMO_PLUGIN)?.skills.length} skills`} />,
+    preview: <TerminalPreview command={pluginInstall(DEMO_PLUGIN)} result={findPlugin(DEMO_PLUGIN) ? `${DEMO_PLUGIN} instalado · ${findPlugin(DEMO_PLUGIN)?.skills.length} skills` : `${DEMO_PLUGIN} instalado`} />,
   },
   {
     title: "Peça em português",

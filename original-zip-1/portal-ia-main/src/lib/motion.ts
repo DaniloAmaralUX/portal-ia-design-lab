@@ -8,4 +8,4 @@ export const iconShown = "scale-100 opacity-100 blur-none";
 export const iconHidden = "scale-[0.25] opacity-0 blur-[4px]";
 
 export const press =
-  "transition-[color,background-color,border-color,box-shadow,scale] duration-(--duration-fast) ease-out active:scale-[0.96]";
+  "transition-[color,background-color,border-color,box-shadow,scale] duration-150 ease-[cubic-bezier(0.2,0,0,1)] motion-safe:active:not-focus-visible:scale-[0.96]";

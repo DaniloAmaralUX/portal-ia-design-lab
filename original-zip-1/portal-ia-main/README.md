@@ -2,6 +2,8 @@
 
 **Versão isolada para continuidade:** [handoff e instruções](docs/HANDOFF-PORTAL.md), branch `handoff/portal-original-ui-audit`.
 
+**Rodada atual de refinamento:** [craft, movimento e validação](docs/CRAFT-POLISH.md), branch `polish/jakub-emil`. A branch de handoff acima permanece preservada.
+
 O portal de IA da Pitang tem quatro portas:
 
 - **Manifesto:** por que a Pitang adota IA.

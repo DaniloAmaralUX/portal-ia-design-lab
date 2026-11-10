@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export function GithubHandoff() {
   return (
     <a
-      href="https://github.com/DaniloAmaralUX/portal-ia-design-lab/tree/handoff/portal-original-ui-audit/original-zip-1/portal-ia-main"
+      href="https://github.com/DaniloAmaralUX/portal-ia-design-lab/tree/polish/jakub-emil/original-zip-1/portal-ia-main"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Código desta versão no GitHub (abre em outra aba)"

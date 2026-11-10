@@ -13,7 +13,7 @@ export function TrainingCourseCard({ course }: { course: TrainingCourse }) {
     <Link
       to="/academy/treinamentos/$curso"
       params={{ curso: course.slug }}
-      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
+      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs interactive-surface"
     >
       <span className="text-caption tabular-nums text-muted-foreground">
         {plural(course.lessons.length, "aula", "aulas")}
@@ -30,7 +30,7 @@ export function TrainingCourseCard({ course }: { course: TrainingCourse }) {
         </span>
         <ArrowRight
           aria-hidden
-          className="size-4 shrink-0 text-muted-foreground transition-transform duration-(--duration-base) group-hover:translate-x-0.5"
+          className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 motion-safe:group-hover:translate-x-0.5"
         />
       </span>
     </Link>

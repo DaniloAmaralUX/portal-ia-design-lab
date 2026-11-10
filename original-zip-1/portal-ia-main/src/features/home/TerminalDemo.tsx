@@ -1,7 +1,9 @@
 import { CopyButton } from "@/components/CopyButton";
+import { Pause, Play } from "lucide-react";
 import { WindowDots } from "@/components/WindowDots";
 import { marketplaceAdd } from "@/lib/commands";
 import { cn } from "@/lib/utils";
+import { press } from "@/lib/motion";
 import { DEMO_SCRIPT, viewOf, type Kind, type LineView } from "./terminal-script";
 import { useTerminalDemo } from "./use-terminal-demo";
 
@@ -87,7 +89,7 @@ function TerminalLine({ kind, text, view }: { kind: Kind; text: string; view: Li
 }
 
 export function TerminalDemo({ className }: { className?: string }) {
-  const { ref, progress, held } = useTerminalDemo(DEMO_SCRIPT);
+  const { ref, progress, held, still, paused, setPaused } = useTerminalDemo(DEMO_SCRIPT);
   // Held under the pointer or the focus, nothing moves: the caret and the dot of the skill stand still where the demo stopped.
   const view = (index: number): LineView => {
     const shown = viewOf(DEMO_SCRIPT, progress, index);
@@ -103,8 +105,20 @@ export function TerminalDemo({ className }: { className?: string }) {
     >
       <div className="flex items-center gap-2 border-b border-terminal-border px-4 py-2.5">
         <WindowDots />
-        <span className="ml-2 font-mono text-micro text-terminal-muted">claude · ~/meu-projeto</span>
-        <CopyButton text={marketplaceAdd} tone="terminal" message="Comando copiado" label="Copiar o comando do marketplace" className="ml-auto" />
+        <span className="ml-2 min-w-0 flex-1 font-mono text-micro text-terminal-muted">claude · ~/meu-projeto</span>
+        {!still && (
+          <button
+            type="button"
+            aria-label={paused ? "Retomar demonstração" : "Pausar demonstração"}
+            aria-pressed={paused}
+            title={paused ? "Retomar demonstração" : "Pausar demonstração"}
+            onClick={() => setPaused(!paused)}
+            className={cn("inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-terminal-muted hover:bg-white/10 hover:text-terminal-foreground focus-visible:outline-terminal-gold", press)}
+          >
+            {paused ? <Play aria-hidden className="size-3.5" /> : <Pause aria-hidden className="size-3.5" />}
+          </button>
+        )}
+        <CopyButton text={marketplaceAdd} tone="terminal" message="Comando copiado" label="Copiar o comando do marketplace" />
       </div>
       <ol className="sr-only">
         {DEMO_SCRIPT.map((line, i) => (

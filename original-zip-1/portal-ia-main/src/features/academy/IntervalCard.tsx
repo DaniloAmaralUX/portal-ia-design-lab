@@ -11,7 +11,7 @@ export function IntervalCard({ interval }: { interval: Interval }) {
     <Link
       to="/academy/intervalos/$intervalo"
       params={{ intervalo: interval.slug }}
-      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md motion-reduce:hover:translate-y-0"
+      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs interactive-surface"
     >
       <span className="flex items-center gap-2 text-caption tabular-nums text-muted-foreground">
         <PlayCircle aria-hidden className="size-4 shrink-0" />
@@ -31,7 +31,7 @@ export function IntervalCard({ interval }: { interval: Interval }) {
           {area ? <AreaDot area={area.id} /> : null}
           {area ? area.name : "Todas as áreas"}
         </span>
-        <ArrowRight aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform duration-(--duration-base) group-hover:translate-x-0.5" />
+        <ArrowRight aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 motion-safe:group-hover:translate-x-0.5" />
       </span>
     </Link>
   );

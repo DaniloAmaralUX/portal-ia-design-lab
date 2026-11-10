@@ -48,7 +48,7 @@ export function AreasSection() {
               <div
                 key={area.id}
                 className={cn(
-                  "group relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-xs transition-[translate,box-shadow,border-color] duration-(--duration-base) hover:-translate-y-0.5 hover:shadow-md motion-reduce:hover:translate-y-0 sm:p-7",
+                  "group relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-xs interactive-surface sm:p-7",
                   tone.border,
                 )}
               >
