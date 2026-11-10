@@ -5,7 +5,7 @@ export function GithubHandoff() {
   return (
     <IconButton asChild label="Código desta versão no GitHub (abre em outra aba)" title="GitHub · código e handoff desta versão">
       <a
-        href="https://github.com/DaniloAmaralUX/portal-ia-design-lab/tree/review/jakub-all-pages/original-zip-1/portal-ia-main"
+        href="https://github.com/DaniloAmaralUX/portal-ia-design-lab/tree/review/portal-pages/original-zip-1/portal-ia-main"
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -1,10 +1,10 @@
-# Revisão Jakub — páginas do portal
+# Revisão de interface — páginas do portal
 
-Branch isolada: `review/jakub-all-pages`, derivada de `polish/jakub-emil`. Publicação em projeto Vercel separado, sem substituir a versão anterior. A prévia continua pública e não contém a seção de design system.
+Branch isolada: `review/portal-pages`, derivada de versão anterior de refinamento. Publicação em projeto Vercel separado, sem substituir a versão anterior. A prévia continua pública e não contém a seção de design system.
 
 ## Procedimento
 
-Skills instaladas com `npx skills add https://github.com/jakubkrehel/skills`: `better-interface`, `better-accessibility`, `better-layout`, `better-writing`, `better-typography`, `better-colors` e `better-ui`.
+Skills de revisão instaladas pelo CLI: `better-interface`, `better-accessibility`, `better-layout`, `better-writing`, `better-typography`, `better-colors` e `better-ui`.
 
 O inventário usa o mesmo gerador de endereços do projeto (`e2e/routes.ts`), incluindo páginas fixas, papéis, roteiros, guias, capítulos, intervalos, cursos e aulas. Foram acrescentados os formulários de publicação, busca sem resultados e página inexistente. São 142 endereços disponíveis neste checkout, verificados em claro a 1440 px e escuro a 320 px. Não se inventaram endereços ou dados de skills privadas ausentes.
 
@@ -37,7 +37,7 @@ O código desta variante é acessível pelo ícone GitHub do cabeçalho, apontan
 - Após a correção, o Catalyst foi revalidado em claro/desktop e escuro/celular: três testes aprovados, incluindo login.
 - O build final passou por 23 testes de regressão de interação, todos aprovados, incluindo cópia alternativa e estado/foco do menu de seção.
 - Tipos, lint e build aprovados. Cinco testes do gateway aprovados.
-- Sem senha na prévia; sem restauração da rota de design system. A publicação usa o projeto separado `portal-ia-jakub-pages`.
+- Sem senha na prévia; sem restauração da rota de design system. A publicação usa o projeto separado `portal-ia-revisao`.
 
 ## Limites
 

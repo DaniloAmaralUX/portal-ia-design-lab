@@ -44,7 +44,7 @@ test("search, palette, theme and installation remain functional", async ({ page 
 test("handoff links to this isolated branch beside the theme switch", async ({ page }) => {
   await page.goto("/");
   const handoff = page.getByRole("link", { name: "Código desta versão no GitHub (abre em outra aba)" });
-  await expect(handoff).toHaveAttribute("href", "https://github.com/DaniloAmaralUX/portal-ia-design-lab/tree/review/jakub-all-pages/original-zip-1/portal-ia-main");
+  await expect(handoff).toHaveAttribute("href", "https://github.com/DaniloAmaralUX/portal-ia-design-lab/tree/review/portal-pages/original-zip-1/portal-ia-main");
   await expect(handoff).toHaveAttribute("target", "_blank");
   expect(await handoff.evaluate((link) => link.previousElementSibling?.getAttribute("aria-label"))).toMatch(/^Usar tema/);
   for (const width of [320, 360, 390, 768, 896, 1024, 1440]) {

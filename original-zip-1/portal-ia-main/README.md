@@ -1,12 +1,12 @@
 # Portal IA da Pitang
 
-**Esta variante:** branch `review/jakub-all-pages`, com [revisão Jakub de todas as páginas disponíveis](docs/JAKUB-ALL-PAGES.md). O deploy desta branch usa o projeto Vercel separado `portal-ia-jakub-pages`; o endereço anterior abaixo continua disponível.
+**Esta variante:** [portal-ia-revisao.vercel.app](https://portal-ia-revisao.vercel.app), branch `review/portal-pages`, com [revisão de interface de todas as páginas disponíveis](docs/PORTAL-REVIEW.md).
 
-**Prévia atual:** https://portal-ia-craft-preview.vercel.app, com acesso público e sem senha, conforme solicitado. A galeria de design system foi removida do portal; a biblioteca de componentes permanece interna ao código. [Padronização e validação desta entrega](docs/STANDARDIZATION.md).
+**Versão anterior preservada:** https://portal-ia-craft-preview.vercel.app. As prévias têm acesso público e sem senha. A galeria de design system foi removida do portal; a biblioteca de componentes permanece interna ao código. [Padronização e validação desta entrega](docs/STANDARDIZATION.md).
 
 **Versão isolada para continuidade:** [handoff e instruções](docs/HANDOFF-PORTAL.md), branch `handoff/portal-original-ui-audit`.
 
-**Rodada atual de refinamento:** [craft, movimento e validação](docs/CRAFT-POLISH.md), branch `polish/jakub-emil`. A branch de handoff acima permanece preservada.
+**Rodada atual de refinamento:** [craft, movimento e validação](docs/CRAFT-POLISH.md), versão anterior de refinamento. A branch de handoff acima permanece preservada.
 
 O portal de IA da Pitang tem quatro portas:
 

@@ -1,6 +1,6 @@
 # Padronização do portal
 
-Branch: `polish/jakub-emil`. A versão-base de handoff continua preservada em `handoff/portal-original-ui-audit`.
+Versão anterior de refinamento. A versão-base de handoff continua preservada em `handoff/portal-original-ui-audit`.
 
 ## Resultado
 

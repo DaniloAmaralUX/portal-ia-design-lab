@@ -1,12 +1,12 @@
-# Rodada de craft — Jakub e Emil
+# Rodada de refinamento de interface
 
-Branch: `polish/jakub-emil`. Base preservada para handoff: `handoff/portal-original-ui-audit`, commit `98dc503`.
+Versão anterior de refinamento. Base preservada para handoff: `handoff/portal-original-ui-audit`, commit `98dc503`.
 
 ## Escopo e contrato
 
 Refinamento dos componentes compartilhados de navegação, busca, botões e cartões usados na home, Academy, treinamentos, intervalos e caminhos por papel. A rodada não altera os textos editoriais, a ordem das seções, os títulos, os tamanhos de fonte ou os grids originais. O único ajuste de conteúdo gerado remove a contagem `undefined skills` quando o catálogo não está disponível.
 
-As skills foram instaladas com o CLI oficial `npx skills add`, a partir de [Jakub Krehel](https://github.com/jakubkrehel/skills) e [Emil Kowalski](https://github.com/emilkowalski/skills). Aplicadas nesta rodada: `better-accessibility`, `better-layout`, `better-writing`, `better-typography`, `better-colors`, `better-ui`, `better-interface`, `emil-design-eng`, `animate`, `animation-performance` e `review-animations`. `interface-review` também foi instalada para revisões posteriores de branches; não substitui a revisão de implementação desta rodada.
+As skills de revisão e refinamento foram instaladas pelo CLI `npx skills add`. Aplicadas nesta rodada: `better-accessibility`, `better-layout`, `better-writing`, `better-typography`, `better-colors`, `better-ui`, `better-interface`, `emil-design-eng`, `animate`, `animation-performance` e `review-animations`. `interface-review` também foi instalada para revisões posteriores de branches; não substitui a revisão de implementação desta rodada.
 
 ## Revisão e decisões
 

@@ -21,7 +21,7 @@ Revisão: 2026-11-06. Fontes no código não significam integração em produç�
 | React Bits Pro | Templates e blocks | Catálogo de referência; sem acesso aos fontes Pro nesta sessão |
 | DesEngs / All Shadcn | Diretórios | Recursos de descoberta, não bibliotecas de runtime |
 | OKLCH / Corner Radii | Cor e geometria | Ferramentas de especificação; não adicionam screens |
-| UI Skills / Emil / Jakub | Critérios de implementação | Skills locais e CLI; sem biblioteca visual de runtime |
+| Critérios de revisão de interface | Critérios de implementação | Skills locais e CLI; sem biblioteca visual de runtime |
 | Mobbin / Grok / TIDAL | Referência visual | Prints e referências; não fornecem componentes React da aplicação |
 | Fumadocs | Documentação | Referência de estrutura; não migrar o router da SPA para instalar outro framework |
 | Mesurer | Inspeção | Pacote já instalado; ferramenta de desenvolvimento |
