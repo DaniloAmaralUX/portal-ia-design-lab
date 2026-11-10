@@ -40,6 +40,7 @@ export function DocsLayout({ title, label, Menu: SectionNav }: { title: string; 
           type="button"
           onClick={() => setOpen(true)}
           aria-haspopup="dialog"
+          aria-expanded={open}
           className={cn(
             "mb-8 flex w-full items-center gap-2.5 rounded-xl border border-border bg-card px-4 py-2.5 text-small font-medium shadow-xs hover:border-foreground/20 lg:hidden",
             press,

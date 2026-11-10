@@ -1,8 +1,7 @@
 import type { KeyboardEvent, Ref } from "react";
 import { Search, X } from "lucide-react";
 import { Kbd } from "@/components/ui/kbd";
-import { press } from "@/lib/motion";
-import { cn } from "@/lib/utils";
+import { IconButton } from "@/components/ui/icon-button";
 
 export function SearchField({
   value,
@@ -36,14 +35,13 @@ export function SearchField({
         className="h-11 min-w-0 flex-1 bg-transparent text-field outline-none placeholder:text-muted-foreground focus-visible:outline-none"
       />
       {value ? (
-        <button
-          type="button"
+        <IconButton
           onClick={onClear}
-          aria-label="Limpar a busca"
-          className={cn("inline-flex size-9 items-center justify-center rounded-xl text-muted-foreground hover:bg-accent hover:text-foreground", press)}
+          label="Limpar a busca"
+          className="rounded-xl"
         >
           <X className="size-4" />
-        </button>
+        </IconButton>
       ) : (
         <Kbd className="mr-2.5 hidden sm:inline-flex">/</Kbd>
       )}

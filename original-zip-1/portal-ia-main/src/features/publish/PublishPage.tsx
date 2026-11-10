@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { PublishShell } from "./PublishShell";
 
 const card =
-  "group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-colors hover:border-foreground/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring";
+  "group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-xs interactive-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring";
 
 export function PublishPage() {
   return (

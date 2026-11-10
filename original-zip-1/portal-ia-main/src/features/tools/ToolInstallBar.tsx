@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ScrollableTable } from "@/components/ScrollableTable";
 import { COMMAND, TOOLKIT } from "@/data/catalyst-toolkit";
 import { cn } from "@/lib/utils";
 import { CopyCommand } from "./CopyCommand";
@@ -18,9 +19,11 @@ export function ToolInstallBar({ className }: { className?: string }) {
           <span aria-hidden className="select-none font-mono text-small text-muted-foreground">
             $
           </span>
-          <code className="scroll-fade min-w-0 flex-1 overflow-x-auto whitespace-nowrap py-1 font-mono text-caption text-foreground [scrollbar-width:none] @max-[20rem]:text-micro @md:text-small">
-            {COMMAND}
-          </code>
+          <ScrollableTable label="Comando de instalação do Catalyst Toolkit" className="scroll-fade min-w-0 flex-1 [scrollbar-width:none]">
+            <code className="block whitespace-nowrap py-1 font-mono text-caption text-foreground @max-[20rem]:text-micro @md:text-small">
+              {COMMAND}
+            </code>
+          </ScrollableTable>
           <CopyCommand command={COMMAND} />
         </div>
         <Button asChild size="lg" variant="inverse" className="h-12 shrink-0">
